@@ -1,0 +1,789 @@
+{
+  "nodes": [
+    {
+      "id": "amem",
+      "type": "file",
+      "file": "10_Papers/amem.md",
+      "x": 0,
+      "y": 0,
+      "width": 420,
+      "height": 150,
+      "color": "1"
+    },
+    {
+      "id": "gmemory",
+      "type": "file",
+      "file": "10_Papers/gmemory.md",
+      "x": 0,
+      "y": 220,
+      "width": 420,
+      "height": 150,
+      "color": "1"
+    },
+    {
+      "id": "magma",
+      "type": "file",
+      "file": "10_Papers/magma.md",
+      "x": 0,
+      "y": 440,
+      "width": 420,
+      "height": 150,
+      "color": "1"
+    },
+    {
+      "id": "reconstructed",
+      "type": "file",
+      "file": "10_Papers/reconstructed.md",
+      "x": 0,
+      "y": 660,
+      "width": 420,
+      "height": 150,
+      "color": "1"
+    },
+    {
+      "id": "mplus",
+      "type": "file",
+      "file": "10_Papers/mplus.md",
+      "x": 0,
+      "y": 880,
+      "width": 420,
+      "height": 150,
+      "color": "1"
+    },
+    {
+      "id": "memgas",
+      "type": "file",
+      "file": "10_Papers/memgas.md",
+      "x": 0,
+      "y": 1100,
+      "width": 420,
+      "height": 150,
+      "color": "1"
+    },
+    {
+      "id": "memagent",
+      "type": "file",
+      "file": "10_Papers/memagent.md",
+      "x": 520,
+      "y": 0,
+      "width": 420,
+      "height": 150,
+      "color": "2"
+    },
+    {
+      "id": "memeolve",
+      "type": "file",
+      "file": "10_Papers/memeolve.md",
+      "x": 520,
+      "y": 220,
+      "width": 420,
+      "height": 150,
+      "color": "2"
+    },
+    {
+      "id": "memoryr1",
+      "type": "file",
+      "file": "10_Papers/memoryr1.md",
+      "x": 520,
+      "y": 440,
+      "width": 420,
+      "height": 150,
+      "color": "2"
+    },
+    {
+      "id": "umem",
+      "type": "file",
+      "file": "10_Papers/umem.md",
+      "x": 520,
+      "y": 660,
+      "width": 420,
+      "height": 150,
+      "color": "2"
+    },
+    {
+      "id": "mem0",
+      "type": "file",
+      "file": "10_Papers/mem0.md",
+      "x": 1040,
+      "y": 0,
+      "width": 420,
+      "height": 150,
+      "color": "3"
+    },
+    {
+      "id": "hippocampus",
+      "type": "file",
+      "file": "10_Papers/hippocampus.md",
+      "x": 1040,
+      "y": 220,
+      "width": 420,
+      "height": 150,
+      "color": "3"
+    },
+    {
+      "id": "lightwm",
+      "type": "file",
+      "file": "10_Papers/lightwm.md",
+      "x": 1040,
+      "y": 440,
+      "width": 420,
+      "height": 150,
+      "color": "3"
+    },
+    {
+      "id": "humanepisodic",
+      "type": "file",
+      "file": "10_Papers/humanepisodic.md",
+      "x": 1560,
+      "y": 0,
+      "width": 420,
+      "height": 150,
+      "color": "4"
+    },
+    {
+      "id": "remem",
+      "type": "file",
+      "file": "10_Papers/remem.md",
+      "x": 1560,
+      "y": 220,
+      "width": 420,
+      "height": 150,
+      "color": "4"
+    },
+    {
+      "id": "artem",
+      "type": "file",
+      "file": "10_Papers/artem.md",
+      "x": 1560,
+      "y": 440,
+      "width": 420,
+      "height": 150,
+      "color": "4"
+    },
+    {
+      "id": "ema",
+      "type": "file",
+      "file": "10_Papers/ema.md",
+      "x": 1560,
+      "y": 660,
+      "width": 420,
+      "height": 150,
+      "color": "4"
+    },
+    {
+      "id": "recmem",
+      "type": "file",
+      "file": "10_Papers/recmem.md",
+      "x": 2080,
+      "y": 0,
+      "width": 420,
+      "height": 150,
+      "color": "5"
+    },
+    {
+      "id": "timem",
+      "type": "file",
+      "file": "10_Papers/timem.md",
+      "x": 2080,
+      "y": 220,
+      "width": 420,
+      "height": 150,
+      "color": "5"
+    },
+    {
+      "id": "tiermem",
+      "type": "file",
+      "file": "10_Papers/tiermem.md",
+      "x": 2080,
+      "y": 440,
+      "width": 420,
+      "height": 150,
+      "color": "5"
+    },
+    {
+      "id": "evoking",
+      "type": "file",
+      "file": "10_Papers/evoking.md",
+      "x": 2600,
+      "y": 0,
+      "width": 420,
+      "height": 150,
+      "color": "6"
+    },
+    {
+      "id": "personaagent",
+      "type": "file",
+      "file": "10_Papers/personaagent.md",
+      "x": 2600,
+      "y": 220,
+      "width": 420,
+      "height": 150,
+      "color": "6"
+    },
+    {
+      "id": "multimodal",
+      "type": "file",
+      "file": "10_Papers/multimodal.md",
+      "x": 3120,
+      "y": 0,
+      "width": 420,
+      "height": 150,
+      "color": "1"
+    },
+    {
+      "id": "rememberrefine",
+      "type": "file",
+      "file": "10_Papers/rememberrefine.md",
+      "x": 3640,
+      "y": 0,
+      "width": 420,
+      "height": 150,
+      "color": "2"
+    },
+    {
+      "id": "learnshare",
+      "type": "file",
+      "file": "10_Papers/learnshare.md",
+      "x": 4160,
+      "y": 0,
+      "width": 420,
+      "height": 150,
+      "color": "3"
+    },
+    {
+      "id": "longmemeval",
+      "type": "file",
+      "file": "10_Papers/longmemeval.md",
+      "x": 4680,
+      "y": 0,
+      "width": 420,
+      "height": 150,
+      "color": "4"
+    },
+    {
+      "id": "interdependent",
+      "type": "file",
+      "file": "10_Papers/interdependent.md",
+      "x": 4680,
+      "y": 220,
+      "width": 420,
+      "height": 150,
+      "color": "4"
+    },
+    {
+      "id": "persistbench",
+      "type": "file",
+      "file": "10_Papers/persistbench.md",
+      "x": 4680,
+      "y": 440,
+      "width": 420,
+      "height": 150,
+      "color": "4"
+    },
+    {
+      "id": "membench",
+      "type": "file",
+      "file": "10_Papers/membench.md",
+      "x": 4680,
+      "y": 660,
+      "width": 420,
+      "height": 150,
+      "color": "4"
+    },
+    {
+      "id": "minerva",
+      "type": "file",
+      "file": "10_Papers/minerva.md",
+      "x": 4680,
+      "y": 880,
+      "width": 420,
+      "height": 150,
+      "color": "4"
+    },
+    {
+      "id": "beyondmillion",
+      "type": "file",
+      "file": "10_Papers/beyondmillion.md",
+      "x": 4680,
+      "y": 1100,
+      "width": 420,
+      "height": 150,
+      "color": "4"
+    },
+    {
+      "id": "injection",
+      "type": "file",
+      "file": "10_Papers/injection.md",
+      "x": 5200,
+      "y": 0,
+      "width": 420,
+      "height": 150,
+      "color": "6"
+    },
+    {
+      "id": "privacy",
+      "type": "file",
+      "file": "10_Papers/privacy.md",
+      "x": 5200,
+      "y": 220,
+      "width": 420,
+      "height": 150,
+      "color": "6"
+    },
+    {
+      "id": "injecmem",
+      "type": "file",
+      "file": "10_Papers/injecmem.md",
+      "x": 5200,
+      "y": 440,
+      "width": 420,
+      "height": 150,
+      "color": "6"
+    },
+    {
+      "id": "poisononce",
+      "type": "file",
+      "file": "10_Papers/poisononce.md",
+      "x": 5200,
+      "y": 660,
+      "width": 420,
+      "height": 150,
+      "color": "6"
+    },
+    {
+      "id": "memrec",
+      "type": "file",
+      "file": "10_Papers/memrec.md",
+      "x": 5720,
+      "y": 0,
+      "width": 420,
+      "height": 150,
+      "color": "5"
+    }
+  ],
+  "edges": [
+    {
+      "id": "edge-0",
+      "fromNode": "amem",
+      "fromSide": "right",
+      "toNode": "gmemory",
+      "toSide": "left",
+      "label": "extends: 单 agent 记忆 → 多 agent 层次记忆",
+      "color": "4"
+    },
+    {
+      "id": "edge-1",
+      "fromNode": "amem",
+      "fromSide": "right",
+      "toNode": "magma",
+      "toSide": "left",
+      "label": "extends: 动态记忆组织 → 多图结构",
+      "color": "4"
+    },
+    {
+      "id": "edge-2",
+      "fromNode": "amem",
+      "fromSide": "right",
+      "toNode": "memgas",
+      "toSide": "left",
+      "label": "extends: 记忆组织 → 多粒度关联",
+      "color": "4"
+    },
+    {
+      "id": "edge-3",
+      "fromNode": "amem",
+      "fromSide": "right",
+      "toNode": "reconstructed",
+      "toSide": "left",
+      "label": "extends: 检索 → 重构",
+      "color": "4"
+    },
+    {
+      "id": "edge-4",
+      "fromNode": "amem",
+      "fromSide": "right",
+      "toNode": "memoryr1",
+      "toSide": "left",
+      "label": "extends: 记忆结构 → 可学习记忆策略",
+      "color": "4"
+    },
+    {
+      "id": "edge-5",
+      "fromNode": "amem",
+      "fromSide": "right",
+      "toNode": "memagent",
+      "toSide": "left",
+      "label": "extends: 记忆结构 → RL memory agent",
+      "color": "4"
+    },
+    {
+      "id": "edge-6",
+      "fromNode": "amem",
+      "fromSide": "right",
+      "toNode": "memeolve",
+      "toSide": "left",
+      "label": "extends: 手工设计 → 元进化",
+      "color": "4"
+    },
+    {
+      "id": "edge-7",
+      "fromNode": "amem",
+      "fromSide": "right",
+      "toNode": "umem",
+      "toSide": "left",
+      "label": "extends: 动态组织 → 统一抽取与管理",
+      "color": "4"
+    },
+    {
+      "id": "edge-8",
+      "fromNode": "amem",
+      "fromSide": "right",
+      "toNode": "mem0",
+      "toSide": "left",
+      "label": "extends: 研究原型 → 生产级记忆流水线",
+      "color": "4"
+    },
+    {
+      "id": "edge-9",
+      "fromNode": "gmemory",
+      "fromSide": "right",
+      "toNode": "learnshare",
+      "toSide": "left",
+      "label": "extends: 团队记忆 → 选择性共享记忆",
+      "color": "4"
+    },
+    {
+      "id": "edge-10",
+      "fromNode": "gmemory",
+      "fromSide": "right",
+      "toNode": "memeolve",
+      "toSide": "left",
+      "label": "related: 多 agent 记忆 → 记忆系统进化",
+      "color": "4"
+    },
+    {
+      "id": "edge-11",
+      "fromNode": "memagent",
+      "fromSide": "right",
+      "toNode": "memoryr1",
+      "toSide": "left",
+      "label": "related: RL memory agent 的两条实现路线",
+      "color": "4"
+    },
+    {
+      "id": "edge-12",
+      "fromNode": "memoryr1",
+      "fromSide": "right",
+      "toNode": "memeolve",
+      "toSide": "left",
+      "label": "extends: 记忆策略学习 → 记忆系统进化",
+      "color": "4"
+    },
+    {
+      "id": "edge-13",
+      "fromNode": "memoryr1",
+      "fromSide": "right",
+      "toNode": "umem",
+      "toSide": "left",
+      "label": "related: 记忆管理与统一管理",
+      "color": "4"
+    },
+    {
+      "id": "edge-14",
+      "fromNode": "memeolve",
+      "fromSide": "right",
+      "toNode": "umem",
+      "toSide": "left",
+      "label": "related: 自动设计 vs 统一抽取",
+      "color": "4"
+    },
+    {
+      "id": "edge-15",
+      "fromNode": "mem0",
+      "fromSide": "right",
+      "toNode": "hippocampus",
+      "toSide": "left",
+      "label": "extends: 长期记忆系统 → 高效记忆模块",
+      "color": "4"
+    },
+    {
+      "id": "edge-16",
+      "fromNode": "mem0",
+      "fromSide": "right",
+      "toNode": "tiermem",
+      "toSide": "left",
+      "label": "extends: 记忆压缩与证据保留",
+      "color": "4"
+    },
+    {
+      "id": "edge-17",
+      "fromNode": "mem0",
+      "fromSide": "right",
+      "toNode": "privacy",
+      "toSide": "left",
+      "label": "risk: 长期记忆的隐私面",
+      "color": "4"
+    },
+    {
+      "id": "edge-18",
+      "fromNode": "mem0",
+      "fromSide": "right",
+      "toNode": "injection",
+      "toSide": "left",
+      "label": "risk: 长期记忆的注入面",
+      "color": "4"
+    },
+    {
+      "id": "edge-19",
+      "fromNode": "humanepisodic",
+      "fromSide": "right",
+      "toNode": "remem",
+      "toSide": "left",
+      "label": "extends: 类人 episodic memory → 推理中的事件记忆",
+      "color": "4"
+    },
+    {
+      "id": "edge-20",
+      "fromNode": "humanepisodic",
+      "fromSide": "right",
+      "toNode": "artem",
+      "toSide": "left",
+      "label": "extends: 无限上下文 → 时空 episodic memory",
+      "color": "4"
+    },
+    {
+      "id": "edge-21",
+      "fromNode": "remem",
+      "fromSide": "right",
+      "toNode": "ema",
+      "toSide": "left",
+      "label": "extends: 事件级记忆 → 选择性 episodic unit",
+      "color": "4"
+    },
+    {
+      "id": "edge-22",
+      "fromNode": "remem",
+      "fromSide": "right",
+      "toNode": "multimodal",
+      "toSide": "left",
+      "label": "extends: 文本事件 → 多模态经验",
+      "color": "4"
+    },
+    {
+      "id": "edge-23",
+      "fromNode": "ema",
+      "fromSide": "right",
+      "toNode": "recmem",
+      "toSide": "left",
+      "label": "related: 选择性记忆 → 复现式整合",
+      "color": "4"
+    },
+    {
+      "id": "edge-24",
+      "fromNode": "recmem",
+      "fromSide": "right",
+      "toNode": "timem",
+      "toSide": "left",
+      "label": "extends: 整合 → 时间层次整合",
+      "color": "4"
+    },
+    {
+      "id": "edge-25",
+      "fromNode": "timem",
+      "fromSide": "right",
+      "toNode": "tiermem",
+      "toSide": "left",
+      "label": "extends: 时间层次 → 压缩/证据分层",
+      "color": "4"
+    },
+    {
+      "id": "edge-26",
+      "fromNode": "tiermem",
+      "fromSide": "right",
+      "toNode": "persistbench",
+      "toSide": "left",
+      "label": "evaluates: 压缩记忆的遗忘边界",
+      "color": "4"
+    },
+    {
+      "id": "edge-27",
+      "fromNode": "evoking",
+      "fromSide": "right",
+      "toNode": "longmemeval",
+      "toSide": "left",
+      "label": "related: 个性化检索 → 长期交互评测",
+      "color": "4"
+    },
+    {
+      "id": "edge-28",
+      "fromNode": "personaagent",
+      "fromSide": "right",
+      "toNode": "evoking",
+      "toSide": "left",
+      "label": "extends: 记忆-行动耦合 → 个性化检索",
+      "color": "4"
+    },
+    {
+      "id": "edge-29",
+      "fromNode": "rememberrefine",
+      "fromSide": "right",
+      "toNode": "memeolve",
+      "toSide": "left",
+      "label": "related: 程序性记忆 vs 元进化",
+      "color": "4"
+    },
+    {
+      "id": "edge-30",
+      "fromNode": "memrec",
+      "fromSide": "right",
+      "toNode": "mem0",
+      "toSide": "left",
+      "label": "applies: 长期记忆用于推荐",
+      "color": "4"
+    },
+    {
+      "id": "edge-31",
+      "fromNode": "longmemeval",
+      "fromSide": "right",
+      "toNode": "membench",
+      "toSide": "left",
+      "label": "related: 长期交互 → 综合记忆评测",
+      "color": "4"
+    },
+    {
+      "id": "edge-32",
+      "fromNode": "longmemeval",
+      "fromSide": "right",
+      "toNode": "beyondmillion",
+      "toSide": "left",
+      "label": "extends: 长期交互 → 百万 token 压力测试",
+      "color": "4"
+    },
+    {
+      "id": "edge-33",
+      "fromNode": "longmemeval",
+      "fromSide": "right",
+      "toNode": "interdependent",
+      "toSide": "left",
+      "label": "extends: 单会话评测 → 多 session 任务",
+      "color": "4"
+    },
+    {
+      "id": "edge-34",
+      "fromNode": "longmemeval",
+      "fromSide": "right",
+      "toNode": "persistbench",
+      "toSide": "left",
+      "label": "extends: 记忆保留 → 何时遗忘",
+      "color": "4"
+    },
+    {
+      "id": "edge-35",
+      "fromNode": "membench",
+      "fromSide": "right",
+      "toNode": "minerva",
+      "toSide": "left",
+      "label": "related: 综合评测 vs 可编程测试",
+      "color": "4"
+    },
+    {
+      "id": "edge-36",
+      "fromNode": "beyondmillion",
+      "fromSide": "right",
+      "toNode": "interdependent",
+      "toSide": "left",
+      "label": "related: 规模压力 vs 任务依赖",
+      "color": "4"
+    },
+    {
+      "id": "edge-37",
+      "fromNode": "privacy",
+      "fromSide": "right",
+      "toNode": "injection",
+      "toSide": "left",
+      "label": "related: 隐私抽取与记忆注入的攻击面对照",
+      "color": "4"
+    },
+    {
+      "id": "edge-38",
+      "fromNode": "injection",
+      "fromSide": "right",
+      "toNode": "injecmem",
+      "toSide": "left",
+      "label": "extends: 查询注入 → 记忆系统注入",
+      "color": "4"
+    },
+    {
+      "id": "edge-39",
+      "fromNode": "injecmem",
+      "fromSide": "right",
+      "toNode": "poisononce",
+      "toSide": "left",
+      "label": "extends: 注入 → 长期记忆 poisoning",
+      "color": "4"
+    },
+    {
+      "id": "edge-40",
+      "fromNode": "longmemeval",
+      "fromSide": "right",
+      "toNode": "amem",
+      "toSide": "left",
+      "label": "evaluated-by: A-Mem 类系统的长期记忆评测参照",
+      "color": "4"
+    },
+    {
+      "id": "edge-41",
+      "fromNode": "membench",
+      "fromSide": "right",
+      "toNode": "amem",
+      "toSide": "left",
+      "label": "evaluated-by: agent memory 综合评测参照",
+      "color": "4"
+    },
+    {
+      "id": "edge-42",
+      "fromNode": "persistbench",
+      "fromSide": "right",
+      "toNode": "memoryr1",
+      "toSide": "left",
+      "label": "evaluated-by: 记忆管理与遗忘边界",
+      "color": "4"
+    },
+    {
+      "id": "edge-43",
+      "fromNode": "mplus",
+      "fromSide": "right",
+      "toNode": "reconstructed",
+      "toSide": "left",
+      "label": "related: 参数化记忆 vs 图重构记忆",
+      "color": "4"
+    },
+    {
+      "id": "edge-44",
+      "fromNode": "lightwm",
+      "fromSide": "right",
+      "toNode": "ema",
+      "toSide": "left",
+      "label": "related: 小模型工作记忆 vs 事件记忆",
+      "color": "4"
+    },
+    {
+      "id": "edge-45",
+      "fromNode": "artem",
+      "fromSide": "right",
+      "toNode": "humanepisodic",
+      "toSide": "left",
+      "label": "related: 时空事件记忆与类人机制",
+      "color": "4"
+    },
+    {
+      "id": "edge-46",
+      "fromNode": "learnshare",
+      "fromSide": "right",
+      "toNode": "memagent",
+      "toSide": "left",
+      "label": "related: 并行记忆共享 vs 长上下文压缩",
+      "color": "4"
+    }
+  ]
+}

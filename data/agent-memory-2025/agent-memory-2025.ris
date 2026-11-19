@@ -1,0 +1,652 @@
+TY  - CP
+TI  - A-Mem: Agentic Memory for LLM Agents
+AU  - Wujiang Xu
+AU  - Zujie Liang
+AU  - Kai Mei
+AU  - Hang Gao
+AU  - Juntao Tan
+AU  - Yongfeng Zhang
+PY  - 2025
+T2  - NeurIPS 2025
+DO  - 10.48550/arXiv.2502.12110
+UR  - https://openreview.net/forum?id=FiM0M8gcct
+AB  - While large language model (LLM) agents can effectively use external tools for complex real-world tasks, they require memory systems to leverage historical experiences. Current memory systems enable basic storage and retrieval but lack sophisticated memory organization, despite recent attempts to incorporate graph databases. Moreover, these systems' fixed operations and structures limit their adaptability across diverse tasks. To address this limitation, this paper proposes a novel agentic memory system for LLM agents that can dynamically organize memories in an agentic way. Following the basic principles of the Zettelkasten method, we designed our memory system to create interconnected knowledge networks through dynamic indexing and linking. When a new memory is added, we generate a comprehensive note containing multiple structured attributes, including contextual descriptions, keywords, and tags. The system then analyzes historical memories to identify relevant connections, establishing links where meaningful similarities exist. Additionally, this process enables memory evolution -- as new memories are integrated, they can trigger updates to the contextual representations and attributes of existing historical memories, allowing the memory network to continuously refine its understanding. Our approach combines the structured organization principles of Zettelkasten with the flexibility of agent-driven decision making, allowing for more adaptive and context-aware memory management.
+Empirical experiments on six foundation models show superior improvement against existing SOTA baselines. The code is available at \url{https://anonymous.4open.science/r/AgenticMemory-76B4}.
+N1  - CCF-A
+ER  -
+
+TY  - CP
+TI  - G-Memory: Tracing Hierarchical Memory for Multi-Agent Systems
+AU  - Guibin Zhang
+AU  - Muxin Fu
+AU  - Kun Wang
+AU  - Guancheng Wan
+AU  - Miao Yu
+AU  - Shuicheng YAN
+PY  - 2025
+T2  - NeurIPS 2025
+DO  - 10.48550/arXiv.2506.07398
+UR  - https://openreview.net/forum?id=mmIAp3cVS0
+AB  - Large language model (LLM)-powered multi-agent systems (MAS) have demonstrated cognitive and execution capabilities that far exceed those of single LLM agents, yet their capacity for self-evolution remains hampered by underdeveloped memory architectures. Upon close inspection, we are alarmed to discover that prevailing MAS memory mechanisms (1) are overly simplistic, completely disregarding the nuanced inter-agent collaboration trajectories, and (2) lack cross-trial and agent-specific customization, in stark contrast to the expressive memory developed for single agents. To bridge this gap, we introduce G-Memory, a hierarchical, agentic memory system for MAS inspired by organizational memory theory, which manages the lengthy MAS interaction via a three-tier graph hierarchy: insight, query, and interaction graphs. Upon receiving a new user query, G-Memory performs bi-directional memory traversal to retrieve both \textit{high-level, generalizable insights} that enable the system to leverage cross-trial knowledge, and \textit{fine-grained, condensed interaction trajectories} that compactly encode prior collaboration experiences. Upon task execution, the entire hierarchy evolves by assimilating new collaborative trajectories, nurturing the progressive evolution of agent teams. Extensive experiments across five benchmarks, three LLM backbones, and three popular MAS frameworks demonstrate that G-Memory improves success rates in embodied action and accuracy in knowledge QA by up to $20.89\\%$ and $10.12\\%$, respectively, without any modifications to the original frameworks.
+N1  - CCF-A
+ER  -
+
+TY  - CP
+TI  - MemAgent: Reshaping Long-Context LLM with Multi-Conv RL-based Memory Agent
+AU  - Hongli Yu
+AU  - Tinghong Chen
+AU  - Jiangtao Feng
+AU  - Jiangjie Chen
+AU  - Weinan Dai
+AU  - Qiying Yu
+AU  - Ya-Qin Zhang
+AU  - Wei-Ying Ma
+AU  - Jingjing Liu
+AU  - Mingxuan Wang
+AU  - Hao Zhou
+PY  - 2026
+T2  - ICLR 2026
+DO  - 10.48550/arXiv.2507.02259
+UR  - https://openreview.net/forum?id=k5nIOvYGCL
+AB  - Despite improvements by length extrapolation, efficient attention and memory modules, handling infinitely long documents without performance degradation during extrapolation remains the ultimate challenge in long-text processing. To solve this problem, We introduce a novel agent workflow, \method, which processes text in segments and updates memory through an overwrite strategy, addressing the challenge of long-context task through enhanced memory management. We further extend the DAPO algorithm to directly optimize memory ability in an end-to-end fashion, facilitating training via independent-context multi-conversation generation. Experimental results demonstrate that MemAgent has superb long-context capabilities, being able to extrapolate from an 8K context to a 3.5M QA task with a performance loss of less than 10\% and achieving over 95\% on the 512K NIAH test.
+N1  - Top-ICLR
+ER  -
+
+TY  - CP
+TI  - Memory-R1: Enhancing Large Language Model Agents to Manage and Utilize Memories via Reinforcement Learning
+AU  - Sikuan Yan
+AU  - Xiufeng Yang
+AU  - Zuchao Huang
+AU  - Ercong Nie
+AU  - Zifeng Ding
+AU  - Zonggen Li
+AU  - Xiaowen Ma
+AU  - Jinhe Bi
+AU  - Kristian Kersting
+AU  - Jeff Z. Pan
+AU  - Hinrich Schütze
+AU  - Volker Tresp
+AU  - Yunpu Ma
+PY  - 2026
+T2  - ACL 2026
+DO  - 10.48550/arXiv.2508.19828
+UR  - https://openreview.net/forum?id=inJIfKNFuE
+AB  - Large Language Models (LLMs) have demonstrated impressive capabilities across a wide range of NLP tasks, but they remain fundamentally stateless, constrained by limited context windows that hinder long-horizon reasoning. Recent efforts to address this limitation often augment LLMs with an external memory bank, yet most existing pipelines are static and heuristic-driven, lacking a learned mechanism for deciding what to store, update, or retrieve. We present Memory-R1, a reinforcement learning (RL) framework that equips LLMs with the ability to actively manage and utilize external memory through two specialized agents: a Memory Manager that learns structured operations, including ADD, UPDATE, DELETE, and NOOP; and an Answer Agent that pre-selects and reasons over relevant entries. Both agents are fine-tuned with outcome-driven RL (PPO and GRPO), enabling adaptive memory management with minimal supervision. With only 152 training QA pairs, Memory-R1 outperforms strong baselines and generalizes across diverse question types, three benchmarks (LoCoMo, MSC, LongMemEval), and multiple model scales (3B–14B).
+N1  - CCF-A
+ER  -
+
+TY  - CP
+TI  - MAGMA: A Multi-Graph based Agentic Memory Architecture for AI Agents
+AU  - Dongming Jiang
+AU  - Yi Li
+AU  - Guanpeng Li
+AU  - Bingzhe Li
+PY  - 2026
+T2  - ACL 2026
+DO  - 10.48550/arXiv.2601.03236
+UR  - https://openreview.net/forum?id=ktbwLLO9nX
+AB  - Memory-Augmented Generation (MAG) extends large language models with external memory to support long-context reasoning, but existing approaches largely rely on semantic similarity over monolithic memory stores, entangling temporal, causal, and entity information. This design limits interpretability and alignment between query intent and retrieved evidence, leading to suboptimal reasoning accuracy. In this paper, we propose MAGMA, a multi-graph agentic memory architecture that represents each memory item across orthogonal semantic, temporal, causal, and entity graphs. MAGMA formulates retrieval as policy-guided traversal over these relational views, enabling query-adaptive selection and structured context construction. By decoupling memory representation from retrieval logic, MAGMA provides transparent reasoning paths and fine-grained control over retrieval. Experiments on LoCoMo and LongMemEval demonstrate that MAGMA consistently outperforms state-of-the-art agentic memory systems in long-horizon reasoning task.
+N1  - CCF-A
+ER  -
+
+TY  - CP
+TI  - MemEvolve: Meta-Evolution of Agent Memory Systems
+AU  - Guibin Zhang
+AU  - Haotian Ren
+AU  - Chong Zhan
+AU  - Junhao Wang
+AU  - He Zhu
+AU  - Wangchunshu Zhou
+AU  - Shuicheng YAN
+PY  - 2026
+T2  - ICML 2026
+DO  - 10.48550/arXiv.2512.18746
+UR  - https://openreview.net/forum?id=qpkG0eKx4v
+AB  - Self-evolving memory systems are rapidly reshaping the evolutionary paradigm of large language model (LLM)-based agents. Prior work has predominantly relied on manually engineered memory architectures to store trajectories, distill experience, and synthesize reusable tools, enabling agents to evolve on the fly within environment interactions. However, this paradigm is fundamentally constrained by the \textit{staticity} of the memory system itself: while memory facilitates agent-level evolving, the underlying memory architecture cannot be meta-adapted to diverse task contexts. To address this gap, we propose MemEvolve, a meta-evolutionary framework that jointly evolves agents’ experiential knowledge and their memory architecture, allowing agent systems not only to accumulate experience but also to progressively refine how they learn from it. To ground MemEvolve in prior work and promote openness in future self-evolving systems, we introduce EvolveLab, a unified memory codebase that distills twelve representative memory systems into a modular design space (\textit{encode}, \textit{store}, \textit{retrieve}, \textit{manage}), providing a standardized implementation substrate and a fair experimental arena. Extensive evaluations on four challenging agentic benchmarks show that MemEvolve delivers (i) substantial performance gains, improving frameworks such as SmolAgent and Flash-Searcher by up to $17.06\%$, and (ii) strong cross-task and cross-LLM generalization, yielding memory architectures that transfer effectively across diverse benchmarks and backbones.
+N1  - CCF-A
+ER  -
+
+TY  - CP
+TI  - UMEM: Unified Memory Extraction and Management Framework for Generalizable Memory
+AU  - Yongshi Ye
+AU  - Hui Jiang
+AU  - Feihu Jiang
+AU  - Tian Lan
+AU  - Yichao Du
+AU  - Biao Fu
+AU  - Xiaodong Shi
+AU  - Qianghuai Jia
+AU  - Longyue Wang
+AU  - Weihua Luo
+PY  - 2026
+T2  - ICML 2026
+UR  - https://openreview.net/forum?id=BoiXvrwtdi
+AB  - Self-evolving memory serves as the trainable parameters for Large Language Models (LLMs)-based agents, where extraction (distilling insights from experience) and management (updating the memory bank) must be tightly coordinated.
+Existing methods predominantly optimize memory management while treating memory extraction as a static process, resulting in poor generalization, where agents accumulate instance-specific noise rather than robust memories.
+To address this, we propose Unified Memory Extraction and Management (UMEM), a self-evolving agent framework that jointly optimizes a LLM to simultaneously extract and manage memories.
+To mitigate overfitting to specific instances, we introduce Semantic Neighborhood Modeling and optimize the model with a neighborhood-level marginal utility reward via GRPO.
+This approach ensures memory generalizability by evaluating memory utility across clusters of semantically related queries.
+Extensive experiments across five benchmarks demonstrate that UMEM significantly outperforms highly competitive baselines, achieving up to 11.49 points improvement in multi-turn interactive tasks. Furthermore, UMEM maintains a stable improvement trend during continuous evolution.
+N1  - CCF-A
+ER  -
+
+TY  - JOUR
+TI  - Mem0: Building Production-Ready AI Agents with Scalable Long-Term Memory
+AU  - Prateek Chhikara
+AU  - Dev Khant
+AU  - Saket Aryan
+AU  - Taranjeet Singh
+AU  - Deshraj Yadav
+PY  - 2025
+T2  - ECAI 2025
+DO  - 10.48550/arXiv.2504.19413
+UR  - https://openreview.net/forum?id=0wxfikDcOa
+AB  - Large Language Models (LLMs) have demonstrated remarkable prowess in generating contextually coherent responses, yet their fixed context windows pose fundamental challenges for maintaining consistency over prolonged multi-session dialogues. We introduce Mem0, a scalable memory-centric architecture that addresses this issue by dynamically extracting, consolidating, and retrieving salient information from ongoing conversations. Building on this foundation, we further propose an enhanced variant that leverages graph-based memory representations to capture complex relational structures among conversational elements. Through comprehensive evaluations on the LOCOMO benchmark, we systematically compare our approaches against six baseline categories. Empirical results demonstrate that our methods consistently outperform all existing memory systems across four question categories: single-hop, temporal, multi-hop, and open-domain. Notably, Mem0 achieves 26% relative improvements in the LLM-as-a-Judge metric over OpenAI, while Mem0 with graph memory achieves around 2% higher overall score than the base Mem0 configuration. Beyond accuracy gains, we also markedly reduce computational overhead compared to the full-context approach. In particular, Mem0 attains a 91% lower p95 latency and saves more than 90% token cost, thereby offering a compelling balance between advanced reasoning capabilities and practical deployment constraints. Our findings highlight the critical role of structured, persistent memory mechanisms for long-term conversational coherence, paving the way for more reliable and efficient LLM-driven AI agents. Code: https://mem0.ai/research.
+N1  - CCF-B
+ER  -
+
+TY  - CP
+TI  - REMem: Reasoning with Episodic Memory in Language Agent
+AU  - Yiheng Shu
+AU  - Saisri Padmaja Jonnalagedda
+AU  - Xiang Gao
+AU  - Bernal Jiménez Gutiérrez
+AU  - Weijian Qi
+AU  - Kamalika Das
+AU  - Huan Sun
+AU  - Yu Su
+PY  - 2026
+T2  - ICLR 2026
+DO  - 10.48550/arXiv.2602.13530
+UR  - https://openreview.net/forum?id=fugnQxbvMm
+AB  - Humans excel at remembering concrete experiences along spatiotemporal contexts and performing reasoning across those events, i.e., the capacity for episodic memory. In contrast, memory in language agents remains mainly semantic, and current agents are not yet capable of effectively recollecting and reasoning over interaction histories. We identify and formalize the core challenges of episodic recollection and reasoning from this gap, and observe that existing work often overlooks episodicity, lacks explicit event modeling, or overemphasizes simple retrieval rather than complex reasoning. We present REMem, a two-phase framework for constructing and reasoning with episodic memory: 1) Offline indexing, where REMem converts experiences into a hybrid memory graph that flexibly links time-aware gists and facts. 2) Online inference, where REMem employs an agentic retriever with carefully curated tools for iterative retrieval over the memory graph. Comprehensive evaluation across four episodic memory benchmarks shows that REMem substantially outperforms state-of-the-art memory systems such as Mem0 and HippoRAG 2, showing 3.4% and 13.4% absolute improvements on episodic recollection and reasoning tasks, respectively. Moreover, REMem also demonstrates more robust refusal behavior for unanswerable questions.
+N1  - Top-ICLR
+ER  -
+
+TY  - CP
+TI  - From Single to Multi-Granularity: Toward Long-Term Memory Association and Selection of Conversational Agents
+AU  - Derong Xu
+AU  - Yi Wen
+AU  - Pengyue Jia
+AU  - Yingyi Zhang
+AU  - Wenlin Zhang
+AU  - Yichao Wang
+AU  - Huifeng Guo
+AU  - Ruiming Tang
+AU  - Xiangyu Zhao
+AU  - Enhong Chen
+AU  - Tong Xu
+PY  - 2026
+T2  - ICLR 2026
+UR  - https://openreview.net/forum?id=i2yIvZARnG
+AB  - Large Language Models (LLMs) have recently been widely adopted in conversational agents. However, the increasingly long interactions between users and agents accumulate extensive dialogue records, making it difficult for LLMs with limited context windows to maintain a coherent long-term dialogue memory and deliver personalized responses. While retrieval-augmented memory systems have emerged to address this issue, existing methods often depend on single-granularity memory segmentation and retrieval. This approach falls short in capturing deep memory connections, leading to partial retrieval of useful information or substantial noise, resulting in suboptimal performance. To tackle these limits, we propose MemGAS, a framework that enhances memory consolidation by constructing multi-granularity association, adaptive selection, and retrieval. MemGAS is based on multi-granularity memory units and employs Gaussian Mixture Models to cluster and associate new memories with historical ones. An entropy-based router adaptively selects optimal granularity by evaluating query relevance distributions and balancing information completeness and noise. Retrieved memories are further refined via LLM-based filtering. Experiments on four long-term memory benchmarks demonstrate that MemGAS outperforms state-of-the-art methods on both question answer and retrieval tasks, achieving superior performance across different query types and top-K settings\footnote{https://github.com/Applied-Machine-Learning-Lab/ICLR2026\_MemGAS}.
+N1  - Top-ICLR
+ER  -
+
+TY  - CP
+TI  - Memory is Reconstructed, Not Retrieved:  Graph Memory for LLM Agents
+AU  - Shuo Ji
+AU  - Yibo Li
+AU  - Bryan Hooi
+PY  - 2026
+T2  - ICML 2026
+DO  - 10.48550/arXiv.2606.06036
+UR  - https://openreview.net/forum?id=xRVWftS3ES
+AB  - Despite recent progress, LLM agents still struggle with reasoning over long interaction histories. While current memory-augmented agents rely on a static ``retrieve-then-reason'' paradigm, this rigid pipeline design prevents them from dynamically adapting memory access to intermediate evidence discovered during inference. To bridge this gap, we propose MRAgent, a framework that combines an associative memory graph with an active reconstruction mechanism. We represent memory as a Cue–Tag–Content graph, where associative tags serve as semantic bridges connecting fine-grained cues to memory contents. Operating on this structure, our active reconstruction mechanism integrates LLM reasoning directly into memory access, allowing the agent to iteratively explore and prune retrieval paths based on accumulated evidence. This ensures that memory retrieval is dynamically adapted to the  reasoning context while avoiding combinatorial explosion caused by unconstrained expansion. Experiments on the LoCoMo benchmark  and LongMemEval benchmark  demonstrate significant improvements over strong baselines (up to $23\\%$), while substantially reducing retrieval cost, highlighting the effectiveness of active and associative reconstruction for long-horizon memory reasoning.
+N1  - CCF-A
+ER  -
+
+TY  - CP
+TI  - Hippocampus: An Efficient and Scalable Memory Module for Agentic AI
+AU  - Yi Li
+AU  - Lianjie Cao
+AU  - Faraz Ahmed
+AU  - Puneet Sharma
+AU  - Bingzhe Li
+PY  - 2026
+T2  - MLSys 2026
+DO  - 10.48550/arXiv.2602.13594
+UR  - https://openreview.net/forum?id=0sUYZh9D4a
+AB  - Agentic AI systems require persistent memory to store user-specific histories beyond the limited context window of LLMs. Existing memory systems rely on the dense vector databases, knowledge-graph traversal, or hybrids, which incur high retrieval latency and poor storage scalability.
+We introduce HIPPOCAMPUS, an agentic memory management system that uses compact binary signatures for semantic search and lossless token-ID streams for exact content reconstruction. Its core is a Dynamic Wavelet Matrix (DWM) that compresses and co-indexes
+both streams to support ultra-fast search in the compressed domain, thus avoiding costly dense-vector or graph computations. For a fixed tokenizer vocabulary, the storage footprint of this design grows linearly with memory size, making it suitable for long-horizon agentic deployments. Empirically, across LoCoMo and LongMemEval, HIPPOCAMPUS achieves end-to-end retrieval latency that is comparable to or lower than the evaluated agentic memory baselines, with 1.1X–31.5X speedups over the evaluated baselines, and reduces per-query token footprint by 1.1X–14.5X, while maintaining competitive task accuracy.
+N1  - Top-MLSys
+ER  -
+
+TY  - CP
+TI  - ARTEM: Enhancing Large Language Model Agents with Spatial-Temporal Episodic Memory
+AU  - Cassandra Hui-Ming Tan
+AU  - Budhitama Subagdja
+AU  - Ah-Hwee Tan
+PY  - 2026
+T2  - AAAI 2026
+DO  - 10.1609/aaai.v40i30.39773
+UR  - https://openreview.net/forum?id=fwbNOrflIy
+AB  - Current large language models (LLMs) exhibit significant deficiencies in episodic memory tasks including encoding, storing, and retrieving specific information from temporally dependent events over a long period of time. Recent approaches to handle memory tasks in LLMs, such as in-context learning, retrieval-augmented generation (RAG), and fine-tuning, may resolve the long-term retention issues, but are still inadequate to handle tasks requiring chronological awareness of the stored information. We introduce Agentic Retrieval with Temporal-Episodic Memory (ARTEM), a hybrid LLM-based agent architecture integrating LLMs with a self-organizing neural network named Spatial-Temporal Episodic Memory (STEM), designed to handle episodic memory tasks. Our approach employs LLMs for event extraction from the inputs to represent temporal, spatial, entitative, and semantic information that may facilitate future retrieval, aside from generating outputs or direct responses. The extracted events can then be encoded vectorially and stored in a fast and stable manner in the episodic memory through an instance-based incremental learning in STEM. STEM supports precise episodes retrieval and helps reduce computational overhead in generating the appropriate responses by LLMs. Evaluation on standardized episodic memory benchmarks across four tasks—partial cue retrieval, epistemic uncertainty detection, recent event identification, and chronological recall—demonstrates superior performance of ARTEM compared to in-context learning, RAG, and fine-tuning in various popular LLMs.
+N1  - CCF-A
+ER  -
+
+TY  - CP
+TI  - Human-inspired Episodic Memory for Infinite Context LLMs
+AU  - Zafeirios Fountas
+AU  - Martin Benfeghoul
+AU  - Adnan Oomerjee
+AU  - Fenia Christopoulou
+AU  - Gerasimos Lampouras
+AU  - Haitham Bou Ammar
+AU  - Jun Wang
+PY  - 2025
+T2  - ICLR 2025
+UR  - https://openreview.net/forum?id=BI2int5SAC
+AB  - Large language models (LLMs) have shown remarkable capabilities, but still struggle with processing extensive contexts, limiting their ability to maintain coherence and accuracy over long sequences. In contrast, the human brain excels at organising and retrieving episodic experiences across vast temporal scales, spanning a lifetime. In this work, we introduce EM-LLM, a novel approach that integrates key aspects of human episodic memory and event cognition into LLMs with no fine-tuning, enabling them to handle practically infinite context lengths while maintaining computational efficiency. EM-LLM organises sequences of tokens into coherent episodic events using a combination of Bayesian surprise and graph-theoretic boundary refinement in an online fashion. When needed, these events are retrieved through a two-stage memory process, combining similarity-based and temporally contiguous retrieval for efficient, human-inspired access to relevant information. Experiments on the LongBench and $\infty$-Bench benchmarks demonstrate EM-LLM's superior performance, consistently outperforming the state-of-the-art retrieval model InfLLM across various baseline LLMs. In addition, EM-LLM outperforms its popular counterpart, RAG, in a wide range of tasks, while requiring similar resources. Notably, EM-LLM's performance even surpasses full-context models in most tasks, while successfully performing retrieval across 10 million tokens -- a scale computationally infeasible for such models. Finally, our analysis reveals strong correlations between EM-LLM's event segmentation and human-perceived events, suggesting parallels between this artificial system and its biological counterpart, thereby offering a novel computational framework for exploring human memory mechanisms.
+N1  - Top-ICLR
+ER  -
+
+TY  - CP
+TI  - M+: Extending MemoryLLM with Scalable Long-Term Memory
+AU  - Yu Wang
+AU  - Dmitry Krotov
+AU  - Yuanzhe Hu
+AU  - Yifan Gao
+AU  - Wangchunshu Zhou
+AU  - Julian McAuley
+AU  - Dan Gutfreund
+AU  - Rogerio Feris
+AU  - Zexue He
+PY  - 2025
+T2  - ICML 2025
+DO  - 10.48550/arXiv.2502.00592
+UR  - https://openreview.net/forum?id=OcqbkROe8J
+AB  - Equipping large language models (LLMs) with latent-space memory has attracted increasing attention as they can extend the context window of existing language models. However, retaining information from the distant past remains a challenge. For example, MemoryLLM (Wang et al., 2024a), as a representative work with latent-space memory, compresses past information into hidden states across all layers, forming a memory pool of 1B parameters. While effective for sequence lengths up to 16k tokens, it struggles to retain knowledge beyond 20k tokens. In this work, we address this limitation by introducing M+, a memory-augmented model based on MemoryLLM that significantly enhances long-term information retention. M+ integrates a long-term memory mechanism with a co-trained retriever, dynamically retrieving relevant information during text generation. We evaluate M+ on diverse benchmarks, including long-context understanding and knowledge retention tasks. Experimental results show that M+ significantly outperforms MemoryLLM and recent strong baselines, extending knowledge retention from under 20k to over 160k tokens with similar GPU memory overhead.
+N1  - CCF-A
+ER  -
+
+TY  - CP
+TI  - LightWM: Training-Free Hierarchical Working Memory for Small Language Model Agents
+AU  - Ziyi Wang
+AU  - Haonan Jin
+AU  - Zian Wang
+AU  - Wendong Wang
+AU  - Lanshan Zhang
+PY  - 2026
+T2  - ICML 2026
+UR  - https://openreview.net/forum?id=WLnpZpShzr
+AB  - Small language models (SLMs) are attractive for low-cost agent deployment, and their growing capabilities make them promising for procedure-centric workloads that repeatedly execute specialized task families with similar workflows.
+However, SLM agents still struggle in long-horizon interaction because limited context budgets make it difficult to reliably retain and reuse decision-relevant state across many steps.
+Existing working-memory methods attempt to mitigate context growth, but their reliance on unstructured natural-language summarization can discard critical facts, introduce state drift, and compound errors in SLM execution.
+We present LightWM, a training-free hierarchical working-memory framework that decomposes procedure-centric tasks into subgoals and organizes memory into task-level global memory and subtask-level local memory, where local memory directly conditions SLM action selection and is updated from new observations through structured updates.
+To instantiate such memories without training, a one-time offline LLM-based induction pipeline builds reusable schemas per task family from a few successful traces, requiring no SLM parameter updates or online LLM calls.
+On ALFWorld valid_unseen, Qwen3-4B reaches 0.910 success, whereas representative prompting and prior working-memory baselines under the same setting remain below 0.320.
+N1  - CCF-A
+ER  -
+
+TY  - CP
+TI  - EMA: An Episodic Memory Agent for Efficient and Selective Memory
+AU  - Hongyi Lan
+AU  - Jiaqi Song
+AU  - Zhengjia Zhong
+AU  - Hui Li
+AU  - Hong Liu
+AU  - Xianming Lin
+AU  - Rongrong Ji
+PY  - 2026
+T2  - ACL Findings 2026
+DO  - 10.18653/v1/2026.findings-acl.250
+UR  - https://openreview.net/forum?id=ZoBJWPoH9a
+AB  - Large Language Models (LLMs) demonstrate strong generation and reasoning abilities, but they still face challenges in long-term memory retention and multi-turn conversational consistency. Existing memory-augmented methods often incorporate full dialog histories without filtering, resulting in information redundancy and inference latency. Inspired by the episodic memory mechanism in human cognition, we abstract conversational context into Episodic Memory Units (EMUs). We then propose a comprehensive framework, Episodic Memory Agent (EMA), along with a filtering decision module called MemDecider. Specifically, EMA organizes and retrieves EMUs to support response generation, while MemDecider filters information to reduce noise and improve overall performance. Experiments on two widely-used benchmarks show that EMA maintains competitive performance, and integrating MemDecider into other methods reduces their token consumption by an average of 11.48% while effectively improving the overall performance. Code is available at https://github.com/Hongyi4221/EMA.
+N1  - ACL-Findings
+ER  -
+
+TY  - CP
+TI  - RecMem: Recurrence-based Memory Consolidation for Efficient and Effective Long-Running LLM Agents
+AU  - Zijie Dai
+AU  - Shiyuan Deng
+AU  - Sheng Guan
+AU  - Yizhou Tian
+AU  - Xin Yao
+AU  - Xiao Yan
+AU  - James Cheng
+PY  - 2026
+T2  - ACL Findings 2026
+UR  - https://openreview.net/forum?id=GIyUZ9ffAK
+AB  - Memory systems often organize user-agent interactions as retrievable external memory and are crucial for long-running agents by overcoming the limited context windows of LLMs. However, existing memory systems invoke LLMs to process every incoming interaction for memory extraction, and such an eager memory consolidation scheme leads to substantial token consumption. To tackle this problem, we propose RecMem by rethinking when memory consolidation should be conducted. RecMem stores incoming interactions in a subconscious memory layer and encode them using lightweight embedding models for retrieval. LLMs are only invoked to extract episodic and semantic memory when sustained recurrence are observed for semantically similar interactions. Such recurrence-based consolidation works because these interactions correspond to a semantic cluster with rich information and thus are worth extraction and summarization. To improve accuracy, RecMem also incorporates a semantic refinement mechanism that recovers the fine-grained facts omitted by memory extraction. Experiments show that RecMem reduces the memory construction token cost of three SOTA memory systems by up to 87% while exceeding their accuracy.
+N1  - ACL-Findings
+ER  -
+
+TY  - CP
+TI  - TiMem: Temporal-Hierarchical Memory Consolidation for Long-Horizon Conversational Agents
+AU  - Kai Li
+AU  - Xuanqing Yu
+AU  - Ziyi Ni
+AU  - Yi Zeng
+AU  - Yao Xu
+AU  - Zheqing Zhang
+AU  - Xin Li
+AU  - Jitao Sang
+AU  - Xiaogang Duan
+AU  - Xuelei Wang
+AU  - Chengbao Liu
+AU  - Jie Tan
+PY  - 2026
+T2  - ACL Findings 2026
+DO  - 10.48550/arXiv.2601.02845
+UR  - https://openreview.net/forum?id=40y8NAFkq0
+AB  - Long-horizon conversational agents have to manage ever-growing interaction histories that quickly exceed the finite context windows of large language models (LLMs). Existing memory frameworks provide limited support for temporally structured information across hierarchical levels, often leading to fragmented memories and unstable long-horizon personalization. We present TiMem, a temporal–hierarchical memory framework that organizes conversations through a Temporal Memory Tree (TMT), enabling systematic memory consolidation from raw conversational observations to progressively abstracted persona representations. TiMem is characterized by three core properties: (1) temporal–hierarchical organization through TMT; (2) semantic-guided consolidation that enables memory integration across hierarchical levels without fine-tuning; and (3) complexity-aware memory recall that balances precision and efficiency across queries of varying complexity. Under a consistent evaluation setup, TiMem achieves state-of-the-art accuracy on both benchmarks, reaching 75.30% on LoCoMo and 76.88% on LongMemEval-S. It outperforms all evaluated baselines while reducing the recalled memory length by 52.20% on LoCoMo. Manifold analysis indicates clear persona separation on LoCoMo and reduced dispersion on LongMemEval-S. Overall, TiMem treats temporal continuity as a first-class organizing principle for long-horizon memory in conversational agents. The code is available at https://github.com/TiMEM-AI/timem.
+N1  - ACL-Findings
+ER  -
+
+TY  - CP
+TI  - TierMem: Balancing Compressed Memory and Raw Evidence for Long-Horizon Agent Memory
+AU  - Qiming Zhu
+AU  - Shunian Chen
+AU  - Rui Yu
+AU  - Zhehao Wu
+AU  - Benyou Wang
+PY  - 2026
+T2  - COLM 2026
+UR  - https://openreview.net/forum?id=svKCa4itcd
+AB  - Long-horizon agents must preserve past experience before knowing what future queries will require. Compact memory makes growing histories efficient to reuse by distilling experience into reusable abstractions, while raw history preserves fine-grained evidence for faithful grounding. Because future queries require different levels of detail, the appropriate memory granularity cannot be reliably fixed when memory is written. We therefore argue that memory granularity should be determined when the future information need becomes known. We introduce \textbf{TierMem}, a provenance-linked two-tier memory framework that allocates memory granularity according to evidence sufficiency. TierMem retrieves compact memory by default, uses a learned router to identify when finer-grained evidence is required, and follows provenance links to recover relevant raw evidence. Recovered evidence can be consolidated into compact memory for future reuse. Across two long-horizon memory benchmarks, TierMem recovers much of the quality enabled by raw evidence while substantially reducing inference cost. Further analyses show that provenance improves evidence recovery and that consolidation progressively increases the share of queries served by compact memory.
+N1  - Top-COLM
+ER  -
+
+TY  - CP
+TI  - Evoking User Memory: Personalizing LLM via Recollection-Familiarity Adaptive Retrieval
+AU  - Yingyi Zhang
+AU  - Junyi Li
+AU  - Wenlin Zhang
+AU  - Pengyue Jia
+AU  - Xianneng Li
+AU  - Yichao Wang
+AU  - Derong Xu
+AU  - Yi Wen
+AU  - Huifeng Guo
+AU  - Yong Liu
+AU  - Xiangyu Zhao
+PY  - 2026
+T2  - ICLR 2026
+DO  - 10.48550/arXiv.2603.09250
+UR  - https://openreview.net/forum?id=f7p0F2X6XN
+AB  - Personalized large language models (LLMs) rely on memory retrieval to incorporate user-specific histories, preferences, and contexts. Existing approaches either overload the LLM by feeding all the user's past memory into the prompt, which is costly and unscalable, or simplify retrieval into a one-shot similarity search, which captures only surface matches. Cognitive science, however, shows that human memory operates through a dual process: Familiarity, offering fast but coarse recognition, and Recollection, enabling deliberate, chain-like reconstruction for deeply recovering episodic content.
+Current systems lack both the ability to perform recollection retrieval and mechanisms to adaptively switch between the dual retrieval paths, leading to either insufficient recall or the inclusion of noise.
+To address this, we propose RF-Mem (Recollection–Familiarity Memory Retrieval), a familiarity uncertainty-guided dual-path memory retriever.
+RF-Mem measures the familiarity signal through the mean score and entropy. High familiarity leads to the direct top-$K$ Familiarity retrieval path, while low familiarity activates the Recollection path. In the Recollection path, the system clusters candidate memories and applies $\alpha$-mix with the query to iteratively expand evidence in embedding space, simulating deliberate contextual reconstruction.
+This design embeds human-like dual-process recognition into the retriever, avoiding full-context overhead and enabling scalable, adaptive personalization. Experiments across three benchmarks and corpus scales demonstrate that RF-Mem consistently outperforms both one-shot retrieval and full-context reasoning under fixed budget and latency constraints.
+Our code can be found in the Reproducibility Statement.
+N1  - Top-ICLR
+ER  -
+
+TY  - CP
+TI  - Seeing, Listening, Remembering, and Reasoning: A Multimodal Agent with Long-Term Memory
+AU  - Lin Long
+AU  - Yichen He
+AU  - Wentao Ye
+AU  - Yiyuan Pan
+AU  - Yuan Lin
+AU  - Hang Li
+AU  - Junbo Zhao
+AU  - Wei Li
+PY  - 2026
+T2  - ICLR 2026
+DO  - 10.48550/arXiv.2508.09736
+UR  - https://openreview.net/forum?id=PMz29A7Muq
+AB  - We introduce M3-Agent, a novel multimodal agent framework equipped with long-term memory. Like humans, M3-Agent can process real-time visual and auditory inputs to build and update episodic and semantic memories, gradually accumulating world knowledge. Its memory is organized in an entity-centric, multimodal manner, enabling deeper and more consistent understanding of the environment. Given an instruction, M3-Agent autonomously performs multi-turn reasoning and retrieves relevant memories to complete tasks. To evaluate memory effectiveness and memory-based reasoning in multimodal agents, we develop M3-Bench, a long-video question answering benchmark comprising 100 newly recorded robot-perspective videos (M3-Bench-robot) and 920 diverse web-sourced videos (M3-Bench-web). We annotate QA pairs designed to test capabilities essential for agent applications, such as person understanding, general knowledge extraction, and cross-modal reasoning. Experimental results show that M3-Agent, trained via reinforcement learning, outperforms the strongest baseline, a prompting agent using Gemini-1.5-pro and GPT-4o, achieving 6.7%, 7.7%, and 5.3% higher accuracy on M3-Bench-robot, M3-Bench-web and VideoMME-long, respectively. Our work advances multimodal agents toward more human-like long-term memory and provides insights for their practical design. Models, datasets and code are available at https://github.com/ByteDance-Seed/m3-agent.
+N1  - Top-ICLR
+ER  -
+
+TY  - CP
+TI  - Remember Me, Refine Me: A Dynamic Procedural Memory Framework for Experience-Driven Agent Evolution
+AU  - Zouying Cao
+AU  - Jiaji Deng
+AU  - Li Yu
+AU  - Weikang Zhou
+AU  - Zhaoyang Liu
+AU  - Bolin Ding
+AU  - Hai Zhao
+PY  - 2026
+T2  - ACL Findings 2026
+DO  - 10.48550/arXiv.2512.10696
+UR  - https://openreview.net/forum?id=Aosii0xMAw
+AB  - Procedural memory enables large language model (LLM) agents to internalize ”how-to” knowledge and thus reduce redundant trial-and-error. However, existing frameworks predominantly suffer from a ”passive accumulation” paradigm, treating memory as a static append-only archive. To bridge the gap between static storage and dynamic reasoning, we propose ReMe (Remember Me, Refine Me), a comprehensive framework for experience-driven agent evolution. ReMe manages the memory lifecycle via three mechanisms: 1) multi-faceted distillation, which extracts fine-grained experiences by recognizing success patterns, analyzing failure triggers and generating comparative insights; 2) context-adaptive reuse, which tailors historical insights to new contexts through scenario-aware indexing; and 3) utility-based refinement, which automatically adds validated memories and prunes outdated ones to maintain a compact, high-quality experience pool. Experiments on BFCL-V3 and AppWorld demonstrate that ReMe establishes a new state-of-the-art in agent memory system. Crucially, we observe a significant memory-scaling effect: Qwen3-8B equipped with ReMe outperforms larger, memoryless Qwen3-14B, indicating that self-evolving memory provides a computation-efficient path for lifelong learning.
+N1  - ACL-Findings
+ER  -
+
+TY  - CP
+TI  - PersonaAgent: Bridging Memory and Action for Personalized LLM Agents
+AU  - Weizhi Zhang
+AU  - Xinyang Zhang
+AU  - Chenwei Zhang
+AU  - Liangwei Yang
+AU  - Jingbo Shang
+AU  - Zhepei Wei
+AU  - Henry Peng Zou
+AU  - Zijie Huang
+AU  - Zhengyang Wang
+AU  - Yifan Gao
+AU  - Xiaoman Pan
+AU  - Lian Xiong
+AU  - Jingguo Liu
+AU  - Philip S. Yu
+AU  - Xian Li
+PY  - 2026
+T2  - ACL Findings 2026
+DO  - 10.18653/v1/2026.findings-acl.1315
+UR  - https://openreview.net/forum?id=hOHAyeGYAP
+AB  - Large Language Model (LLM) empowered agents have recently emerged as advanced paradigms that exhibit impressive capabilities in a wide range of domains and tasks. Despite their potential, current LLM agents often adopt a one-size-fits-all approach, lacking the flexibility to respond to users’ varying needs and preferences. This limitation motivates us to develop PersonaAgent, the first personalized LLM agent framework designed to address versatile personalization tasks. Specifically, PersonaAgent integrates two complementary components: a personalized memory module that includes episodic and semantic memory mechanisms; a personalized action module that enables the agent to perform tool actions tailored to the user. At the core, the persona (defined as unique system prompt for each user) functions as an intermediary: it leverages insights from personalized memory to control agent actions, while the outcomes of these actions in turn refine the memory. Based on the framework, we propose a test-time user-preference alignment strategy that simulate the latest n interactions to optimize the persona prompt, ensuring real-time user preference alignment through textual loss feedback between simulated and ground-truth responses. Experimental evaluations demonstrate that PersonaAgent significantly outperforms other baseline methods by not only personalizing the action space effectively but also scaling during test-time real-world applications. These results underscore the feasibility and potential of our approach in delivering tailored, dynamic user experiences.
+N1  - ACL-Findings
+ER  -
+
+TY  - CP
+TI  - MemRec: Collaborative Memory-Augmented Agentic Recommender System
+AU  - Weixin Chen
+AU  - Yuhan Zhao
+AU  - Jingyuan Huang
+AU  - Zihe Ye
+AU  - Mingxuan Ju
+AU  - Tong Zhao
+AU  - Neil Shah
+AU  - Li Chen
+AU  - Yongfeng Zhang
+PY  - 2026
+T2  - ACL 2026
+UR  - https://openreview.net/forum?id=FaMcfd14pg
+AB  - The evolution of recommender systems has shifted from traditional collaborative filtering to LLM-based agentic systems, which rely on semantic user and item memories to make predictions. However, existing agents maintain these memories in isolation. This overlooks crucial collaborative signals, such as user-item co-engagements and peer relationships across the community, which significantly limits their ability to uncover hidden preferences and accurately infer user needs, particularly for data-sparse users. To bridge this gap, we introduce collaborative memory, a paradigm that connects isolated semantics to enable the sharing of relational insights. Yet, naively utilizing collaborative memory causes severe context overload and introduces noise to downstream LLMs, alongside prohibitive computational costs. To resolve this, we propose MemRec, a framework that architecturally decouples memory management from reasoning. MemRec introduces a dedicated, lightweight language model LM_Mem to efficiently manage and synthesize a dynamic collaborative memory graph in the background. It provides only distilled, high-signal contexts to a downstream, heavyweight large language model (LLM_Rec) for the final recommendation. Extensive experiments on four benchmarks demonstrate that MemRec achieves state-of-the-art performance. Code: https://github.com/rutgerswiselab/memrecHomepage: https://memrec.weixinchen.com
+N1  - CCF-A
+ER  -
+
+TY  - CP
+TI  - Learning to Share: Selective Memory for Efficient Parallel Agentic Systems
+AU  - Joseph Fioresi
+AU  - Parth Parag Kulkarni
+AU  - Ashmal Vayani
+AU  - Song Wang
+AU  - Mubarak Shah
+PY  - 2026
+T2  - ICML 2026
+DO  - 10.48550/arXiv.2602.05965
+UR  - https://openreview.net/forum?id=cCFyY2LmF5
+AB  - Agentic systems solve complex tasks by coordinating multiple agents that iteratively reason, invoke tools, and exchange intermediate results. To improve robustness and solution quality, recent approaches deploy multiple agent teams running in parallel to explore diverse reasoning trajectories. However, parallel execution comes at a significant computational cost: when different teams independently reason about similar sub-problems or execute analogous steps, they repeatedly perform substantial overlapping computation. To address these limitations, in this paper, we propose Learning to Share (LTS), a learned shared-memory mechanism for parallel agentic frameworks that enables selective cross-team information reuse while controlling context growth. LTS introduces a global memory bank accessible to all teams and a lightweight controller that decides whether intermediate agent steps should be added to memory or not. The controller is trained using stepwise reinforcement learning with usage-aware credit assignment, allowing it to identify information that is globally useful across parallel executions. Experiments on the AssistantBench and GAIA benchmarks show that LTS significantly reduces overall runtime while matching or improving task performance compared to memory-free parallel baselines, demonstrating that learned memory admission is an effective strategy for improving the efficiency of parallel agentic systems.
+N1  - CCF-A
+ER  -
+
+TY  - CP
+TI  - LongMemEval: Benchmarking Chat Assistants on Long-Term Interactive Memory
+AU  - Di Wu
+AU  - Hongwei Wang
+AU  - Wenhao Yu
+AU  - Yuwei Zhang
+AU  - Kai-Wei Chang
+AU  - Dong Yu
+PY  - 2025
+T2  - ICLR 2025
+UR  - https://openreview.net/forum?id=pZiyCaVuti
+AB  - Recent large language model (LLM)-driven chat assistant systems have integrated memory components to track user-assistant chat histories, enabling more accurate and personalized responses. However, their long-term memory capabilities in sustained interactions remain underexplored. We introduce LongMemEval, a comprehensive benchmark designed to evaluate five core long-term memory abilities of chat assistants: information extraction, multi-session reasoning, temporal reasoning, knowledge updates, and abstention. With 500 meticulously curated questions embedded within freely scalable user-assistant chat histories, LongMemEval presents a significant challenge to existing long-term memory systems, with commercial chat assistants and long-context LLMs showing a 30% accuracy drop on memorizing information across sustained interactions. We then present a unified framework that breaks down the long-term memory design into three stages: indexing, retrieval, and reading. Built upon key experimental insights, we propose several memory design optimizations including session decomposition for value granularity, fact-augmented key expansion for indexing, and time-aware query expansion for refining the search scope. Extensive experiments show that these optimizations greatly improve both memory recall and downstream question answering on LongMemEval. Overall, our study provides valuable resources and guidance for advancing the long-term memory capabilities of LLM-based chat assistants, paving the way toward more personalized and reliable conversational AI. Our benchmark and code are publicly available at https://github.com/xiaowu0162/LongMemEval.
+N1  - Top-ICLR
+ER  -
+
+TY  - CP
+TI  - Beyond a Million Tokens: Benchmarking and Enhancing Long-Term Memory in LLMs
+AU  - Mohammad Tavakoli
+AU  - Alireza Salemi
+AU  - Carrie Ye
+AU  - Mohamed Abdalla
+AU  - Hamed Zamani
+AU  - J Ross Mitchell
+PY  - 2026
+T2  - ICLR 2026
+DO  - 10.48550/arXiv.2510.27246
+UR  - https://openreview.net/forum?id=y59hf5lrMn
+AB  - Evaluating the abilities of large language models (LLMs) for tasks that require long-term memory and thus long-context reasoning, for example in conversational settings, is hampered by the existing benchmarks, which often lack narrative coherence, cover narrow domains, and only test simple recall-oriented tasks. This paper introduces a comprehensive solution to these challenges. First, we present a
+novel framework for automatically generating long (up to 10M tokens), coherent, and topically diverse conversations, accompanied by probing questions targeting a wide range of memory abilities. From this, we construct BEAM, a new benchmark comprising 100 conversations and 2,000 validated questions. Second, to enhance model performance, we propose LIGHT–a framework inspired by human cognition that equips LLMs with three complementary memory systems: a long-term episodic memory, a short-term working memory, and a scratchpad for accumulating salient facts. Our experiments on BEAM reveal that even LLMs with 1M token context windows (with and without retrieval-augmentation) struggle as dialogues lengthen. In contrast, LIGHT consistently improves performance
+across various models, achieving an average improvement of 3.5%–12.69% over the strongest baselines, depending on the backbone LLM. An ablation study further confirms the contribution of each memory component.
+N1  - Top-ICLR
+ER  -
+
+TY  - CP
+TI  - Benchmarking Agent Memory in Interdependent Multi-Session Agentic Tasks
+AU  - Zexue He
+AU  - Yu Wang
+AU  - Churan Zhi
+AU  - Yuanzhe Hu
+AU  - Tzu-Ping Chen
+AU  - Lang Yin
+AU  - Ze Chen
+AU  - Tong Arthur Wu
+AU  - Siru Ouyang
+AU  - Zihan Wang
+AU  - Jiaxin Pei
+AU  - Julian McAuley
+AU  - Yejin Choi
+AU  - Alex Pentland
+PY  - 2026
+T2  - ICML 2026
+UR  - https://openreview.net/forum?id=JHYmxqS9Jv
+AB  - Existing evaluations of agents with memory typically assess **memorization** and **action** in isolation. One class of benchmarks evaluates memorization by testing recall of past conversations or text but fails to capture how memory is used to guide future decisions. Another class focuses on agents acting in single-session tasks without the need for long-term memory. However, in realistic settings, memorization and action are tightly coupled: agents acquire memory while interacting with the environment, and subsequently rely on that memory to solve future tasks. To capture this setting, we introduce MemoryArena, a unified evaluation gym for benchmarking agent memory in multi-session Memory-Agent-Environment loops. The benchmark consists of human-crafted agentic tasks with explicitly interdependent subtasks, where agents must learn from earlier actions and feedback by distilling experiences into memory, and subsequently use that memory to guide later actions to solve the overall task. MEMORYARENA supports evaluation across web navigation, preference-constrained planning, progressive information search, and sequential formal reasoning, and reveals that agents with near-saturated performance on existing long-context memory benchmarks like LoCoMo perform poorly in our agentic setting, exposing a gap in current evaluations for agents with memory.
+N1  - CCF-A
+ER  -
+
+TY  - CP
+TI  - PersistBench: When Should Long-Term Memories Be Forgotten by LLMs?
+AU  - Sidharth Pulipaka
+AU  - Oliver Chen
+AU  - Manas Sharma
+AU  - Taaha Saleem Bajwa
+AU  - Vyas Raina
+AU  - Ivaxi Sheth
+PY  - 2026
+T2  - ICML 2026
+DO  - 10.48550/arXiv.2602.01146
+UR  - https://openreview.net/forum?id=Z7Rhzk13NT
+AB  - Conversational assistants are increasingly integrating long-term memory with large language models (LLMs). This persistence of memories, e.g., the user is vegetarian, can enhance personalization in future conversations. However, the same persistence can also introduce safety risks that have been largely overlooked. Hence, we introduce \textbf{PersistBench} to measure the extent of these safety risks. We identify two long-term memory-specific risks: \textit{cross-domain leakage}, where LLMs inappropriately inject context from the long-term memories; and \textit{memory-induced sycophancy}, where stored long-term memories insidiously reinforce user biases. We evaluate 18 frontier and open-source LLMs on our benchmark. Our results reveal a surprisingly high failure rate across these LLMs - a median failure rate of $53\%$ on cross-domain samples and $97\%$ on sycophancy samples. To address this, our benchmark encourages the development of more robust and safer long-term memory usage in frontier conversational systems.
+N1  - CCF-A
+ER  -
+
+TY  - CP
+TI  - MemBench: Towards More Comprehensive Evaluation on the Memory of LLM-based Agents
+AU  - Haoran Tan
+AU  - Zeyu Zhang
+AU  - Chen Ma
+AU  - Xu Chen
+AU  - Quanyu Dai
+AU  - Zhenhua Dong
+PY  - 2025
+T2  - ACL Findings 2025
+DO  - 10.48550/arXiv.2506.21605
+UR  - https://openreview.net/forum?id=XOJ5SQe6X0
+AB  - Recent works have highlighted the significance of memory mechanisms in LLM-based agents, which enable them to store observed information and adapt to dynamic environments. However, evaluating their memory capabilities still remains challenges. Previous evaluations are commonly limited by the diversity of memory levels and interactive scenarios. They also lack comprehensive metrics to reflect the memory capabilities from multiple aspects. To address these problems, in this paper, we construct a more comprehensive dataset and benchmark to evaluate the memory capability of LLM-based agents. Our dataset incorporates factual memory and reflective memory as different levels, and proposes participation and observation as various interactive scenarios. Based on our dataset, we present a benchmark, named MemBench, to evaluate the memory capability of LLM-based agents from multiple aspects, including their effectiveness, efficiency, and capacity. To benefit the research community, we release our dataset and project at https://github.com/import-myself/Membench.
+N1  - ACL-Findings
+ER  -
+
+TY  - CP
+TI  - Minerva: A Programmable Memory Test Benchmark for Language Models
+AU  - Menglin Xia
+AU  - Victor Rühle
+AU  - Saravan Rajmohan
+AU  - Reza Shokri
+PY  - 2025
+T2  - ICML 2025
+DO  - 10.48550/arXiv.2502.03358
+UR  - https://openreview.net/forum?id=ib9drlZllP
+AB  - How effectively can LLM-based AI assistants utilize their memory (context) to perform various tasks? Traditional data benchmarks, which are often manually crafted, suffer from several limitations: they are static, susceptible to overfitting, difficult to interpret, and lack actionable insights--failing to pinpoint the specific capabilities a model lacks when it does not pass a test. In this paper, we present a framework for automatically generating a comprehensive set of tests to evaluate models' abilities to use their memory effectively. Our framework extends the range of capability tests beyond the commonly explored (passkey, key-value, needle in the haystack) search, a dominant focus in the literature. Specifically, we evaluate models on atomic tasks such as searching, recalling, editing, matching, comparing information in context memory, performing basic operations when inputs are structured into distinct blocks, and maintaining state while operating on memory, simulating real-world data. Additionally, we design composite tests to investigate the models' ability to perform more complex, integrated tasks. Our benchmark enables an interpretable, detailed assessment of memory capabilities of LLMs.
+N1  - CCF-A
+ER  -
+
+TY  - CP
+TI  - Unveiling Privacy Risks in LLM Agent Memory
+AU  - Bo Wang
+AU  - Weiyi He
+AU  - Shenglai Zeng
+AU  - Zhen Xiang
+AU  - Yue Xing
+AU  - Jiliang Tang
+AU  - Pengfei He
+PY  - 2025
+T2  - ACL 2025
+DO  - 10.48550/arXiv.2502.13172
+UR  - https://openreview.net/forum?id=GZWGC1fDnc
+AB  - Large Language Model (LLM) agents have become increasingly prevalent across various real-world applications. They enhance decision-making by storing private user-agent interactions in the memory module for demonstrations, introducing new privacy risks for LLM agents. In this work, we systematically investigate the vulnerability of LLM agents to our proposed Memory EXTRaction Attack (MEXTRA) under a black-box setting. To extract private information from memory, we propose an effective attacking prompt design and an automated prompt generation method based on different levels of knowledge about the LLM agent. Experiments on two representative agents demonstrate the effectiveness of MEXTRA. Moreover, we explore key factors influencing memory leakage from both the agent designer’s and the attacker’s perspectives. Our findings highlight the urgent need for effective memory safeguards in LLM agent design and deployment.
+N1  - CCF-A
+ER  -
+
+TY  - CP
+TI  - Memory Injection Attacks on LLM Agents via Query-Only Interaction
+AU  - Shen Dong
+AU  - Shaochen Xu
+AU  - Pengfei He
+AU  - Yige Li
+AU  - Jiliang Tang
+AU  - Tianming Liu
+AU  - Hui Liu
+AU  - Zhen Xiang
+PY  - 2025
+T2  - NeurIPS 2025
+DO  - 10.52202/085713-1554
+UR  - https://openreview.net/forum?id=QINnsnppv8
+AB  - Agents powered by large language models (LLMs) have demonstrated strong capabilities in a wide range of complex, real-world applications.
+However, LLM agents with a compromised memory bank may easily produce harmful outputs when the past records retrieved for demonstration are malicious.
+In this paper, we propose a novel Memory INJection Attack, MINJA, without assuming that the attacker can directly modify the memory bank of the agent.
+The attacker injects malicious records into the memory bank by only **interacting with the agent via queries and output observations**.
+These malicious records are designed to elicit a sequence of malicious reasoning steps corresponding to a different target query during the agent's execution of the victim user's query.
+Specifically, we introduce a sequence of *bridging steps* to link victim queries to the malicious reasoning steps.
+During the memory injection, we propose an *indication prompt* that guides the agent to autonomously generate similar bridging steps, with a *progressive shortening strategy* that gradually removes the indication prompt, such that the malicious record will be easily retrieved when processing later victim queries.
+Our extensive experiments across diverse agents demonstrate the effectiveness of MINJA in compromising agent memory.
+With minimal requirements for execution, MINJA enables any user to influence agent memory, highlighting the risk.
+N1  - CCF-A
+ER  -
+
+TY  - CP
+TI  - InjecMEM: Memory Injection Attack on LLM Agent Memory Systems
+AU  - Hanling Tian
+AU  - Gengyu Zhang
+AU  - Zeyang Sha
+AU  - Jingying Wang
+AU  - Yuhang Liu
+AU  - Zhehao Huang
+AU  - Kun Yang
+AU  - Xiaolin Huang
+PY  - 2026
+T2  - COLM 2026
+DO  - 10.48550/arXiv.2608.23471
+UR  - https://openreview.net/forum?id=VbXN1Ny912
+AB  - Memory is becoming a default subsystem in deployed LLM agents to provide persistent personalization and continuity. This naturally prompts a question: will memory system introduce new vulnerabilities into agents? Thus we propose **InjecMEM**, a novel memory injection attack paradigm that requires only a single interaction (no read/edit access to memory store) to steer later responses of related queries toward a pre-specified output. Guided by the retrieval-then-generate mechanism of memory systems, we craft the injection with a *retriever-agnostic anchor* and an *adversarial command*. The anchor contains high-recall topical cues so that downstream retrieval consistently associates the record with the target topic. The command is a short sequence optimized to remain effective under uncertain fused contexts, variable placements, and long prompts so that it reliably steers outputs once retrieved. We learn the command via gradient-based coordinate search, averaging over synthetic prompt templates and insertion positions, and extend it to joint optimization across backbones to study transfer. Evaluated across multiple memory systems and backbone models, InjecMEM achieves reliable topic-conditioned retrieval and targeted generation, remains effective under memory drift, and leaves non-target queries unaffected. Our results underscore the need to harden memory systems and provide a reproducible framework for studying agent memory.
+N1  - Top-COLM
+ER  -
+
+TY  - CP
+TI  - Poison Once, Exploit Forever: Environment-Injected Memory Poisoning Attacks on Web Agents
+AU  - Mingwen Dong
+AU  - Wei Zou
+AU  - Miguel Romero Calvo
+AU  - Shuaichen Chang
+AU  - Jiang Guo
+AU  - Dongkyu Lee
+AU  - Xing Niu
+AU  - Xiaofei Ma
+AU  - Yanjun Qi
+AU  - Jiarong Jiang
+PY  - 2026
+T2  - COLM 2026
+UR  - https://openreview.net/forum?id=sfUpgUKF2Y
+AB  - Memory makes LLM-based web agents personalized, powerful, yet exploitable. By storing past interactions to personalize future tasks, agents inadvertently create a persistent attack surface that spans websites and sessions. While existing security research on memory assumes attackers can directly inject into memory storage or exploit shared memory across users, we present a more realistic threat model: contamination through environmental observation alone. We introduce Environment-injected Trajectory-based Agent Memory Poisoning (eTAMP), the first attack to achieve cross-session, cross-site compromise without requiring direct memory access. A single contaminated observation (e.g., viewing a manipulated product page) silently poisons an agent's memory and activates during future tasks on different websites, bypassing permission-based defenses. Our experiments on (Visual)WebArena reveal two key findings. First, eTAMP achieves substantial attack success rates: up to 32.5\% on GPT-5-mini, 23.4\% on GPT-5.2, and 19.5\% on GPT-OSS-120B. Second, we discover Frustration Exploitation: agents under environmental stress become dramatically more susceptible, with ASR increasing up to 9 times when agents struggle with dropped clicks or garbled text.  Notably, more capable models are not more secure. GPT-5.2 shows substantial vulnerability despite superior task performance. As LLM-based agents increasingly interact with untrusted
+web environments, our findings underscore the need for defenses against environment-injected memory poisoning.
+N1  - Top-COLM
+ER  -

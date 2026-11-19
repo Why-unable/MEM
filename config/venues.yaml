@@ -1,0 +1,41 @@
+# Venue policy for MEM.
+# CCF-A is the primary bar. Top-tier venues outside the CCF list are allowed
+# but must be labeled explicitly.
+
+ccf_a:
+  AI:
+    - AAAI
+    - NeurIPS
+    - ICML
+    - IJCAI
+    - ACL
+  CV:
+    - CVPR
+    - ICCV
+  IR:
+    - SIGIR
+    - WWW
+  DB:
+    - SIGMOD
+    - VLDB
+    - ICDE
+  DM:
+    - KDD
+
+top_tier_non_ccf_a:
+  - ICLR
+  - COLM
+  - MLSys
+
+high_quality_but_secondary:
+  - ECAI
+  - EMNLP
+  - NAACL
+  - ACL-Findings
+  - NeurIPS-Workshop
+  - ICLR-Workshop
+
+rules:
+  - "Main map: CCF-A + top_tier_non_ccf_a + explicit high-quality exceptions."
+  - "Findings/Workshop: allowed only as supporting nodes, never silently treated as main-conference papers."
+  - "arXiv-only: excluded from main map; record in preprints-excluded.md."

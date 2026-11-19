@@ -1,0 +1,75 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/Why-unable/MEM/schemas/paper.schema.json",
+  "title": "MEM Paper Record",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "id",
+    "title",
+    "year",
+    "venue",
+    "venue_short",
+    "venue_tier",
+    "category",
+    "priority",
+    "role_zh",
+    "authors",
+    "abstract",
+    "openreview_url",
+    "pdf_url",
+    "status"
+  ],
+  "properties": {
+    "id": {
+      "type": "string",
+      "pattern": "^[a-z0-9][a-z0-9-]*$",
+      "description": "Stable lowercase paper ID."
+    },
+    "title": {"type": "string", "minLength": 1},
+    "year": {"type": "integer", "minimum": 2025, "maximum": 2100},
+    "venue": {"type": "string", "minLength": 1},
+    "venue_short": {"type": "string", "minLength": 1},
+    "venue_tier": {
+      "type": "string",
+      "enum": ["CCF-A", "Top-ICLR", "Top-COLM", "Top-MLSys", "ACL-Findings", "CCF-B", "Workshop", "Preprint"]
+    },
+    "category": {
+      "type": "string",
+      "enum": [
+        "architecture",
+        "training",
+        "system",
+        "episodic",
+        "consolidation",
+        "personalization",
+        "multimodal",
+        "procedural",
+        "multiagent",
+        "evaluation",
+        "safety",
+        "application"
+      ]
+    },
+    "priority": {"type": "integer", "minimum": 1, "maximum": 2},
+    "role_zh": {"type": "string", "minLength": 1},
+    "authors": {
+      "type": "array",
+      "minItems": 1,
+      "items": {"type": "string", "minLength": 1}
+    },
+    "abstract": {"type": "string", "minLength": 1},
+    "keywords": {"type": "array", "items": {"type": "string"}},
+    "openreview_url": {"type": "string", "format": "uri"},
+    "pdf_url": {"type": "string", "format": "uri"},
+    "DOI": {"type": ["string", "null"]},
+    "arXiv": {"type": ["string", "null"]},
+    "DBLP": {"type": ["string", "null"]},
+    "S2CorpusId": {"type": ["integer", "string", "null"]},
+    "verified_by": {"type": "array", "items": {"type": "string"}},
+    "status": {"type": "string", "enum": ["published", "accepted", "excluded"]},
+    "collected_at": {"type": "string", "format": "date"},
+    "confidence": {"type": "string", "enum": ["low", "medium", "high"]},
+    "notes": {"type": "string"}
+  }
+}

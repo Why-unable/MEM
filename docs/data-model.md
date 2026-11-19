@@ -1,0 +1,167 @@
+# MEM Data Model
+
+## 1. Paper
+
+Source of truth in v0.1:
+
+```text
+data/<topic>/papers.json
+```
+
+Required fields:
+
+| Field | Type | Description |
+|---|---|---|
+| `id` | string | Stable lowercase slug |
+| `title` | string | Canonical title |
+| `year` | integer | 2025 or 2026 |
+| `venue` | string | Venue with track |
+| `venue_short` | string | Display venue |
+| `venue_tier` | enum | CCF-A / Top-ICLR / Top-COLM / Top-MLSys / ACL-Findings / CCF-B |
+| `category` | enum | architecture / training / system / episodic / consolidation / personalization / multimodal / procedural / multiagent / evaluation / safety / application |
+| `priority` | integer | 1 core, 2 supporting |
+| `role_zh` | string | One-sentence role in map |
+| `authors` | string[] | Authors |
+| `abstract` | string | Official abstract |
+| `openreview_url` | string | Official record |
+| `pdf_url` | string | Official PDF |
+| `status` | enum | published / accepted / excluded |
+| `collected_at` | date | Retrieval date |
+
+Optional fields:
+
+- `DOI`
+- `arXiv`
+- `DBLP`
+- `S2CorpusId`
+- `keywords`
+- `verified_by`
+- `confidence`
+- `notes`
+
+## 2. Edge
+
+Source of truth:
+
+```text
+data/<topic>/edges.json
+```
+
+```json
+{
+  "from": "amem",
+  "to": "gmemory",
+  "type": "extends",
+  "label": "单 agent 记忆 → 多 agent 层次记忆"
+}
+```
+
+Allowed types:
+
+- `extends`
+- `related`
+- `contrasts`
+- `applies`
+- `evaluates`
+- `evaluated-by`
+- `risk`
+- `inspired-by`
+
+## 3. Topic
+
+Topic note:
+
+```text
+vault/20_Topics/<Topic Name>.md
+```
+
+Frontmatter:
+
+```yaml
+type: topic
+topic: Agent Memory 2025+
+paper_count: 36
+updated: 2026-11-19
+tags:
+  - topic
+  - agent-memory
+```
+
+## 4. Idea
+
+Idea note:
+
+```text
+vault/30_Ideas/<Idea>.md
+```
+
+Frontmatter:
+
+```yaml
+type: idea
+status: seed
+created: 2026-11-19
+tags:
+  - idea
+  - agent-memory
+```
+
+## 5. Paper Note
+
+Generated paper note:
+
+```text
+vault/10_Papers/<paper-id>.md
+```
+
+Sections:
+
+- one-line positioning
+- metadata
+- official abstract
+- role in map
+- relations
+- reading questions
+- extensible notes
+
+The “可扩展笔记” section is the preferred place for manual additions.
+
+## 6. Map
+
+Generated files:
+
+```text
+maps/<topic>/research-map.md
+maps/<topic>/research-map.json
+maps/<topic>/research-map.canvas
+maps/<topic>/papers.csv
+```
+
+Do not hand-edit generated map files without updating the builder.
+
+## 7. IDs
+
+Use stable, readable IDs:
+
+```text
+amem
+gmemory
+memoryr1
+longmemeval
+persistbench
+```
+
+Do not use sequential numbers alone.
+
+## 8. Migration
+
+v0.1 uses single-file JSON. v0.2 should migrate to:
+
+```text
+data/papers/<id>.yaml
+data/relations/<id>.yaml
+data/index/papers.generated.json
+data/index/graph.generated.json
+```
+
+Migration trigger is documented in `docs/decisions/0005-data-layout-v0.1.md`.

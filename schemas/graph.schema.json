@@ -1,0 +1,35 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/Why-unable/MEM/schemas/graph.schema.json",
+  "title": "MEM Research Graph",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["from", "to", "type", "label"],
+  "properties": {
+    "from": {
+      "type": "string",
+      "pattern": "^[a-z0-9][a-z0-9-]*$",
+      "description": "Source paper ID."
+    },
+    "to": {
+      "type": "string",
+      "pattern": "^[a-z0-9][a-z0-9-]*$",
+      "description": "Target paper ID."
+    },
+    "type": {
+      "type": "string",
+      "enum": ["extends", "related", "contrasts", "applies", "evaluates", "evaluated-by", "risk", "inspired-by"]
+    },
+    "label": {"type": "string", "minLength": 1},
+    "evidence": {
+      "type": "array",
+      "items": {"type": "string"},
+      "description": "Optional source snippets or section references."
+    },
+    "confidence": {"type": "string", "enum": ["low", "medium", "high"]},
+    "provenance": {
+      "type": "string",
+      "enum": ["official", "conceptual", "model-inferred", "human"]
+    }
+  }
+}

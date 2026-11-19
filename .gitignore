@@ -1,0 +1,11 @@
+.DS_Store
+.tools/
+.env
+*.pdf
+vault/.obsidian/cache
+vault/.trash/
+__pycache__/
+*.pyc
+vault/.obsidian/workspace*.json
+config/mem.config.json
+data/obsidian-config-backup.json

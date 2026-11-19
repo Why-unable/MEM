@@ -1,0 +1,9 @@
+cff-version: 1.2.0
+message: "If you use MEM in academic work, cite the repository and the underlying papers."
+title: "MEM: Personal Paper Research System"
+version: 0.2.0
+date-released: 2026-11-19
+authors:
+  - family-names: Why-unable
+repository-code: "https://github.com/Why-unable/MEM"
+license: MIT
