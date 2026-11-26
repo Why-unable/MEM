@@ -35,13 +35,13 @@ tags:
 
 ## 五篇论文的分工
 
-| 论文 | 核心贡献 | 在主线 A 中的位置 |
-|---|---|---|
-| [A-Mem](../10_Papers/evidence/amem-evidence.md) | Zettelkasten 式原子笔记 + 链接生成 + 记忆演化 | 建立“结构化 + 可演化”的基线 |
-| [G-Memory](../10_Papers/evidence/gmemory-evidence.md) | insight / query / interaction 三层图 | 把记忆单元从单 agent 历史扩展到团队协作 |
-| [MAGMA](../10_Papers/evidence/magma-evidence.md) | semantic / temporal / causal / entity 多图 + intent-aware traversal | 把“关系类型”变成检索策略 |
-| [MemGAS](../10_Papers/evidence/memgas-evidence.md) | session / turn / summary / keyword 多粒度 + entropy router | 把“粒度选择”变成自适应对象 |
-| [MRAgent](../10_Papers/evidence/reconstructed-evidence.md) | Cue–Tag–Content 图 + 多轮 active reconstruction | 把“访问”从单轮检索变成序列决策 |
+| 论文                                                         | 核心贡献                                                              | 在主线 A 中的位置              |
+| ---------------------------------------------------------- | ----------------------------------------------------------------- | ----------------------- |
+| [A-Mem](../10_Papers/evidence/amem-evidence.md)            | Zettelkasten 式原子笔记 + 链接生成 + 记忆演化                                  | 建立“结构化 + 可演化”的基线        |
+| [G-Memory](../10_Papers/evidence/gmemory-evidence.md)      | insight / query / interaction 三层图                                 | 把记忆单元从单 agent 历史扩展到团队协作 |
+| [MAGMA](../10_Papers/evidence/magma-evidence.md)           | semantic / temporal / causal / entity 多图 + intent-aware traversal | 把“关系类型”变成检索策略           |
+| [MemGAS](../10_Papers/evidence/memgas-evidence.md)         | session / turn / summary / keyword 多粒度 + entropy router           | 把“粒度选择”变成自适应对象          |
+| [MRAgent](../10_Papers/evidence/reconstructed-evidence.md) | Cue–Tag–Content 图 + 多轮 active reconstruction                      | 把“访问”从单轮检索变成序列决策        |
 
 ## 概念演进链
 

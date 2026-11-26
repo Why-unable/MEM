@@ -13,6 +13,7 @@
 - `magma-evidence.md`
 - `memgas-evidence.md`
 - `reconstructed-evidence.md`
+- `COST_COMPARISON.md` — 主线 A 成本对比
 
 ## 证据卡最低要求
 
@@ -38,6 +39,7 @@
 - 不同论文的指标不可直接横比。
 - LLM-Judge 分数不能当作绝对正确率。
 - 不确定的元数据写入“待核对”，不要猜。
+- 每张证据卡必须有成本分析：报告成本、隐藏成本、与长上下文/其他论文的相对位置。
 
 ## 命名
 
