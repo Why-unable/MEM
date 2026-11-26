@@ -17,6 +17,8 @@
 
 代表：A-Mem、G-Memory、MAGMA、MemGAS、Memory is Reconstructed。
 
+> 全文证据卡与 RQ1 分析：[[20_Topics/Mainline A - Memory Architecture]]
+
 - A-Mem 用 Zettelkasten 式动态索引和链接组织记忆，是后续工作的常见基线。
 - G-Memory 把多智能体协作轨迹做成层次记忆，开始处理“团队记忆”而不是单 agent 记忆。
 - MAGMA 用多图结构组织实体、事件和时间关系。

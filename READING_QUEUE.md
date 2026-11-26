@@ -6,14 +6,26 @@
 
 | 论文 | 原因 | 状态 |
 |---|---|---|
-| A-Mem | 记忆组织基线 | queued |
-| G-Memory | 多智能体层次记忆 | queued |
+| A-Mem | 记忆组织基线 | evidence-checked |
+| G-Memory | 多智能体层次记忆 | evidence-checked |
 | Memory-R1 | 可学习记忆管理 | queued |
 | MemAgent | RL memory agent | queued |
 | LongMemEval | 长期记忆评测 | queued |
 | PersistBench | 遗忘边界 | queued |
 | Memory Injection Attacks | 安全攻击面 | queued |
 | Privacy Risks in Agent Memory | 隐私攻击面 | queued |
+
+## 主线 A — 已精读
+
+| 论文 | 证据卡 | 状态 |
+|---|---|---|
+| A-Mem | [[10_Papers/evidence/amem-evidence]] | evidence-checked |
+| G-Memory | [[10_Papers/evidence/gmemory-evidence]] | evidence-checked |
+| MAGMA | [[10_Papers/evidence/magma-evidence]] | evidence-checked |
+| MemGAS | [[10_Papers/evidence/memgas-evidence]] | evidence-checked |
+| MRAgent | [[10_Papers/evidence/reconstructed-evidence]] | evidence-checked |
+
+主线综合：[[20_Topics/Mainline A - Memory Architecture]]
 
 ## P1 — RQ1 需要
 

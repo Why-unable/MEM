@@ -32,12 +32,13 @@
       ],
       "openreview_url": "https://openreview.net/forum?id=FiM0M8gcct",
       "pdf_url": "https://openreview.net/pdf?id=FiM0M8gcct",
-      "DOI": "10.48550/arXiv.2502.12110",
+      "DOI": "10.52202/085713-0593",
       "arXiv": "2502.12110",
       "DBLP": "conf/nips/XuLMGTZ25",
       "S2CorpusId": 276421617,
       "verified_by": [
-        "OpenReview accepted venue"
+        "OpenReview accepted venue",
+        "Crossref DOI"
       ],
       "status": "published",
       "collected_at": "2026-11-19"
@@ -69,12 +70,13 @@
       ],
       "openreview_url": "https://openreview.net/forum?id=mmIAp3cVS0",
       "pdf_url": "https://openreview.net/pdf?id=mmIAp3cVS0",
-      "DOI": "10.48550/arXiv.2506.07398",
+      "DOI": "10.52202/085713-0439",
       "arXiv": "2506.07398",
       "DBLP": "conf/nips/ZhangFWWYY25",
       "S2CorpusId": 279250852,
       "verified_by": [
-        "OpenReview accepted venue"
+        "OpenReview accepted venue",
+        "Crossref DOI"
       ],
       "status": "published",
       "collected_at": "2026-11-19"
@@ -184,13 +186,14 @@
       "keywords": [],
       "openreview_url": "https://openreview.net/forum?id=ktbwLLO9nX",
       "pdf_url": "https://aclanthology.org/2026.acl-long.1709.pdf",
-      "DOI": "10.48550/arXiv.2601.03236",
+      "DOI": "10.18653/v1/2026.acl-long.1709",
       "arXiv": "2601.03236",
       "DBLP": "journals/corr/abs-2601-03236",
       "S2CorpusId": 284513025,
       "verified_by": [
         "OpenReview accepted venue",
-        "ACL Anthology/AAAI DOI"
+        "ACL Anthology/AAAI DOI",
+        "Crossref DOI; ACL Anthology"
       ],
       "status": "published",
       "collected_at": "2026-11-19"

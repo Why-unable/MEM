@@ -11,7 +11,7 @@ authors:
   - "Yi Li"
   - "Guanpeng Li"
   - "Bingzhe Li"
-doi: "10.48550/arXiv.2601.03236"
+doi: "10.18653/v1/2026.acl-long.1709"
 arxiv: "2601.03236"
 openreview: "https://openreview.net/forum?id=ktbwLLO9nX"
 pdf: "https://aclanthology.org/2026.acl-long.1709.pdf"

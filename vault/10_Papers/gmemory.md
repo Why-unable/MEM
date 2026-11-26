@@ -13,7 +13,7 @@ authors:
   - "Guancheng Wan"
   - "Miao Yu"
   - "Shuicheng YAN"
-doi: "10.48550/arXiv.2506.07398"
+doi: "10.52202/085713-0439"
 arxiv: "2506.07398"
 openreview: "https://openreview.net/forum?id=mmIAp3cVS0"
 pdf: "https://openreview.net/pdf?id=mmIAp3cVS0"

@@ -5,6 +5,7 @@
 | 日期 | 机器/执行者 | 主题 | 记录 |
 |---|---|---|---|
 | 2026-11-19 | macOS / Codex | MEM v0.1 构建与 Agent Memory 初始地图 | [research-log/2026-11-19-codex.md](research-log/2026-11-19-codex.md) |
+| 2026-11-26 | macOS / Codex | 主线 A 全文证据冲刺 | [research-log/2026-11-26-mainline-a.md](research-log/2026-11-26-mainline-a.md) |
 
 ## 记录规范
 

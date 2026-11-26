@@ -13,7 +13,7 @@ authors:
   - "Hang Gao"
   - "Juntao Tan"
   - "Yongfeng Zhang"
-doi: "10.48550/arXiv.2502.12110"
+doi: "10.52202/085713-0593"
 arxiv: "2502.12110"
 openreview: "https://openreview.net/forum?id=FiM0M8gcct"
 pdf: "https://openreview.net/pdf?id=FiM0M8gcct"

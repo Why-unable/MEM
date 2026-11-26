@@ -8,7 +8,7 @@ AU  - Juntao Tan
 AU  - Yongfeng Zhang
 PY  - 2025
 T2  - NeurIPS 2025
-DO  - 10.48550/arXiv.2502.12110
+DO  - 10.52202/085713-0593
 UR  - https://openreview.net/forum?id=FiM0M8gcct
 AB  - While large language model (LLM) agents can effectively use external tools for complex real-world tasks, they require memory systems to leverage historical experiences. Current memory systems enable basic storage and retrieval but lack sophisticated memory organization, despite recent attempts to incorporate graph databases. Moreover, these systems' fixed operations and structures limit their adaptability across diverse tasks. To address this limitation, this paper proposes a novel agentic memory system for LLM agents that can dynamically organize memories in an agentic way. Following the basic principles of the Zettelkasten method, we designed our memory system to create interconnected knowledge networks through dynamic indexing and linking. When a new memory is added, we generate a comprehensive note containing multiple structured attributes, including contextual descriptions, keywords, and tags. The system then analyzes historical memories to identify relevant connections, establishing links where meaningful similarities exist. Additionally, this process enables memory evolution -- as new memories are integrated, they can trigger updates to the contextual representations and attributes of existing historical memories, allowing the memory network to continuously refine its understanding. Our approach combines the structured organization principles of Zettelkasten with the flexibility of agent-driven decision making, allowing for more adaptive and context-aware memory management.
 Empirical experiments on six foundation models show superior improvement against existing SOTA baselines. The code is available at \url{https://anonymous.4open.science/r/AgenticMemory-76B4}.
@@ -25,7 +25,7 @@ AU  - Miao Yu
 AU  - Shuicheng YAN
 PY  - 2025
 T2  - NeurIPS 2025
-DO  - 10.48550/arXiv.2506.07398
+DO  - 10.52202/085713-0439
 UR  - https://openreview.net/forum?id=mmIAp3cVS0
 AB  - Large language model (LLM)-powered multi-agent systems (MAS) have demonstrated cognitive and execution capabilities that far exceed those of single LLM agents, yet their capacity for self-evolution remains hampered by underdeveloped memory architectures. Upon close inspection, we are alarmed to discover that prevailing MAS memory mechanisms (1) are overly simplistic, completely disregarding the nuanced inter-agent collaboration trajectories, and (2) lack cross-trial and agent-specific customization, in stark contrast to the expressive memory developed for single agents. To bridge this gap, we introduce G-Memory, a hierarchical, agentic memory system for MAS inspired by organizational memory theory, which manages the lengthy MAS interaction via a three-tier graph hierarchy: insight, query, and interaction graphs. Upon receiving a new user query, G-Memory performs bi-directional memory traversal to retrieve both \textit{high-level, generalizable insights} that enable the system to leverage cross-trial knowledge, and \textit{fine-grained, condensed interaction trajectories} that compactly encode prior collaboration experiences. Upon task execution, the entire hierarchy evolves by assimilating new collaborative trajectories, nurturing the progressive evolution of agent teams. Extensive experiments across five benchmarks, three LLM backbones, and three popular MAS frameworks demonstrate that G-Memory improves success rates in embodied action and accuracy in knowledge QA by up to $20.89\\%$ and $10.12\\%$, respectively, without any modifications to the original frameworks.
 N1  - CCF-A
@@ -83,7 +83,7 @@ AU  - Guanpeng Li
 AU  - Bingzhe Li
 PY  - 2026
 T2  - ACL 2026
-DO  - 10.48550/arXiv.2601.03236
+DO  - 10.18653/v1/2026.acl-long.1709
 UR  - https://openreview.net/forum?id=ktbwLLO9nX
 AB  - Memory-Augmented Generation (MAG) extends large language models with external memory to support long-context reasoning, but existing approaches largely rely on semantic similarity over monolithic memory stores, entangling temporal, causal, and entity information. This design limits interpretability and alignment between query intent and retrieved evidence, leading to suboptimal reasoning accuracy. In this paper, we propose MAGMA, a multi-graph agentic memory architecture that represents each memory item across orthogonal semantic, temporal, causal, and entity graphs. MAGMA formulates retrieval as policy-guided traversal over these relational views, enabling query-adaptive selection and structured context construction. By decoupling memory representation from retrieval logic, MAGMA provides transparent reasoning paths and fine-grained control over retrieval. Experiments on LoCoMo and LongMemEval demonstrate that MAGMA consistently outperforms state-of-the-art agentic memory systems in long-horizon reasoning task.
 N1  - CCF-A

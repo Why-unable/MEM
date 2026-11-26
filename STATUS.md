@@ -1,7 +1,7 @@
 # MEM Status
 
-> 更新时间：2026-11-19
-> 当前阶段：`v0.2 — 多机协作层已建立`
+> 更新时间：2026-11-26
+> 当前阶段：`v0.2.1 — 主线 A 证据层已启动`
 > 当前研究主题：`Agent Memory 2025+`
 
 ## 当前完成度
@@ -16,8 +16,9 @@
 | Obsidian Canvas | 完成 | `vault/40_Maps/Agent Memory 2025+.canvas` |
 | 研究综合 | 完成 | `maps/agent-memory-2025/SYNTHESIS.md` |
 | Zotero 导入文件 | 完成 | BibTeX / RIS 已生成 |
-| Zotero 实际导入 | 未完成 | Zotero 当前 0 items，导入确认未完成 |
+| Zotero 实际导入 | 完成 | 36 条书目 + 36 条 importer notes；collection `agent-memory-2025`；无 PDF 附件 |
 | 多机协作规范 | 完成 | `CONTRIBUTING.md`、schemas、CI、数据政策 |
+| 主线 A 证据层 | 进行中 | 5 篇全文证据卡 + 比较矩阵 v0；其余论文尚未精读 |
 | 自动增量检索 | 未开始 | 计划 v0.3 |
 | 实验/数据集登记 | 未开始 | 进入实验阶段后再建 |
 
@@ -32,26 +33,30 @@ ACL Findings：6
 Top-COLM：3
 Top-MLSys：1
 CCF-B：1
+全文证据卡：5
 ```
 
 ## 本轮正在进行
 
-- 建立多机 GitHub 协作层
-- 增加决策记录、变更记录、研究日志
-- 增加数据契约、来源规范、AI 使用记录
-- 建立 CI 校验
+- 主线 A：A-Mem、G-Memory、MAGMA、MemGAS、MRAgent 全文精读
+- 建立 `vault/10_Papers/evidence/` 证据卡层
+- 把主线 A 的发现重写为 RQ1 的可检验假设
+- 校准正式 DOI 与 Zotero 实际状态
 
 ## 下一步
 
-1. 在 Zotero 中确认 `agent-memory-2025.bib` 导入。
-2. 从 `RESEARCH_QUESTIONS.md` 选择 RQ1 或 RQ3。
-3. 精读 5–8 篇核心论文并补证据表。
-4. 将论文库从单文件 JSON 迁移为 per-paper YAML，降低多机冲突。
+1. 选择 RQ1 作为当前主研究问题。
+2. 用正式 camera-ready 复核 A-Mem / G-Memory。
+3. 把主线 A 综合整理为 `CLAIMS.md` 的 claim-evidence 表。
+4. 设计 RQ1 最小实验：full context / RAG / A-Mem-like / MAGMA-like / MRAgent-like。
+5. 在第二台机器开始写入前，把 `papers.json` / `edges.json` 迁移为 per-paper 文件。
 
 ## 阻塞项
 
-- Zotero 导入尚未确认。
-- 还没有为每篇论文补齐“关键方法 / 实验数字 / 局限 / 可复用点”。
+- A-Mem、G-Memory 的正式 NeurIPS 2025 camera-ready 尚未复核。
+- Zotero 有书目但无 PDF 附件；全文目前保存在被 Git 忽略的 `data/agent-memory-2025/pdfs/`。
+- `CLAIMS.md` 尚未建立。
+- 单文件 JSON 在多机同时编辑时仍可能冲突。
 
 ## 另一台机器的最短接手路径
 

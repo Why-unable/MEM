@@ -9,3 +9,5 @@ __pycache__/
 vault/.obsidian/workspace*.json
 config/mem.config.json
 data/obsidian-config-backup.json
+/.obsidian/
+data/*/pdfs/
