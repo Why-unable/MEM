@@ -19,7 +19,7 @@
 | Zotero 实际导入 | 完成 | 51 篇书目 + 51 条 importer notes；3 个 collection；无 PDF 附件 |
 | 多机协作规范 | 完成 | `CONTRIBUTING.md`、schemas、CI、数据政策 |
 | 主线分析层 | 完成 | 七条主线综合页；50/51 全文扫描（ReasoningBank 用摘要/实验地图） |
-| 逐篇证据层 | 进行中 | 51 个 evidence 入口；12 张 evidence-checked；39 个 queued |
+| 逐篇证据层 | 进行中 | 51 个 evidence 入口；18 张 evidence-checked；33 个 queued |
 | 自动增量检索 | 未开始 | 计划 v0.3 |
 | 实验/数据集登记 | 未开始 | 进入实验阶段后再建 |
 

@@ -1,56 +1,156 @@
 ---
 type: evidence
-paper_id: "timem"
+paper_id: timem
 title: "TiMem: Temporal-Hierarchical Memory Consolidation for Long-Horizon Conversational Agents"
-status: queued
-checked_at: null
-source_pdf: ""
-source_version: ""
-pages_checked: []
+status: evidence-checked
+checked_at: 2026-11-27
+source_pdf: "data/agent-memory-2025/pdfs/timem.pdf"
+source_version: "ACL Findings 2026"
+pages_checked: "1-10"
 mainline: "D"
 tags:
   - evidence
   - mainline-d
+  - consolidation
+  - temporal-memory
 ---
 
-# TiMem: Temporal-Hierarchical Memory Consolidation for Long-Horizon Conversational Agents — Evidence
+# TiMem 证据卡
 
-> Status: **queued**. 这是逐篇 evidence 的入口，不是已完成的证据卡。
-> 不要把下面的摘要当作已验证结论；关键数字必须回全文和页码核对。
+## 结论先行
 
-## 元数据
+- TiMem 把时间连续性作为记忆组织的第一性原则：用 **Temporal Memory Tree (TMT)** 从 raw observations 逐层抽象到 persona representation。
+- 它用 semantic-guided consolidation（training-free）和 complexity-aware recall 在不同层次间选择。
+- LoCoMo **75.30%**，LongMemEval-S **76.88%**；recalled memory length 比 Mem0 降低 **52.20%**。
 
-- **Venue**：ACL Findings 2026（ACL-Findings）
-- **年份**：2026
-- **作者**：Kai Li, Xuanqing Yu, Ziyi Ni, Yi Zeng, Yao Xu, Zheqing Zhang, Xin Li, Jitao Sang, Xiaogang Duan, Xuelei Wang, Chengbao Liu, Jie Tan
-- **DOI**：10.48550/arXiv.2601.02845
-- **arXiv**：2601.02845
-- **PDF**：https://aclanthology.org/2026.findings-acl.1091.pdf
-- **正式记录**：https://openreview.net/forum?id=40y8NAFkq0
-- **主库角色**：时间—层次记忆整合，面向长时程对话中的时序信息保持。
+## 研究问题与定位
 
-## 官方摘要
+长期对话 agent 面临：
 
-Long-horizon conversational agents have to manage ever-growing interaction histories that quickly exceed the finite context windows of large language models (LLMs). Existing memory frameworks provide limited support for temporally structured information across hierarchical levels, often leading to fragmented memories and unstable long-horizon personalization. We present TiMem, a temporal–hierarchical memory framework that organizes conversations through a Temporal Memory Tree (TMT), enabling systematic memory consolidation from raw conversational observations to progressively abstracted persona representations. TiMem is characterized by three core properties: (1) temporal–hierarchical organization through TMT; (2) semantic-guided consolidation that enables memory integration across hierarchical levels without fine-tuning; and (3) complexity-aware memory recall that balances precision and efficiency across queries of varying complexity. Under a consistent evaluation setup, TiMem achieves state-of-the-art accuracy on both benchmarks, reaching 75.30% on LoCoMo and 76.88% on LongMemEval-S. It outperforms all evaluated baselines while reducing the recalled memory length by 52.20% on LoCoMo. Manifold analysis indicates clear persona separation on LoCoMo and reduced dispersion on LongMemEval-S. Overall, TiMem treats temporal continuity as a first-class organizing principle for long-horizon memory in conversational agents. The code is available at https://github.com/TiMEM-AI/timem.
+- 历史不断增长；
+- 时间结构被压平；
+- 记忆碎片化，长期个性化不稳定。
 
-## 待提取（全文核对）
+TiMem 要回答：
 
-- [ ] 研究问题与一句话定位
-- [ ] 记忆单元 / 数据结构
-- [ ] 写入、组织、检索、更新、遗忘机制
-- [ ] 训练方式与监督信号（若适用）
-- [ ] 数据集、backbone、baseline、指标
-- [ ] 关键数字（必须标 PDF 页码或表格）
-- [ ] 主要结论
-- [ ] 局限与威胁
-- [ ] 与主线 D 其他论文的关系
-- [ ] 对 RQ1 / RQ3 的意义
-- [ ] 可复用点
-- [ ] 成本：build / query / latency / storage
-- [ ] 待核对项
+> 能否用时间层次树组织记忆，让不同复杂度的 query 访问不同抽象层？
+
+## 方法拆解
+
+### Temporal Memory Tree
+
+- 从原始对话观察开始，逐层抽象：
+  - raw observations
+  - episodic/semantic summaries
+  - 更高层 persona representation
+- 时间连续性决定节点如何连接/合并。
+
+### Semantic-guided consolidation
+
+- 不 fine-tune LLM。
+- 用语义相似度/引导把下层记忆整合到上层。
+- 兼顾时间顺序和语义一致性。
+
+### Complexity-aware recall
+
+- 简单 query：高层/摘要记忆。
+- 复杂 query：更深层/更细粒度记忆。
+- 用 adaptive planner 在 accuracy 和 token 之间权衡。
+
+来源：PDF p.2-6，Method。
+
+## 实验与关键数字
+
+### 设置
+
+- Benchmarks：LoCoMo、LongMemEval-S。
+- Baselines：MemoryBank、Mem0、A-Mem、MemoryOS、MemOS。
+- Backbones：GPT-4o-mini、GPT-4o。
+- Metrics：LLM-Judge accuracy、F1、ROUGE-L、memory tokens、latency。
+
+### LoCoMo
+
+| 方法 | Overall LLJ |
+|---|---:|
+| A-Mem | 51.29 |
+| Mem0 | 57.79 |
+| MemoryOS | — |
+| **TiMem** | **75.30** |
+
+- F1 **54.40**，ROUGE-L **54.68**。
+- Memory context 511.25 tokens/query。
+- 比 Mem0 的 1,070.10 tokens 低 **52.20%**。
+- P50 recall latency **2.35s**。
+
+来源：PDF p.7，Table 1，Table 6。
+
+### LongMemEval-S
+
+| 方法 | Overall LLJ |
+|---|---:|
+| A-Mem | 55.44 |
+| Mem0 | 67.56 |
+| **TiMem** | **76.88** |
+
+- 使用 GPT-4o 作为 answer model 时，TiMem 可到 **78.96%**。
+- Memory context 1,270.62 tokens/query。
+- P50 latency **1.76s**。
+
+来源：PDF p.7，Table 2，Table 6。
+
+### 层次/召回消融
+
+- Adaptive planner 比固定 scope 更好：LoCoMo 75.30 vs 73.38，LongMemEval 76.88 vs 75.00。
+- 去掉 hierarchy 或 recall gating 会降低 accuracy。
+- 树深度/召回预算需要按数据集调参。
+
+来源：PDF p.7-8，Table 3-4。
+
+## 真正的新意
+
+1. **时间层次树**：不是平面 summary 堆叠，而是按时间/抽象层级组织。
+2. **complexity-aware recall**：query 复杂度决定访问哪一层。
+3. **training-free consolidation**：不 fine-tune。
+4. **persona representation 作为树顶**：长期个性化有明确抽象层。
+
+## 局限与威胁
+
+- **树构建/维护成本**：LLM consolidation calls 可能很高；论文报告 amortized calls，但长期部署需核对。
+- **层次深度敏感**：树太深/太浅都可能损失 accuracy。
+- **主要是对话 QA**：没有 action-coupled、多模态、安全评测。
+- **没有显式遗忘/删除**：树节点只增不减。
+- **persona 抽象可能丢证据**：需要 provenance/回溯机制。
+- **Mem0 的 temporal F1 仍可能更强**（不同 backbone 下）。
+
+## 与主线 D 的关系
+
+- **RecMem**：RecMem 决定何时 consolidation；TiMem 定义 consolidation 后的时间层次。
+- **TierMem**：TierMem 用 summary/raw 两层 + provenance；TiMem 用多层时间树。
+- **Nemori**：Nemori 用 prediction error 决定保留；TiMem 用时间/语义层次组织。
+- **EM-LLM/REMem**：都强调事件/时间结构，但 TiMem 更偏长期 persona 抽象。
+
+## 对 RQ1 的意义
+
+TiMem 提供了“层次结构 + 访问策略”的组合证据：
+
+- 结构（TMT）和访问（complexity-aware recall）必须一起设计。
+- RQ1 应报告 memory context length 和 latency，而不只是 accuracy。
+
+## 可复用点
+
+- Temporal Memory Tree schema。
+- semantic-guided consolidation。
+- complexity-aware recall / adaptive planner。
+- LLJ + F1 + ROUGE-L + memory tokens + latency 的多指标报告。
+
+## 成本
+
+- LoCoMo：511.25 tokens/query，P50 2.35s。
+- LongMemEval-S：1,270.62 tokens/query，P50 1.76s。
+- Consolidation calls：论文 Table 5 报告 amortized 成本，需回表核对。
+- 存储：树节点增长，未给统一 storage 指标。
 
 ## 来源
 
-- 主库记录：`data/agent-memory-2025/papers.json`
-- PDF：https://aclanthology.org/2026.findings-acl.1091.pdf
-- 正式记录：https://openreview.net/forum?id=40y8NAFkq0
+- 本地 PDF：`data/agent-memory-2025/pdfs/timem.pdf`
+- ACL Anthology / Findings 2026（见论文记录）

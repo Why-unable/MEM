@@ -341,5 +341,6 @@ E-mem            未压缩情境 + 多 agent episodic reconstruction
 
 ## 证据边界
 
-- 扩展四篇已完成全文扫描，但尚未建立独立页码级证据卡。
+- SeCom、HippoRAG 2、GAM、E-mem 已完成页码级证据卡。
+- M+ 仍为 queued。
 - SeCom、HippoRAG 2、GAM、E-mem 的数字来自各自论文的实验表/摘要，不能与核心五篇直接横比。

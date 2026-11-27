@@ -9,6 +9,7 @@
 | 2026-11-27 | macOS / Codex | Agent Memory 主库深度扩展至 51 篇 | [research-log/2026-11-27-deep-survey.md](research-log/2026-11-27-deep-survey.md) |
 | 2026-11-27 | macOS / Codex | A–G 七条主线全文阅读分析 | [research-log/2026-11-27-mainlines.md](research-log/2026-11-27-mainlines.md) |
 | 2026-11-27 | macOS / Codex | Evidence Batch 1（6 篇） | [research-log/2026-11-27-evidence-batch1.md](research-log/2026-11-27-evidence-batch1.md) |
+| 2026-11-27 | macOS / Codex | Evidence Batch 2（6 篇） | [research-log/2026-11-27-evidence-batch2.md](research-log/2026-11-27-evidence-batch2.md) |
 
 ## 记录规范
 

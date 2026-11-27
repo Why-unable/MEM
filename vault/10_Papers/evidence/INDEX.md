@@ -7,13 +7,13 @@
 
 - 主库论文：51
 - 已有独立 evidence 文件：51
-- 已完成页码级证据卡：12
+- 已完成页码级证据卡：18
 
 ```text
-queued: 39
+queued: 33
 metadata-only: 0
 full-text-scan: 0
-evidence-checked: 12
+evidence-checked: 18
 verified: 0
 ```
 
@@ -22,15 +22,15 @@ verified: 0
 | Paper | Venue | Status | Evidence |
 |---|---|---|---|
 | A-Mem: Agentic Memory for LLM Agents | NeurIPS 2025 | `evidence-checked` | [amem](amem-evidence.md) |
+| E-mem: Multi-agent based Episodic Context Reconstruction for LLM Agent Memory | ICML 2026 | `evidence-checked` | [emem](emem-evidence.md) |
+| GAM: Hierarchical Graph-based Agentic Memory for LLM Agents | ACL 2026 | `evidence-checked` | [gam](gam-evidence.md) |
 | G-Memory: Tracing Hierarchical Memory for Multi-Agent Systems | NeurIPS 2025 | `evidence-checked` | [gmemory](gmemory-evidence.md) |
+| From RAG to Memory: Non-Parametric Continual Learning for Large Language Models | ICML 2025 | `evidence-checked` | [hipporag2](hipporag2-evidence.md) |
 | MAGMA: A Multi-Graph based Agentic Memory Architecture for AI Agents | ACL 2026 | `evidence-checked` | [magma](magma-evidence.md) |
 | From Single to Multi-Granularity: Toward Long-Term Memory Association and Selection of Conversational Agents | ICLR 2026 | `evidence-checked` | [memgas](memgas-evidence.md) |
 | Memory is Reconstructed, Not Retrieved:  Graph Memory for LLM Agents | ICML 2026 | `evidence-checked` | [reconstructed](reconstructed-evidence.md) |
-| E-mem: Multi-agent based Episodic Context Reconstruction for LLM Agent Memory | ICML 2026 | `queued` | [emem](emem-evidence.md) |
-| GAM: Hierarchical Graph-based Agentic Memory for LLM Agents | ACL 2026 | `queued` | [gam](gam-evidence.md) |
-| From RAG to Memory: Non-Parametric Continual Learning for Large Language Models | ICML 2025 | `queued` | [hipporag2](hipporag2-evidence.md) |
+| On Memory Construction and Retrieval for Personalized Conversational Agents | ICLR 2025 | `evidence-checked` | [secom](secom-evidence.md) |
 | M+: Extending MemoryLLM with Scalable Long-Term Memory | ICML 2025 | `queued` | [mplus](mplus-evidence.md) |
-| On Memory Construction and Retrieval for Personalized Conversational Agents | ICLR 2025 | `queued` | [secom](secom-evidence.md) |
 
 ## Mainline B · Memory Policy
 
@@ -59,14 +59,14 @@ verified: 0
 
 | Paper | Venue | Status | Evidence |
 |---|---|---|---|
+| RecMem: Recurrence-based Memory Consolidation for Efficient and Effective Long-Running LLM Agents | ACL Findings 2026 | `evidence-checked` | [recmem](recmem-evidence.md) |
 | TierMem: Balancing Compressed Memory and Raw Evidence for Long-Horizon Agent Memory | COLM 2026 | `evidence-checked` | [tiermem](tiermem-evidence.md) |
+| TiMem: Temporal-Hierarchical Memory Consolidation for Long-Horizon Conversational Agents | ACL Findings 2026 | `evidence-checked` | [timem](timem-evidence.md) |
 | ARTEM: Enhancing Large Language Model Agents with Spatial-Temporal Episodic Memory | AAAI 2026 | `queued` | [artem](artem-evidence.md) |
 | EMA: An Episodic Memory Agent for Efficient and Selective Memory | ACL Findings 2026 | `queued` | [ema](ema-evidence.md) |
 | Human-inspired Episodic Memory for Infinite Context LLMs | ICLR 2025 | `queued` | [humanepisodic](humanepisodic-evidence.md) |
 | What Deserves Memory: Adaptive Memory Distillation for LLM Agents | ACL 2026 | `queued` | [nemori](nemori-evidence.md) |
-| RecMem: Recurrence-based Memory Consolidation for Efficient and Effective Long-Running LLM Agents | ACL Findings 2026 | `queued` | [recmem](recmem-evidence.md) |
 | REMem: Reasoning with Episodic Memory in Language Agent | ICLR 2026 | `queued` | [remem](remem-evidence.md) |
-| TiMem: Temporal-Hierarchical Memory Consolidation for Long-Horizon Conversational Agents | ACL Findings 2026 | `queued` | [timem](timem-evidence.md) |
 
 ## Mainline E · Personalization, Multimodal and Procedural
 

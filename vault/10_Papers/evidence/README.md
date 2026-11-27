@@ -14,8 +14,9 @@
 
 状态：
 
-- `evidence-checked`：12 篇（A 线 5 篇 + AgeMem + Batch 1 的 6 篇）
-- `queued`：39 篇
+- `evidence-checked`：18 篇
+- `queued`：33 篇
+- `queued`：33 篇
 - `COST_COMPARISON.md`：主线 A 成本对比（横切文件，不是论文卡）
 
 `queued` 只是入口，不是已完成证据。
