@@ -16,7 +16,7 @@
 
 - `evidence-checked`：51 篇
 - `queued`：0 篇
-- `queued`：33 篇
+- `verified`：0 篇
 - `COST_COMPARISON.md`：主线 A 成本对比（横切文件，不是论文卡）
 
 `queued` 只是入口，不是已完成证据。

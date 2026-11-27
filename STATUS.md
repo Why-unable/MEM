@@ -57,7 +57,7 @@ CCF-B：2
 - A-Mem、G-Memory 的正式 NeurIPS 2025 camera-ready 尚未复核。
 - Zotero 有书目但无 PDF 附件；全文目前保存在被 Git 忽略的 `data/agent-memory-2025/pdfs/`。
 - `CLAIMS.md` 尚未建立。
-- 新增 15 篇大多未补全文证据卡。
+- 51 张 evidence 尚未做 `verified` 人工抽查。
 - 单文件 JSON 在多机同时编辑时仍可能冲突。
 
 ## 另一台机器的最短接手路径
