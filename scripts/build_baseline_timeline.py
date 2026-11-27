@@ -59,7 +59,7 @@ def write_csv(path: Path, rows: list[dict]) -> None:
         "headline", "comparison", "delta_pct", "baseline_shift", "note",
     ]
     with path.open("w", encoding="utf-8", newline="") as fh:
-        writer = csv.DictWriter(fh, fieldnames=columns)
+        writer = csv.DictWriter(fh, fieldnames=columns, lineterminator="\n")
         writer.writeheader()
         for row in rows:
             writer.writerow({key: row.get(key, "") for key in columns})
