@@ -14,8 +14,8 @@
 
 状态：
 
-- `evidence-checked`：29 篇
-- `queued`：22 篇
+- `evidence-checked`：36 篇
+- `queued`：15 篇
 - `queued`：33 篇
 - `COST_COMPARISON.md`：主线 A 成本对比（横切文件，不是论文卡）
 

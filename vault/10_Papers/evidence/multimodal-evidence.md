@@ -1,56 +1,119 @@
 ---
 type: evidence
-paper_id: "multimodal"
+paper_id: multimodal
 title: "Seeing, Listening, Remembering, and Reasoning: A Multimodal Agent with Long-Term Memory"
-status: queued
-checked_at: null
-source_pdf: ""
-source_version: ""
-pages_checked: []
+status: evidence-checked
+checked_at: 2026-11-27
+source_pdf: "data/agent-memory-2025/pdfs/multimodal.pdf"
+source_version: "ICLR 2026 conference paper"
+pages_checked: "1-9"
 mainline: "E"
 tags:
   - evidence
   - mainline-e
+  - multimodal
+  - episodic-memory
 ---
 
-# Seeing, Listening, Remembering, and Reasoning: A Multimodal Agent with Long-Term Memory — Evidence
+# M3-Agent 证据卡
 
-> Status: **queued**. 这是逐篇 evidence 的入口，不是已完成的证据卡。
-> 不要把下面的摘要当作已验证结论；关键数字必须回全文和页码核对。
+## 结论先行
 
-## 元数据
+- M3-Agent 把长期记忆扩展到 **视觉 + 听觉 + 文本**：实时处理多模态输入，构建 entity-centric episodic/semantic memory。
+- 它用 RL 训练多轮推理和记忆检索，并发布 M3-Bench：100 个 robot-perspective 视频 + 920 个 web 视频。
+- 相对最强 prompting baseline（Gemini-1.5-Pro + GPT-4o），M3-Bench-robot **+6.7%**、M3-Bench-web **+7.7%**、VideoMME-long **+5.3%**。
 
-- **Venue**：ICLR 2026（Top-ICLR）
-- **年份**：2026
-- **作者**：Lin Long, Yichen He, Wentao Ye, Yiyuan Pan, Yuan Lin, Hang Li, Junbo Zhao, Wei Li
-- **DOI**：10.48550/arXiv.2508.09736
-- **arXiv**：2508.09736
-- **PDF**：https://openreview.net/pdf?id=PMz29A7Muq
-- **正式记录**：https://openreview.net/forum?id=PMz29A7Muq
-- **主库角色**：多模态长期记忆 agent，连接视觉、听觉与文本经验。
+## 研究问题与定位
 
-## 官方摘要
+多模态 agent 需要跨时间积累视觉/听觉经验，但现有 memory 主要是文本。M3-Agent 要回答：
 
-We introduce M3-Agent, a novel multimodal agent framework equipped with long-term memory. Like humans, M3-Agent can process real-time visual and auditory inputs to build and update episodic and semantic memories, gradually accumulating world knowledge. Its memory is organized in an entity-centric, multimodal manner, enabling deeper and more consistent understanding of the environment. Given an instruction, M3-Agent autonomously performs multi-turn reasoning and retrieves relevant memories to complete tasks. To evaluate memory effectiveness and memory-based reasoning in multimodal agents, we develop M3-Bench, a long-video question answering benchmark comprising 100 newly recorded robot-perspective videos (M3-Bench-robot) and 920 diverse web-sourced videos (M3-Bench-web). We annotate QA pairs designed to test capabilities essential for agent applications, such as person understanding, general knowledge extraction, and cross-modal reasoning. Experimental results show that M3-Agent, trained via reinforcement learning, outperforms the strongest baseline, a prompting agent using Gemini-1.5-pro and GPT-4o, achieving 6.7%, 7.7%, and 5.3% higher accuracy on M3-Bench-robot, M3-Bench-web and VideoMME-long, respectively. Our work advances multimodal agents toward more human-like long-term memory and provides insights for their practical design. Models, datasets and code are available at https://github.com/ByteDance-Seed/m3-agent.
+> 能否用一个 entity-centric 多模态长期记忆，支持实时感知、记忆更新和多轮推理？
 
-## 待提取（全文核对）
+## 方法拆解
 
-- [ ] 研究问题与一句话定位
-- [ ] 记忆单元 / 数据结构
-- [ ] 写入、组织、检索、更新、遗忘机制
-- [ ] 训练方式与监督信号（若适用）
-- [ ] 数据集、backbone、baseline、指标
-- [ ] 关键数字（必须标 PDF 页码或表格）
-- [ ] 主要结论
-- [ ] 局限与威胁
-- [ ] 与主线 E 其他论文的关系
-- [ ] 对 RQ1 / RQ3 的意义
-- [ ] 可复用点
-- [ ] 成本：build / query / latency / storage
-- [ ] 待核对项
+### Entity-centric multimodal memory
+
+- 记忆以 entity 为中心组织。
+- 同时包含 episodic（具体经历）和 semantic（稳定知识）。
+- 支持视觉/听觉/文本输入。
+
+### Multi-turn reasoning
+
+- 给定 instruction，agent 自主进行多轮推理。
+- 检索相关记忆，组合跨模态证据。
+- 训练方式：RL。
+
+来源：PDF p.2-6，Method。
+
+## 实验与关键数字
+
+### 设置
+
+- Benchmarks：M3-Bench-robot（100 videos）、M3-Bench-web（920 videos）、VideoMME-long。
+- Baselines：Socratic Models（Gemini-1.5-Pro / GPT-4o / Qwen2.5-Omni / Qwen2.5-VL）、MovieChat、MA-LMM、Flash-VStream、Gemini-Agent、Gemini-GPT4o-Agent。
+- Metrics：QA accuracy。
+
+### 结果
+
+| Benchmark | M3-Agent 相对最强 baseline |
+|---|---:|
+| M3-Bench-robot | **+6.7%** |
+| M3-Bench-web | **+7.7%** |
+| VideoMME-long | **+5.3%** |
+
+来源：PDF p.1 abstract；p.7-8，Table 1。
+
+### 分析
+
+- Entity-centric memory 对 person understanding、general knowledge、cross-modal reasoning 都有帮助。
+- 多轮推理比单轮检索更适合长视频。
+
+来源：PDF p.7-9。
+
+## 真正的新意
+
+1. **entity-centric 多模态记忆**：不是文本 chunk。
+2. **episodic + semantic 多模态**：视觉/听觉经验也可长期保留。
+3. **M3-Bench**：robot + web 两类长视频 benchmark。
+4. **RL 训练多轮记忆推理**。
+
+## 局限与威胁
+
+- **视频 QA 为主**：不是通用多模态 agent。
+- **存储/检索成本高**：视频/音频记忆比文本大。
+- **隐私风险**：视觉/听觉长期记忆可能包含敏感信息。
+- **没有显式遗忘/删除**：多模态记忆只增不减。
+- **benchmark 新**：与文本 memory benchmark 不可直接比较。
+
+## 与主线 E 的关系
+
+- **Evoking/PersonaAgent**：文本个性化；M3-Agent 多模态个性化。
+- **MemRec**：推荐领域；M3-Agent 视频理解。
+- **TierMem**：文本 summary/raw；M3-Agent 需要多模态证据层。
+- **MemoryAgentBench**：目前主要是文本；M3-Agent 暴露多模态评测缺口。
+
+## 对 RQ1 的意义
+
+M3-Agent 说明“记忆单元”可以是 entity，而不是文本 chunk：
+
+- 多模态任务中，entity-centric 结构可能比文本 RAG 更有效。
+- RQ1 的多模态扩展需要新的 evidence recall 和隐私指标。
+
+## 可复用点
+
+- entity-centric multimodal memory schema。
+- episodic + semantic 多模态分层。
+- M3-Bench-robot/web。
+- 多轮记忆推理训练。
+
+## 成本
+
+- 多模态存储/检索成本未在正文完整量化。
+- RL 训练成本未汇总。
+- 没有统一 token/latency 表（视频 token 计费不同）。
 
 ## 来源
 
-- 主库记录：`data/agent-memory-2025/papers.json`
-- PDF：https://openreview.net/pdf?id=PMz29A7Muq
-- 正式记录：https://openreview.net/forum?id=PMz29A7Muq
+- 本地 PDF：`data/agent-memory-2025/pdfs/multimodal.pdf`
+- ICLR 2026（论文记录）
+- 代码/数据：https://github.com/ByteDance-Seed/m3-agent

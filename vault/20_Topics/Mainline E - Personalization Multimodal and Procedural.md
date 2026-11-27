@@ -240,6 +240,6 @@ LTS 证明“选择性共享”能降成本；但共享权限、冲突裁决、�
 
 ## 证据边界
 
-- 六篇已完成全文扫描；ReasoningBank 使用摘要 + 实验地图，未完成页码级全文核对。
+- 七篇均已完成页码级证据卡（ReasoningBank 使用 arXiv 全文补齐）。
 - 尚未为 Evoking、PersonaAgent、M3-Agent、ReMe、ReasoningBank、MemRec、LTS 建立独立页码级证据卡。
 - 评测领域差异很大，不能直接把 LaMP、M3-Bench、BFCL、GAIA 的分数横比。

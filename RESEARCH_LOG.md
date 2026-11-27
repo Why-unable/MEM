@@ -12,6 +12,7 @@
 | 2026-11-27 | macOS / Codex | Evidence Batch 2（6 篇） | [research-log/2026-11-27-evidence-batch2.md](research-log/2026-11-27-evidence-batch2.md) |
 | 2026-11-27 | macOS / Codex | Evidence Batch 3（6 篇） | [research-log/2026-11-27-evidence-batch3.md](research-log/2026-11-27-evidence-batch3.md) |
 | 2026-11-27 | macOS / Codex | Evidence Batch 4（5 篇） | [research-log/2026-11-27-evidence-batch4.md](research-log/2026-11-27-evidence-batch4.md) |
+| 2026-11-27 | macOS / Codex | Evidence Batch 5（7 篇） | [research-log/2026-11-27-evidence-batch5.md](research-log/2026-11-27-evidence-batch5.md) |
 
 ## 记录规范
 

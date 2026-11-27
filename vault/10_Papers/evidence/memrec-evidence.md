@@ -1,56 +1,125 @@
 ---
 type: evidence
-paper_id: "memrec"
+paper_id: memrec
 title: "MemRec: Collaborative Memory-Augmented Agentic Recommender System"
-status: queued
-checked_at: null
-source_pdf: ""
-source_version: ""
-pages_checked: []
+status: evidence-checked
+checked_at: 2026-11-27
+source_pdf: "data/agent-memory-2025/pdfs/memrec.pdf"
+source_version: "ACL 2026 Long Papers"
+pages_checked: "1-9"
 mainline: "E"
 tags:
   - evidence
   - mainline-e
+  - recommender-system
+  - collaborative-memory
 ---
 
-# MemRec: Collaborative Memory-Augmented Agentic Recommender System — Evidence
+# MemRec 证据卡
 
-> Status: **queued**. 这是逐篇 evidence 的入口，不是已完成的证据卡。
-> 不要把下面的摘要当作已验证结论；关键数字必须回全文和页码核对。
+## 结论先行
 
-## 元数据
+- MemRec 把推荐系统中的 memory 从“孤立的用户/物品语义记忆”扩展到 **collaborative memory**：用户-物品共现和社区关系。
+- 它把记忆管理从推理中解耦：轻量 `LM_Mem` 在后台维护 collaborative memory graph，重型 `LLM_Rec` 只接收蒸馏后的高信号上下文。
+- 在 Books / Goodreads / MovieTV / Yelp 四个数据集上，H@1 相对最佳 baseline 提升 **14.91% / 28.98% / 19.75% / 15.77%**。
 
-- **Venue**：ACL 2026（CCF-A）
-- **年份**：2026
-- **作者**：Weixin Chen, Yuhan Zhao, Jingyuan Huang, Zihe Ye, Mingxuan Ju, Tong Zhao, Neil Shah, Li Chen, Yongfeng Zhang
-- **DOI**：null
-- **arXiv**：null
-- **PDF**：https://aclanthology.org/2026.acl-long.2061.pdf
-- **正式记录**：https://openreview.net/forum?id=FaMcfd14pg
-- **主库角色**：把协作记忆增强用于 agentic recommender system。
+## 研究问题与定位
 
-## 官方摘要
+LLM 推荐 agent 的用户/物品 memory 通常彼此孤立，忽略 collaborative signals。直接共享 collaborative memory 又会导致 context overload、噪声和成本。
 
-The evolution of recommender systems has shifted from traditional collaborative filtering to LLM-based agentic systems, which rely on semantic user and item memories to make predictions. However, existing agents maintain these memories in isolation. This overlooks crucial collaborative signals, such as user-item co-engagements and peer relationships across the community, which significantly limits their ability to uncover hidden preferences and accurately infer user needs, particularly for data-sparse users. To bridge this gap, we introduce collaborative memory, a paradigm that connects isolated semantics to enable the sharing of relational insights. Yet, naively utilizing collaborative memory causes severe context overload and introduces noise to downstream LLMs, alongside prohibitive computational costs. To resolve this, we propose MemRec, a framework that architecturally decouples memory management from reasoning. MemRec introduces a dedicated, lightweight language model LM_Mem to efficiently manage and synthesize a dynamic collaborative memory graph in the background. It provides only distilled, high-signal contexts to a downstream, heavyweight large language model (LLM_Rec) for the final recommendation. Extensive experiments on four benchmarks demonstrate that MemRec achieves state-of-the-art performance. Code: https://github.com/rutgerswiselab/memrecHomepage: https://memrec.weixinchen.com
+MemRec 要回答：
 
-## 待提取（全文核对）
+> 能否用协作记忆图 + 轻量管理器，把 collaborative signal 蒸馏给推荐 LLM？
 
-- [ ] 研究问题与一句话定位
-- [ ] 记忆单元 / 数据结构
-- [ ] 写入、组织、检索、更新、遗忘机制
-- [ ] 训练方式与监督信号（若适用）
-- [ ] 数据集、backbone、baseline、指标
-- [ ] 关键数字（必须标 PDF 页码或表格）
-- [ ] 主要结论
-- [ ] 局限与威胁
-- [ ] 与主线 E 其他论文的关系
-- [ ] 对 RQ1 / RQ3 的意义
-- [ ] 可复用点
-- [ ] 成本：build / query / latency / storage
-- [ ] 待核对项
+## 方法拆解
+
+### Collaborative memory
+
+- 连接用户/物品/邻居/共现关系。
+- 不是单一用户历史，而是社区级关系信号。
+
+### 解耦架构
+
+- `LM_Mem`：轻量语言模型，后台管理、合成 collaborative memory graph。
+- `LLM_Rec`：重型推荐模型，只接收 distilled high-signal context。
+
+### 目标
+
+- 降低 context overload。
+- 保留 collaborative signal。
+- 减少在线推理成本。
+
+来源：PDF p.3-6，Method。
+
+## 实验与关键数字
+
+### 设置
+
+- Datasets：Amazon Books、Amazon Goodreads、MovieTV、Yelp。
+- Baselines：LightGCN、SASRec、P5、Vanilla LLM、iAgent、i2Agent、AgentCF、RecBot。
+- Metrics：Hit@K、NDCG@K。
+
+### 主结果（H@1）
+
+| Dataset | Best baseline H@1 | MemRec H@1 | Relative |
+|---|---:|---:|---:|
+| Books | 0.4453（i2Agent） | **0.5117** | **+14.91%** |
+| Goodreads | 0.3099（i2Agent） | **0.3997** | **+28.98%** |
+| MovieTV | 0.4912（i2Agent） | **0.5882** | **+19.75%** |
+| Yelp | 0.4205（i2Agent） | **0.4868** | **+15.77%** |
+
+来源：PDF p.7，Table 2-3。
+
+### 效率
+
+- 解耦后，在线只查询 distilled collaborative memory，避免重型 LLM 直接处理原始图。
+- 论文报告优于 monolithic agent 的 Pareto frontier。
+- 具体 latency 见 Table 5（待逐项核对）。
+
+来源：PDF p.7-8。
+
+## 真正的新意
+
+1. **collaborative memory**：从个体语义到群体关系。
+2. **memory management / reasoning 解耦**：LM_Mem + LLM_Rec。
+3. **collaborative graph 蒸馏**：只把高信号上下文交给推理模型。
+4. **推荐任务上的 memory 评测**：Hit@K/NDCG@K。
+
+## 局限与威胁
+
+- **推荐领域专用**：不是通用 agent memory。
+- **协作记忆隐私**：用户-物品关系可能敏感；权限未展开。
+- **图维护成本**：LM_Mem 后台管理仍需计算。
+- **没有显式遗忘/删除**：协作图只增不减。
+- **benchmark 是离线推荐**：在线用户反馈/冷启动未充分验证。
+
+## 与主线 E 的关系
+
+- **Evoking/PersonaAgent**：个体个性化；MemRec 群体协作信号。
+- **LTS**：LTS 跨团队共享中间步骤；MemRec 共享用户-物品关系。
+- **MemoryOS/EverMemOS**：系统层 memory；MemRec 推荐领域 memory。
+- **TierMem**：粒度选择；MemRec 管理/推理解耦。
+
+## 对 RQ1/RQ4 的意义
+
+- RQ1：推荐任务中，collaborative signal 是结构记忆的一种。
+- RQ4：多用户共享记忆的权限/隐私是直接问题。
+
+## 可复用点
+
+- collaborative memory graph。
+- LM_Mem + LLM_Rec 解耦。
+- distilled high-signal context。
+- Hit@K/NDCG@K 评测。
+- 与 i2Agent/AgentCF 等强 baseline 对照。
+
+## 成本
+
+- LM_Mem 后台管理成本 + LLM_Rec 在线推理。
+- 在线上下文显著压缩（定性），具体 token/latency 见 Table 5/8。
+- 图存储随用户/物品增长。
 
 ## 来源
 
-- 主库记录：`data/agent-memory-2025/papers.json`
-- PDF：https://aclanthology.org/2026.acl-long.2061.pdf
-- 正式记录：https://openreview.net/forum?id=FaMcfd14pg
+- 本地 PDF：`data/agent-memory-2025/pdfs/memrec.pdf`
+- ACL Anthology 2026（论文记录）

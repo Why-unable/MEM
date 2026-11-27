@@ -7,13 +7,13 @@
 
 - 主库论文：51
 - 已有独立 evidence 文件：51
-- 已完成页码级证据卡：29
+- 已完成页码级证据卡：36
 
 ```text
-queued: 22
+queued: 15
 metadata-only: 0
 full-text-scan: 0
-evidence-checked: 29
+evidence-checked: 36
 verified: 0
 ```
 
@@ -72,13 +72,13 @@ verified: 0
 
 | Paper | Venue | Status | Evidence |
 |---|---|---|---|
-| Evoking User Memory: Personalizing LLM via Recollection-Familiarity Adaptive Retrieval | ICLR 2026 | `queued` | [evoking](evoking-evidence.md) |
-| Learning to Share: Selective Memory for Efficient Parallel Agentic Systems | ICML 2026 | `queued` | [learnshare](learnshare-evidence.md) |
-| MemRec: Collaborative Memory-Augmented Agentic Recommender System | ACL 2026 | `queued` | [memrec](memrec-evidence.md) |
-| Seeing, Listening, Remembering, and Reasoning: A Multimodal Agent with Long-Term Memory | ICLR 2026 | `queued` | [multimodal](multimodal-evidence.md) |
-| PersonaAgent: Bridging Memory and Action for Personalized LLM Agents | ACL Findings 2026 | `queued` | [personaagent](personaagent-evidence.md) |
-| ReasoningBank: Scaling Agent Self-Evolving with Reasoning Memory | ICLR 2026 | `queued` | [reasoningbank](reasoningbank-evidence.md) |
-| Remember Me, Refine Me: A Dynamic Procedural Memory Framework for Experience-Driven Agent Evolution | ACL Findings 2026 | `queued` | [rememberrefine](rememberrefine-evidence.md) |
+| Evoking User Memory: Personalizing LLM via Recollection-Familiarity Adaptive Retrieval | ICLR 2026 | `evidence-checked` | [evoking](evoking-evidence.md) |
+| Learning to Share: Selective Memory for Efficient Parallel Agentic Systems | ICML 2026 | `evidence-checked` | [learnshare](learnshare-evidence.md) |
+| MemRec: Collaborative Memory-Augmented Agentic Recommender System | ACL 2026 | `evidence-checked` | [memrec](memrec-evidence.md) |
+| Seeing, Listening, Remembering, and Reasoning: A Multimodal Agent with Long-Term Memory | ICLR 2026 | `evidence-checked` | [multimodal](multimodal-evidence.md) |
+| PersonaAgent: Bridging Memory and Action for Personalized LLM Agents | ACL Findings 2026 | `evidence-checked` | [personaagent](personaagent-evidence.md) |
+| ReasoningBank: Scaling Agent Self-Evolving with Reasoning Memory | ICLR 2026 | `evidence-checked` | [reasoningbank](reasoningbank-evidence.md) |
+| Remember Me, Refine Me: A Dynamic Procedural Memory Framework for Experience-Driven Agent Evolution | ACL Findings 2026 | `evidence-checked` | [rememberrefine](rememberrefine-evidence.md) |
 
 ## Mainline F · Evaluation
 
