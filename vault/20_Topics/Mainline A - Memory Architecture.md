@@ -268,15 +268,15 @@ preference
 
 ## 扩展论文
 
-| 论文 | 核心机制 | 对 A 线的意义 |
-|---|---|---|
-| [SeCom](../10_Papers/secom.md) | 主题连贯的 segment 级记忆 + prompt compression 去噪 | 直接研究“记忆粒度”本身，是 MemGAS 多粒度路线的前置工作 |
-| [HippoRAG 2](../10_Papers/hipporag2.md) | Personalized PageRank + passage integration 的图增强 RAG | 证明图结构必须同时保住 factual memory，否则不如普通 RAG |
-| [GAM](../10_Papers/gam.md) | event progression graph + topic associative network | 把“快速感知”和“稳定知识保留”解耦，是层次图的另一种实现 |
-| [E-mem](../10_Papers/emem.md) | 多 agent 保留未压缩情境，master agent 协调 episodic reconstruction | 直接挑战“先压缩成结构再检索”的预处理范式 |
-| [M+](../10_Papers/mplus.md) | 扩展 MemoryLLM 的可扩展长期参数记忆 | 证明记忆可以存在于模型参数中，而不只是外部存储 |
+| 论文                                      | 核心机制                                                    | 对 A 线的意义                              |
+| --------------------------------------- | ------------------------------------------------------- | ------------------------------------- |
+| [SeCom](../10_Papers/secom.md)          | 主题连贯的 segment 级记忆 + prompt compression 去噪               | 直接研究“记忆粒度”本身，是 MemGAS 多粒度路线的前置工作      |
+| [HippoRAG 2](../10_Papers/hipporag2.md) | Personalized PageRank + passage integration 的图增强 RAG    | 证明图结构必须同时保住 factual memory，否则不如普通 RAG |
+| [GAM](../10_Papers/gam.md)              | event progression graph + topic associative network     | 把“快速感知”和“稳定知识保留”解耦，是层次图的另一种实现         |
+| [E-mem](../10_Papers/emem.md)           | 多 agent 保留未压缩情境，master agent 协调 episodic reconstruction | 直接挑战“先压缩成结构再检索”的预处理范式                 |
+| [M+](../10_Papers/mplus.md)             | 扩展 MemoryLLM 的可扩展长期参数记忆                                 | 证明记忆可以存在于模型参数中，而不只是外部存储               |
 
-## 四篇论文的关键点
+## 扩展论文的关键点
 
 ### SeCom：粒度本身就是架构变量
 

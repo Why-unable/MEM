@@ -6,7 +6,7 @@ EDGES ?= data/$(TOPIC)/edges.json
 VAULT ?= vault
 OUT ?= maps/$(TOPIC)
 
-.PHONY: validate schemas build export check sync clean-cache
+.PHONY: validate schemas build export evidence-index check sync clean-cache
 
 validate:
 	$(PYTHON) scripts/validate_mem.py --papers $(PAPERS) --edges $(EDGES)
@@ -21,7 +21,10 @@ build:
 export:
 	$(PYTHON) scripts/export_zotero_formats.py --papers $(PAPERS) --out-dir data/$(TOPIC) --stem $(TOPIC)
 
-check: schemas validate build export
+evidence-index:
+	$(PYTHON) scripts/build_evidence_index.py
+
+check: schemas validate build export evidence-index
 	git diff --check
 
 sync:

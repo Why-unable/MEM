@@ -8,12 +8,17 @@
 
 ## 当前覆盖
 
-- `amem-evidence.md`
-- `gmemory-evidence.md`
-- `magma-evidence.md`
-- `memgas-evidence.md`
-- `reconstructed-evidence.md`
-- `COST_COMPARISON.md` — 主线 A 成本对比
+每篇主库论文都有一个 `<paper-id>-evidence.md`。当前索引：
+
+- [[10_Papers/evidence/INDEX|Per-Paper Evidence Index]]
+
+状态：
+
+- `evidence-checked`：6 篇（A 线 5 篇 + AgeMem）
+- `queued`：45 篇
+- `COST_COMPARISON.md`：主线 A 成本对比（横切文件，不是论文卡）
+
+`queued` 只是入口，不是已完成证据。
 
 ## 证据卡最低要求
 

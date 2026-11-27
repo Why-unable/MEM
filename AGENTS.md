@@ -28,5 +28,7 @@ python3 scripts/export_zotero_formats.py --papers data/<topic>/papers.json --out
 
 10. Do not overwrite the user's hand-written Obsidian notes without previewing the change. Generated paper notes are safe to rebuild; topic/idea notes may contain user edits and need care.
 11. Never modify `zotero.sqlite` directly. Use BibTeX/RIS/CSL JSON export-first workflows.
-12. Record system decisions in `docs/decisions/`, research process in `research-log/`, and AI assistance in `AI_USAGE.md`.
+12. Every paper must have `vault/10_Papers/evidence/<paper-id>-evidence.md`; keep `INDEX.md` current with `python3 scripts/build_evidence_index.py`.
+13. Do not mark a paper `evidence-checked` from its abstract or a mainline synthesis; key numbers require PDF/page verification.
+14. Record system decisions in `docs/decisions/`, research process in `research-log/`, and AI assistance in `AI_USAGE.md`.
 13. Run `make check` before commit and `git pull --rebase` before starting work on a machine.

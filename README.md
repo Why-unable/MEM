@@ -24,6 +24,7 @@
 - 论文元数据：`data/agent-memory-2025/papers.json`
 - Zotero 导入：`data/agent-memory-2025/agent-memory-2025.bib`、`agent-memory-2025-batch2.bib`、`agent-memory-2025-batch3.bib`
 - 研究综合：`maps/agent-memory-2025/SYNTHESIS.md`
+- 逐篇证据索引：`vault/10_Papers/evidence/INDEX.md`
 - 初始研究问题：`vault/30_Ideas/Agent Memory Research Questions.md`
 
 ## 协作入口

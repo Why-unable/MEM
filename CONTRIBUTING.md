@@ -25,6 +25,7 @@ Read:
 | Paper metadata | `data/<topic>/papers.json` | paper notes, CSV, BibTeX, RIS |
 | Conceptual edges | `data/<topic>/edges.json` | Mermaid map, Canvas |
 | Research questions | `RESEARCH_QUESTIONS.md` and `vault/30_Ideas/` | — |
+| Per-paper evidence | `vault/10_Papers/evidence/<paper-id>-evidence.md` | `INDEX.md` |
 | Decisions | `docs/decisions/*.md` | `DECISIONS.md` |
 | Research process | `research-log/*.md` | `RESEARCH_LOG.md` |
 | Current state | `STATUS.md` | — |
