@@ -20,7 +20,7 @@ authors:
   - "Hinrich Schütze"
   - "Volker Tresp"
   - "Yunpu Ma"
-doi: "10.48550/arXiv.2508.19828"
+doi: "10.18653/v1/2026.acl-long.583"
 arxiv: "2508.19828"
 openreview: "https://openreview.net/forum?id=inJIfKNFuE"
 pdf: "https://aclanthology.org/2026.acl-long.583.pdf"

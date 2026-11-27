@@ -219,6 +219,6 @@ vs learned compression (MemAgent)
 
 ## 证据边界
 
-- AgeMem 已完成全文证据卡。
-- Memory-R1、MemAgent、MemEvolve、UMEM 已做全文扫描，但尚未各自建立页码级证据卡。
+- AgeMem、Memory-R1、MemAgent 已完成页码级证据卡。
+- MemEvolve、UMEM 已完成全文扫描，但尚未各自建立页码级证据卡。
 - 五篇论文的分数不能直接横比；本页只做机制和证据方向比较。

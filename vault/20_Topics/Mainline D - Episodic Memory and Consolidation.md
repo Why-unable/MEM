@@ -273,5 +273,6 @@ REMem 的 agentic retriever、EM-LLM 的两阶段检索、TierMem 的 escalate �
 ## 证据边界
 
 - 八篇均已完成全文扫描。
-- 尚未为 EM-LLM、REMem、ARTEM、EMA、RecMem、TiMem、TierMem、Nemori 建立独立页码级证据卡。
+- TierMem 已完成页码级证据卡。
+- EM-LLM、REMem、ARTEM、EMA、RecMem、TiMem、Nemori 尚未建立独立页码级证据卡。
 - 分数不可直接横比；本页只比较事件建模、巩固时机和成本结构。

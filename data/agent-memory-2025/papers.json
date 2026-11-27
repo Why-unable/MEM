@@ -146,13 +146,14 @@
     "keywords": [],
     "openreview_url": "https://openreview.net/forum?id=inJIfKNFuE",
     "pdf_url": "https://aclanthology.org/2026.acl-long.583.pdf",
-    "DOI": "10.48550/arXiv.2508.19828",
+    "DOI": "10.18653/v1/2026.acl-long.583",
     "arXiv": "2508.19828",
     "DBLP": "conf/acl/YanYHNDLMBKPSTM26",
     "S2CorpusId": 280918480,
     "verified_by": [
       "OpenReview accepted venue",
-      "ACL Anthology/AAAI DOI"
+      "ACL Anthology/AAAI DOI",
+      "Crossref DOI"
     ],
     "status": "published",
     "collected_at": "2026-11-19"

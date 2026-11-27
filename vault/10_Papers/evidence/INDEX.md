@@ -7,13 +7,13 @@
 
 - 主库论文：51
 - 已有独立 evidence 文件：51
-- 已完成页码级证据卡：6
+- 已完成页码级证据卡：12
 
 ```text
-queued: 45
+queued: 39
 metadata-only: 0
 full-text-scan: 0
-evidence-checked: 6
+evidence-checked: 12
 verified: 0
 ```
 
@@ -37,18 +37,18 @@ verified: 0
 | Paper | Venue | Status | Evidence |
 |---|---|---|---|
 | Agentic Memory: Learning Unified Long-Term and Short-Term Memory Management for Large Language Model Agents | ACL 2026 | `evidence-checked` | [agemem](agemem-evidence.md) |
-| MemAgent: Reshaping Long-Context LLM with Multi-Conv RL-based Memory Agent | ICLR 2026 | `queued` | [memagent](memagent-evidence.md) |
+| MemAgent: Reshaping Long-Context LLM with Multi-Conv RL-based Memory Agent | ICLR 2026 | `evidence-checked` | [memagent](memagent-evidence.md) |
+| Memory-R1: Enhancing Large Language Model Agents to Manage and Utilize Memories via Reinforcement Learning | ACL 2026 | `evidence-checked` | [memoryr1](memoryr1-evidence.md) |
 | MemEvolve: Meta-Evolution of Agent Memory Systems | ICML 2026 | `queued` | [memeolve](memeolve-evidence.md) |
-| Memory-R1: Enhancing Large Language Model Agents to Manage and Utilize Memories via Reinforcement Learning | ACL 2026 | `queued` | [memoryr1](memoryr1-evidence.md) |
 | UMEM: Unified Memory Extraction and Management Framework for Generalizable Memory | ICML 2026 | `queued` | [umem](umem-evidence.md) |
 
 ## Mainline C · Systems and Efficiency
 
 | Paper | Venue | Status | Evidence |
 |---|---|---|---|
+| LightMem: Lightweight and Efficient Memory-Augmented Generation | ICLR 2026 | `evidence-checked` | [lightmem](lightmem-evidence.md) |
 | EverMemOS: A Self-Organizing Memory Operating System for Structured Long-Horizon Reasoning | ACL 2026 | `queued` | [evermemos](evermemos-evidence.md) |
 | Hippocampus: An Efficient and Scalable Memory Module for Agentic AI | MLSys 2026 | `queued` | [hippocampus](hippocampus-evidence.md) |
-| LightMem: Lightweight and Efficient Memory-Augmented Generation | ICLR 2026 | `queued` | [lightmem](lightmem-evidence.md) |
 | Lightweight LLM Agent Memory with Small Language Models | ACL 2026 | `queued` | [lightmem-slm](lightmem-slm-evidence.md) |
 | LightWM: Training-Free Hierarchical Working Memory for Small Language Model Agents | ICML 2026 | `queued` | [lightwm](lightwm-evidence.md) |
 | Mem0: Building Production-Ready AI Agents with Scalable Long-Term Memory | ECAI 2025 | `queued` | [mem0](mem0-evidence.md) |
@@ -59,13 +59,13 @@ verified: 0
 
 | Paper | Venue | Status | Evidence |
 |---|---|---|---|
+| TierMem: Balancing Compressed Memory and Raw Evidence for Long-Horizon Agent Memory | COLM 2026 | `evidence-checked` | [tiermem](tiermem-evidence.md) |
 | ARTEM: Enhancing Large Language Model Agents with Spatial-Temporal Episodic Memory | AAAI 2026 | `queued` | [artem](artem-evidence.md) |
 | EMA: An Episodic Memory Agent for Efficient and Selective Memory | ACL Findings 2026 | `queued` | [ema](ema-evidence.md) |
 | Human-inspired Episodic Memory for Infinite Context LLMs | ICLR 2025 | `queued` | [humanepisodic](humanepisodic-evidence.md) |
 | What Deserves Memory: Adaptive Memory Distillation for LLM Agents | ACL 2026 | `queued` | [nemori](nemori-evidence.md) |
 | RecMem: Recurrence-based Memory Consolidation for Efficient and Effective Long-Running LLM Agents | ACL Findings 2026 | `queued` | [recmem](recmem-evidence.md) |
 | REMem: Reasoning with Episodic Memory in Language Agent | ICLR 2026 | `queued` | [remem](remem-evidence.md) |
-| TierMem: Balancing Compressed Memory and Raw Evidence for Long-Horizon Agent Memory | COLM 2026 | `queued` | [tiermem](tiermem-evidence.md) |
 | TiMem: Temporal-Hierarchical Memory Consolidation for Long-Horizon Conversational Agents | ACL Findings 2026 | `queued` | [timem](timem-evidence.md) |
 
 ## Mainline E · Personalization, Multimodal and Procedural
@@ -84,14 +84,14 @@ verified: 0
 
 | Paper | Venue | Status | Evidence |
 |---|---|---|---|
+| LongMemEval: Benchmarking Chat Assistants on Long-Term Interactive Memory | ICLR 2025 | `evidence-checked` | [longmemeval](longmemeval-evidence.md) |
+| PersistBench: When Should Long-Term Memories Be Forgotten by LLMs? | ICML 2026 | `evidence-checked` | [persistbench](persistbench-evidence.md) |
 | Beyond a Million Tokens: Benchmarking and Enhancing Long-Term Memory in LLMs | ICLR 2026 | `queued` | [beyondmillion](beyondmillion-evidence.md) |
 | Benchmarking Agent Memory in Interdependent Multi-Session Agentic Tasks | ICML 2026 | `queued` | [interdependent](interdependent-evidence.md) |
-| LongMemEval: Benchmarking Chat Assistants on Long-Term Interactive Memory | ICLR 2025 | `queued` | [longmemeval](longmemeval-evidence.md) |
 | MemBench: Towards More Comprehensive Evaluation on the Memory of LLM-based Agents | ACL Findings 2025 | `queued` | [membench](membench-evidence.md) |
 | Evaluating Memory in LLM Agents via Incremental Multi-Turn Interactions | ICLR 2026 | `queued` | [memoryagentbench](memoryagentbench-evidence.md) |
 | MemoryBench: A Benchmark for Memory and Continual Learning in LLM Systems | ICML 2026 | `queued` | [memorybench](memorybench-evidence.md) |
 | Minerva: A Programmable Memory Test Benchmark for Language Models | ICML 2025 | `queued` | [minerva](minerva-evidence.md) |
-| PersistBench: When Should Long-Term Memories Be Forgotten by LLMs? | ICML 2026 | `queued` | [persistbench](persistbench-evidence.md) |
 
 ## Mainline G · Safety and Privacy
 
