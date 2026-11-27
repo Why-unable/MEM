@@ -59,7 +59,7 @@ verified：0
 2. 选择 RQ1，设计统一实验协议：固定 benchmark、metric、backbone、judge、retrieval budget。
 3. 对 52 张 evidence 做 `verified` 抽查，优先 VikingMem、TiMem、RecMem、MRAgent、MAGMA。
 4. 回填 16 篇新增论文到 `EXPERIMENT_LANDSCAPE.md` 的正式实验矩阵。
-5. 结合学校模板和导师方向，完成开题报告正文与 pilot 实验设计。
+5. 先按 `开题报告/07_下一步_导师讨论版.md` 完成 2 页导师讨论稿和 2–4 周 pilot，再扩写学校模板。
 6. 把 `papers.json` / `edges.json` 迁移为 per-paper / per-edge 分片，降低多机冲突。
 7. 在 Zotero 中回填 item key，并逐步链接 PDF 附件。
 

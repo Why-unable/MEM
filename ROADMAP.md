@@ -56,7 +56,7 @@
 - [ ] 建立 `CLAIMS.md`：claim–evidence–confidence 证据矩阵
 - [ ] 对 52 篇 evidence 做 `verified` 人工抽查
 - [ ] 建立 RQ1 的统一实验协议：`benchmark + metric + backbone + judge + retrieval budget`
-- [ ] 根据学校模板完成开题报告初稿和 pilot 实验
+- [ ] 先完成 2 页导师讨论稿与 2–4 周 pilot，再根据学校模板完成开题报告初稿
 - [ ] 把 `papers.json` / `edges.json` 迁移为 per-paper / per-edge 分片
 - [ ] 回填 16 篇新增论文到 `EXPERIMENT_LANDSCAPE.md` 的完整矩阵
 - [ ] 统一 utility / efficiency / safety 三条榜单的评测口径
