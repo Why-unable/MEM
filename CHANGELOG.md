@@ -16,6 +16,7 @@ The format is based on Keep a Changelog and uses semantic versioning for the res
 - 2026-11-27：Evidence Batch 4 完成 5 篇（EM-LLM、REMem、ARTEM、EMA、Nemori），`evidence-checked` 达到 29/51；主线 D 全部完成。
 - 2026-11-27：Evidence Batch 5 完成 7 篇（Evoking、PersonaAgent、M3-Agent、ReMe、ReasoningBank、MemRec、LTS），`evidence-checked` 达到 36/51；主线 E 全部完成。
 - 2026-11-27：Evidence Batch 6 完成 6 篇（MemoryArena、MemBench、Minerva、BEAM、MemoryAgentBench、MemoryBench），`evidence-checked` 达到 42/51；主线 F 全部完成。
+- 2026-11-27：Evidence Batch 7 完成 4 篇（MEXTRA、MINJA、InjecMEM、eTAMP），`evidence-checked` 达到 46/51；主线 G 全部完成。
 - 2026-11-27：主库从 36 篇扩展到 51 篇，新增 15 篇正式发表论文（Batch 1: 8 篇；Batch 2: 7 篇）。
 - 新增 `data/agent-memory-2025/COVERAGE_AUDIT.md`，记录覆盖审计、增补理由、暂缓候选和去重结果。
 - 新增 `survey` 论文类别，用于正式发表的综述与框架论文。

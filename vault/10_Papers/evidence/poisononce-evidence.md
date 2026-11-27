@@ -1,57 +1,114 @@
 ---
 type: evidence
-paper_id: "poisononce"
+paper_id: poisononce
 title: "Poison Once, Exploit Forever: Environment-Injected Memory Poisoning Attacks on Web Agents"
-status: queued
-checked_at: null
-source_pdf: ""
-source_version: ""
-pages_checked: []
+status: evidence-checked
+checked_at: 2026-11-27
+source_pdf: "data/agent-memory-2025/pdfs/poisononce.pdf"
+source_version: "COLM 2026 conference paper"
+pages_checked: "1-9"
 mainline: "G"
 tags:
   - evidence
   - mainline-g
+  - memory-poisoning
+  - web-agent
 ---
 
-# Poison Once, Exploit Forever: Environment-Injected Memory Poisoning Attacks on Web Agents — Evidence
+# eTAMP 证据卡
 
-> Status: **queued**. 这是逐篇 evidence 的入口，不是已完成的证据卡。
-> 不要把下面的摘要当作已验证结论；关键数字必须回全文和页码核对。
+## 结论先行
 
-## 元数据
+- eTAMP 证明 **环境观察本身** 就能污染 memory：一次被操纵的网页/观察，可能在后续不同网站的任务中激活。
+- 它不需要 direct memory access，也不需要 shared memory；威胁模型比 MINJA/InjecMEM 更现实。
+- ASR 最高：GPT-5-mini **32.5%**、GPT-5.2 **23.4%**、GPT-OSS-120B **19.5%**；Frustration Exploitation 可把 ASR 放大到约 **8–9x**。
 
-- **Venue**：COLM 2026（Top-COLM）
-- **年份**：2026
-- **作者**：Mingwen Dong, Wei Zou, Miguel Romero Calvo, Shuaichen Chang, Jiang Guo, Dongkyu Lee, Xing Niu, Xiaofei Ma, Yanjun Qi, Jiarong Jiang
-- **DOI**：null
-- **arXiv**：null
-- **PDF**：https://openreview.net/pdf?id=sfUpgUKF2Y
-- **正式记录**：https://openreview.net/forum?id=sfUpgUKF2Y
-- **主库角色**：环境注入的记忆 poisoning：一次污染可被长期利用，面向 Web agent。
+## 研究问题与定位
 
-## 官方摘要
+现有 memory poisoning 假设 direct injection 或 shared memory。eTAMP 要回答：
 
-Memory makes LLM-based web agents personalized, powerful, yet exploitable. By storing past interactions to personalize future tasks, agents inadvertently create a persistent attack surface that spans websites and sessions. While existing security research on memory assumes attackers can directly inject into memory storage or exploit shared memory across users, we present a more realistic threat model: contamination through environmental observation alone. We introduce Environment-injected Trajectory-based Agent Memory Poisoning (eTAMP), the first attack to achieve cross-session, cross-site compromise without requiring direct memory access. A single contaminated observation (e.g., viewing a manipulated product page) silently poisons an agent's memory and activates during future tasks on different websites, bypassing permission-based defenses. Our experiments on (Visual)WebArena reveal two key findings. First, eTAMP achieves substantial attack success rates: up to 32.5\% on GPT-5-mini, 23.4\% on GPT-5.2, and 19.5\% on GPT-OSS-120B. Second, we discover Frustration Exploitation: agents under environmental stress become dramatically more susceptible, with ASR increasing up to 9 times when agents struggle with dropped clicks or garbled text.  Notably, more capable models are not more secure. GPT-5.2 shows substantial vulnerability despite superior task performance. As LLM-based agents increasingly interact with untrusted
-web environments, our findings underscore the need for defenses against environment-injected memory poisoning.
+> 只通过环境观察（例如 manipulated product page），能否实现跨 session、跨站点的持久污染？
 
-## 待提取（全文核对）
+## 方法拆解
 
-- [ ] 研究问题与一句话定位
-- [ ] 记忆单元 / 数据结构
-- [ ] 写入、组织、检索、更新、遗忘机制
-- [ ] 训练方式与监督信号（若适用）
-- [ ] 数据集、backbone、baseline、指标
-- [ ] 关键数字（必须标 PDF 页码或表格）
-- [ ] 主要结论
-- [ ] 局限与威胁
-- [ ] 与主线 G 其他论文的关系
-- [ ] 对 RQ1 / RQ3 的意义
-- [ ] 可复用点
-- [ ] 成本：build / query / latency / storage
-- [ ] 待核对项
+### 环境注入
+
+- 攻击者操纵 agent 观察到的网页/内容。
+- agent 把观察写入 memory。
+- 后续不同网站/任务中，memory 被检索并触发恶意 action。
+
+### 三种策略
+
+1. Baseline Injection
+2. Frustration Exploitation
+3. Authority Framing
+
+### 评测
+
+- WebArena / VisualWebArena：Shopping、Reddit、Classifieds。
+- 约 280 个跨站任务对。
+- Models：GPT-5-mini、GPT-5.2、GPT-OSS-120B、Qwen2.5-VL-72B、Qwen3-VL-32B、Qwen3.5-122B-A10B。
+
+来源：PDF p.3-6，Method。
+
+## 关键数字
+
+| 模型 | 最高 ASR |
+|---|---:|
+| GPT-5-mini | **32.5%** |
+| GPT-5.2 | **23.4%** |
+| GPT-OSS-120B | **19.5%** |
+
+- Frustration Exploitation：ASR 提升约 **8x**（GPT-5-mini 3.6% → 32.5%）；论文摘要称最高 9x。
+- 更强模型不一定更安全：GPT-5.2 任务能力更强但仍脆弱。
+- 跨站点方向影响 ASR（如 Shopping→Reddit 9.5% 等）。
+
+来源：PDF p.1 abstract；p.7-8，Table 1-2。
+
+## 真正的新意
+
+1. **environment-injected poisoning**：不需要 memory 写权限。
+2. **cross-session + cross-site**：一次污染长期利用。
+3. **Frustration Exploitation**：环境压力放大攻击。
+4. **capability ≠ security**：更强模型仍脆弱。
+
+## 局限与威胁
+
+- WebArena 模拟环境。
+- ASR 绝对值不高，但持久性和放大效应显著。
+- 防御未系统评估。
+- 没有多用户共享记忆。
+- 没有多模态真实网页的完整覆盖。
+
+## 与主线 G 的关系
+
+- **MINJA**：query-only 多轮注入。
+- **InjecMEM**：单次交互定向注入。
+- **eTAMP**：环境观察注入。
+- **PersistBench**：正常记忆安全风险。
+
+## 对 RQ3 的意义
+
+eTAMP 说明“记忆来源可信度”必须成为一等字段：
+
+- 环境观察不可信；
+- 需要 provenance/trust/sandbox；
+- 删除必须能追踪到污染源。
+
+## 可复用点
+
+- 环境注入威胁模型。
+- Frustration Exploitation。
+- ASR/TSR/awareness 指标。
+- 跨站点任务对。
+
+## 成本
+
+- 攻击成本：一次环境观察。
+- 防御成本未系统量化。
+- 评测依赖 WebArena/VisualWebArena。
 
 ## 来源
 
-- 主库记录：`data/agent-memory-2025/papers.json`
-- PDF：https://openreview.net/pdf?id=sfUpgUKF2Y
-- 正式记录：https://openreview.net/forum?id=sfUpgUKF2Y
+- 本地 PDF：`data/agent-memory-2025/pdfs/poisononce.pdf`
+- COLM 2026（论文记录）

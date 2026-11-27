@@ -1,56 +1,105 @@
 ---
 type: evidence
-paper_id: "privacy"
+paper_id: privacy
 title: "Unveiling Privacy Risks in LLM Agent Memory"
-status: queued
-checked_at: null
-source_pdf: ""
-source_version: ""
-pages_checked: []
+status: evidence-checked
+checked_at: 2026-11-27
+source_pdf: "data/agent-memory-2025/pdfs/privacy.pdf"
+source_version: "ACL 2025 Long Papers"
+pages_checked: "1-9"
 mainline: "G"
 tags:
   - evidence
   - mainline-g
+  - privacy
+  - memory-extraction
 ---
 
-# Unveiling Privacy Risks in LLM Agent Memory — Evidence
+# MEXTRA 证据卡
 
-> Status: **queued**. 这是逐篇 evidence 的入口，不是已完成的证据卡。
-> 不要把下面的摘要当作已验证结论；关键数字必须回全文和页码核对。
+## 结论先行
 
-## 元数据
+- MEXTRA 是一种黑盒 **Memory EXTRaction Attack**：攻击者只通过 query + 输出观察，就能提取 agent memory 中的隐私。
+- 在 EHRAgent（MIMIC-III）和 RAP（WebShop）上，memory size=200、30 prompts 时均能显著泄漏。
+- 关键影响因素：memory size、embedding、similarity function、prompt 结构（aligner/requirement/demos）。
 
-- **Venue**：ACL 2025（CCF-A）
-- **年份**：2025
-- **作者**：Bo Wang, Weiyi He, Shenglai Zeng, Zhen Xiang, Yue Xing, Jiliang Tang, Pengfei He
-- **DOI**：10.48550/arXiv.2502.13172
-- **arXiv**：2502.13172
-- **PDF**：https://aclanthology.org/2025.acl-long.1227.pdf
-- **正式记录**：https://openreview.net/forum?id=GZWGC1fDnc
-- **主库角色**：记忆隐私抽取攻击，揭示长期记忆中的敏感信息泄露面。
+## 研究问题与定位
 
-## 官方摘要
+Agent 把私人交互存入 memory 作为 demonstrations，可能被攻击者提取。MEXTRA 要回答：
 
-Large Language Model (LLM) agents have become increasingly prevalent across various real-world applications. They enhance decision-making by storing private user-agent interactions in the memory module for demonstrations, introducing new privacy risks for LLM agents. In this work, we systematically investigate the vulnerability of LLM agents to our proposed Memory EXTRaction Attack (MEXTRA) under a black-box setting. To extract private information from memory, we propose an effective attacking prompt design and an automated prompt generation method based on different levels of knowledge about the LLM agent. Experiments on two representative agents demonstrate the effectiveness of MEXTRA. Moreover, we explore key factors influencing memory leakage from both the agent designer’s and the attacker’s perspectives. Our findings highlight the urgent need for effective memory safeguards in LLM agent design and deployment.
+> 在黑盒设置下，攻击者能否通过 prompt 诱导 agent 泄漏 memory 中的隐私？
 
-## 待提取（全文核对）
+## 方法拆解
 
-- [ ] 研究问题与一句话定位
-- [ ] 记忆单元 / 数据结构
-- [ ] 写入、组织、检索、更新、遗忘机制
-- [ ] 训练方式与监督信号（若适用）
-- [ ] 数据集、backbone、baseline、指标
-- [ ] 关键数字（必须标 PDF 页码或表格）
-- [ ] 主要结论
-- [ ] 局限与威胁
-- [ ] 与主线 G 其他论文的关系
-- [ ] 对 RQ1 / RQ3 的意义
-- [ ] 可复用点
-- [ ] 成本：build / query / latency / storage
-- [ ] 待核对项
+### 攻击 prompt
+
+- 设计 attacking prompt，诱导 agent 输出 memory 内容。
+- 自动生成不同知识水平下的 prompt。
+- 用 aligner / requirement / demos 等组件提高攻击效果。
+
+### 评估
+
+- EHRAgent：医疗 EHR。
+- RAP：WebShop 购物。
+- Metrics：EN、RN、EE、CER、AER。
+- Memory size=200，30 attacking prompts。
+
+来源：PDF p.3-5，Method。
+
+## 关键数字
+
+| Agent | EN | RN | EE | CER | AER |
+|---|---:|---:|---:|---:|---:|
+| EHRAgent | 50 | 55 | 0.42 | 0.83 | 0.83 |
+| RAP | 26 | 27 | 0.29 | 0.87 | 0.90 |
+
+- 去掉 aligner / requirement / demos 都会降低攻击效果。
+- memory size 增大、embedding/similarity 选择都会影响泄漏程度。
+
+来源：PDF p.4，Table 1；p.5-8。
+
+## 真正的新意
+
+1. **黑盒 memory extraction**：不需要 memory 写权限。
+2. **prompt 结构化攻击**：aligner/requirement/demos 组合。
+3. **多因素分析**：memory size、embedding、similarity。
+4. **真实 agent 场景**：医疗 + 购物。
+
+## 局限与威胁
+
+- 两个 agent/domain，泛化有限。
+- 攻击依赖 prompt 设计。
+- 防御评估有限。
+- 没有多模态/多 agent 共享记忆。
+- 没有统一的 utility/defense trade-off 表。
+
+## 与主线 G 的关系
+
+- **MINJA**：MEXTRA 读记忆；MINJA 写记忆。
+- **InjecMEM**：单次交互定向注入。
+- **eTAMP**：环境注入 poisoning。
+- **PersistBench**：正常记忆的 cross-domain leakage/sycophancy。
+
+## 对 RQ3 的意义
+
+MEXTRA 说明“删除/隔离”必须能降低可提取性：
+
+- 仅加 prompt guard 不足。
+- 需要 provenance、access control、deletion audit。
+
+## 可复用点
+
+- MEXTRA prompt 结构。
+- EN/RN/EE/CER/AER 指标。
+- memory size/embedding/similarity 的因素分析。
+- 两个真实 agent 场景。
+
+## 成本
+
+- 黑盒攻击成本低（30 prompts）。
+- 防御成本未系统评估。
 
 ## 来源
 
-- 主库记录：`data/agent-memory-2025/papers.json`
-- PDF：https://aclanthology.org/2025.acl-long.1227.pdf
-- 正式记录：https://openreview.net/forum?id=GZWGC1fDnc
+- 本地 PDF：`data/agent-memory-2025/pdfs/privacy.pdf`
+- ACL 2025（论文记录）

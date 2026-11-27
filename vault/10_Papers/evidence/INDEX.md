@@ -7,13 +7,13 @@
 
 - 主库论文：51
 - 已有独立 evidence 文件：51
-- 已完成页码级证据卡：42
+- 已完成页码级证据卡：46
 
 ```text
-queued: 9
+queued: 5
 metadata-only: 0
 full-text-scan: 0
-evidence-checked: 42
+evidence-checked: 46
 verified: 0
 ```
 
@@ -97,10 +97,10 @@ verified: 0
 
 | Paper | Venue | Status | Evidence |
 |---|---|---|---|
-| InjecMEM: Memory Injection Attack on LLM Agent Memory Systems | COLM 2026 | `queued` | [injecmem](injecmem-evidence.md) |
-| Memory Injection Attacks on LLM Agents via Query-Only Interaction | NeurIPS 2025 | `queued` | [injection](injection-evidence.md) |
-| Poison Once, Exploit Forever: Environment-Injected Memory Poisoning Attacks on Web Agents | COLM 2026 | `queued` | [poisononce](poisononce-evidence.md) |
-| Unveiling Privacy Risks in LLM Agent Memory | ACL 2025 | `queued` | [privacy](privacy-evidence.md) |
+| InjecMEM: Memory Injection Attack on LLM Agent Memory Systems | COLM 2026 | `evidence-checked` | [injecmem](injecmem-evidence.md) |
+| Memory Injection Attacks on LLM Agents via Query-Only Interaction | NeurIPS 2025 | `evidence-checked` | [injection](injection-evidence.md) |
+| Poison Once, Exploit Forever: Environment-Injected Memory Poisoning Attacks on Web Agents | COLM 2026 | `evidence-checked` | [poisononce](poisononce-evidence.md) |
+| Unveiling Privacy Risks in LLM Agent Memory | ACL 2025 | `evidence-checked` | [privacy](privacy-evidence.md) |
 
 ## Mainline X · Cross-cutting
 
