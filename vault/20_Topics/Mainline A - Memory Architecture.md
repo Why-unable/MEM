@@ -3,8 +3,8 @@ type: topic
 subtype: mainline-analysis
 topic: "Agent Memory 2025+"
 mainline: "A"
-status: evidence-checked
-updated: 2026-11-26
+status: expanded
+updated: 2026-11-27
 tags:
   - topic
   - agent-memory
@@ -14,9 +14,9 @@ tags:
 
 # Mainline A - Memory Architecture
 
-> 范围：A-Mem、G-Memory、MAGMA、MemGAS、MRAgent（Memory is Reconstructed）五篇论文。
-> 方法：全文 PDF 阅读 + 页码级证据卡；不是仅基于摘要。
-> 注意：五篇论文的 benchmark、backbone、judge 和成本口径不同，**不能直接把分数横向排名**。
+> 范围：核心五篇（A-Mem、G-Memory、MAGMA、MemGAS、MRAgent）+ 扩展四篇（SeCom、HippoRAG 2、GAM、E-mem）。
+> 方法：核心五篇有页码级证据卡；扩展四篇完成全文扫描，尚未逐篇建卡。
+> 注意：九篇论文的 benchmark、backbone、judge 和成本口径不同，**不能直接把分数横向排名**。
 
 ## 一句话结论
 
@@ -29,7 +29,7 @@ tags:
 → 由 LLM 驱动的主动访问策略
 ```
 
-五篇论文共同支持一个更精确的判断：
+九篇论文共同支持一个更精确的判断：
 
 > **结构化记忆的优势主要集中在多跳、时间/因果推理和对抗性问题上；在单点事实回忆和知识更新上，长上下文仍然是强 baseline。**
 
@@ -259,3 +259,80 @@ preference
 | MAGMA | `data/agent-memory-2025/pdfs/magma.pdf` | ACL 2026 Long Papers |
 | MemGAS | `data/agent-memory-2025/pdfs/memgas.pdf` | ICLR 2026 |
 | MRAgent | `data/agent-memory-2025/pdfs/reconstructed.pdf` | ICML 2026, PMLR 306 |
+
+---
+
+# 2026-11-27 扩展：新增四篇架构工作
+
+> 这四篇是在主库从 36 篇扩展到 51 篇后加入的。它们让 A 线从“五篇核心论文”变成更完整的架构谱系。
+
+## 扩展论文
+
+| 论文 | 核心机制 | 对 A 线的意义 |
+|---|---|---|
+| [SeCom](../10_Papers/secom.md) | 主题连贯的 segment 级记忆 + prompt compression 去噪 | 直接研究“记忆粒度”本身，是 MemGAS 多粒度路线的前置工作 |
+| [HippoRAG 2](../10_Papers/hipporag2.md) | Personalized PageRank + passage integration 的图增强 RAG | 证明图结构必须同时保住 factual memory，否则不如普通 RAG |
+| [GAM](../10_Papers/gam.md) | event progression graph + topic associative network | 把“快速感知”和“稳定知识保留”解耦，是层次图的另一种实现 |
+| [E-mem](../10_Papers/emem.md) | 多 agent 保留未压缩情境，master agent 协调 episodic reconstruction | 直接挑战“先压缩成结构再检索”的预处理范式 |
+
+## 四篇论文的关键点
+
+### SeCom：粒度本身就是架构变量
+
+- 不是固定 turn/session 粒度，而是用 conversation segmentation 找主题连贯的 segment。
+- 用 LLMLingua-2 压缩去噪。
+- 在 LoCoMo、Long-MT-Bench+ 上优于固定粒度基线。
+- 对 A 线的含义：**“记忆单元怎么切”与“记忆图怎么连”同等重要。**
+
+### HippoRAG 2：图结构不能牺牲事实记忆
+
+- 用 Personalized PageRank 做 passage integration。
+- 同时覆盖 factual、sense-making、associative memory。
+- 论文明确指出：一些图/RAG 结构在 sense-making 上强，但在基础 factual memory 上反而不如标准 RAG。
+- 对 A 线的含义：**结构记忆必须通过“事实保真”门槛，否则图只是更贵的噪声。**
+
+### GAM：编码与整合解耦
+
+- 用 event progression graph 保存当前事件链。
+- 只有发生 semantic shift 时才整合到 topic associative network。
+- 在 LoCoMo、LongDialQA 上优于 SOTA。
+- 对 A 线的含义：**不是所有新信息都应该立刻改写长期结构；需要“缓冲 → 整合”的两阶段。**
+
+### E-mem：反预处理路线
+
+- 多个 assistant agent 保留未压缩的 episodic context。
+- master agent 做全局规划，assistant 在激活 segment 内局部推理后再聚合。
+- LoCoMo 上 F1 超过 54%，比 GAM 高 7.75%，token 成本降低 70%+。
+- 对 A 线的含义：**“压缩成图”不是唯一解；保留原始情境 + 局部重构也可能是更优的 Pareto 点。**
+
+## 更新后的 A 线谱系
+
+```text
+A-Mem            原子笔记 + 链接 + 演化
+SeCom            segment 级记忆 + 压缩去噪
+G-Memory         多 agent 三层图
+MAGMA            多关系图 + intent-aware traversal
+MemGAS           多粒度 + entropy router
+GAM              事件图 + 主题网络，编码/整合解耦
+HippoRAG 2       图增强 RAG，事实/关联/意义三重目标
+MRAgent          Cue–Tag–Content + 多轮主动重构
+E-mem            未压缩情境 + 多 agent episodic reconstruction
+```
+
+## 对 RQ1 的更新
+
+新增四篇后，RQ1 的“结构”不能只按“图 vs 向量”分类，而应拆成四个正交维度：
+
+1. **单元粒度**：turn / session / segment / event / note / entity。
+2. **关系类型**：semantic / temporal / causal / entity / topic。
+3. **整合时机**：即时写入 / 语义偏移触发 / 离线巩固 / 查询时重构。
+4. **访问策略**：top-k / PPR / beam search / 多轮 action selection / 局部 agent 推理。
+
+这意味着：
+
+> 结构化记忆的收益不是来自“有图”，而是来自 **粒度、关系、整合时机、访问策略四者的匹配**。
+
+## 证据边界
+
+- 扩展四篇已完成全文扫描，但尚未建立独立页码级证据卡。
+- SeCom、HippoRAG 2、GAM、E-mem 的数字来自各自论文的实验表/摘要，不能与核心五篇直接横比。

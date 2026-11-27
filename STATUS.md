@@ -18,7 +18,7 @@
 | Zotero 导入文件 | 完成 | BibTeX / RIS 已生成 |
 | Zotero 实际导入 | 完成 | 51 篇书目 + 51 条 importer notes；3 个 collection；无 PDF 附件 |
 | 多机协作规范 | 完成 | `CONTRIBUTING.md`、schemas、CI、数据政策 |
-| 主线 A 证据层 | 进行中 | 5 篇全文证据卡 + 比较矩阵 v0；其余论文尚未精读 |
+| 主线分析层 | 完成 | 七条主线全文扫描 + A/B/C/D/E/F/G 综合页；6 张页码级证据卡 |
 | 自动增量检索 | 未开始 | 计划 v0.3 |
 | 实验/数据集登记 | 未开始 | 进入实验阶段后再建 |
 
@@ -38,15 +38,15 @@ CCF-B：2
 
 ## 本轮正在进行
 
-- 主线 A：A-Mem、G-Memory、MAGMA、MemGAS、MRAgent 全文精读
-- 建立 `vault/10_Papers/evidence/` 证据卡层
-- 把主线 A 的发现重写为 RQ1 的可检验假设
-- 校准正式 DOI 与 Zotero 实际状态
+- 完成 A–G 七条主线的全文扫描与综合
+- 建立 `vault/20_Topics/Mainline Overview.md` 总入口
+- 为 AgeMem 建立页码级证据卡
+- 校准正式 DOI、Zotero 与主库计数
 
 ## 下一步
 
 1. 选择 RQ1 作为当前主研究问题。
-2. 优先精读 LightMem / AgeMem / EverMemOS / Nemori，并补全文证据卡。
+2. 把 B–G 的核心论文各补 1–2 张页码级证据卡。
 3. 用正式 camera-ready 复核 A-Mem / G-Memory。
 4. 把主线 A 综合整理为 `CLAIMS.md` 的 claim-evidence 表。
 5. 设计 RQ1 最小实验：full context / RAG / A-Mem-like / MAGMA-like / MRAgent-like。

@@ -13,6 +13,9 @@
 
 ## 2. 七条主线
 
+> 七条主线的逐条全文分析入口：[[20_Topics/Mainline Overview]]
+
+
 ### 主线 A：记忆架构从“检索”走向“组织 + 重构”
 
 代表：A-Mem、G-Memory、MAGMA、MemGAS、Memory is Reconstructed；补充：SeCom、HippoRAG 2、GAM。

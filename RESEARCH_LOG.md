@@ -7,6 +7,7 @@
 | 2026-11-19 | macOS / Codex | MEM v0.1 构建与 Agent Memory 初始地图 | [research-log/2026-11-19-codex.md](research-log/2026-11-19-codex.md) |
 | 2026-11-26 | macOS / Codex | 主线 A 全文证据冲刺 | [research-log/2026-11-26-mainline-a.md](research-log/2026-11-26-mainline-a.md) |
 | 2026-11-27 | macOS / Codex | Agent Memory 主库深度扩展至 51 篇 | [research-log/2026-11-27-deep-survey.md](research-log/2026-11-27-deep-survey.md) |
+| 2026-11-27 | macOS / Codex | A–G 七条主线全文阅读分析 | [research-log/2026-11-27-mainlines.md](research-log/2026-11-27-mainlines.md) |
 
 ## 记录规范
 
