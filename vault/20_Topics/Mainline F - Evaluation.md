@@ -264,6 +264,5 @@ BEAM              → 128K–10M scale stress test
 ## 证据边界
 
 - 八个 benchmark 均已完成全文扫描。
-- LongMemEval、PersistBench 已完成页码级证据卡。
-- MemoryArena、MemBench、Minerva、BEAM、MemoryAgentBench、MemoryBench 尚未建立独立页码级证据卡。
+- 八个 benchmark 均已完成页码级证据卡。
 - 覆盖矩阵是分析性归纳，不是原作者给出的正式分类。

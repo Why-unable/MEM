@@ -7,13 +7,13 @@
 
 - 主库论文：51
 - 已有独立 evidence 文件：51
-- 已完成页码级证据卡：36
+- 已完成页码级证据卡：42
 
 ```text
-queued: 15
+queued: 9
 metadata-only: 0
 full-text-scan: 0
-evidence-checked: 36
+evidence-checked: 42
 verified: 0
 ```
 
@@ -84,14 +84,14 @@ verified: 0
 
 | Paper | Venue | Status | Evidence |
 |---|---|---|---|
+| Beyond a Million Tokens: Benchmarking and Enhancing Long-Term Memory in LLMs | ICLR 2026 | `evidence-checked` | [beyondmillion](beyondmillion-evidence.md) |
+| Benchmarking Agent Memory in Interdependent Multi-Session Agentic Tasks | ICML 2026 | `evidence-checked` | [interdependent](interdependent-evidence.md) |
 | LongMemEval: Benchmarking Chat Assistants on Long-Term Interactive Memory | ICLR 2025 | `evidence-checked` | [longmemeval](longmemeval-evidence.md) |
+| MemBench: Towards More Comprehensive Evaluation on the Memory of LLM-based Agents | ACL Findings 2025 | `evidence-checked` | [membench](membench-evidence.md) |
+| Evaluating Memory in LLM Agents via Incremental Multi-Turn Interactions | ICLR 2026 | `evidence-checked` | [memoryagentbench](memoryagentbench-evidence.md) |
+| MemoryBench: A Benchmark for Memory and Continual Learning in LLM Systems | ICML 2026 | `evidence-checked` | [memorybench](memorybench-evidence.md) |
+| Minerva: A Programmable Memory Test Benchmark for Language Models | ICML 2025 | `evidence-checked` | [minerva](minerva-evidence.md) |
 | PersistBench: When Should Long-Term Memories Be Forgotten by LLMs? | ICML 2026 | `evidence-checked` | [persistbench](persistbench-evidence.md) |
-| Beyond a Million Tokens: Benchmarking and Enhancing Long-Term Memory in LLMs | ICLR 2026 | `queued` | [beyondmillion](beyondmillion-evidence.md) |
-| Benchmarking Agent Memory in Interdependent Multi-Session Agentic Tasks | ICML 2026 | `queued` | [interdependent](interdependent-evidence.md) |
-| MemBench: Towards More Comprehensive Evaluation on the Memory of LLM-based Agents | ACL Findings 2025 | `queued` | [membench](membench-evidence.md) |
-| Evaluating Memory in LLM Agents via Incremental Multi-Turn Interactions | ICLR 2026 | `queued` | [memoryagentbench](memoryagentbench-evidence.md) |
-| MemoryBench: A Benchmark for Memory and Continual Learning in LLM Systems | ICML 2026 | `queued` | [memorybench](memorybench-evidence.md) |
-| Minerva: A Programmable Memory Test Benchmark for Language Models | ICML 2025 | `queued` | [minerva](minerva-evidence.md) |
 
 ## Mainline G · Safety and Privacy
 

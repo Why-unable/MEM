@@ -1,56 +1,109 @@
 ---
 type: evidence
-paper_id: "minerva"
+paper_id: minerva
 title: "Minerva: A Programmable Memory Test Benchmark for Language Models"
-status: queued
-checked_at: null
-source_pdf: ""
-source_version: ""
-pages_checked: []
+status: evidence-checked
+checked_at: 2026-11-27
+source_pdf: "data/agent-memory-2025/pdfs/minerva.pdf"
+source_version: "ICML 2025 / PMLR 267"
+pages_checked: "1-9"
 mainline: "F"
 tags:
   - evidence
   - mainline-f
+  - benchmark
+  - programmable-tests
 ---
 
-# Minerva: A Programmable Memory Test Benchmark for Language Models — Evidence
+# Minerva 证据卡
 
-> Status: **queued**. 这是逐篇 evidence 的入口，不是已完成的证据卡。
-> 不要把下面的摘要当作已验证结论；关键数字必须回全文和页码核对。
+## 结论先行
 
-## 元数据
+- Minerva 把 memory 能力拆成可编程的 atomic tests：search、recall、edit、match、compare、compute、stateful processing。
+- 它有 **1,110** 个测试，上下文约 **4K**，并支持 composite tests 组合多个原子能力。
+- 它解决传统 data benchmark 的静态、易过拟合、难解释问题：失败时可以定位到具体能力。
 
-- **Venue**：ICML 2025（CCF-A）
-- **年份**：2025
-- **作者**：Menglin Xia, Victor Rühle, Saravan Rajmohan, Reza Shokri
-- **DOI**：10.48550/arXiv.2502.03358
-- **arXiv**：2502.03358
-- **PDF**：https://openreview.net/pdf?id=ib9drlZllP
-- **正式记录**：https://openreview.net/forum?id=ib9drlZllP
-- **主库角色**：可编程记忆测试基准，把记忆能力拆成可组合的测试程序。
+## 研究问题与定位
 
-## 官方摘要
+传统 memory benchmark 多为手工 QA，难以解释“模型到底缺哪种能力”。Minerva 要回答：
 
-How effectively can LLM-based AI assistants utilize their memory (context) to perform various tasks? Traditional data benchmarks, which are often manually crafted, suffer from several limitations: they are static, susceptible to overfitting, difficult to interpret, and lack actionable insights--failing to pinpoint the specific capabilities a model lacks when it does not pass a test. In this paper, we present a framework for automatically generating a comprehensive set of tests to evaluate models' abilities to use their memory effectively. Our framework extends the range of capability tests beyond the commonly explored (passkey, key-value, needle in the haystack) search, a dominant focus in the literature. Specifically, we evaluate models on atomic tasks such as searching, recalling, editing, matching, comparing information in context memory, performing basic operations when inputs are structured into distinct blocks, and maintaining state while operating on memory, simulating real-world data. Additionally, we design composite tests to investigate the models' ability to perform more complex, integrated tasks. Our benchmark enables an interpretable, detailed assessment of memory capabilities of LLMs.
+> 能否自动生成可解释、可组合的 memory tests，定位模型的 memory 能力缺口？
 
-## 待提取（全文核对）
+## Benchmark 设计
 
-- [ ] 研究问题与一句话定位
-- [ ] 记忆单元 / 数据结构
-- [ ] 写入、组织、检索、更新、遗忘机制
-- [ ] 训练方式与监督信号（若适用）
-- [ ] 数据集、backbone、baseline、指标
-- [ ] 关键数字（必须标 PDF 页码或表格）
-- [ ] 主要结论
-- [ ] 局限与威胁
-- [ ] 与主线 F 其他论文的关系
-- [ ] 对 RQ1 / RQ3 的意义
-- [ ] 可复用点
-- [ ] 成本：build / query / latency / storage
-- [ ] 待核对项
+### Atomic tasks
+
+- search
+- recall
+- edit
+- match
+- compare
+- compute
+- stateful processing
+
+### Composite tests
+
+- 把多个 atomic 能力组合成更复杂的 memory 任务。
+- 测试模型在结构化 blocks 上维护状态/操作的能力。
+
+### 规模
+
+- 1,110 个测试
+- 约 4K 上下文
+
+来源：PDF p.1-6，Benchmark design。
+
+## 关键发现
+
+- Minerva 能精细区分不同模型的 memory 能力，而不是只给一个总分。
+- 传统 passkey/key-value/NIAH 只覆盖 search 的一小部分。
+- composite tests 暴露了 atomic tests 看不到的组合失败。
+
+来源：PDF p.1 abstract；p.6-9，Results。
+
+## 真正的新意
+
+1. **programmable memory tests**：自动生成、可解释。
+2. **atomic + composite**：既能定位能力，又能测组合。
+3. **超出 passkey/NIAH**：覆盖 edit/match/compare/compute/stateful。
+4. **可复现/可扩展**：不是静态手工数据。
+
+## 局限与威胁
+
+- **上下文较小（约 4K）**：不是长期记忆系统 benchmark。
+- **更偏“模型如何使用上下文”**：不等同于 agent memory 的 store/retrieve/forget。
+- **不是 action-coupled**：没有 environment loop。
+- **没有安全/隐私维度**。
+- **任务合成性**：真实世界噪声可能不同。
+
+## 与主线 F 的关系
+
+- **LongMemEval**：LongMemEval 测长期对话能力；Minerva 测上下文 memory 的原子能力。
+- **MemoryAgentBench**：MemoryAgentBench 有 selective forgetting；Minerva 更偏上下文操作。
+- **BEAM**：BEAM 测规模；Minerva 测能力分解。
+- **MemoryArena**：MemoryArena 测 action；Minerva 测 computation。
+
+## 对 RQ1 的意义
+
+Minerva 可以作为“机制诊断”而不是最终排行榜：
+
+- 如果结构记忆在 multi-hop 上失败，Minerva 可以定位是 search、compare 还是 stateful processing 的问题。
+- RQ1 应把 Minerva 作为 ablation/诊断工具。
+
+## 可复用点
+
+- atomic task taxonomy。
+- composite tests。
+- programmable generation。
+- 1,110 tests / 4K context 的设计。
+
+## 成本
+
+- 测试自动生成成本低。
+- 推理成本取决于模型/测试数。
+- 没有系统 build cost。
 
 ## 来源
 
-- 主库记录：`data/agent-memory-2025/papers.json`
-- PDF：https://openreview.net/pdf?id=ib9drlZllP
-- 正式记录：https://openreview.net/forum?id=ib9drlZllP
+- 本地 PDF：`data/agent-memory-2025/pdfs/minerva.pdf`
+- PMLR 267（ICML 2025）

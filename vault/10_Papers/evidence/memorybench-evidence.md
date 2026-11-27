@@ -1,56 +1,100 @@
 ---
 type: evidence
-paper_id: "memorybench"
+paper_id: memorybench
 title: "MemoryBench: A Benchmark for Memory and Continual Learning in LLM Systems"
-status: queued
-checked_at: null
-source_pdf: ""
-source_version: ""
-pages_checked: []
+status: evidence-checked
+checked_at: 2026-11-27
+source_pdf: "data/agent-memory-2025/pdfs/memorybench.pdf"
+source_version: "ICML 2026 / PMLR 306"
+pages_checked: "1-9"
 mainline: "F"
 tags:
   - evidence
   - mainline-f
+  - benchmark
+  - continual-learning
 ---
 
-# MemoryBench: A Benchmark for Memory and Continual Learning in LLM Systems — Evidence
+# MemoryBench 证据卡
 
-> Status: **queued**. 这是逐篇 evidence 的入口，不是已完成的证据卡。
-> 不要把下面的摘要当作已验证结论；关键数字必须回全文和页码核对。
+## 结论先行
 
-## 元数据
+- MemoryBench 关注 **continual learning from user feedback**，而不是静态长上下文 recall。
+- 它用用户反馈模拟框架，覆盖多领域、多语言、多任务类型，评测 LLMsys 在服务时从累计反馈中学习。
+- 关键发现：现有 SOTA 在有效性和效率上都远未满足。
 
-- **Venue**：ICML 2026（CCF-A）
-- **年份**：2026
-- **作者**：Qingyao Ai, Yichen Tang, Changyue Wang, Jianming Long, Weihang Su, Yiqun Liu
-- **DOI**：null
-- **arXiv**：2510.17281
-- **PDF**：https://raw.githubusercontent.com/mlresearch/v306/main/assets/ai26e/ai26e.pdf
-- **正式记录**：https://proceedings.mlr.press/v306/ai26e.html
-- **主库角色**：用用户反馈模拟框架评测 LLM 系统的持续学习与记忆能力，覆盖多领域、多语言和多任务类型。
+## 研究问题与定位
 
-## 官方摘要
+现有 memory benchmark 多在 homogeneous reading comprehension 上测长文本输入，而不是测“服务时从用户反馈中持续学习”。MemoryBench 要回答：
 
-Scaling up data, parameters, and test-time computation has been the mainstream methods to improve LLM systems (LLMsys), but their upper bounds are almost reached due to the gradual depletion of high-quality data and marginal gains obtained from larger computational resource consumption. Inspired by the abilities of human and traditional AI systems in learning from practice, constructing memory and continual learning frameworks for LLMsys has become an important and popular research direction in recent literature. Yet, existing benchmarks for LLM memory often focus on evaluating the system on homogeneous reading comprehension tasks with long-form inputs rather than testing their abilities to learn from accumulated user feedback in service time. Therefore, we propose a user feedback simulation framework and a comprehensive benchmark covering multiple domains, languages, and types of tasks to evaluate the continual learning abilities of LLMsys. Experiments show that the effectiveness and efficiency of state-of-the-art baselines are far from satisfying, and we hope this benchmark could pave the way for future studies on LLM memory and optimization algorithms. Website: https://memorybench.thuir.cn Code: https://github.com/THUIR/MemoryBench Data: https://huggingface.co/datasets/THUIR/MemoryBench Data-Full: https://huggingface.co/datasets/THUIR/MemoryBench-Full
+> LLM 系统能否在真实服务过程中，从累积的用户反馈里持续改进？
 
-## 待提取（全文核对）
+## Benchmark 设计
 
-- [ ] 研究问题与一句话定位
-- [ ] 记忆单元 / 数据结构
-- [ ] 写入、组织、检索、更新、遗忘机制
-- [ ] 训练方式与监督信号（若适用）
-- [ ] 数据集、backbone、baseline、指标
-- [ ] 关键数字（必须标 PDF 页码或表格）
-- [ ] 主要结论
-- [ ] 局限与威胁
-- [ ] 与主线 F 其他论文的关系
-- [ ] 对 RQ1 / RQ3 的意义
-- [ ] 可复用点
-- [ ] 成本：build / query / latency / storage
-- [ ] 待核对项
+### 用户反馈模拟
+
+- 构造 user feedback 序列。
+- 让系统在多轮服务中积累反馈。
+- 评测后续任务是否因反馈而改进。
+
+### 覆盖
+
+- 多领域
+- 多语言
+- 多任务类型
+
+来源：PDF p.2-6，Benchmark design。
+
+## 关键发现
+
+- 现有 SOTA memory/continual learning 方法在 MemoryBench 上表现不理想。
+- 有效性和效率都远未满足。
+- 说明“长期记忆”不等于“持续学习”。
+
+来源：PDF p.1 abstract；p.6-9，Results。
+
+## 真正的新意
+
+1. **user feedback simulation**。
+2. **continual learning 视角**：不是静态 memory QA。
+3. **多领域/多语言/多任务**。
+4. **服务时学习**：更接近真实产品。
+
+## 局限与威胁
+
+- **更偏 LLMsys 持续学习**：与 agentic action loop 还未完全结合。
+- **反馈模拟**：真实用户反馈噪声不同。
+- **没有 action-coupled environment**。
+- **没有安全/隐私维度**。
+- **评测成本高**。
+
+## 与主线 F 的关系
+
+- **LongMemEval**：LongMemEval 测长期对话 memory；MemoryBench 测持续学习。
+- **MemoryAgentBench**：MemoryAgentBench 有 test-time learning；MemoryBench 更偏 user feedback/continual learning。
+- **MemoryArena**：MemoryArena 测 action-coupled；MemoryBench 测服务反馈。
+- **PersistBench**：PersistBench 测安全失败；MemoryBench 测学习效果。
+
+## 对 RQ1/RQ2 的意义
+
+- RQ1：持续学习场景下，结构记忆的收益可能来自“更新”而不是“检索”。
+- RQ2：跨领域/跨语言迁移可直接用 MemoryBench 评测。
+
+## 可复用点
+
+- user feedback simulation。
+- 多领域/多语言/多任务设置。
+- 持续学习有效性/效率指标。
+- 与静态 memory benchmark 的对照。
+
+## 成本
+
+- 多轮反馈评测成本高。
+- 没有统一 token/latency 表。
+- 需要同时报告有效性/效率。
 
 ## 来源
 
-- 主库记录：`data/agent-memory-2025/papers.json`
-- PDF：https://raw.githubusercontent.com/mlresearch/v306/main/assets/ai26e/ai26e.pdf
-- 正式记录：https://proceedings.mlr.press/v306/ai26e.html
+- 本地 PDF：`data/agent-memory-2025/pdfs/memorybench.pdf`
+- PMLR 306（ICML 2026）
+- 数据/代码：https://memorybench.thuir.cn

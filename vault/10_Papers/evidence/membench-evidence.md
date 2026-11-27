@@ -1,56 +1,105 @@
 ---
 type: evidence
-paper_id: "membench"
+paper_id: membench
 title: "MemBench: Towards More Comprehensive Evaluation on the Memory of LLM-based Agents"
-status: queued
-checked_at: null
-source_pdf: ""
-source_version: ""
-pages_checked: []
+status: evidence-checked
+checked_at: 2026-11-27
+source_pdf: "data/agent-memory-2025/pdfs/membench.pdf"
+source_version: "ACL Findings 2025"
+pages_checked: "1-9"
 mainline: "F"
 tags:
   - evidence
   - mainline-f
+  - benchmark
+  - memory-capability
 ---
 
-# MemBench: Towards More Comprehensive Evaluation on the Memory of LLM-based Agents — Evidence
+# MemBench 证据卡
 
-> Status: **queued**. 这是逐篇 evidence 的入口，不是已完成的证据卡。
-> 不要把下面的摘要当作已验证结论；关键数字必须回全文和页码核对。
+## 结论先行
 
-## 元数据
+- MemBench 用两个维度组织记忆评测：**factual vs reflective memory**，以及 **participation vs observation** 交互场景。
+- 指标覆盖 effectiveness、efficiency、capacity，而不是单一 QA accuracy。
+- 它试图补足早期 benchmark “记忆层次单一、交互场景单一、指标单一”的问题。
 
-- **Venue**：ACL Findings 2025（ACL-Findings）
-- **年份**：2025
-- **作者**：Haoran Tan, Zeyu Zhang, Chen Ma, Xu Chen, Quanyu Dai, Zhenhua Dong
-- **DOI**：10.48550/arXiv.2506.21605
-- **arXiv**：2506.21605
-- **PDF**：https://aclanthology.org/2025.findings-acl.989.pdf
-- **正式记录**：https://openreview.net/forum?id=XOJ5SQe6X0
-- **主库角色**：LLM-based agent 记忆的综合评测，覆盖多种记忆能力。
+## 研究问题与定位
 
-## 官方摘要
+现有记忆评测常只测 factual recall，缺少 reflective memory（反思/推理后的记忆）和不同交互角色。MemBench 要回答：
 
-Recent works have highlighted the significance of memory mechanisms in LLM-based agents, which enable them to store observed information and adapt to dynamic environments. However, evaluating their memory capabilities still remains challenges. Previous evaluations are commonly limited by the diversity of memory levels and interactive scenarios. They also lack comprehensive metrics to reflect the memory capabilities from multiple aspects. To address these problems, in this paper, we construct a more comprehensive dataset and benchmark to evaluate the memory capability of LLM-based agents. Our dataset incorporates factual memory and reflective memory as different levels, and proposes participation and observation as various interactive scenarios. Based on our dataset, we present a benchmark, named MemBench, to evaluate the memory capability of LLM-based agents from multiple aspects, including their effectiveness, efficiency, and capacity. To benefit the research community, we release our dataset and project at https://github.com/import-myself/Membench.
+> agent 在不同记忆层次和交互场景下，记忆能力是否一致？
 
-## 待提取（全文核对）
+## Benchmark 设计
 
-- [ ] 研究问题与一句话定位
-- [ ] 记忆单元 / 数据结构
-- [ ] 写入、组织、检索、更新、遗忘机制
-- [ ] 训练方式与监督信号（若适用）
-- [ ] 数据集、backbone、baseline、指标
-- [ ] 关键数字（必须标 PDF 页码或表格）
-- [ ] 主要结论
-- [ ] 局限与威胁
-- [ ] 与主线 F 其他论文的关系
-- [ ] 对 RQ1 / RQ3 的意义
-- [ ] 可复用点
-- [ ] 成本：build / query / latency / storage
-- [ ] 待核对项
+### 两个记忆层次
+
+- Factual memory：事实、事件、属性。
+- Reflective memory：需要推理/反思形成的记忆。
+
+### 两个交互场景
+
+- Participation：agent 参与交互。
+- Observation：agent 观察交互。
+
+### 三类指标
+
+- Effectiveness
+- Efficiency
+- Capacity
+
+来源：PDF p.1-5，Benchmark design。
+
+## 关键发现
+
+- MemBench 能区分不同记忆层次/场景下的能力差异。
+- 单一 QA 分数不足以刻画 agent memory。
+- 为后续 benchmark 提供了“多维度评测”的模板。
+
+来源：PDF p.1 abstract；p.6-8，Results。
+
+## 真正的新意
+
+1. **factual/reflective 两层**。
+2. **participation/observation 两场景**。
+3. **effectiveness/efficiency/capacity 三指标**。
+4. **多场景数据构造**。
+
+## 局限与威胁
+
+- **任务/数据仍以对话/模拟环境为主**。
+- **能力维度与 LongMemEval/MemoryAgentBench 有重叠但不可直接对齐**。
+- **没有 action-coupled environment loop**。
+- **没有安全/隐私维度**。
+- **benchmark 规模相对小**。
+
+## 与主线 F 的关系
+
+- **LongMemEval**：LongMemEval 五能力；MemBench 两层×两场景×三指标。
+- **MemoryAgentBench**：MemBench 更偏综合能力；MemoryAgentBench 更偏 incremental multi-turn。
+- **PersistBench**：MemBench 测能力；PersistBench 测安全失败。
+- **MemoryArena**：MemBench 不是 action loop。
+
+## 对 RQ1 的意义
+
+RQ1 可以用 MemBench 补足：
+
+- 不只测 factual recall，还要测 reflective memory。
+- 不只测 participation，还要测 observation。
+
+## 可复用点
+
+- factual/reflective taxonomy。
+- participation/observation 场景。
+- effectiveness/efficiency/capacity 指标。
+- 多场景数据构造。
+
+## 成本
+
+- 评测成本取决于场景数量。
+- 没有统一 token/latency 表。
+- 主要报告能力指标，不报告系统 build cost。
 
 ## 来源
 
-- 主库记录：`data/agent-memory-2025/papers.json`
-- PDF：https://aclanthology.org/2025.findings-acl.989.pdf
-- 正式记录：https://openreview.net/forum?id=XOJ5SQe6X0
+- 本地 PDF：`data/agent-memory-2025/pdfs/membench.pdf`
+- ACL Findings 2025（论文记录）

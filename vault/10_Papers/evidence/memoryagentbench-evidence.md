@@ -1,56 +1,100 @@
 ---
 type: evidence
-paper_id: "memoryagentbench"
+paper_id: memoryagentbench
 title: "Evaluating Memory in LLM Agents via Incremental Multi-Turn Interactions"
-status: queued
-checked_at: null
-source_pdf: ""
-source_version: ""
-pages_checked: []
+status: evidence-checked
+checked_at: 2026-11-27
+source_pdf: "data/agent-memory-2025/pdfs/memoryagentbench.pdf"
+source_version: "ICLR 2026 conference paper"
+pages_checked: "1-9"
 mainline: "F"
 tags:
   - evidence
   - mainline-f
+  - benchmark
+  - memory-agent
 ---
 
-# Evaluating Memory in LLM Agents via Incremental Multi-Turn Interactions — Evidence
+# MemoryAgentBench 证据卡
 
-> Status: **queued**. 这是逐篇 evidence 的入口，不是已完成的证据卡。
-> 不要把下面的摘要当作已验证结论；关键数字必须回全文和页码核对。
+## 结论先行
 
-## 元数据
+- MemoryAgentBench 把 long-context 数据改造成增量多轮交互，专门评测 memory agent。
+- 四项核心能力：accurate retrieval、test-time learning、long-range understanding、selective forgetting。
+- 现有 memory agents（context-based、RAG、external memory、tool-integrated）没有同时掌握四项能力。
 
-- **Venue**：ICLR 2026（Top-ICLR）
-- **年份**：2026
-- **作者**：Yuanzhe Hu, Yu Wang, Julian McAuley
-- **DOI**：null
-- **arXiv**：2507.05257
-- **PDF**：https://proceedings.iclr.cc/paper_files/paper/2026/file/fd1eff9dd295df50a41f2521942fa31d-Paper-Conference.pdf
-- **正式记录**：https://proceedings.iclr.cc/paper_files/paper/2026/hash/fd1eff9dd295df50a41f2521942fa31d-Abstract-Conference.html
-- **主库角色**：把长期记忆评测改造成增量多轮交互，覆盖检索、测试时学习、长程理解和选择性遗忘四项能力。
+## 研究问题与定位
 
-## 官方摘要
+现有 benchmark 多测 reasoning/planning/execution，memory 评测不足；长上下文 QA 又是静态、非增量的。MemoryAgentBench 要回答：
 
-Recent benchmarks for Large Language Model (LLM) agents primarily focus on evaluating reasoning, planning, and execution capabilities, while another critical component-memory, encompassing how agents memorize, update, and retrieve long-term information-is under-evaluated due to the lack of benchmarks. We term agents with memory mechanisms as memory agents. In this paper, based on classic theories from memory science and cognitive science, we identify four core competencies essential for memory agents: accurate retrieval, test-time learning, long-range understanding, and selective forgetting. Existing benchmarks either rely on limited context lengths or are tailored for static, long-context settings like book-based QA, which do not reflect the interactive, multi-turn nature of memory agents that incrementally accumulate information. Moreover, no existing benchmarks cover all four competencies. We introduce MemoryAgentBench, a new benchmark specifically designed for memory agents. Our benchmark transforms existing long-context datasets and incorporates newly constructed datasets into a multi-turn format, effectively simulating the incremental information processing characteristic of memory agents. By carefully selecting and curating datasets, our benchmark provides comprehensive coverage of the four core memory competencies outlined above, thereby offering a systematic and challenging testbed for assessing memory quality. We evaluate a diverse set of memory agents, ranging from simple context-based and retrieval-augmented generation (RAG) systems to advanced agents with external memory modules and tool integration. Empirical results reveal that current methods fall short of mastering all four competencies, underscoring the need for further research into comprehensive memory mechanisms for LLM agents.
+> 在增量多轮交互中，agent 是否同时具备 retrieval、test-time learning、long-range understanding、selective forgetting？
 
-## 待提取（全文核对）
+## Benchmark 设计
 
-- [ ] 研究问题与一句话定位
-- [ ] 记忆单元 / 数据结构
-- [ ] 写入、组织、检索、更新、遗忘机制
-- [ ] 训练方式与监督信号（若适用）
-- [ ] 数据集、backbone、baseline、指标
-- [ ] 关键数字（必须标 PDF 页码或表格）
-- [ ] 主要结论
-- [ ] 局限与威胁
-- [ ] 与主线 F 其他论文的关系
-- [ ] 对 RQ1 / RQ3 的意义
-- [ ] 可复用点
-- [ ] 成本：build / query / latency / storage
-- [ ] 待核对项
+### 四项能力
+
+1. accurate retrieval
+2. test-time learning
+3. long-range understanding
+4. selective forgetting
+
+### 构造
+
+- 把现有 long-context 数据集改造成 incremental multi-turn 格式。
+- 加入新构造数据集，覆盖四项能力。
+- 评测对象从 context-based/RAG 到 external memory/tool agents。
+
+来源：PDF p.2-6，Benchmark design。
+
+## 关键发现
+
+- 没有现有方法同时掌握四项能力。
+- 一些方法 retrieval 强，但 selective forgetting/test-time learning 弱。
+- 说明 memory agent 需要“多能力联合”而不是单一 QA 分数。
+
+来源：PDF p.1 abstract；p.6-9，Results。
+
+## 真正的新意
+
+1. **incremental multi-turn 格式**：不是静态长上下文。
+2. **四项能力**：retrieval + test-time learning + long-range + selective forgetting。
+3. **覆盖多种 memory agent**。
+4. **把 forgetting 纳入统一评测**。
+
+## 局限与威胁
+
+- **仍是模拟增量交互**：不是真实 environment loop。
+- **action coupling 不如 MemoryArena**。
+- **安全维度不如 PersistBench**。
+- **benchmark 新**：与 LongMemEval/MemBench 不可直接对齐。
+- **没有统一成本指标**。
+
+## 与主线 F 的关系
+
+- **LongMemEval**：LongMemEval 五能力；MemoryAgentBench 四项能力，强调 test-time learning/forgetting。
+- **PersistBench**：PersistBench 测安全；MemoryAgentBench 测能力。
+- **MemoryArena**：MemoryArena 测 action loop；MemoryAgentBench 测 incremental memory。
+- **MemoryBench**：MemoryBench 测持续学习；MemoryAgentBench 测四项核心能力。
+
+## 对 RQ1/RQ3 的意义
+
+- RQ1：MemoryAgentBench 的 retrieval/long-range 子集适合结构记忆。
+- RQ3：selective forgetting 子集直接对应遗忘。
+
+## 可复用点
+
+- 四项能力 taxonomy。
+- incremental multi-turn 改造。
+- 多类 memory agent 评测。
+- selective forgetting 子集。
+
+## 成本
+
+- 增量多轮评测比静态 QA 成本高。
+- 没有统一 token/latency 表。
+- 需要按能力子集报告。
 
 ## 来源
 
-- 主库记录：`data/agent-memory-2025/papers.json`
-- PDF：https://proceedings.iclr.cc/paper_files/paper/2026/file/fd1eff9dd295df50a41f2521942fa31d-Paper-Conference.pdf
-- 正式记录：https://proceedings.iclr.cc/paper_files/paper/2026/hash/fd1eff9dd295df50a41f2521942fa31d-Abstract-Conference.html
+- 本地 PDF：`data/agent-memory-2025/pdfs/memoryagentbench.pdf`
+- ICLR 2026（论文记录）
