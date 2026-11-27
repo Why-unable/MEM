@@ -11,10 +11,11 @@
 每篇主库论文都有一个 `<paper-id>-evidence.md`。当前索引：
 
 - [[10_Papers/evidence/INDEX|Per-Paper Evidence Index]]
+- [[40_Maps/Agent Memory 2025+ Baseline Timeline|Baseline Timeline]]：按发表时间、同月效果、数据集和 baseline 变化整理
 
 状态：
 
-- `evidence-checked`：51 篇
+- `evidence-checked`：52 篇
 - `queued`：0 篇
 - `verified`：0 篇
 - `COST_COMPARISON.md`：主线 A 成本对比（横切文件，不是论文卡）

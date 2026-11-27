@@ -2,6 +2,7 @@
 
 > 主题：Agent Memory 2025+
 > 详细想法页：`vault/30_Ideas/Agent Memory Research Questions.md`
+> 当前实验/baseline 参照：`vault/40_Maps/Agent Memory 2025+ Baseline Timeline.md`
 
 ## 当前优先级
 
@@ -71,7 +72,7 @@
 
 1. 能用 1–2 周做最小实验
 2. 有明确反例
-3. 能用现有 36 篇论文建立基线
+3. 能用现有 52 篇论文和 baseline timeline 建立基线
 4. 有可复现指标
 
 ## 下一次收敛

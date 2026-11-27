@@ -144,9 +144,50 @@
 - `schemas/`：机器可读数据契约
 - `.github/workflows/validate.yml`：CI 校验
 
-## 8. 当前限制
+## 8. 证据与时间化比较层
 
-- 当前 51 篇论文的边是人工概念边，尚未逐篇做引文级核验；其中 15 篇为 2026-11-27 增补，尚未全部精读。
+MEM 目前有三类互补证据：
+
+1. **Paper evidence**：`vault/10_Papers/evidence/<paper-id>-evidence.md`，一篇论文一个文件。
+2. **Topic synthesis**：`maps/<topic>/SYNTHESIS.md` 与主线综合页。
+3. **Baseline timeline**：`data/<topic>/baseline-timeline.json`，跨论文整理时间、数据集、主结果、baseline 变化和 2–6 字机制标签。
+
+Baseline timeline 不是单一排行榜。严格比较需要固定：
+
+```text
+benchmark + metric + backbone + judge + retrieval budget
+```
+
+生成物：
+
+```text
+data/<topic>/baseline-timeline.csv
+vault/40_Maps/<Topic> Baseline Timeline.md
+```
+
+## 9. 多机协作门禁
+
+每台机器开工前运行：
+
+```bash
+git pull --rebase
+make check
+```
+
+`make check` 必须包含文档一致性检查：
+
+```bash
+make docs-check
+```
+
+协作细节见 `docs/multi-machine-playbook.md`、`CONTRIBUTING.md` 和 `docs/machine-setup.md`。
+
+## 10. 当前限制
+
+- 52 篇论文的边是人工概念边，尚未逐篇做引文级核验。
+- 52 张 evidence 是 `evidence-checked`，不是人工 `verified`。
+- `papers.json` / `edges.json` 仍是单文件 JSON，多机同时编辑有冲突风险。
+- 基线时间轴的 `delta_pct` 只用于同月浏览排序，不能作为跨 benchmark 的科学总分。
 - 2026 年部分会议论文的正式 proceedings 页面可能仍在更新；使用前应再次检查官方页面。
-- Zotero 尚未绑定具体 library/collection；当前提供 BibTeX/RIS 和 CSL JSON 导入脚本。
+- Zotero 已导入 52 条书目，但尚未把本机 item key 回填到 `papers.json`，也尚未建立自动同步。
 - 自动更新（每日/每周）尚未启用，避免在未确认来源时污染主库。

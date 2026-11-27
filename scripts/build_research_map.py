@@ -200,7 +200,7 @@ def write_topic(vault: Path, papers: list[dict], topic: str) -> str:
 type: topic
 topic: {q(topic)}
 paper_count: {len(papers)}
-updated: 2026-11-19
+updated: 2026-11-27
 tags:
   - topic
   - agent-memory
@@ -210,7 +210,7 @@ tags:
 
 ## 范围
 
-- 时间：2025-01-01 至 2026-11-19
+- 时间：2025-01-01 至 2026-11-27
 - 对象：LLM/agent 的长期记忆、episodic memory、memory policy、记忆整合、记忆评测与安全
 - 发表要求：优先 CCF-A/顶会正式发表；ICLR、COLM、MLSys 等顶级但非 CCF-A 的 venue 单独标注
 - 收录：{len(papers)} 篇
@@ -276,7 +276,7 @@ def write_map_markdown(out: Path, papers: list[dict], edges: list[dict], topic: 
         "",
         f"- 论文数：{len(papers)}",
         f"- 关系数：{len(edges)}",
-        "- 范围：2025-01-01 至 2026-11-19",
+        "- 范围：2025-01-01 至 2026-11-27",
         "- 说明：边为概念关系，不等同于逐条引文。",
         "",
         "## 全景图",
@@ -384,7 +384,7 @@ def main() -> None:
         (vault / "40_Maps" / f"{args.topic} Synthesis.md").write_text(synthesis.read_text(encoding="utf-8"), encoding="utf-8")
     (out / "research-map.json").write_text(json.dumps({
         "topic": args.topic,
-        "scope": {"from": "2025-01-01", "to": "2026-11-19"},
+        "scope": {"from": "2025-01-01", "to": "2026-11-27"},
         "paper_count": len(papers),
         "edge_count": len(edges),
         "papers": papers,

@@ -45,6 +45,39 @@ vault/10_Papers/evidence/<paper-id>-evidence.md
 14. 待核对
 15. 来源
 
+## 横切证据层：Baseline Timeline
+
+逐篇 evidence 解决“这篇论文说了什么”；baseline timeline 解决“同一时期哪些论文用了什么数据、主结果如何、和谁比、baseline 如何变化”。
+
+源数据：
+
+```text
+data/<topic>/baseline-timeline.json
+```
+
+生成物：
+
+```text
+data/<topic>/baseline-timeline.csv
+vault/40_Maps/<Topic> Baseline Timeline.md
+```
+
+规则：
+
+- 时间使用正式 venue 的发表月份，不使用 arXiv 首次提交月。
+- 只做同 benchmark / 同指标 / 同 backbone 的可比排名。
+- 跨 benchmark 的 `delta_pct` 仅用于浏览排序，不构成科学结论。
+- utility、efficiency、safety、benchmark、survey 分开处理。
+- 每行必须能回链到对应论文 evidence。
+- 新增论文或修改主结果后运行 `make baseline-timeline` 与 `make docs-check`。
+
+运行：
+
+```bash
+make baseline-timeline
+make docs-check
+```
+
 ## 索引
 
 ```bash

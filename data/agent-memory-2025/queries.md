@@ -2,7 +2,7 @@
 
 ## 范围
 
-- 时间：2025-01-01 至 2026-11-19
+- 时间：2025-01-01 至 2026-11-27
 - 对象：LLM/agent 的长期记忆、episodic memory、memory policy、记忆整合、记忆评测、记忆安全
 - 发表门槛：正式发表的 CCF-A 优先；ICLR、COLM、MLSys 等顶级但非 CCF-A 的 venue 单独标注
 - 排除：仅 arXiv、workshop-only、无法核验 venue 的工作不进入主地图
@@ -65,14 +65,14 @@
 ## 当前结果
 
 - 候选：约 1,750 条 OpenReview notes（多轮去重后）
-- 正式发表主库：36 篇
-- 关系边：47 条
-- 其中 CCF-A：17 篇
-- Top-ICLR：8 篇
-- ACL Findings：6 篇
+- 正式发表主库：52 篇
+- 关系边：86 条
+- 其中 CCF-A：27 篇
+- Top-ICLR：12 篇
+- ACL Findings：7 篇
 - Top-COLM：3 篇
 - Top-MLSys：1 篇
-- CCF-B（ECAI）：1 篇
+- CCF-B：2 篇
 
 ## 已知限制
 

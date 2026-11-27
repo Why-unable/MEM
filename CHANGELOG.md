@@ -8,6 +8,8 @@ The format is based on Keep a Changelog and uses semantic versioning for the res
 
 ### Added
 
+- 2026-11-27：完成多机部署与文档一致性更新：新增 multi-machine playbook、`check_docs.py`、`build_venue_audit.py`，更新 README/ROADMAP/STATUS/CONTRIBUTING/SYSTEM/AGENTS 与 CI；`make check` 现覆盖 timeline、venue audit 和文档一致性。
+- 2026-11-27：新增 `Agent Memory 2025+ Baseline Timeline`，按正式发表月份整理 52 篇论文的主结果、数据集、对比基线与同月效果顺序；新增 `baseline-timeline.json`、CSV 和可重复生成脚本。
 - 2026-11-27：新增 VikingMem（PVLDB 2026，CCF-A），主库达到 52 篇；完成页码级证据卡并加入系统效率主线。
 - 2026-11-27：完成 A–G 七条主线的全文扫描与综合页，新增 `vault/20_Topics/Mainline Overview.md`。
 - 2026-11-27：新增 AgeMem 页码级证据卡。

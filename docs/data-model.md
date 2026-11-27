@@ -2,7 +2,7 @@
 
 ## 1. Paper
 
-Source of truth in v0.1:
+Current source of truth:
 
 ```text
 data/<topic>/papers.json
@@ -80,8 +80,8 @@ Frontmatter:
 ```yaml
 type: topic
 topic: Agent Memory 2025+
-paper_count: 36
-updated: 2026-11-19
+paper_count: 52
+updated: 2026-11-27
 tags:
   - topic
   - agent-memory
@@ -126,7 +126,55 @@ Sections:
 
 The “可扩展笔记” section is the preferred place for manual additions.
 
-## 6. Map
+## 6. Baseline Timeline
+
+Source of truth:
+
+```text
+data/<topic>/baseline-timeline.json
+```
+
+This is a curated, cross-paper evidence layer. It is not a universal ranking. Each row should contain:
+
+| Field | Description |
+|---|---|
+| `date` | Formal publication month |
+| `paper_id` | Foreign key to `papers.json` |
+| `short` | Display name |
+| `tagline` | 2–6 字 core-mechanism label |
+| `type` | method / benchmark / attack / survey |
+| `lane` | utility / efficiency / safety / benchmark / survey |
+| `datasets` | Benchmarks or datasets used |
+| `headline` | Primary reported result |
+| `comparison` | Strongest baseline or comparable change |
+| `delta_pct` | Optional sortable relative-improvement proxy |
+| `baseline_shift` | How the baseline set / evaluation changed |
+| `note` | Caveat or reading warning |
+
+Generated outputs:
+
+```text
+data/<topic>/baseline-timeline.csv
+vault/40_Maps/<Topic> Baseline Timeline.md
+```
+
+Do not hand-edit the generated CSV or Obsidian note.
+
+## 6.1 Venue Audit
+
+Generated from `papers.json`:
+
+```text
+data/<topic>/VENUE_AUDIT.md
+```
+
+The audit groups all papers by `venue_tier` and records official-record / PDF links. Run:
+
+```bash
+make venue-audit
+```
+
+## 7. Map
 
 Generated files:
 
@@ -139,7 +187,7 @@ maps/<topic>/papers.csv
 
 Do not hand-edit generated map files without updating the builder.
 
-## 7. IDs
+## 8. IDs
 
 Use stable, readable IDs:
 
@@ -153,9 +201,9 @@ persistbench
 
 Do not use sequential numbers alone.
 
-## 8. Migration
+## 9. Migration
 
-v0.1 uses single-file JSON. v0.2 should migrate to:
+Current version uses single-file JSON. The next data-layout migration should move to:
 
 ```text
 data/papers/<id>.yaml

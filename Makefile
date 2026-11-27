@@ -6,7 +6,7 @@ EDGES ?= data/$(TOPIC)/edges.json
 VAULT ?= vault
 OUT ?= maps/$(TOPIC)
 
-.PHONY: validate schemas build export evidence-index check sync clean-cache
+.PHONY: validate schemas build export evidence-index baseline-timeline venue-audit docs-check check sync clean-cache
 
 validate:
 	$(PYTHON) scripts/validate_mem.py --papers $(PAPERS) --edges $(EDGES)
@@ -24,7 +24,16 @@ export:
 evidence-index:
 	$(PYTHON) scripts/build_evidence_index.py
 
-check: schemas validate build export evidence-index
+baseline-timeline:
+	$(PYTHON) scripts/build_baseline_timeline.py
+
+venue-audit:
+	$(PYTHON) scripts/build_venue_audit.py --papers $(PAPERS)
+
+docs-check:
+	$(PYTHON) scripts/check_docs.py
+
+check: schemas validate build export evidence-index baseline-timeline venue-audit docs-check
 	git diff --check
 
 sync:

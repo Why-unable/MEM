@@ -1,6 +1,7 @@
 # Agent Memory 2025+ — Research Synthesis
 
-> 基于主库 52 篇正式发表论文的概念地图；深度综合仍以原始 36 篇全文核对为主，2026-11-27 分三批增补的 16 篇已入图并已完成逐篇 evidence；深度综合仍以原始 36 篇为主。具体实验数字仍需回论文 PDF 复核。
+> 基于主库 52 篇正式发表论文的概念地图；52/52 已有独立 evidence，均为 `evidence-checked`，但尚未逐篇人工 `verified`。具体实验数字仍需回论文 PDF 与页码复核。
+> 时间化效果、数据集与 baseline：[[40_Maps/Agent Memory 2025+ Baseline Timeline]]
 
 ## 1. 一句话判断
 

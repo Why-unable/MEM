@@ -22,6 +22,7 @@ $MEM_ROOT/vault
 
 - `vault/90_System/Dashboard.md`
 - `vault/20_Topics/Agent Memory 2025+.md`
+- `vault/40_Maps/Agent Memory 2025+ Baseline Timeline.md`
 - `vault/40_Maps/Agent Memory 2025+.canvas`
 
 ## 2. 安装外部工具（可选）
@@ -95,21 +96,55 @@ python3 scripts/build_research_map.py \
 
 ## 6. 当前案例
 
-`Agent Memory 2025+` 已经包含：
+`Agent Memory 2025+` 当前包含：
 
-- 36 篇正式发表论文
-- 17 篇 CCF-A
-- 8 篇 ICLR
-- 6 篇 ACL Findings
-- 3 篇 COLM
-- 1 篇 MLSys
-- 1 篇 ECAI
-- 47 条概念关系
+- 52 篇正式发表论文
+- 86 条概念关系
+- 27 篇 CCF-A
+- 12 篇 Top-ICLR
+- 7 篇 ACL Findings
+- 3 篇 Top-COLM
+- 1 篇 Top-MLSys
+- 2 篇 CCF-B
+- 52/52 逐篇 `evidence-checked`
+- 52 篇时间化 baseline 记录
+- 4 个 Zotero collection，52 条书目 + 52 条 importer notes
 
-## 7. 下一步
+核心入口：
 
-- 绑定你的实际 Obsidian Vault 路径。
-- 绑定 Zotero collection。
-- 把 36 篇论文导入 Zotero。
-- 逐篇补“关键方法 / 关键实验 / 局限 / 可复用点”。
-- 从地图缺口生成 3–5 个研究问题。
+```text
+vault/90_System/Dashboard.md
+vault/20_Topics/Agent Memory 2025+.md
+vault/20_Topics/Mainline Overview.md
+vault/10_Papers/evidence/INDEX.md
+vault/40_Maps/Agent Memory 2025+ Baseline Timeline.md
+maps/agent-memory-2025/EXPERIMENT_LANDSCAPE.md
+个人理解/路线分类.md
+```
+
+## 7. 多机部署
+
+第二台机器按以下顺序接手：
+
+```bash
+git clone git@github.com:Why-unable/MEM.git
+cd MEM
+git fetch origin
+git switch research/agent-memory-evidence
+make check
+```
+
+然后：
+
+1. 打开本机 `MEM/vault/` 到 Obsidian。
+2. 确认 Zotero 52 条书目，不重复导入已有 batch。
+3. 阅读 `docs/multi-machine-playbook.md` 与 `CONTRIBUTING.md`。
+4. 运行 `make docs-check` 验收文档与数据一致。
+
+## 8. 下一步
+
+- 建立 `CLAIMS.md`：claim–evidence–confidence。
+- 建立 RQ1 统一实验协议。
+- 对 52 张 evidence 做 `verified` 人工抽查。
+- 迁移 per-paper 数据分片，降低多机冲突。
+- 回填 Zotero item key 与合法可获得的本机 PDF 附件。

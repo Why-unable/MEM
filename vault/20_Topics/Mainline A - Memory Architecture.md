@@ -15,8 +15,8 @@ tags:
 # Mainline A - Memory Architecture
 
 > 范围：核心五篇（A-Mem、G-Memory、MAGMA、MemGAS、MRAgent）+ 扩展四篇（SeCom、HippoRAG 2、GAM、E-mem）。
-> 方法：核心五篇有页码级证据卡；扩展四篇完成全文扫描，尚未逐篇建卡。
-> 注意：九篇论文的 benchmark、backbone、judge 和成本口径不同，**不能直接把分数横向排名**。
+> 方法：十篇均已完成页码级 evidence card，并对 benchmark、backbone、judge 与成本口径做交叉核对。
+> 注意：十篇论文的 benchmark、backbone、judge 和成本口径不同，**不能直接把分数横向排名**。
 
 ## 一句话结论
 
@@ -29,7 +29,7 @@ tags:
 → 由 LLM 驱动的主动访问策略
 ```
 
-九篇论文共同支持一个更精确的判断：
+十篇论文共同支持一个更精确的判断：
 
 > **结构化记忆的优势主要集中在多跳、时间/因果推理和对抗性问题上；在单点事实回忆和知识更新上，长上下文仍然是强 baseline。**
 

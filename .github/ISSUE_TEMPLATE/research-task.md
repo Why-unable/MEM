@@ -22,8 +22,17 @@ assignees: ""
 - [ ] Paper notes
 - [ ] Concept edges
 - [ ] Synthesis update
+- [ ] Baseline timeline update
+- [ ] Personal route classification update
+- [ ] Documentation / generated artifact check
 - [ ] Research log
 
 ## Evidence
+
+## Collaboration impact
+
+- Files / branches affected:
+- Generated artifacts to rebuild:
+- Does this need an ADR?
 
 ## Risks / open questions

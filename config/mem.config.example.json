@@ -9,13 +9,13 @@
     "local_api": "http://127.0.0.1:23119/api/users/0",
     "import_dir": "$MEM_ROOT/data/zotero",
     "import_handed_off": true,
-    "import_handed_off_at": "2026-11-19T14:10:00+08:00",
+    "import_handed_off_at": "2026-11-27T14:10:00+08:00",
     "import_confirmed": false,
     "import_note": "BibTeX opened with Zotero; no direct database writes. Import dialog may require one confirmation click."
   },
   "research": {
     "default_scope_from": "2025-01-01",
-    "default_scope_to": "2026-11-19",
+    "default_scope_to": "2026-11-27",
     "preferred_venues": [
       "NeurIPS",
       "ICML",

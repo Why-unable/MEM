@@ -15,6 +15,16 @@
 - [ ] PDF / abstract checked
 - [ ] DOI / arXiv / OpenReview ID checked
 - [ ] Conceptual edges are labeled
+- [ ] Per-paper evidence updated
+- [ ] Baseline timeline / tagline updated for affected papers
+
+## Generated artifacts
+
+- [ ] `papers.json` / `edges.json` are the source of truth
+- [ ] Generated notes, Canvas and map were rebuilt
+- [ ] `baseline-timeline.csv` and Obsidian timeline were rebuilt
+- [ ] `VENUE_AUDIT.md` was rebuilt
+- [ ] No generated file was hand-edited
 
 ## AI participation
 
@@ -25,9 +35,11 @@
 ## Validation
 
 - [ ] `make check`
+- [ ] `make docs-check`
 - [ ] `git diff --check`
 - [ ] Obsidian links checked
-- [ ] Generated map reviewed
+- [ ] Generated map/timeline reviewed
+- [ ] `git status -sb` clean or only expected files
 
 ## Risks / limitations
 

@@ -2,7 +2,7 @@
 type: topic
 topic: "Agent Memory 2025+"
 paper_count: 52
-updated: 2026-11-19
+updated: 2026-11-27
 tags:
   - topic
   - agent-memory
@@ -12,7 +12,7 @@ tags:
 
 ## 范围
 
-- 时间：2025-01-01 至 2026-11-19
+- 时间：2025-01-01 至 2026-11-27
 - 对象：LLM/agent 的长期记忆、episodic memory、memory policy、记忆整合、记忆评测与安全
 - 发表要求：优先 CCF-A/顶会正式发表；ICLR、COLM、MLSys 等顶级但非 CCF-A 的 venue 单独标注
 - 收录：52 篇

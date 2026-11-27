@@ -9,6 +9,7 @@
 | [0003](docs/decisions/0003-conceptual-edges.md) | 地图边默认为概念关系 | accepted | 2026-11-19 |
 | [0004](docs/decisions/0004-zotero-export-first.md) | Zotero 采用 export-first，不直接写数据库 | accepted | 2026-11-19 |
 | [0005](docs/decisions/0005-data-layout-v0.1.md) | v0.1 使用单文件 JSON，v0.2 迁移到分片 YAML | accepted | 2026-11-19 |
+| [0006](docs/decisions/0006-baseline-timeline.md) | Baseline timeline 作为可生成的横切证据层，不构造统一总榜 | accepted | 2026-11-27 |
 
 ## 何时新增 ADR
 
