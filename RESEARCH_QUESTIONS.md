@@ -4,6 +4,7 @@
 > 详细想法页：`vault/30_Ideas/Agent Memory Research Questions.md`
 > 当前实验/baseline 参照：`vault/40_Maps/Agent Memory 2025+ Baseline Timeline.md`
 > 开题设计与写作规范：`开题报告/README.md`
+> 当前开题首选：方向 B（记忆冲突检测与可追溯更新），见 `开题报告/05_VikingMem后续研究与方向B设计.md`。
 
 ## 当前优先级
 

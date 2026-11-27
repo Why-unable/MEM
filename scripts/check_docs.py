@@ -140,12 +140,16 @@ def main() -> None:
         "README.md",
         "01_选题方法与方向评估.md",
         "02_国内开题报告写作规范.md",
-        "03_推荐题目与初步研究设计.md",
+        "03_备选方向A_自适应记忆路由研究设计.md",
         "04_开题报告初稿模板.md",
+        "05_VikingMem后续研究与方向B设计.md",
+        "06_备选方向A_开题报告模板.md",
     ]
     proposal_texts = {name: read(PROPOSAL_DIR / name) for name in proposal_files}
-    require(proposal_texts["README.md"], "预算约束下长期对话智能体的自适应记忆路由与证据回退方法研究", "开题报告/README.md")
-    require(proposal_texts["03_推荐题目与初步研究设计.md"], "预算约束下长期对话智能体的自适应记忆路由与证据回退方法研究", "开题报告/03_推荐题目与初步研究设计.md")
+    primary_title = "面向知识更新的可追溯事件—实体记忆冲突消解与回滚方法研究"
+    require(proposal_texts["README.md"], primary_title, "开题报告/README.md")
+    require(proposal_texts["04_开题报告初稿模板.md"], primary_title, "开题报告/04_开题报告初稿模板.md")
+    require(proposal_texts["05_VikingMem后续研究与方向B设计.md"], primary_title, "开题报告/05_VikingMem后续研究与方向B设计.md")
     require(proposal_texts["02_国内开题报告写作规范.md"], "学校/学院模板为准", "开题报告/02_国内开题报告写作规范.md")
     require(proposal_texts["04_开题报告初稿模板.md"], "一页研究设计画布", "开题报告/04_开题报告初稿模板.md")
 

@@ -48,7 +48,7 @@
 - [x] `baseline-timeline.json` / CSV / Obsidian 笔记：按发表时间组织效果、数据集和 baseline 变化
 - [x] `VENUE_AUDIT.md` 从 `papers.json` 自动生成
 - [x] `make check` 覆盖 schema、论文图、地图、Zotero 导出、evidence、时间轴、venue audit、文档一致性
-- [x] 新增 `开题报告/`：选题方法、写作规范、推荐题目、研究设计与初稿模板
+- [x] 新增 `开题报告/`：当前首选方向 B（VikingMem 后续：冲突检测、可信更新与回滚），保留方向 A 备选
 - [x] README / STATUS / ROADMAP / Dashboard / 自动化脚本同步到当前状态
 
 ### 待完成

@@ -20,7 +20,7 @@
 | 主线分析层 | 完成 | A–G 七条主线综合页 |
 | 研究综合 | 完成 | `maps/agent-memory-2025/SYNTHESIS.md` 已同步 |
 | 实验/baseline 登记 | 完成 | `baseline-timeline.json`、CSV、Obsidian 时间轴；数据集与 baseline 变化已整理 |
-| 硕士开题材料 | 完成初版 | `开题报告/`：选题方法、写作规范、推荐题目、研究设计与模板 |
+| 硕士开题材料 | 完成初版 | `开题报告/`：当前首选方向 B（VikingMem 后续：冲突检测、可信更新与回滚） |
 | Venue 审计 | 完成 | `VENUE_AUDIT.md` 从主库自动生成 |
 | Zotero 导入文件 | 完成 | BibTeX / RIS 已生成 |
 | Zotero 实际导入 | 完成 | 52 书目 + 52 importer notes；4 个 collection；0 PDF 附件 |
