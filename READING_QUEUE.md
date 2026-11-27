@@ -19,6 +19,7 @@
 | MemoryOS | 三级层次记忆基线 | queued |
 | HippoRAG 2 | 图增强 RAG 强基线 | queued |
 | AgeMem | 统一 LTM/STM 的 RL memory policy | evidence-checked |
+| VikingMem | Memory Base / 生产级事件-实体记忆系统 | evidence-checked |
 
 ## 新增批次 — 待补证据卡
 

@@ -57,6 +57,7 @@ Large Language Models (LLMs) have demonstrated remarkable prowess in generating 
 - extends ← [[10_Papers/lightmem|LightMem: Lightweight and Efficient Memory-Augmented Generation]]：生产级记忆流水线 → 轻量级记忆系统
 - extends ← [[10_Papers/simplemem|SimpleMem: Efficient Lifelong Memory for LLM Agents]]：生产级记忆流水线 → 语义压缩记忆
 - related ← [[10_Papers/lightmem-slm|Lightweight LLM Agent Memory with Small Language Models]]：SLM 驱动记忆 vs 生产级 LLM 记忆
+- extends ← [[10_Papers/vikingmem|VikingMem: A Memory Base Management System for Stateful LLM-Based Applications]]：生产级记忆流水线 → Memory Base 管理系统
 
 ## 我的阅读问题
 

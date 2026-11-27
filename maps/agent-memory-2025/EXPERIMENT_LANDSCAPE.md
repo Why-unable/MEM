@@ -1,7 +1,7 @@
 # Agent Memory 2025+：实验数据集与对比基线全景
 
 > 更新时间：2026-11-26
-> 范围：原始 36 篇正式发表论文；2026-11-27 主库已增补至 51 篇，新增 15 篇的实验矩阵尚未回填（见 `data/agent-memory-2025/COVERAGE_AUDIT.md`）
+> 范围：原始 36 篇正式发表论文；2026-11-27 主库已增补至 52 篇，新增 16 篇的实验矩阵尚未回填（见 `data/agent-memory-2025/COVERAGE_AUDIT.md`）
 > 方法：优先读取论文 PDF 的 Experiments / Experimental Setup / Baselines 段落；已完成的 5 张主线 A 证据卡用于交叉核对
 > 说明：本文是“实验设置地图”，不是排行榜。不同论文的 backbone、judge、数据切分、token 预算和 baseline 重实现方式不同，数字不能直接横比。
 

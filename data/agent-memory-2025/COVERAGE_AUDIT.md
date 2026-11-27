@@ -1,7 +1,7 @@
 # Agent Memory 2025+：覆盖审计与增补记录
 
-> 审计日期：2026-11-27  
-> 当前主库：51 篇正式发表论文  
+> 审计日期：2026-11-27
+> 当前主库：52 篇正式发表论文
 > 触发原因：用户发现 LightMem 未被收录；进一步审计发现这不是单篇遗漏，而是“系统基线/评测基准”整层覆盖不足。
 
 ## 0. 结论
@@ -26,7 +26,7 @@ LightMem 确实应该进入主地图：
 | ReasoningBank | ICLR 2026 | Top-ICLR | 从成功/失败经验蒸馏推理策略；程序性记忆的重要工作 |
 | MemoryAgentBench | ICLR 2026 | Top-ICLR | 增量多轮记忆评测，覆盖检索、测试时学习、长程理解、选择性遗忘 |
 
-本次先加入 8 篇（Batch 1）；随后又完成一轮深度检索，加入 7 篇 Batch 2。主库从 36 篇增加到 51 篇，关系从 47 条增加到 81 条。
+本次先加入 8 篇（Batch 1）；随后又完成一轮深度检索，加入 7 篇 Batch 2。主库从 36 篇增加到 52 篇，关系从 47 条增加到 86 条。
 
 补充说明：**AgeMem**（*Agentic Memory: Learning Unified Long-Term and Short-Term Memory Management for Large Language Model Agents*）已确认是 **ACL 2026 Long Papers（CCF-A）**，DOI `10.18653/v1/2026.acl-long.981`，本轮已加入，并完成 `vault/10_Papers/evidence/agemem-evidence.md` 全文证据卡。
 
@@ -123,6 +123,15 @@ LightMem 确实应该进入主地图：
 
 MemoryArena 已经在主库中，但原记录 ID 为 `interdependent`，标题为官方 PDF 标题 *Benchmarking Agent Memory in Interdependent Multi-Session Agentic Tasks*，没有 “MemoryArena:” 前缀。因此本轮**没有重复添加**，只补强了它的 role 描述和 arXiv 字段。
 
+## 2.10 后续单篇增补：VikingMem
+
+- **论文**：VikingMem: A Memory Base Management System for Stateful LLM-Based Applications
+- **Venue**：PVLDB 2026（Proceedings of the VLDB Endowment, Vol. 19 No. 12）
+- **DOI**：`10.14778/3827998.3828037`
+- **为什么重要**：把 memory 从应用内 pipeline 提升为生产级 Memory Base；event + entity 双抽象、选择性抽取、时间压缩、multi-vector rerank。
+- **主库位置**：`vikingmem`，category `system`，CCF-A。
+- **全文**：正式 DOI 已核验；全文使用 arXiv 2605.29640 版本阅读，正式 PVLDB PDF 后续可补。
+
 ## 3. 验证方式
 
 本次新增记录使用了以下来源：
@@ -130,6 +139,7 @@ MemoryArena 已经在主库中，但原记录 ID 为 `interdependent`，标题�
 - ICLR 2026 / 2025 official proceedings（LightMem、SeCom、ReasoningBank、MemoryAgentBench）
 - PMLR（HippoRAG 2、SimpleMem）
 - ACL Anthology + Crossref DOI（MemoryOS、GAM）
+- PVLDB + Crossref DOI（VikingMem）
 - OpenAlex 用于标题、作者、摘要和 venue 交叉核对
 - 官方 PDF 首页用于作者名核对
 
@@ -152,17 +162,17 @@ MemoryArena 已经在主库中，但原记录 ID 为 `interdependent`，标题�
 
 ## 5. 下一步
 
-1. 先为 LightMem、SeCom、MemoryOS、HippoRAG 2 补全文证据卡（它们是现有论文的高频 baseline）。
-2. 再补 AgeMem、EverMemOS、E-mem、Nemori 的证据卡，建立“记忆管理/整合”主线。
-3. 补 MemoryAgentBench、MemoryBench、MemoryArena 的评测协议对照。
+1. 建立 `CLAIMS.md`，把主线结论转成 claim–evidence–confidence。
+2. 对 52 张 evidence 做 `verified` 人工抽查。
+3. 回填新增 16 篇论文的 `EXPERIMENT_LANDSCAPE.md` 矩阵。
 4. 保持规则：arXiv-only 不进入主地图；正式 venue 确认后再迁移。
 
 ## 6. 当前计数
 
 ```text
-论文：51
-关系：81
-CCF-A：26
+论文：52
+关系：86
+CCF-A：27
 Top-ICLR：12
 CCF-B：2
 Top-MLSys：1

@@ -12,8 +12,8 @@ tags:
 
 # Agent Memory 2025+ · Mainline Overview
 
-> 目的：把 51 篇主库论文组织成七条可读、可比较、可做实验的主线。
-> 状态：51/51 篇均有页码级 evidence 文件；当前全部为 `evidence-checked`，尚未做 `verified` 人工抽查。
+> 目的：把 52 篇主库论文组织成七条可读、可比较、可做实验的主线。
+> 状态：52/52 篇均有页码级 evidence 文件；当前全部为 `evidence-checked`，尚未做 `verified` 人工抽查。
 
 ## 七条主线
 
@@ -21,7 +21,7 @@ tags:
 |---|---|---:|---|
 | A · Memory Architecture | 记忆应该怎么组织：笔记、图、层次、粒度、重构？ | 10 | [[20_Topics/Mainline A - Memory Architecture]] |
 | B · Memory Policy | 何时写、读、更新、总结、删除？这些策略能否学习？ | 5 | [[20_Topics/Mainline B - Memory Policy]] |
-| C · Systems and Efficiency | 如何降低 token、latency、API calls、storage 和构建成本？ | 8 | [[20_Topics/Mainline C - Systems and Efficiency]] |
+| C · Systems and Efficiency | 如何降低 token、latency、API calls、storage 和构建成本？ | 9 | [[20_Topics/Mainline C - Systems and Efficiency]] |
 | D · Episodic Memory and Consolidation | 如何切事件、何时巩固、如何压缩但不丢证据？ | 8 | [[20_Topics/Mainline D - Episodic Memory and Consolidation]] |
 | E · Personalization, Multimodal and Procedural | 记忆应该存什么：用户、视觉/听觉、技能、协作信号？ | 7 | [[20_Topics/Mainline E - Personalization Multimodal and Procedural]] |
 | F · Evaluation | 如何证明记忆真的有效、可迁移、可遗忘、可安全使用？ | 8 | [[20_Topics/Mainline F - Evaluation]] |
@@ -90,11 +90,11 @@ G 安全：怎么防止被利用
 
 | 深度 | 含义 | 当前覆盖 |
 |---|---|---|
-| L1 · metadata | 标题、venue、摘要 | 51/51 |
-| L2 · experiment landscape | 数据集、baseline、主要设置 | 36/51（新增 15 篇待回填） |
-| L3 · full-text scan | 方法、结果、局限、主线综合 | 51/51 |
-| L4 · evidence card | 页码级关键数字与来源 | 51 个入口，51 张 evidence-checked，0 个 queued |
-| L5 · reproduction | 代码/数据复现 | 0/51 |
+| L1 · metadata | 标题、venue、摘要 | 52/52 |
+| L2 · experiment landscape | 数据集、baseline、主要设置 | 36/52（新增 16 篇待回填） |
+| L3 · full-text scan | 方法、结果、局限、主线综合 | 52/52 |
+| L4 · evidence card | 页码级关键数字与来源 | 52 个入口，52 张 evidence-checked，0 个 queued |
+| L5 · reproduction | 代码/数据复现 | 0/52 |
 
 > 下一步应优先做 L4 的 `verified` 人工抽查，而不是继续无边界扩论文。
 
@@ -112,5 +112,5 @@ G 安全：怎么防止被利用
 
 1. 建立 `CLAIMS.md`，把七条主线结论转成 claim–evidence–confidence。
 2. 选定 RQ1，设计统一实验协议。
-3. 对 51 张 evidence 做 `verified` 抽查。
-4. 把 `EXPERIMENT_LANDSCAPE.md` 的 15 篇新增论文回填。
+3. 对 52 张 evidence 做 `verified` 抽查。
+4. 把 `EXPERIMENT_LANDSCAPE.md` 的 16 篇新增论文回填。

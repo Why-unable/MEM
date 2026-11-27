@@ -1,0 +1,17 @@
+TY  - JOUR
+TI  - VikingMem: A Memory Base Management System for Stateful LLM-Based Applications
+AU  - Jiajie Fu
+AU  - Junwen Chen
+AU  - Mengzhao Wang
+AU  - Aoxiang He
+AU  - Maojia Sheng
+AU  - Xiangyu Ke
+AU  - Yifan Zhu
+AU  - Yunjun Gao
+PY  - 2026
+T2  - PVLDB 2026
+DO  - 10.14778/3827998.3828037
+UR  - https://doi.org/10.14778/3827998.3828037
+AB  - Large Language Models have revolutionized interactive applications, however, their finite context windows pose a critical data management challenge for maintaining stateful, long-term interactions. Existing memory approaches, however, often rely on simplistic extraction that leads to incomplete memories or use rigid, single-use memory extract prompts tailored for one use case like Chatbots. Consequently, they lack generalizability and perform poorly on diverse downstream tasks. To bridge this gap, we introduce the Memory Base, a novel data management paradigm to manage the persistent state of long-term interactions. It is characterized by three core principles: selective extraction of high-value memories from raw information streams; inherent statefulness and evolution, where memory content is progressively summarized, corrected, and temporally weighted to prioritize recent interactions; and a generalizable abstraction paradigm designed for robust transferability across diverse applications, including education, recommendation, and agent memory. Building on this foundation, we present VikingMem, an end-to-end Memory Base Management System implemented on the VikingDB vector engine. VikingMem materializes this paradigm through interconnected event and entity abstractions. It features event-centric memory extraction to selectively handle complex information streams, while entities are dynamically updated by events to achieve stateful evolution. Using temporal compression via a topic-wise timeline and time-weighted recall, the system can progressively produce high-level summary memories, prioritize recent items, while compressing and fading older ones. Retrieval is further optimized through multi-vector-based reranking. Extensive evaluations on long-term memory benchmarks demonstrate that VikingMem achieves state-of-the-art performance, outperforming baselines by up to 30% in memory retrieval effectiveness while maintaining low latency essential for interactive applications.
+N1  - CCF-A
+ER  -

@@ -5,15 +5,15 @@
 
 ## 覆盖
 
-- 主库论文：51
-- 已有独立 evidence 文件：51
-- 已完成页码级证据卡：51
+- 主库论文：52
+- 已有独立 evidence 文件：52
+- 已完成页码级证据卡：52
 
 ```text
 queued: 0
 metadata-only: 0
 full-text-scan: 0
-evidence-checked: 51
+evidence-checked: 52
 verified: 0
 ```
 
@@ -54,6 +54,7 @@ verified: 0
 | Mem0: Building Production-Ready AI Agents with Scalable Long-Term Memory | ECAI 2025 | `evidence-checked` | [mem0](mem0-evidence.md) |
 | Memory OS of AI Agent | EMNLP 2025 | `evidence-checked` | [memoryos](memoryos-evidence.md) |
 | SimpleMem: Efficient Lifelong Memory for LLM Agents | ICML 2026 | `evidence-checked` | [simplemem](simplemem-evidence.md) |
+| VikingMem: A Memory Base Management System for Stateful LLM-Based Applications | PVLDB 2026 | `evidence-checked` | [vikingmem](vikingmem-evidence.md) |
 
 ## Mainline D · Episodic Memory and Consolidation
 

@@ -161,11 +161,21 @@
       "color": "3"
     },
     {
+      "id": "vikingmem",
+      "type": "file",
+      "file": "10_Papers/vikingmem.md",
+      "x": 1040,
+      "y": 220,
+      "width": 420,
+      "height": 150,
+      "color": "3"
+    },
+    {
       "id": "mem0",
       "type": "file",
       "file": "10_Papers/mem0.md",
       "x": 1040,
-      "y": 220,
+      "y": 440,
       "width": 420,
       "height": 150,
       "color": "3"
@@ -175,7 +185,7 @@
       "type": "file",
       "file": "10_Papers/memoryos.md",
       "x": 1040,
-      "y": 440,
+      "y": 660,
       "width": 420,
       "height": 150,
       "color": "3"
@@ -185,7 +195,7 @@
       "type": "file",
       "file": "10_Papers/evermemos.md",
       "x": 1040,
-      "y": 660,
+      "y": 880,
       "width": 420,
       "height": 150,
       "color": "3"
@@ -195,7 +205,7 @@
       "type": "file",
       "file": "10_Papers/hippocampus.md",
       "x": 1040,
-      "y": 880,
+      "y": 1100,
       "width": 420,
       "height": 150,
       "color": "3"
@@ -205,7 +215,7 @@
       "type": "file",
       "file": "10_Papers/lightwm.md",
       "x": 1040,
-      "y": 1100,
+      "y": 1320,
       "width": 420,
       "height": 150,
       "color": "3"
@@ -215,7 +225,7 @@
       "type": "file",
       "file": "10_Papers/lightmem-slm.md",
       "x": 1040,
-      "y": 1320,
+      "y": 1540,
       "width": 420,
       "height": 150,
       "color": "3"
@@ -225,7 +235,7 @@
       "type": "file",
       "file": "10_Papers/simplemem.md",
       "x": 1040,
-      "y": 1540,
+      "y": 1760,
       "width": 420,
       "height": 150,
       "color": "3"
@@ -1239,6 +1249,51 @@
       "toNode": "reasoningbank",
       "toSide": "left",
       "label": "related: Experience 阶段的跨轨迹抽象",
+      "color": "4"
+    },
+    {
+      "id": "edge-81",
+      "fromNode": "vikingmem",
+      "fromSide": "right",
+      "toNode": "mem0",
+      "toSide": "left",
+      "label": "extends: 生产级记忆流水线 → Memory Base 管理系统",
+      "color": "4"
+    },
+    {
+      "id": "edge-82",
+      "fromNode": "vikingmem",
+      "fromSide": "right",
+      "toNode": "memoryos",
+      "toSide": "left",
+      "label": "related: Memory Base vs 分层 memory OS",
+      "color": "4"
+    },
+    {
+      "id": "edge-83",
+      "fromNode": "vikingmem",
+      "fromSide": "right",
+      "toNode": "evermemos",
+      "toSide": "left",
+      "label": "related: Memory Base vs 自组织 memory OS",
+      "color": "4"
+    },
+    {
+      "id": "edge-84",
+      "fromNode": "vikingmem",
+      "fromSide": "right",
+      "toNode": "hippocampus",
+      "toSide": "left",
+      "label": "related: VikingDB 向量引擎 vs 压缩检索模块",
+      "color": "4"
+    },
+    {
+      "id": "edge-85",
+      "fromNode": "vikingmem",
+      "fromSide": "right",
+      "toNode": "memgas",
+      "toSide": "left",
+      "label": "related: 事件/实体 + 时间压缩 vs 多粒度记忆",
       "color": "4"
     }
   ]

@@ -1,7 +1,7 @@
 ---
 type: topic
 topic: "Agent Memory 2025+"
-paper_count: 51
+paper_count: 52
 updated: 2026-11-19
 tags:
   - topic
@@ -15,12 +15,12 @@ tags:
 - 时间：2025-01-01 至 2026-11-19
 - 对象：LLM/agent 的长期记忆、episodic memory、memory policy、记忆整合、记忆评测与安全
 - 发表要求：优先 CCF-A/顶会正式发表；ICLR、COLM、MLSys 等顶级但非 CCF-A 的 venue 单独标注
-- 收录：51 篇
+- 收录：52 篇
 
 ## 统计
 
-- 类别分布：记忆架构 10, 系统与效率 8, 评测与基准 8, 记忆策略与训练 5, 情景记忆 4, 记忆整合 4, 安全与隐私 4, 个性化记忆 2, 程序性记忆 2, 多模态记忆 1, 应用 1, 多智能体记忆 1, 综述与框架 1
-- Venue 层级：CCF-A 26, Top-ICLR 12, ACL-Findings 7, Top-COLM 3, CCF-B 2, Top-MLSys 1
+- 类别分布：记忆架构 10, 系统与效率 9, 评测与基准 8, 记忆策略与训练 5, 情景记忆 4, 记忆整合 4, 安全与隐私 4, 个性化记忆 2, 程序性记忆 2, 多模态记忆 1, 应用 1, 多智能体记忆 1, 综述与框架 1
+- Venue 层级：CCF-A 27, Top-ICLR 12, ACL-Findings 7, Top-COLM 3, CCF-B 2, Top-MLSys 1
 
 ## 深度综合
 
@@ -66,6 +66,7 @@ tags:
 
 
 - [[10_Papers/lightmem|LightMem: Lightweight and Efficient Memory-Augmented Generation]] — ICLR 2026 — 用 sensory / short-term / long-term 三阶段和 sleep-time update，把记忆压缩与整合移出在线推理，主打低成本长期记忆。
+- [[10_Papers/vikingmem|VikingMem: A Memory Base Management System for Stateful LLM-Based Applications]] — PVLDB 2026 — 在 VikingDB 上实现 Memory Base 管理系统：事件/实体抽象、选择性抽取、状态演化、时间压缩与多向量重排。
 - [[10_Papers/mem0|Mem0: Building Production-Ready AI Agents with Scalable Long-Term Memory]] — ECAI 2025 — 工业级可扩展长期记忆，强调生产部署中的记忆抽取、更新与检索流水线。
 - [[10_Papers/memoryos|Memory OS of AI Agent]] — EMNLP 2025 — 把操作系统式的分层存储、更新和检索引入 agent memory，建立 short / mid / long-term 三级记忆。
 - [[10_Papers/evermemos|EverMemOS: A Self-Organizing Memory Operating System for Structured Long-Horizon Reasoning]] — ACL 2026 — 用 engram-inspired 生命周期组织记忆：Episodic Trace Formation → Semantic Consolidation → Reconstructive Recollection。

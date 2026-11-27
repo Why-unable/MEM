@@ -1,7 +1,7 @@
 # Agent Memory 2025+ · Research Map
 
-- 论文数：51
-- 关系数：81
+- 论文数：52
+- 关系数：86
 - 范围：2025-01-01 至 2026-11-19
 - 说明：边为概念关系，不等同于逐条引文。
 
@@ -37,6 +37,7 @@ flowchart LR
     simplemem["SimpleMem: Efficient Lifelong Memory fo..."]
     evermemos["EverMemOS: A Self-Organizing Memory Ope..."]
     lightmem-slm["Lightweight LLM Agent Memory with Small..."]
+    vikingmem["VikingMem: A Memory Base Management Sys..."]
   end
   subgraph episodic[情景记忆]
     remem["REMem: Reasoning with Episodic Memory i..."]
@@ -167,6 +168,11 @@ flowchart LR
   memorybench -->|related| memoryagentbench
   storagetexperience -->|related| amem
   storagetexperience -->|related| reasoningbank
+  vikingmem -->|extends| mem0
+  vikingmem -->|related| memoryos
+  vikingmem -->|related| evermemos
+  vikingmem -->|related| hippocampus
+  vikingmem -->|related| memgas
 ```
 
 ## 论文清单
@@ -189,6 +195,7 @@ flowchart LR
 | `umem` | UMEM: Unified Memory Extraction and Management Framework for Generalizable Memory | ICML 2026 | CCF-A | 记忆策略与训练 | 统一记忆抽取与管理，强调跨任务、跨场景的泛化记忆能力。 |
 | `agemem` | Agentic Memory: Learning Unified Long-Term and Short-Term Memory Management for Large Language Model Agents | ACL 2026 | CCF-A | 记忆策略与训练 | 把 long-term / short-term memory 操作统一成 agent policy 的 tool actions，并用三阶段 RL + step-wise GRPO 训练。 |
 | `lightmem` | LightMem: Lightweight and Efficient Memory-Augmented Generation | ICLR 2026 | Top-ICLR | 系统与效率 | 用 sensory / short-term / long-term 三阶段和 sleep-time update，把记忆压缩与整合移出在线推理，主打低成本长期记忆。 |
+| `vikingmem` | VikingMem: A Memory Base Management System for Stateful LLM-Based Applications | PVLDB 2026 | CCF-A | 系统与效率 | 在 VikingDB 上实现 Memory Base 管理系统：事件/实体抽象、选择性抽取、状态演化、时间压缩与多向量重排。 |
 | `mem0` | Mem0: Building Production-Ready AI Agents with Scalable Long-Term Memory | ECAI 2025 | CCF-B | 系统与效率 | 工业级可扩展长期记忆，强调生产部署中的记忆抽取、更新与检索流水线。 |
 | `memoryos` | Memory OS of AI Agent | EMNLP 2025 | CCF-B | 系统与效率 | 把操作系统式的分层存储、更新和检索引入 agent memory，建立 short / mid / long-term 三级记忆。 |
 | `hippocampus` | Hippocampus: An Efficient and Scalable Memory Module for Agentic AI | MLSys 2026 | Top-MLSys | 系统与效率 | 面向 agentic AI 的高效、可扩展记忆模块，偏系统实现与部署效率。 |
@@ -310,6 +317,11 @@ flowchart LR
 | MemoryBench: A Benchmark for Memory and Continual Learning in LLM Systems | related | Evaluating Memory in LLM Agents via Incremental Multi-Turn Interactions | 持续学习与增量多轮记忆的不同评测维度 |
 | From Storage to Experience: A Survey on the Evolution of LLM Agent Memory Mechanisms | related | A-Mem: Agentic Memory for LLM Agents | 综述框架：Storage → Reflection → Experience |
 | From Storage to Experience: A Survey on the Evolution of LLM Agent Memory Mechanisms | related | ReasoningBank: Scaling Agent Self-Evolving with Reasoning Memory | Experience 阶段的跨轨迹抽象 |
+| VikingMem: A Memory Base Management System for Stateful LLM-Based Applications | extends | Mem0: Building Production-Ready AI Agents with Scalable Long-Term Memory | 生产级记忆流水线 → Memory Base 管理系统 |
+| VikingMem: A Memory Base Management System for Stateful LLM-Based Applications | related | Memory OS of AI Agent | Memory Base vs 分层 memory OS |
+| VikingMem: A Memory Base Management System for Stateful LLM-Based Applications | related | EverMemOS: A Self-Organizing Memory Operating System for Structured Long-Horizon Reasoning | Memory Base vs 自组织 memory OS |
+| VikingMem: A Memory Base Management System for Stateful LLM-Based Applications | related | Hippocampus: An Efficient and Scalable Memory Module for Agentic AI | VikingDB 向量引擎 vs 压缩检索模块 |
+| VikingMem: A Memory Base Management System for Stateful LLM-Based Applications | related | From Single to Multi-Granularity: Toward Long-Term Memory Association and Selection of Conversational Agents | 事件/实体 + 时间压缩 vs 多粒度记忆 |
 
 ## 维护规则
 

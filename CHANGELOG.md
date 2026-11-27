@@ -8,6 +8,7 @@ The format is based on Keep a Changelog and uses semantic versioning for the res
 
 ### Added
 
+- 2026-11-27：新增 VikingMem（PVLDB 2026，CCF-A），主库达到 52 篇；完成页码级证据卡并加入系统效率主线。
 - 2026-11-27：完成 A–G 七条主线的全文扫描与综合页，新增 `vault/20_Topics/Mainline Overview.md`。
 - 2026-11-27：新增 AgeMem 页码级证据卡。
 - 2026-11-27：Evidence Batch 1 完成 6 篇（Memory-R1、MemAgent、LightMem、TierMem、LongMemEval、PersistBench），`evidence-checked` 达到 12/51。

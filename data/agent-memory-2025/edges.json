@@ -484,5 +484,35 @@
     "to": "reasoningbank",
     "type": "related",
     "label": "Experience 阶段的跨轨迹抽象"
+  },
+  {
+    "from": "vikingmem",
+    "to": "mem0",
+    "type": "extends",
+    "label": "生产级记忆流水线 → Memory Base 管理系统"
+  },
+  {
+    "from": "vikingmem",
+    "to": "memoryos",
+    "type": "related",
+    "label": "Memory Base vs 分层 memory OS"
+  },
+  {
+    "from": "vikingmem",
+    "to": "evermemos",
+    "type": "related",
+    "label": "Memory Base vs 自组织 memory OS"
+  },
+  {
+    "from": "vikingmem",
+    "to": "hippocampus",
+    "type": "related",
+    "label": "VikingDB 向量引擎 vs 压缩检索模块"
+  },
+  {
+    "from": "vikingmem",
+    "to": "memgas",
+    "type": "related",
+    "label": "事件/实体 + 时间压缩 vs 多粒度记忆"
   }
 ]

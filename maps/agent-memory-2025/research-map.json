@@ -4,8 +4,8 @@
     "from": "2025-01-01",
     "to": "2026-11-19"
   },
-  "paper_count": 51,
-  "edge_count": 81,
+  "paper_count": 52,
+  "edge_count": 86,
   "papers": [
     {
       "id": "amem",
@@ -1943,6 +1943,46 @@
       ],
       "status": "published",
       "collected_at": "2026-11-27"
+    },
+    {
+      "id": "vikingmem",
+      "title": "VikingMem: A Memory Base Management System for Stateful LLM-Based Applications",
+      "year": 2026,
+      "venue": "PVLDB 2026",
+      "venue_short": "PVLDB 2026",
+      "venue_tier": "CCF-A",
+      "ccf": "CCF-A",
+      "category": "system",
+      "priority": 1,
+      "role_zh": "在 VikingDB 上实现 Memory Base 管理系统：事件/实体抽象、选择性抽取、状态演化、时间压缩与多向量重排。",
+      "authors": [
+        "Jiajie Fu",
+        "Junwen Chen",
+        "Mengzhao Wang",
+        "Aoxiang He",
+        "Maojia Sheng",
+        "Xiangyu Ke",
+        "Yifan Zhu",
+        "Yunjun Gao"
+      ],
+      "abstract": "Large Language Models have revolutionized interactive applications, however, their finite context windows pose a critical data management challenge for maintaining stateful, long-term interactions. Existing memory approaches, however, often rely on simplistic extraction that leads to incomplete memories or use rigid, single-use memory extract prompts tailored for one use case like Chatbots. Consequently, they lack generalizability and perform poorly on diverse downstream tasks. To bridge this gap, we introduce the Memory Base, a novel data management paradigm to manage the persistent state of long-term interactions. It is characterized by three core principles: selective extraction of high-value memories from raw information streams; inherent statefulness and evolution, where memory content is progressively summarized, corrected, and temporally weighted to prioritize recent interactions; and a generalizable abstraction paradigm designed for robust transferability across diverse applications, including education, recommendation, and agent memory. Building on this foundation, we present VikingMem, an end-to-end Memory Base Management System implemented on the VikingDB vector engine. VikingMem materializes this paradigm through interconnected event and entity abstractions. It features event-centric memory extraction to selectively handle complex information streams, while entities are dynamically updated by events to achieve stateful evolution. Using temporal compression via a topic-wise timeline and time-weighted recall, the system can progressively produce high-level summary memories, prioritize recent items, while compressing and fading older ones. Retrieval is further optimized through multi-vector-based reranking. Extensive evaluations on long-term memory benchmarks demonstrate that VikingMem achieves state-of-the-art performance, outperforming baselines by up to 30% in memory retrieval effectiveness while maintaining low latency essential for interactive applications.",
+      "keywords": [
+        "memory base",
+        "stateful LLM applications",
+        "event memory",
+        "entity memory",
+        "VikingDB"
+      ],
+      "openreview_url": "https://doi.org/10.14778/3827998.3828037",
+      "pdf_url": "https://arxiv.org/pdf/2605.29640",
+      "DOI": "10.14778/3827998.3828037",
+      "arXiv": "2605.29640",
+      "verified_by": [
+        "Crossref DOI",
+        "PVLDB 2026"
+      ],
+      "status": "published",
+      "collected_at": "2026-11-27"
     }
   ],
   "edges": [
@@ -2431,6 +2471,36 @@
       "to": "reasoningbank",
       "type": "related",
       "label": "Experience 阶段的跨轨迹抽象"
+    },
+    {
+      "from": "vikingmem",
+      "to": "mem0",
+      "type": "extends",
+      "label": "生产级记忆流水线 → Memory Base 管理系统"
+    },
+    {
+      "from": "vikingmem",
+      "to": "memoryos",
+      "type": "related",
+      "label": "Memory Base vs 分层 memory OS"
+    },
+    {
+      "from": "vikingmem",
+      "to": "evermemos",
+      "type": "related",
+      "label": "Memory Base vs 自组织 memory OS"
+    },
+    {
+      "from": "vikingmem",
+      "to": "hippocampus",
+      "type": "related",
+      "label": "VikingDB 向量引擎 vs 压缩检索模块"
+    },
+    {
+      "from": "vikingmem",
+      "to": "memgas",
+      "type": "related",
+      "label": "事件/实体 + 时间压缩 vs 多粒度记忆"
     }
   ]
 }

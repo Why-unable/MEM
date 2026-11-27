@@ -56,6 +56,7 @@ Large Language Models (LLMs) are increasingly deployed as long-term interactive 
 
 - extends → [[10_Papers/memoryos|Memory OS of AI Agent]]：分层 memory OS → 自组织 memory OS
 - related → [[10_Papers/memgas|From Single to Multi-Granularity: Toward Long-Term Memory Association and Selection of Conversational Agents]]：语义整合 + scene-guided retrieval
+- related ← [[10_Papers/vikingmem|VikingMem: A Memory Base Management System for Stateful LLM-Based Applications]]：Memory Base vs 自组织 memory OS
 
 ## 我的阅读问题
 

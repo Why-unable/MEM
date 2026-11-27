@@ -15,7 +15,7 @@ tags:
 
 # Mainline C - Systems and Efficiency
 
-> 范围：LightMem、Mem0、MemoryOS、EverMemOS、Hippocampus、LightWM、LightMem (SLM)、SimpleMem 八篇系统/效率工作。
+> 范围：LightMem、Mem0、MemoryOS、EverMemOS、Hippocampus、LightWM、LightMem (SLM)、SimpleMem、VikingMem 九篇系统/效率工作。
 > 阅读方式：全文 PDF 扫描（系统架构、写入/巩固路径、实验设置、成本指标）+ `EXPERIMENT_LANDSCAPE.md` 交叉核对。
 > 注意：token、latency、API calls、build time、storage 是不同成本维度，不能混为一个“效率分数”。
 
@@ -25,16 +25,17 @@ tags:
 
 > 记忆系统不是“能不能记住”，而是“用什么成本、在什么时间、以什么精度记住”。
 
-八篇论文形成了四个系统设计方向：
+九篇论文形成了五个系统设计方向：
 
 ```text
 层次化 memory OS        MemoryOS / EverMemOS
 在线-离线解耦           LightMem / LightMem (SLM)
 压缩与索引               SimpleMem / Hippocampus
 小模型/小上下文控制       LightWM / LightMem (SLM)
+生产级 Memory Base        VikingMem
 ```
 
-## 八篇论文的分工
+## 九篇论文的分工
 
 | 论文 | 系统定位 | 核心机制 | 主要成本/效果证据 |
 |---|---|---|---|
@@ -46,6 +47,7 @@ tags:
 | [LightWM](../10_Papers/lightwm.md) | 小模型工作记忆 | task/subtask 两层 memory；一次离线 schema induction | Qwen3-4B ALFWorld valid_unseen 0.910 vs 基线 <0.320 |
 | [LightMem (SLM)](../10_Papers/lightmem-slm.md) | SLM 驱动记忆 | STM/MTM/LTM；固定检索预算；两阶段检索 | LoCoMo F1 平均 +2.5 over A-Mem；检索 83ms、端到端 581ms |
 | [SimpleMem](../10_Papers/simplemem.md) | 压缩型终身记忆 | semantic structured compression + online synthesis + intent-aware planning | LoCoMo 平均 F1 +26.4%；推理 token 最多降 30x |
+| [VikingMem](../10_Papers/vikingmem.md) | 生产级 Memory Base | event/entity 抽象 + 选择性抽取 + 时间压缩 + multi-vector rerank | LoCoMo 88.83/90.12；LongMemEval 66.36/75.80；P95 0.39–0.89s |
 
 ## 逐篇分析
 
@@ -101,6 +103,13 @@ tags:
 - **方法**：STM/MTM/LTM；固定检索预算；vector coarse retrieval + semantic consistency re-ranking；offline consolidation。
 - **证据**：LoCoMo F1 平均比 A-Mem 高约 **2.5**；检索 **83ms**、端到端 **581ms**。
 - **局限**：与 ICLR 2026 的 LightMem 同名但不同工作，引用时必须区分；主要面向对话记忆。
+
+### VikingMem：Memory Base 管理系统
+
+- **问题**：LLM 应用从 stateless 转向 stateful，但现有 extraction 过于简化、prompt 只服务单一场景。
+- **方法**：event + entity 双抽象；选择性抽取；entity 由事件持续更新；topic-wise timeline + TTL + time-weighted recall；multi-vector reranking。
+- **证据**：LoCoMo 88.83 / 90.12；LongMemEval 66.36 / 75.80；P50 0.20–0.25s、P95 0.39–0.89s。
+- **局限**：依赖 VikingDB/生产系统；temporal weighting 在 fact QA 上默认关闭；没有安全/多 agent 评测。
 
 ### SimpleMem：语义无损压缩
 
@@ -187,6 +196,7 @@ vs Mem0-like pipeline
 vs LightMem-like offline consolidation
 vs MemoryOS-like hierarchy
 vs SimpleMem-like compression
+vs VikingMem-like Memory Base
 ```
 
 报告：
@@ -200,6 +210,6 @@ vs SimpleMem-like compression
 
 ## 证据边界
 
-- 八篇均已完成全文扫描。
-- 八篇均已完成页码级证据卡。
+- 九篇均已完成全文扫描。
+- 九篇均已完成页码级证据卡。
 - 分数不可直接横比；本页只比较系统设计和成本维度。

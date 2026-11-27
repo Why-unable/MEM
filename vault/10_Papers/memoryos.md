@@ -50,6 +50,7 @@ Large Language Models (LLMs) face a crucial challenge from fixed context windows
 - related → [[10_Papers/magma|MAGMA: A Multi-Graph based Agentic Memory Architecture for AI Agents]]：三级层次存储 vs 多关系图记忆
 - related → [[10_Papers/reconstructed|Memory is Reconstructed, Not Retrieved:  Graph Memory for LLM Agents]]：层次记忆系统作为主动重建的对照
 - extends ← [[10_Papers/evermemos|EverMemOS: A Self-Organizing Memory Operating System for Structured Long-Horizon Reasoning]]：分层 memory OS → 自组织 memory OS
+- related ← [[10_Papers/vikingmem|VikingMem: A Memory Base Management System for Stateful LLM-Based Applications]]：Memory Base vs 分层 memory OS
 
 ## 我的阅读问题
 

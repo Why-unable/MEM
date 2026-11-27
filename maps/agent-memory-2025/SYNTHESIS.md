@@ -1,6 +1,6 @@
 # Agent Memory 2025+ — Research Synthesis
 
-> 基于主库 51 篇正式发表论文的概念地图；深度综合仍以原始 36 篇全文核对为主，2026-11-27 分两批增补的 15 篇已入图但尚未全部精读。具体实验数字仍需回论文 PDF 复核。
+> 基于主库 52 篇正式发表论文的概念地图；深度综合仍以原始 36 篇全文核对为主，2026-11-27 分三批增补的 16 篇已入图并已完成逐篇 evidence；深度综合仍以原始 36 篇为主。具体实验数字仍需回论文 PDF 复核。
 
 ## 1. 一句话判断
 
@@ -43,7 +43,7 @@
 
 ### 主线 C：系统效率与生产可用性
 
-代表：Mem0、Hippocampus、LightWM、Learning to Share；补充：LightMem、SimpleMem、EverMemOS、LightMem (SLM)。
+代表：Mem0、Hippocampus、LightWM、Learning to Share；补充：LightMem、SimpleMem、EverMemOS、LightMem (SLM)、VikingMem。
 
 - Mem0 关注生产级长期记忆的抽取、更新与检索。
 - Hippocampus 关注高效、可扩展的记忆模块。

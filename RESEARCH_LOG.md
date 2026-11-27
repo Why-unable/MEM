@@ -16,6 +16,7 @@
 | 2026-11-27 | macOS / Codex | Evidence Batch 6（6 篇） | [research-log/2026-11-27-evidence-batch6.md](research-log/2026-11-27-evidence-batch6.md) |
 | 2026-11-27 | macOS / Codex | Evidence Batch 7（4 篇） | [research-log/2026-11-27-evidence-batch7.md](research-log/2026-11-27-evidence-batch7.md) |
 | 2026-11-27 | macOS / Codex | Evidence Batch 8（5 篇，51/51 完成） | [research-log/2026-11-27-evidence-batch8.md](research-log/2026-11-27-evidence-batch8.md) |
+| 2026-11-27 | macOS / Codex | VikingMem 增补（PVLDB 2026） | [research-log/2026-11-27-vikingmem.md](research-log/2026-11-27-vikingmem.md) |
 
 ## 记录规范
 

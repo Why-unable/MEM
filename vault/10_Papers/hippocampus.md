@@ -52,6 +52,7 @@ both streams to support ultra-fast search in the compressed domain, thus avoidin
 
 - extends ← [[10_Papers/mem0|Mem0: Building Production-Ready AI Agents with Scalable Long-Term Memory]]：长期记忆系统 → 高效记忆模块
 - related ← [[10_Papers/lightmem|LightMem: Lightweight and Efficient Memory-Augmented Generation]]：高效记忆模块的不同系统路线
+- related ← [[10_Papers/vikingmem|VikingMem: A Memory Base Management System for Stateful LLM-Based Applications]]：VikingDB 向量引擎 vs 压缩检索模块
 
 ## 我的阅读问题
 
