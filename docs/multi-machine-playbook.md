@@ -61,6 +61,7 @@ make check
 | Venue 审计 | `data/<topic>/papers.json` | `VENUE_AUDIT.md` | 中 |
 | 研究综合 | 手写 `maps/<topic>/SYNTHESIS.md` | `vault/40_Maps/... Synthesis.md` | 中 |
 | 个人路线总纲 | `个人理解/路线分类.md` | — | 高；需人工合并 |
+| 硕士开题材料 | `开题报告/*.md` | — | 高；由一人统稿 |
 | 决策 | `docs/decisions/*.md` | `DECISIONS.md` | 低；一 ADR 一文件 |
 | 研究过程 | `research-log/*.md` | `RESEARCH_LOG.md` | 低；一任务一文件 |
 
@@ -78,6 +79,7 @@ make check
 - `papers.json`、`edges.json`、`baseline-timeline.json`。
 - `README.md`、`ROADMAP.md`、`STATUS.md`、`CHANGELOG.md`。
 - `个人理解/路线分类.md`。
+- `开题报告/*.md`。
 - `vault/40_Maps/*.canvas` 和所有生成型 Markdown。
 - `Makefile`、CI workflow、schema。
 

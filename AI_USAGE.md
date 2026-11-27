@@ -11,6 +11,7 @@
 | 2026-11-19 | Codex | 检索策略、论文元数据整理、概念地图、Obsidian 笔记、系统文档 | partial | 关键 venue 与 PDF 链接已核验；实验数字尚未逐篇复核 |
 | 2026-11-27 | Codex | 52 篇论文的时间化 baseline、数据集和效果整理 | partial | 复用已完成 evidence 卡片；数字仍需逐项回 PDF/表格复核，跨论文不可直接横比 |
 | 2026-11-27 | Codex | 多机部署、README/ROADMAP/STATUS、CI 与文档一致性检查 | partial | 文档与生成链路已校验；仓库状态、Zotero 与关键实验数字仍需人工确认 |
+| 2026-11-27 | Codex | 硕士开题方向、写作规范、研究设计与模板 | partial | 基于 MEM evidence 与 baseline 整理；需结合学校模板、导师意见和算力做最终确认 |
 
 ## Tools used
 

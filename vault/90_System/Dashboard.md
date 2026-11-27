@@ -47,6 +47,7 @@ tags:
 - `MEM/guides/scheme-a-setup.md`
 - `MEM/docs/multi-machine-playbook.md`
 - `MEM/CONTRIBUTING.md`
+- `MEM/开题报告/README.md`（Obsidian vault 外，用编辑器打开）
 
 ## 研究状态
 

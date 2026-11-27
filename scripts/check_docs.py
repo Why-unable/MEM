@@ -17,6 +17,7 @@ TIMELINE_NOTE = ROOT / "vault/40_Maps/Agent Memory 2025+ Baseline Timeline.md"
 ROUTE_NOTE = ROOT / "个人理解/路线分类.md"
 VENUE_AUDIT = ROOT / "data/agent-memory-2025/VENUE_AUDIT.md"
 EVIDENCE_DIR = ROOT / "vault/10_Papers/evidence"
+PROPOSAL_DIR = ROOT / "开题报告"
 
 
 def fail(message: str) -> None:
@@ -102,6 +103,7 @@ def main() -> None:
     require(readme, f"概念关系：**{edge_count} 条**", "README.md")
     require(readme, "docs/multi-machine-playbook.md", "README.md")
     require(readme, "Agent Memory 2025+ Baseline Timeline.md", "README.md")
+    require(readme, "开题报告/README.md", "README.md")
 
     status = read(ROOT / "STATUS.md")
     require(status, "当前阶段：`v0.2.4", "STATUS.md")
@@ -133,6 +135,20 @@ def main() -> None:
     require(dashboard, f"{paper_count} 篇论文，{edge_count} 条概念关系", "vault Dashboard")
     require(dashboard, "Baseline Timeline", "vault Dashboard")
 
+    # Proposal pack.
+    proposal_files = [
+        "README.md",
+        "01_选题方法与方向评估.md",
+        "02_国内开题报告写作规范.md",
+        "03_推荐题目与初步研究设计.md",
+        "04_开题报告初稿模板.md",
+    ]
+    proposal_texts = {name: read(PROPOSAL_DIR / name) for name in proposal_files}
+    require(proposal_texts["README.md"], "预算约束下长期对话智能体的自适应记忆路由与证据回退方法研究", "开题报告/README.md")
+    require(proposal_texts["03_推荐题目与初步研究设计.md"], "预算约束下长期对话智能体的自适应记忆路由与证据回退方法研究", "开题报告/03_推荐题目与初步研究设计.md")
+    require(proposal_texts["02_国内开题报告写作规范.md"], "学校/学院模板为准", "开题报告/02_国内开题报告写作规范.md")
+    require(proposal_texts["04_开题报告初稿模板.md"], "一页研究设计画布", "开题报告/04_开题报告初稿模板.md")
+
     playbook = read(ROOT / "docs/multi-machine-playbook.md")
     require(playbook, "research/agent-memory-evidence", "multi-machine playbook")
     require(playbook, "make docs-check", "multi-machine playbook")
@@ -144,6 +160,7 @@ def main() -> None:
     print(f"timeline rows: {len(timeline_rows)}")
     print(f"timeline links: {len(timeline_links)}")
     print(f"route links: {len(route_links)}")
+    print("proposal docs: OK")
     print("docs: OK")
 
 

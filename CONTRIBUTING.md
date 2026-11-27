@@ -37,6 +37,7 @@ research/agent-memory-evidence
 | Venue audit | `data/<topic>/papers.json` | `VENUE_AUDIT.md` |
 | Research synthesis | hand-written `maps/<topic>/SYNTHESIS.md` | `vault/40_Maps/... Synthesis.md` |
 | Personal route map | `个人理解/路线分类.md` | — |
+| Proposal pack | `开题报告/*.md` | — |
 | Decisions | `docs/decisions/*.md` | `DECISIONS.md` |
 | Research process | `research-log/*.md` | `RESEARCH_LOG.md` |
 | Current state | `STATUS.md` | — |
@@ -142,6 +143,7 @@ Serialize or assign one integrator:
 - `edges.json`
 - `baseline-timeline.json`
 - `个人理解/路线分类.md`
+- `开题报告/*.md`
 - `README.md`, `ROADMAP.md`, `STATUS.md`, `CHANGELOG.md`
 - generated Canvas / map / timeline files
 - `Makefile`, CI workflows, schemas
@@ -182,6 +184,7 @@ make docs-check        # docs vs data consistency
 - [ ] Evidence status and page references checked
 - [ ] Baseline timeline updated for new/revised papers
 - [ ] Personal route map links and tags updated
+- [ ] Proposal docs updated if the thesis direction or experiment protocol changed
 - [ ] Obsidian links valid
 - [ ] AI usage recorded
 - [ ] Changelog updated for system-level changes

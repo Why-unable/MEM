@@ -12,6 +12,7 @@
 - 概念关系：**86 条**
 - **逐篇 evidence**：52/52 `evidence-checked`，0 `queued`，0 `verified`
 - **时间化 baseline**：52 篇均已进入时间轴，包含数据集、主结果、对照和 baseline 变化
+- **开题报告资料包**：已形成选题方法、国内写作规范、推荐研究设计和初稿模板，见 `开题报告/README.md`
 - **Zotero**：52 条书目 + 52 条 importer notes，分为主库与三个增量 collection；未提交 Zotero 数据库或 PDF
 - **Obsidian Vault**：`vault/`
 - **CI 门禁**：`make check` 同时校验论文、关系、evidence、地图、Zotero 导出、baseline 时间轴、venue audit 和文档一致性
@@ -30,6 +31,7 @@
 - [DATA_POLICY.md](DATA_POLICY.md)：数据边界
 - [AI_USAGE.md](AI_USAGE.md)：AI 使用记录
 - [READING_QUEUE.md](READING_QUEUE.md)：阅读队列
+- [开题报告/README.md](开题报告/README.md)：硕士开题方向、写作规范和研究设计
 
 ## 先从哪里开始
 
@@ -59,6 +61,7 @@ make check
 3. `vault/10_Papers/evidence/INDEX.md`：52 篇逐篇证据索引
 4. `个人理解/路线分类.md`：带 2–6 字机制标签和 evidence 直达链接的个人路线总纲
 5. `vault/30_Ideas/Agent Memory Research Questions.md`：研究问题页
+6. `开题报告/README.md`：把研究问题收敛为硕士开题题目
 
 ## 核心产物
 
@@ -75,6 +78,7 @@ make check
 | Venue 审计 | `data/agent-memory-2025/VENUE_AUDIT.md` | 从主库生成的 venue 分层清单 |
 | Zotero 导入 | `data/agent-memory-2025/*.bib` / `*.ris` | export-first |
 | 个人路线总纲 | `个人理解/路线分类.md` | 手写综合，含链接和机制标签 |
+| 硕士开题报告 | `开题报告/` | 选题、写作规范、推荐题目和初稿模板 |
 
 ## 目录结构
 
@@ -113,6 +117,7 @@ MEM/
 │   └── agent-memory-2025/
 ├── .github/
 ├── 个人理解/
+├── 开题报告/
 └── vault/
     ├── 00_Inbox/
     ├── 10_Papers/

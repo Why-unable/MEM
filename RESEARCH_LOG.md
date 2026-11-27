@@ -19,6 +19,7 @@
 | 2026-11-27 | macOS / Codex | VikingMem 增补（PVLDB 2026） | [research-log/2026-11-27-vikingmem.md](research-log/2026-11-27-vikingmem.md) |
 | 2026-11-27 | macOS / Codex | 时间化效果、数据集与 baseline 变化 | [research-log/2026-11-27-baseline-timeline.md](research-log/2026-11-27-baseline-timeline.md) |
 | 2026-11-27 | macOS / Codex | 多机部署与文档一致性更新 | [research-log/2026-11-27-multimachine-docs.md](research-log/2026-11-27-multimachine-docs.md) |
+| 2026-11-27 | macOS / Codex | 硕士开题报告资料包 | [research-log/2026-11-27-proposal-pack.md](research-log/2026-11-27-proposal-pack.md) |
 
 ## 记录规范
 

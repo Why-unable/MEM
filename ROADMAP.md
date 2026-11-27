@@ -48,6 +48,7 @@
 - [x] `baseline-timeline.json` / CSV / Obsidian 笔记：按发表时间组织效果、数据集和 baseline 变化
 - [x] `VENUE_AUDIT.md` 从 `papers.json` 自动生成
 - [x] `make check` 覆盖 schema、论文图、地图、Zotero 导出、evidence、时间轴、venue audit、文档一致性
+- [x] 新增 `开题报告/`：选题方法、写作规范、推荐题目、研究设计与初稿模板
 - [x] README / STATUS / ROADMAP / Dashboard / 自动化脚本同步到当前状态
 
 ### 待完成
@@ -55,6 +56,7 @@
 - [ ] 建立 `CLAIMS.md`：claim–evidence–confidence 证据矩阵
 - [ ] 对 52 篇 evidence 做 `verified` 人工抽查
 - [ ] 建立 RQ1 的统一实验协议：`benchmark + metric + backbone + judge + retrieval budget`
+- [ ] 根据学校模板完成开题报告初稿和 pilot 实验
 - [ ] 把 `papers.json` / `edges.json` 迁移为 per-paper / per-edge 分片
 - [ ] 回填 16 篇新增论文到 `EXPERIMENT_LANDSCAPE.md` 的完整矩阵
 - [ ] 统一 utility / efficiency / safety 三条榜单的评测口径

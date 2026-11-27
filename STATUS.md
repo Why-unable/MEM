@@ -20,6 +20,7 @@
 | 主线分析层 | 完成 | A–G 七条主线综合页 |
 | 研究综合 | 完成 | `maps/agent-memory-2025/SYNTHESIS.md` 已同步 |
 | 实验/baseline 登记 | 完成 | `baseline-timeline.json`、CSV、Obsidian 时间轴；数据集与 baseline 变化已整理 |
+| 硕士开题材料 | 完成初版 | `开题报告/`：选题方法、写作规范、推荐题目、研究设计与模板 |
 | Venue 审计 | 完成 | `VENUE_AUDIT.md` 从主库自动生成 |
 | Zotero 导入文件 | 完成 | BibTeX / RIS 已生成 |
 | Zotero 实际导入 | 完成 | 52 书目 + 52 importer notes；4 个 collection；0 PDF 附件 |
@@ -58,8 +59,9 @@ verified：0
 2. 选择 RQ1，设计统一实验协议：固定 benchmark、metric、backbone、judge、retrieval budget。
 3. 对 52 张 evidence 做 `verified` 抽查，优先 VikingMem、TiMem、RecMem、MRAgent、MAGMA。
 4. 回填 16 篇新增论文到 `EXPERIMENT_LANDSCAPE.md` 的正式实验矩阵。
-5. 把 `papers.json` / `edges.json` 迁移为 per-paper / per-edge 分片，降低多机冲突。
-6. 在 Zotero 中回填 item key，并逐步链接 PDF 附件。
+5. 结合学校模板和导师方向，完成开题报告正文与 pilot 实验设计。
+6. 把 `papers.json` / `edges.json` 迁移为 per-paper / per-edge 分片，降低多机冲突。
+7. 在 Zotero 中回填 item key，并逐步链接 PDF 附件。
 
 ## 阻塞项
 

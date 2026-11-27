@@ -3,6 +3,7 @@
 > 主题：Agent Memory 2025+
 > 详细想法页：`vault/30_Ideas/Agent Memory Research Questions.md`
 > 当前实验/baseline 参照：`vault/40_Maps/Agent Memory 2025+ Baseline Timeline.md`
+> 开题设计与写作规范：`开题报告/README.md`
 
 ## 当前优先级
 
