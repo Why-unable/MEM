@@ -3,7 +3,7 @@ type: topic
 subtype: mainline-analysis
 topic: "Agent Memory 2025+"
 mainline: "F"
-status: full-text-scan
+status: evidence-checked
 updated: 2026-11-27
 tags:
   - topic

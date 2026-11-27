@@ -3,7 +3,7 @@ type: topic
 subtype: mainline-analysis
 topic: "Agent Memory 2025+"
 mainline: "A"
-status: expanded
+status: evidence-checked
 updated: 2026-11-27
 tags:
   - topic
@@ -341,6 +341,5 @@ E-mem            未压缩情境 + 多 agent episodic reconstruction
 
 ## 证据边界
 
-- SeCom、HippoRAG 2、GAM、E-mem 已完成页码级证据卡。
-- M+ 仍为 queued。
+- 十篇均已完成页码级证据卡。
 - SeCom、HippoRAG 2、GAM、E-mem 的数字来自各自论文的实验表/摘要，不能与核心五篇直接横比。

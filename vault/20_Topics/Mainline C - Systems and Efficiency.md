@@ -3,7 +3,7 @@ type: topic
 subtype: mainline-analysis
 topic: "Agent Memory 2025+"
 mainline: "C"
-status: full-text-scan
+status: evidence-checked
 updated: 2026-11-27
 tags:
   - topic
@@ -201,6 +201,5 @@ vs SimpleMem-like compression
 ## 证据边界
 
 - 八篇均已完成全文扫描。
-- LightMem、MemoryOS、EverMemOS、Hippocampus、LightWM、LightMem (SLM)、SimpleMem 已完成页码级证据卡。
-- Mem0 尚未建立独立页码级证据卡。
+- 八篇均已完成页码级证据卡。
 - 分数不可直接横比；本页只比较系统设计和成本维度。

@@ -1,56 +1,95 @@
 ---
 type: evidence
-paper_id: "storagetexperience"
+paper_id: storagetexperience
 title: "From Storage to Experience: A Survey on the Evolution of LLM Agent Memory Mechanisms"
-status: queued
-checked_at: null
-source_pdf: ""
-source_version: ""
-pages_checked: []
+status: evidence-checked
+checked_at: 2026-11-27
+source_pdf: "data/agent-memory-2025/pdfs/storagetexperience.pdf"
+source_version: "ACL Findings 2026; DOI 10.18653/v1/2026.findings-acl.2069"
+pages_checked: "1-9"
 mainline: "X"
 tags:
   - evidence
-  - mainline-x
+  - survey
+  - memory-evolution
+  - cross-cutting
 ---
 
-# From Storage to Experience: A Survey on the Evolution of LLM Agent Memory Mechanisms — Evidence
+# From Storage to Experience 证据卡
 
-> Status: **queued**. 这是逐篇 evidence 的入口，不是已完成的证据卡。
-> 不要把下面的摘要当作已验证结论；关键数字必须回全文和页码核对。
+## 结论先行
 
-## 元数据
+- 这不是实验论文，而是一篇 **正式发表的综述**：把 LLM agent memory 的演化概括为 Storage → Reflection → Experience 三阶段。
+- 它把碎片化的研究（OS 工程 vs 认知科学）统一到一个演化框架中。
+- 它特别强调 Experience 阶段的两个机制：proactive exploration 和 cross-trajectory abstraction。
 
-- **Venue**：ACL Findings 2026（ACL-Findings）
-- **年份**：2026
-- **作者**：Jinghao Luo, Yuchen Tian, Chuxue Cao, Ziyang Luo, Hongzhan Lin, Kaixin Li, Chuyi Kong, Ruichao Yang, Jing Ma
-- **DOI**：10.18653/v1/2026.findings-acl.2069
-- **arXiv**：null
-- **PDF**：https://aclanthology.org/2026.findings-acl.2069.pdf
-- **正式记录**：https://doi.org/10.18653/v1/2026.findings-acl.2069
-- **主库角色**：把 LLM agent memory 的演化概括为 Storage → Reflection → Experience 三阶段，并梳理长程一致性、动态环境和持续学习三条驱动线。
+## 研究问题与定位
 
-## 官方摘要
+Agent memory 研究分散在系统、认知、RL、评测等方向，缺少统一演化视角。综述要回答：
 
-Large Language Model (LLM)-based agents have fundamentally reshaped artificial intelligence by integrating external tools and planning capabilities. While memory mechanisms have emerged as the architectural cornerstone of these systems, current research remains fragmented, oscillating between operating system engineering and cognitive science. This theoretical divide prevents a unified view of technological synthesis and a coherent evolutionary perspective. To bridge this gap, this survey proposes a novel evolutionary framework for LLM agent memory mechanisms, formalizing the development process into three stages: **Storage** (trajectory preservation), **Reflection** (trajectory refinement), and **Experience** (trajectory abstraction). We first formally define these three stages before analyzing the three core drivers of this evolution: the necessity for long-range consistency, the challenges in dynamic environments, and the ultimate goal of continual learning. Furthermore, we specifically explore two transformative mechanisms in the frontier Experience stage: proactive exploration and cross-trajectory abstraction. By synthesizing these disparate views, this work offers robust design principles and a clear roadmap for the development of next-generation LLM agents.
+> 记忆机制如何从“保存轨迹”演化到“提炼经验”，以及下一步是什么？
 
-## 待提取（全文核对）
+## 框架
 
-- [ ] 研究问题与一句话定位
-- [ ] 记忆单元 / 数据结构
-- [ ] 写入、组织、检索、更新、遗忘机制
-- [ ] 训练方式与监督信号（若适用）
-- [ ] 数据集、backbone、baseline、指标
-- [ ] 关键数字（必须标 PDF 页码或表格）
-- [ ] 主要结论
-- [ ] 局限与威胁
-- [ ] 与主线 X 其他论文的关系
-- [ ] 对 RQ1 / RQ3 的意义
-- [ ] 可复用点
-- [ ] 成本：build / query / latency / storage
-- [ ] 待核对项
+### 三阶段
+
+| 阶段 | 含义 |
+|---|---|
+| Storage | 保存 trajectory/历史 |
+| Reflection | 对 trajectory 做 refine/反思 |
+| Experience | 从 trajectory 抽象出可复用经验 |
+
+### 三个驱动
+
+1. 长程一致性
+2. 动态环境
+3. 持续学习
+
+### Experience 阶段的两个机制
+
+- Proactive exploration
+- Cross-trajectory abstraction
+
+来源：PDF p.1-6，Framework。
+
+## 关键贡献
+
+- 形式化定义 Storage / Reflection / Experience。
+- 统一 OS 工程与认知科学视角。
+- 给出下一代 memory 的设计原则和路线图。
+- 把“经验抽象”作为 frontier。
+
+来源：PDF p.1 abstract；p.6-8。
+
+## 与主线 A–G 的关系
+
+- **A/B**：Storage/Reflection/Experience 对应结构、策略、经验。
+- **D**：consolidation 是 Reflection/Experience 的核心。
+- **E**：程序性记忆是 Experience 的典型。
+- **F**：需要评测 Experience，而不只是 recall。
+- **G**：Experience 的 provenance/trust 更复杂。
+
+## 对 RQ1/RQ5 的意义
+
+- RQ1：结构记忆的演进方向是 Experience，而不是更复杂的 Storage。
+- RQ5：程序性记忆/技能复用是 Experience 的核心。
+
+## 局限
+
+- **综述没有新实验**：所有结论是二手综合。
+- **三阶段是分析框架**，不是唯一分类。
+- **覆盖偏 2025–2026**：更早的认知科学/记忆研究覆盖有限。
+- **没有统一评测协议**。
+
+## 可复用点
+
+- Storage / Reflection / Experience 三阶段框架。
+- 三个驱动：长程一致性、动态环境、持续学习。
+- proactive exploration / cross-trajectory abstraction。
+- 作为 MEM 主线叙事骨架。
 
 ## 来源
 
-- 主库记录：`data/agent-memory-2025/papers.json`
-- PDF：https://aclanthology.org/2026.findings-acl.2069.pdf
-- 正式记录：https://doi.org/10.18653/v1/2026.findings-acl.2069
+- 本地 PDF：`data/agent-memory-2025/pdfs/storagetexperience.pdf`
+- ACL Anthology：https://aclanthology.org/2026.findings-acl.2069/
+- DOI：https://doi.org/10.18653/v1/2026.findings-acl.2069

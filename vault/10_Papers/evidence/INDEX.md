@@ -7,13 +7,13 @@
 
 - 主库论文：51
 - 已有独立 evidence 文件：51
-- 已完成页码级证据卡：46
+- 已完成页码级证据卡：51
 
 ```text
-queued: 5
+queued: 0
 metadata-only: 0
 full-text-scan: 0
-evidence-checked: 46
+evidence-checked: 51
 verified: 0
 ```
 
@@ -28,9 +28,9 @@ verified: 0
 | From RAG to Memory: Non-Parametric Continual Learning for Large Language Models | ICML 2025 | `evidence-checked` | [hipporag2](hipporag2-evidence.md) |
 | MAGMA: A Multi-Graph based Agentic Memory Architecture for AI Agents | ACL 2026 | `evidence-checked` | [magma](magma-evidence.md) |
 | From Single to Multi-Granularity: Toward Long-Term Memory Association and Selection of Conversational Agents | ICLR 2026 | `evidence-checked` | [memgas](memgas-evidence.md) |
+| M+: Extending MemoryLLM with Scalable Long-Term Memory | ICML 2025 | `evidence-checked` | [mplus](mplus-evidence.md) |
 | Memory is Reconstructed, Not Retrieved:  Graph Memory for LLM Agents | ICML 2026 | `evidence-checked` | [reconstructed](reconstructed-evidence.md) |
 | On Memory Construction and Retrieval for Personalized Conversational Agents | ICLR 2025 | `evidence-checked` | [secom](secom-evidence.md) |
-| M+: Extending MemoryLLM with Scalable Long-Term Memory | ICML 2025 | `queued` | [mplus](mplus-evidence.md) |
 
 ## Mainline B · Memory Policy
 
@@ -38,9 +38,9 @@ verified: 0
 |---|---|---|---|
 | Agentic Memory: Learning Unified Long-Term and Short-Term Memory Management for Large Language Model Agents | ACL 2026 | `evidence-checked` | [agemem](agemem-evidence.md) |
 | MemAgent: Reshaping Long-Context LLM with Multi-Conv RL-based Memory Agent | ICLR 2026 | `evidence-checked` | [memagent](memagent-evidence.md) |
+| MemEvolve: Meta-Evolution of Agent Memory Systems | ICML 2026 | `evidence-checked` | [memeolve](memeolve-evidence.md) |
 | Memory-R1: Enhancing Large Language Model Agents to Manage and Utilize Memories via Reinforcement Learning | ACL 2026 | `evidence-checked` | [memoryr1](memoryr1-evidence.md) |
-| MemEvolve: Meta-Evolution of Agent Memory Systems | ICML 2026 | `queued` | [memeolve](memeolve-evidence.md) |
-| UMEM: Unified Memory Extraction and Management Framework for Generalizable Memory | ICML 2026 | `queued` | [umem](umem-evidence.md) |
+| UMEM: Unified Memory Extraction and Management Framework for Generalizable Memory | ICML 2026 | `evidence-checked` | [umem](umem-evidence.md) |
 
 ## Mainline C · Systems and Efficiency
 
@@ -51,9 +51,9 @@ verified: 0
 | LightMem: Lightweight and Efficient Memory-Augmented Generation | ICLR 2026 | `evidence-checked` | [lightmem](lightmem-evidence.md) |
 | Lightweight LLM Agent Memory with Small Language Models | ACL 2026 | `evidence-checked` | [lightmem-slm](lightmem-slm-evidence.md) |
 | LightWM: Training-Free Hierarchical Working Memory for Small Language Model Agents | ICML 2026 | `evidence-checked` | [lightwm](lightwm-evidence.md) |
+| Mem0: Building Production-Ready AI Agents with Scalable Long-Term Memory | ECAI 2025 | `evidence-checked` | [mem0](mem0-evidence.md) |
 | Memory OS of AI Agent | EMNLP 2025 | `evidence-checked` | [memoryos](memoryos-evidence.md) |
 | SimpleMem: Efficient Lifelong Memory for LLM Agents | ICML 2026 | `evidence-checked` | [simplemem](simplemem-evidence.md) |
-| Mem0: Building Production-Ready AI Agents with Scalable Long-Term Memory | ECAI 2025 | `queued` | [mem0](mem0-evidence.md) |
 
 ## Mainline D · Episodic Memory and Consolidation
 
@@ -106,7 +106,7 @@ verified: 0
 
 | Paper | Venue | Status | Evidence |
 |---|---|---|---|
-| From Storage to Experience: A Survey on the Evolution of LLM Agent Memory Mechanisms | ACL Findings 2026 | `queued` | [storagetexperience](storagetexperience-evidence.md) |
+| From Storage to Experience: A Survey on the Evolution of LLM Agent Memory Mechanisms | ACL Findings 2026 | `evidence-checked` | [storagetexperience](storagetexperience-evidence.md) |
 
 ## 状态定义
 

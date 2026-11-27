@@ -2,7 +2,7 @@
 type: topic
 subtype: roadmap
 topic: "Agent Memory 2025+"
-status: full-text-scan
+status: evidence-checked
 updated: 2026-11-27
 tags:
   - topic
@@ -13,7 +13,7 @@ tags:
 # Agent Memory 2025+ · Mainline Overview
 
 > 目的：把 51 篇主库论文组织成七条可读、可比较、可做实验的主线。
-> 状态：A 线有 5 张页码级证据卡；AgeMem 有 1 张；B–G 已做全文扫描与主线综合（ReasoningBank 除外，使用摘要/实验地图），尚未逐篇建卡。
+> 状态：51/51 篇均有页码级 evidence 文件；当前全部为 `evidence-checked`，尚未做 `verified` 人工抽查。
 
 ## 七条主线
 
@@ -93,7 +93,7 @@ G 安全：怎么防止被利用
 | L1 · metadata | 标题、venue、摘要 | 51/51 |
 | L2 · experiment landscape | 数据集、baseline、主要设置 | 36/51（新增 15 篇待回填） |
 | L3 · full-text scan | 方法、结果、局限、主线综合 | 50/51（ReasoningBank 使用摘要/实验地图） |
-| L4 · evidence card | 页码级关键数字与来源 | 51 个入口，46 张 evidence-checked，5 个 queued |
+| L4 · evidence card | 页码级关键数字与来源 | 51 个入口，51 张 evidence-checked，0 个 queued |
 | L5 · reproduction | 代码/数据复现 | 0/51 |
 
 > 下一步应优先把 L3 的核心论文提升到 L4，而不是继续无边界扩论文。
@@ -110,7 +110,7 @@ G 安全：怎么防止被利用
 
 ## 下一步
 
-1. 把 B–G 的核心论文各补 1–2 张 L4 证据卡。
-2. 建立 `CLAIMS.md`，把七条主线的结论转成 claim–evidence–confidence。
-3. 选定 RQ1，设计统一实验协议。
+1. 建立 `CLAIMS.md`，把七条主线结论转成 claim–evidence–confidence。
+2. 选定 RQ1，设计统一实验协议。
+3. 对 51 张 evidence 做 `verified` 抽查。
 4. 把 `EXPERIMENT_LANDSCAPE.md` 的 15 篇新增论文回填。

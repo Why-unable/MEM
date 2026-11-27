@@ -3,7 +3,7 @@ type: topic
 subtype: mainline-analysis
 topic: "Agent Memory 2025+"
 mainline: "B"
-status: full-text-scan
+status: evidence-checked
 updated: 2026-11-27
 tags:
   - topic
@@ -219,6 +219,5 @@ vs learned compression (MemAgent)
 
 ## 证据边界
 
-- AgeMem、Memory-R1、MemAgent 已完成页码级证据卡。
-- MemEvolve、UMEM 已完成全文扫描，但尚未各自建立页码级证据卡。
+- 五篇均已完成页码级证据卡。
 - 五篇论文的分数不能直接横比；本页只做机制和证据方向比较。

@@ -1,56 +1,112 @@
 ---
 type: evidence
-paper_id: "mem0"
+paper_id: mem0
 title: "Mem0: Building Production-Ready AI Agents with Scalable Long-Term Memory"
-status: queued
-checked_at: null
-source_pdf: ""
-source_version: ""
-pages_checked: []
+status: evidence-checked
+checked_at: 2026-11-27
+source_pdf: "data/agent-memory-2025/pdfs/mem0.pdf"
+source_version: "ECAI 2025 conference paper"
+pages_checked: "1-9"
 mainline: "C"
 tags:
   - evidence
   - mainline-c
+  - production-memory
+  - extraction
 ---
 
-# Mem0: Building Production-Ready AI Agents with Scalable Long-Term Memory — Evidence
+# Mem0 证据卡
 
-> Status: **queued**. 这是逐篇 evidence 的入口，不是已完成的证据卡。
-> 不要把下面的摘要当作已验证结论；关键数字必须回全文和页码核对。
+## 结论先行
 
-## 元数据
+- Mem0 是生产级 extract → consolidate → retrieve 记忆流水线；Mem0g 增加 graph memory。
+- LoCoMo 上相对 OpenAI memory，LLM-as-a-Judge 提升 **26%**；Mem0g 比 base Mem0 再高约 **2%**。
+- 相对 full-context，p95 latency **-91%**，token cost **-90%+**。
 
-- **Venue**：ECAI 2025（CCF-B）
-- **年份**：2025
-- **作者**：Prateek Chhikara, Dev Khant, Saket Aryan, Taranjeet Singh, Deshraj Yadav
-- **DOI**：10.48550/arXiv.2504.19413
-- **arXiv**：2504.19413
-- **PDF**：https://openreview.net/pdf?id=0wxfikDcOa
-- **正式记录**：https://openreview.net/forum?id=0wxfikDcOa
-- **主库角色**：工业级可扩展长期记忆，强调生产部署中的记忆抽取、更新与检索流水线。
+## 研究问题与定位
 
-## 官方摘要
+多 session 对话中固定上下文窗口导致不一致。Mem0 要回答：
 
-Large Language Models (LLMs) have demonstrated remarkable prowess in generating contextually coherent responses, yet their fixed context windows pose fundamental challenges for maintaining consistency over prolonged multi-session dialogues. We introduce Mem0, a scalable memory-centric architecture that addresses this issue by dynamically extracting, consolidating, and retrieving salient information from ongoing conversations. Building on this foundation, we further propose an enhanced variant that leverages graph-based memory representations to capture complex relational structures among conversational elements. Through comprehensive evaluations on the LOCOMO benchmark, we systematically compare our approaches against six baseline categories. Empirical results demonstrate that our methods consistently outperform all existing memory systems across four question categories: single-hop, temporal, multi-hop, and open-domain. Notably, Mem0 achieves 26% relative improvements in the LLM-as-a-Judge metric over OpenAI, while Mem0 with graph memory achieves around 2% higher overall score than the base Mem0 configuration. Beyond accuracy gains, we also markedly reduce computational overhead compared to the full-context approach. In particular, Mem0 attains a 91% lower p95 latency and saves more than 90% token cost, thereby offering a compelling balance between advanced reasoning capabilities and practical deployment constraints. Our findings highlight the critical role of structured, persistent memory mechanisms for long-term conversational coherence, paving the way for more reliable and efficient LLM-driven AI agents. Code: https://mem0.ai/research.
+> 能否用可扩展的 extract/consolidate/retrieve 流水线，兼顾长期一致性和部署成本？
 
-## 待提取（全文核对）
+## 方法拆解
 
-- [ ] 研究问题与一句话定位
-- [ ] 记忆单元 / 数据结构
-- [ ] 写入、组织、检索、更新、遗忘机制
-- [ ] 训练方式与监督信号（若适用）
-- [ ] 数据集、backbone、baseline、指标
-- [ ] 关键数字（必须标 PDF 页码或表格）
-- [ ] 主要结论
-- [ ] 局限与威胁
-- [ ] 与主线 C 其他论文的关系
-- [ ] 对 RQ1 / RQ3 的意义
-- [ ] 可复用点
-- [ ] 成本：build / query / latency / storage
-- [ ] 待核对项
+### 基础 Mem0
+
+1. 从对话中抽取 salient memory。
+2. 持续 consolidate/update。
+3. 按 query 检索相关 memory。
+4. 生成回答。
+
+### Mem0g
+
+- 在 base Mem0 上增加 graph memory。
+- 捕捉对话元素之间的关系。
+- 约 +2% overall score。
+
+来源：PDF p.2-5，Method。
+
+## 实验与关键数字
+
+### 设置
+
+- Benchmark：LoCoMo。
+- Baselines：LoCoMo、ReadAgent、MemoryBank、MemGPT、A-Mem、LangMem、Zep、OpenAI memory、full-context；Mem0g。
+- Metrics：LLM-as-a-Judge、p95 latency、token cost。
+
+### 结果
+
+- LLM-J 相对 OpenAI memory **+26%**。
+- Mem0g 比 base Mem0 overall **+~2%**。
+- p95 latency **-91%** vs full-context。
+- token cost **-90%+** vs full-context。
+- 在 single-hop、temporal、multi-hop、open-domain 四类上均优于现有 memory systems。
+
+来源：PDF p.1 abstract；p.6-8，Table 1-2。
+
+## 真正的新意
+
+1. **生产级 extract-consolidate-retrieve**。
+2. **Mem0g**：graph memory 作为可选增强。
+3. **latency/token 双成本优化**。
+4. **六类 baseline 的系统对比**。
+
+## 局限与威胁
+
+- **extraction 质量依赖 LLM**。
+- **graph 变体增加复杂度**。
+- **主要是 LoCoMo**：没有 action-coupled、多模态、安全。
+- **没有显式遗忘/删除/审计**。
+- **长期 storage/维护成本未完整报告**。
+
+## 与主线 C 的关系
+
+- **LightMem**：LightMem 更强调 online/offline 解耦；Mem0 是生产流水线。
+- **MemoryOS**：MemoryOS 层次存储；Mem0 条目抽取/巩固。
+- **SimpleMem**：压缩；Mem0 抽取。
+- **Hippocampus**：底层检索；Mem0 上层 pipeline。
+
+## 对 RQ1 的意义
+
+Mem0 是“生产 baseline”：
+
+- 结构记忆可以在 accuracy 和 latency/token 上都优于 full-context。
+- 但评测主要是 LoCoMo，需要跨 benchmark 验证。
+
+## 可复用点
+
+- extract/consolidate/retrieve pipeline。
+- Mem0g graph variant。
+- LLM-J + p95 latency + token cost 三指标。
+- 六类 baseline 对比。
+
+## 成本
+
+- p95 latency -91%。
+- token cost -90%+。
+- 具体 build/storage 成本需回附录核对。
 
 ## 来源
 
-- 主库记录：`data/agent-memory-2025/papers.json`
-- PDF：https://openreview.net/pdf?id=0wxfikDcOa
-- 正式记录：https://openreview.net/forum?id=0wxfikDcOa
+- 本地 PDF：`data/agent-memory-2025/pdfs/mem0.pdf`
+- ECAI 2025（论文记录）
