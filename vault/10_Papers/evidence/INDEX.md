@@ -7,13 +7,13 @@
 
 - 主库论文：51
 - 已有独立 evidence 文件：51
-- 已完成页码级证据卡：24
+- 已完成页码级证据卡：29
 
 ```text
-queued: 27
+queued: 22
 metadata-only: 0
 full-text-scan: 0
-evidence-checked: 24
+evidence-checked: 29
 verified: 0
 ```
 
@@ -59,14 +59,14 @@ verified: 0
 
 | Paper | Venue | Status | Evidence |
 |---|---|---|---|
+| ARTEM: Enhancing Large Language Model Agents with Spatial-Temporal Episodic Memory | AAAI 2026 | `evidence-checked` | [artem](artem-evidence.md) |
+| EMA: An Episodic Memory Agent for Efficient and Selective Memory | ACL Findings 2026 | `evidence-checked` | [ema](ema-evidence.md) |
+| Human-inspired Episodic Memory for Infinite Context LLMs | ICLR 2025 | `evidence-checked` | [humanepisodic](humanepisodic-evidence.md) |
+| What Deserves Memory: Adaptive Memory Distillation for LLM Agents | ACL 2026 | `evidence-checked` | [nemori](nemori-evidence.md) |
 | RecMem: Recurrence-based Memory Consolidation for Efficient and Effective Long-Running LLM Agents | ACL Findings 2026 | `evidence-checked` | [recmem](recmem-evidence.md) |
+| REMem: Reasoning with Episodic Memory in Language Agent | ICLR 2026 | `evidence-checked` | [remem](remem-evidence.md) |
 | TierMem: Balancing Compressed Memory and Raw Evidence for Long-Horizon Agent Memory | COLM 2026 | `evidence-checked` | [tiermem](tiermem-evidence.md) |
 | TiMem: Temporal-Hierarchical Memory Consolidation for Long-Horizon Conversational Agents | ACL Findings 2026 | `evidence-checked` | [timem](timem-evidence.md) |
-| ARTEM: Enhancing Large Language Model Agents with Spatial-Temporal Episodic Memory | AAAI 2026 | `queued` | [artem](artem-evidence.md) |
-| EMA: An Episodic Memory Agent for Efficient and Selective Memory | ACL Findings 2026 | `queued` | [ema](ema-evidence.md) |
-| Human-inspired Episodic Memory for Infinite Context LLMs | ICLR 2025 | `queued` | [humanepisodic](humanepisodic-evidence.md) |
-| What Deserves Memory: Adaptive Memory Distillation for LLM Agents | ACL 2026 | `queued` | [nemori](nemori-evidence.md) |
-| REMem: Reasoning with Episodic Memory in Language Agent | ICLR 2026 | `queued` | [remem](remem-evidence.md) |
 
 ## Mainline E · Personalization, Multimodal and Procedural
 

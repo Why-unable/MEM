@@ -13,6 +13,7 @@ The format is based on Keep a Changelog and uses semantic versioning for the res
 - 2026-11-27：Evidence Batch 1 完成 6 篇（Memory-R1、MemAgent、LightMem、TierMem、LongMemEval、PersistBench），`evidence-checked` 达到 12/51。
 - 2026-11-27：Evidence Batch 2 完成 6 篇（SeCom、HippoRAG 2、GAM、E-mem、RecMem、TiMem），`evidence-checked` 达到 18/51。
 - 2026-11-27：Evidence Batch 3 完成 6 篇（MemoryOS、EverMemOS、Hippocampus、LightWM、LightMem (SLM)、SimpleMem），`evidence-checked` 达到 24/51。
+- 2026-11-27：Evidence Batch 4 完成 5 篇（EM-LLM、REMem、ARTEM、EMA、Nemori），`evidence-checked` 达到 29/51；主线 D 全部完成。
 - 2026-11-27：主库从 36 篇扩展到 51 篇，新增 15 篇正式发表论文（Batch 1: 8 篇；Batch 2: 7 篇）。
 - 新增 `data/agent-memory-2025/COVERAGE_AUDIT.md`，记录覆盖审计、增补理由、暂缓候选和去重结果。
 - 新增 `survey` 论文类别，用于正式发表的综述与框架论文。

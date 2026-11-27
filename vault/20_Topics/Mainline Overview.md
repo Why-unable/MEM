@@ -93,7 +93,7 @@ G 安全：怎么防止被利用
 | L1 · metadata | 标题、venue、摘要 | 51/51 |
 | L2 · experiment landscape | 数据集、baseline、主要设置 | 36/51（新增 15 篇待回填） |
 | L3 · full-text scan | 方法、结果、局限、主线综合 | 50/51（ReasoningBank 使用摘要/实验地图） |
-| L4 · evidence card | 页码级关键数字与来源 | 51 个入口，24 张 evidence-checked，27 个 queued |
+| L4 · evidence card | 页码级关键数字与来源 | 51 个入口，29 张 evidence-checked，22 个 queued |
 | L5 · reproduction | 代码/数据复现 | 0/51 |
 
 > 下一步应优先把 L3 的核心论文提升到 L4，而不是继续无边界扩论文。
