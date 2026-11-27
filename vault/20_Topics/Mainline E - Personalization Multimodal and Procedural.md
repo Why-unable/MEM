@@ -3,7 +3,7 @@ type: topic
 subtype: mainline-analysis
 topic: "Agent Memory 2025+"
 mainline: "E"
-status: full-text-scan
+status: mixed
 updated: 2026-11-27
 tags:
   - topic
@@ -17,7 +17,7 @@ tags:
 # Mainline E - Personalization, Multimodal and Procedural Memory
 
 > 范围：Evoking/RF-Mem、PersonaAgent、M3-Agent、ReMe、ReasoningBank、MemRec、Learning to Share 七篇。
-> 阅读方式：全文 PDF 扫描（记忆内容类型、访问策略、评测设置）+ `EXPERIMENT_LANDSCAPE.md` 交叉核对。
+> 阅读方式：六篇全文 PDF 扫描；ReasoningBank 使用摘要 + `EXPERIMENT_LANDSCAPE.md` 交叉核对。
 > 说明：本页把“个性化 / 多模态 / 程序性 / 应用 / 多 agent 共享”放在一起，是因为它们共同回答：**记忆到底应该存什么类型的东西？**
 
 ## 一句话结论
@@ -240,6 +240,6 @@ LTS 证明“选择性共享”能降成本；但共享权限、冲突裁决、�
 
 ## 证据边界
 
-- 七篇均已完成全文扫描。
+- 六篇已完成全文扫描；ReasoningBank 使用摘要 + 实验地图，未完成页码级全文核对。
 - 尚未为 Evoking、PersonaAgent、M3-Agent、ReMe、ReasoningBank、MemRec、LTS 建立独立页码级证据卡。
 - 评测领域差异很大，不能直接把 LaMP、M3-Bench、BFCL、GAIA 的分数横比。

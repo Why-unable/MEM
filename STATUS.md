@@ -18,7 +18,7 @@
 | Zotero 导入文件 | 完成 | BibTeX / RIS 已生成 |
 | Zotero 实际导入 | 完成 | 51 篇书目 + 51 条 importer notes；3 个 collection；无 PDF 附件 |
 | 多机协作规范 | 完成 | `CONTRIBUTING.md`、schemas、CI、数据政策 |
-| 主线分析层 | 完成 | 七条主线全文扫描 + A/B/C/D/E/F/G 综合页；6 张页码级证据卡 |
+| 主线分析层 | 完成 | 七条主线综合页；50/51 全文扫描（ReasoningBank 用摘要/实验地图）；6 张页码级证据卡 |
 | 自动增量检索 | 未开始 | 计划 v0.3 |
 | 实验/数据集登记 | 未开始 | 进入实验阶段后再建 |
 

@@ -49,7 +49,7 @@
 ```text
 L1 metadata: 51/51
 L2 experiment landscape: 36/51
-L3 full-text scan: 51/51
+L3 full-text scan: 50/51（ReasoningBank 使用摘要/实验地图）
 L4 evidence card: 6/51
 L5 reproduction: 0/51
 ```

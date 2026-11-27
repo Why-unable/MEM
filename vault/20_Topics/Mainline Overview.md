@@ -13,7 +13,7 @@ tags:
 # Agent Memory 2025+ · Mainline Overview
 
 > 目的：把 51 篇主库论文组织成七条可读、可比较、可做实验的主线。
-> 状态：A 线有 5 张页码级证据卡；AgeMem 有 1 张；B–G 已完成全文扫描与主线综合，尚未逐篇建卡。
+> 状态：A 线有 5 张页码级证据卡；AgeMem 有 1 张；B–G 已做全文扫描与主线综合（ReasoningBank 除外，使用摘要/实验地图），尚未逐篇建卡。
 
 ## 七条主线
 
@@ -92,7 +92,7 @@ G 安全：怎么防止被利用
 |---|---|---|
 | L1 · metadata | 标题、venue、摘要 | 51/51 |
 | L2 · experiment landscape | 数据集、baseline、主要设置 | 36/51（新增 15 篇待回填） |
-| L3 · full-text scan | 方法、结果、局限、主线综合 | 51/51（B–G 已扫描） |
+| L3 · full-text scan | 方法、结果、局限、主线综合 | 50/51（ReasoningBank 使用摘要/实验地图） |
 | L4 · evidence card | 页码级关键数字与来源 | 6/51 |
 | L5 · reproduction | 代码/数据复现 | 0/51 |
 
