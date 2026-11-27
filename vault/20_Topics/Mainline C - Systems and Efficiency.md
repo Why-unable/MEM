@@ -201,6 +201,6 @@ vs SimpleMem-like compression
 ## 证据边界
 
 - 八篇均已完成全文扫描。
-- LightMem 已完成页码级证据卡。
-- Mem0、MemoryOS、EverMemOS、Hippocampus、LightWM、LightMem (SLM)、SimpleMem 尚未建立独立页码级证据卡。
+- LightMem、MemoryOS、EverMemOS、Hippocampus、LightWM、LightMem (SLM)、SimpleMem 已完成页码级证据卡。
+- Mem0 尚未建立独立页码级证据卡。
 - 分数不可直接横比；本页只比较系统设计和成本维度。

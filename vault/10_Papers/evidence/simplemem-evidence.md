@@ -1,56 +1,122 @@
 ---
 type: evidence
-paper_id: "simplemem"
+paper_id: simplemem
 title: "SimpleMem: Efficient Lifelong Memory for LLM Agents"
-status: queued
-checked_at: null
-source_pdf: ""
-source_version: ""
-pages_checked: []
+status: evidence-checked
+checked_at: 2026-11-27
+source_pdf: "data/agent-memory-2025/pdfs/simplemem.pdf"
+source_version: "ICML 2026 / PMLR 306"
+pages_checked: "1-9"
 mainline: "C"
 tags:
   - evidence
   - mainline-c
+  - compression
+  - efficiency
 ---
 
-# SimpleMem: Efficient Lifelong Memory for LLM Agents — Evidence
+# SimpleMem 证据卡
 
-> Status: **queued**. 这是逐篇 evidence 的入口，不是已完成的证据卡。
-> 不要把下面的摘要当作已验证结论；关键数字必须回全文和页码核对。
+## 结论先行
 
-## 元数据
+- SimpleMem 的核心是 **semantic lossless compression**：把交互压成 compact、multi-view indexed memory units，再在线合并和按 intent 检索。
+- 三步：Semantic Structured Compression → Online Semantic Synthesis → Intent-Aware Retrieval Planning。
+- LoCoMo 上平均 F1 **+26.4%**，推理 token 最多降低 **30x**。
 
-- **Venue**：ICML 2026（CCF-A）
-- **年份**：2026
-- **作者**：Jiaqi Liu, Yaofeng Su, Peng Xia, Siwei Han, Zeyu Zheng, Cihang Xie, Mingyu Ding, Huaxiu Yao
-- **DOI**：null
-- **arXiv**：2601.02553
-- **PDF**：https://raw.githubusercontent.com/mlresearch/v306/main/assets/liu26dx/liu26dx.pdf
-- **正式记录**：https://proceedings.mlr.press/v306/liu26dx.html
-- **主库角色**：用语义结构化压缩、在线综合和意图感知检索规划，在长期记忆中同时优化准确率与 token 成本。
+## 研究问题与定位
 
-## 官方摘要
+现有方法要么保留完整历史（冗余、token 高），要么靠迭代推理过滤噪声（也贵）。SimpleMem 要回答：
 
-To support long-term interaction in complex environments, LLM agents require memory systems that manage historical experiences. Existing approaches either retain full interaction histories via passive context extension, leading to substantial redundancy, or rely on iterative reasoning to filter noise, incurring high token costs. To address this challenge, we introduce SimpleMem, an efficient memory framework based on semantic lossless compression. We propose a three-stage pipeline designed to maximize information density and token utilization: (1) Semantic Structured Compression, which distills unstructured interactions into compact, multi-view indexed memory units; (2) Online Semantic Synthesis, an intra-session process that instantly integrates related context into unified abstract representations to eliminate redundancy; and (3) Intent-Aware Retrieval Planning, which infers search intent to dynamically determine retrieval scope and construct precise context efficiently. Experiments on benchmark datasets show that our method consistently outperforms baseline approaches in accuracy, retrieval efficiency, and inference cost, achieving an average F1 improvement of 26.4% in LoCoMo while reducing inference-time token consumption by up to 30-fold, demonstrating a superior balance between performance and efficiency. Code is available at https://github.com/aiming-lab/SimpleMem.
+> 能否通过语义压缩和意图感知检索，在长期记忆中获得更好的 accuracy–token Pareto？
 
-## 待提取（全文核对）
+## 方法拆解
 
-- [ ] 研究问题与一句话定位
-- [ ] 记忆单元 / 数据结构
-- [ ] 写入、组织、检索、更新、遗忘机制
-- [ ] 训练方式与监督信号（若适用）
-- [ ] 数据集、backbone、baseline、指标
-- [ ] 关键数字（必须标 PDF 页码或表格）
-- [ ] 主要结论
-- [ ] 局限与威胁
-- [ ] 与主线 C 其他论文的关系
-- [ ] 对 RQ1 / RQ3 的意义
-- [ ] 可复用点
-- [ ] 成本：build / query / latency / storage
-- [ ] 待核对项
+### 1. Semantic Structured Compression
+
+- 把非结构化交互压成 compact memory units。
+- 每个 unit 有多视图索引（语义/关键词/上下文等）。
+
+### 2. Online Semantic Synthesis
+
+- 在 session 内即时合并相关上下文。
+- 消除冗余，形成统一抽象表示。
+
+### 3. Intent-Aware Retrieval Planning
+
+- 推断 query 的检索意图。
+- 动态决定检索范围和上下文构造，而不是固定 top-k。
+
+来源：PDF p.2-5，Method。
+
+## 实验与关键数字
+
+### 设置
+
+- Benchmark：LoCoMo（及论文附录中的其他基准）。
+- Baselines：full history、RAG、memory systems。
+- Metrics：F1、retrieval efficiency、inference token。
+
+### 结果
+
+- LoCoMo 平均 F1 **+26.4%**。
+- 推理 token 最多降低 **30x**。
+- 在 accuracy、retrieval efficiency、inference cost 三方面均优于 baseline。
+
+来源：PDF p.1 abstract；p.6-8，Table 1-2。
+
+### 消融
+
+- 去掉 semantic compression / online synthesis / intent-aware planning 会降低 accuracy 或增加 token。
+- 说明三步都是必要的。
+
+来源：PDF p.8，Ablation。
+
+## 真正的新意
+
+1. **语义无损压缩**：不是简单摘要，而是保留多视图索引。
+2. **在线 synthesis**：session 内即时合并，减少重复。
+3. **intent-aware retrieval planning**：检索范围由 query intent 决定。
+4. **accuracy–token Pareto**：同时报告准确率和推理成本。
+
+## 局限与威胁
+
+- **压缩可能丢证据**：semantic lossless 是作者命名，但仍是有损摘要/索引。
+- **主要是 LoCoMo**：没有 action-coupled、多模态、安全。
+- **没有显式遗忘/删除**：memory units 只增不减。
+- **intent planner 依赖 LLM**：错误 intent 会导致检索范围错误。
+- **长期更新/冲突**：论文没有系统评估。
+
+## 与主线 C 的关系
+
+- **LightMem**：都做压缩/效率；LightMem 更强调 online/offline 解耦，SimpleMem 更强调 compression + intent planning。
+- **Mem0**：Mem0 是生产级 extract-consolidate-retrieve；SimpleMem 是 semantic compression pipeline。
+- **Hippocampus**：Hippocampus 优化底层索引；SimpleMem 优化 memory unit 表示。
+- **TierMem**：TierMem 用 summary+raw 两层；SimpleMem 用 multi-view compressed units。
+
+## 对 RQ1 的意义
+
+SimpleMem 提供了“压缩 + 意图检索”的 Pareto：
+
+- 结构记忆的收益可能来自更小的 memory unit + 更精准的 retrieval scope。
+- RQ1 应报告 inference token、retrieval latency、accuracy。
+
+## 可复用点
+
+- semantic structured compression。
+- online semantic synthesis。
+- intent-aware retrieval planning。
+- multi-view indexed memory units。
+- accuracy–token Pareto 报告。
+
+## 成本
+
+- 推理 token 最多降低 30x。
+- 平均 F1 +26.4%。
+- build/retrieval latency 细节见论文实验表（待核对）。
+- 没有统一 storage 成本。
 
 ## 来源
 
-- 主库记录：`data/agent-memory-2025/papers.json`
-- PDF：https://raw.githubusercontent.com/mlresearch/v306/main/assets/liu26dx/liu26dx.pdf
-- 正式记录：https://proceedings.mlr.press/v306/liu26dx.html
+- 本地 PDF：`data/agent-memory-2025/pdfs/simplemem.pdf`
+- PMLR：https://proceedings.mlr.press/v306/liu26dx.html
+- arXiv：https://arxiv.org/abs/2601.02553

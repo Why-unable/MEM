@@ -7,13 +7,13 @@
 
 - 主库论文：51
 - 已有独立 evidence 文件：51
-- 已完成页码级证据卡：18
+- 已完成页码级证据卡：24
 
 ```text
-queued: 33
+queued: 27
 metadata-only: 0
 full-text-scan: 0
-evidence-checked: 18
+evidence-checked: 24
 verified: 0
 ```
 
@@ -46,14 +46,14 @@ verified: 0
 
 | Paper | Venue | Status | Evidence |
 |---|---|---|---|
+| EverMemOS: A Self-Organizing Memory Operating System for Structured Long-Horizon Reasoning | ACL 2026 | `evidence-checked` | [evermemos](evermemos-evidence.md) |
+| Hippocampus: An Efficient and Scalable Memory Module for Agentic AI | MLSys 2026 | `evidence-checked` | [hippocampus](hippocampus-evidence.md) |
 | LightMem: Lightweight and Efficient Memory-Augmented Generation | ICLR 2026 | `evidence-checked` | [lightmem](lightmem-evidence.md) |
-| EverMemOS: A Self-Organizing Memory Operating System for Structured Long-Horizon Reasoning | ACL 2026 | `queued` | [evermemos](evermemos-evidence.md) |
-| Hippocampus: An Efficient and Scalable Memory Module for Agentic AI | MLSys 2026 | `queued` | [hippocampus](hippocampus-evidence.md) |
-| Lightweight LLM Agent Memory with Small Language Models | ACL 2026 | `queued` | [lightmem-slm](lightmem-slm-evidence.md) |
-| LightWM: Training-Free Hierarchical Working Memory for Small Language Model Agents | ICML 2026 | `queued` | [lightwm](lightwm-evidence.md) |
+| Lightweight LLM Agent Memory with Small Language Models | ACL 2026 | `evidence-checked` | [lightmem-slm](lightmem-slm-evidence.md) |
+| LightWM: Training-Free Hierarchical Working Memory for Small Language Model Agents | ICML 2026 | `evidence-checked` | [lightwm](lightwm-evidence.md) |
+| Memory OS of AI Agent | EMNLP 2025 | `evidence-checked` | [memoryos](memoryos-evidence.md) |
+| SimpleMem: Efficient Lifelong Memory for LLM Agents | ICML 2026 | `evidence-checked` | [simplemem](simplemem-evidence.md) |
 | Mem0: Building Production-Ready AI Agents with Scalable Long-Term Memory | ECAI 2025 | `queued` | [mem0](mem0-evidence.md) |
-| Memory OS of AI Agent | EMNLP 2025 | `queued` | [memoryos](memoryos-evidence.md) |
-| SimpleMem: Efficient Lifelong Memory for LLM Agents | ICML 2026 | `queued` | [simplemem](simplemem-evidence.md) |
 
 ## Mainline D · Episodic Memory and Consolidation
 

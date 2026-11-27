@@ -1,56 +1,129 @@
 ---
 type: evidence
-paper_id: "lightmem-slm"
+paper_id: lightmem-slm
 title: "Lightweight LLM Agent Memory with Small Language Models"
-status: queued
-checked_at: null
-source_pdf: ""
-source_version: ""
-pages_checked: []
+status: evidence-checked
+checked_at: 2026-11-27
+source_pdf: "data/agent-memory-2025/pdfs/lightmem-slm.pdf"
+source_version: "ACL 2026 Long Papers; DOI 10.18653/v1/2026.acl-long.588"
+pages_checked: "1-9"
 mainline: "C"
 tags:
   - evidence
   - mainline-c
+  - small-language-models
+  - efficiency
 ---
 
-# Lightweight LLM Agent Memory with Small Language Models — Evidence
+# LightMem (SLM) 证据卡
 
-> Status: **queued**. 这是逐篇 evidence 的入口，不是已完成的证据卡。
-> 不要把下面的摘要当作已验证结论；关键数字必须回全文和页码核对。
+## 结论先行
 
-## 元数据
+- 这是与 ICLR 2026 LightMem **不同**的另一篇同名工作：它用 Small Language Models 驱动记忆检索、写入和长期巩固。
+- 结构是 STM / MTM / LTM，在线固定检索预算，离线做 consolidation；目标是把记忆操作的延迟压到百毫秒级。
+- LoCoMo 上平均 F1 比 A-Mem 高约 **2.5**；检索 **83ms**、端到端 **581ms**。
 
-- **Venue**：ACL 2026（CCF-A）
-- **年份**：2026
-- **作者**：Jiaquan Zhang, Chaoning Zhang, Shuxu Chen, Zhenzhen Huang, Pengcheng Zheng, Zhicheng Wang, Ping Guo, Fan Mo, Sung-Ho Bae, Jie Zou, Jiwei Wei, Yang Yang
-- **DOI**：10.18653/v1/2026.acl-long.588
-- **arXiv**：null
-- **PDF**：https://aclanthology.org/2026.acl-long.588.pdf
-- **正式记录**：https://doi.org/10.18653/v1/2026.acl-long.588
-- **主库角色**：用 Small Language Models 驱动记忆检索、写入和离线整合，分离 online 与 offline 处理，强调低延迟和固定检索预算。
+## 研究问题与定位
 
-## 官方摘要
+现有记忆系统有两类极端：
 
-Although LLM agents can leverage tools for complex tasks, they still need memory to maintain cross-turn consistency and accumulate reusable information in long-horizon interactions. However, retrieval-based external memory systems incur low online overhead but suffer from unstable accuracy due to limited query construction and candidate filtering. In contrast, many systems use repeated large-model calls for online memory operations, improving accuracy but accumulating latency over long interactions. We propose LightMem, a lightweight memory system for better agent memory driven by Small Language Models (SLMs). LightMem modularizes memory retrieval, writing, and long-term consolidation, and separates online processing from offline consolidation to enable efficient memory invocation under bounded compute. We organize memory into short-term memory (STM) for immediate conversational context, mid-term memory (MTM) for reusable interaction summaries, and long-term memory (LTM) for consolidated knowledge, and uses user identifiers to support independent retrieval and incremental maintenance in multi-user settings. Online, LightMem operates under a fixed retrieval budget and selects memories via a two-stage procedure: vector-based coarse retrieval followed by semantic consistency re-ranking. Offline, it abstracts reusable interaction evidence and incrementally integrates it into LTM. Experiments show consistent gains across model scales, with an average F1 improvement of about 2.5 over A-MEM on LoCoMo, while achieving higher efficiency and low median latency (83 ms for retrieval and 581 ms end-to-end).
+- 纯检索：在线开销低，但 query construction/candidate filtering 不稳定；
+- 用大模型反复做在线记忆操作：准确率好，但延迟随交互累积。
 
-## 待提取（全文核对）
+LightMem (SLM) 要回答：
 
-- [ ] 研究问题与一句话定位
-- [ ] 记忆单元 / 数据结构
-- [ ] 写入、组织、检索、更新、遗忘机制
-- [ ] 训练方式与监督信号（若适用）
-- [ ] 数据集、backbone、baseline、指标
-- [ ] 关键数字（必须标 PDF 页码或表格）
-- [ ] 主要结论
-- [ ] 局限与威胁
-- [ ] 与主线 C 其他论文的关系
-- [ ] 对 RQ1 / RQ3 的意义
-- [ ] 可复用点
-- [ ] 成本：build / query / latency / storage
-- [ ] 待核对项
+> 能否用 SLM 做记忆控制，在固定计算预算下兼顾准确率和低延迟？
+
+## 方法拆解
+
+### 三级记忆
+
+| 层 | 作用 |
+|---|---|
+| STM | 当前对话上下文 |
+| MTM | 可复用交互摘要 |
+| LTM | 已巩固知识 |
+
+- 用 user identifiers 支持多用户独立检索和增量维护。
+
+### 在线检索
+
+- 固定 retrieval budget。
+- 两阶段：
+  1. vector coarse retrieval；
+  2. semantic consistency re-ranking。
+
+### 离线 consolidation
+
+- 从交互中抽象可复用 evidence。
+- 增量整合到 LTM。
+
+来源：PDF p.2-5，Method。
+
+## 实验与关键数字
+
+### 设置
+
+- Benchmark：LoCoMo。
+- Backbones：不同规模模型。
+- Baselines：A-Mem 等 memory systems。
+- Metrics：F1、retrieval latency、end-to-end latency。
+
+### 结果
+
+- 平均 F1 比 A-Mem 高约 **2.5**。
+- 检索延迟中位数 **83ms**。
+- 端到端延迟中位数 **581ms**。
+- 在不同模型规模上保持一致增益。
+
+来源：PDF p.1 abstract；p.6-8，Table 2/3。
+
+## 真正的新意
+
+1. **SLM 作为 memory controller**：不是用大模型做每次记忆操作。
+2. **固定 retrieval budget**：在线成本可控。
+3. **两阶段检索**：vector coarse + semantic consistency re-rank。
+4. **STM/MTM/LTM**：兼顾即时上下文、可复用摘要和长期知识。
+
+## 局限与威胁
+
+- **与 ICLR 2026 LightMem 同名**：引用时必须区分，容易混淆。
+- **主要是 LoCoMo**：没有 action-coupled、多模态、安全。
+- **SLM 能力上限**：复杂 query/长文档可能不如大模型控制。
+- **没有显式遗忘/删除**：LTM 只增不减。
+- **离线 consolidation 成本**：在线低延迟不等于总成本低。
+
+## 与主线 C 的关系
+
+- **LightMem (ICLR 2026)**：同名不同工作；ICLR 版是 sensory/STM/LTM + sleep-time；本篇是 SLM-driven STM/MTM/LTM。
+- **LightWM**：都强调 SLM/轻量控制；LightWM 是 procedure-centric working memory。
+- **Mem0**：Mem0 用 LLM extraction；本篇用 SLM 降在线成本。
+- **SimpleMem**：都关注压缩/效率，但本篇更偏 SLM 控制。
+
+## 对 RQ1 的意义
+
+LightMem (SLM) 支持“控制器大小”也是效率轴：
+
+- 记忆系统的成本不仅来自存储/检索，还来自控制器的模型大小。
+- RQ1 应报告 controller latency 和 end-to-end latency。
+
+## 可复用点
+
+- STM/MTM/LTM 三级 schema。
+- fixed retrieval budget。
+- vector coarse + semantic consistency re-ranking。
+- 多用户 user identifier 隔离。
+- 83ms/581ms 的延迟报告。
+
+## 成本
+
+- 检索中位 83ms。
+- 端到端中位 581ms。
+- 离线 consolidation 成本未完整量化。
+- 没有 storage/build token 表。
 
 ## 来源
 
-- 主库记录：`data/agent-memory-2025/papers.json`
-- PDF：https://aclanthology.org/2026.acl-long.588.pdf
-- 正式记录：https://doi.org/10.18653/v1/2026.acl-long.588
+- 本地 PDF：`data/agent-memory-2025/pdfs/lightmem-slm.pdf`
+- ACL Anthology：https://aclanthology.org/2026.acl-long.588/
+- DOI：https://doi.org/10.18653/v1/2026.acl-long.588
