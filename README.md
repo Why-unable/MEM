@@ -15,14 +15,14 @@
 
 - **方案 A 已布置**：Scholar Literature Maps + Research Nexus 思路 + OpenAlex 数据底座。
 - **Obsidian 已绑定独立 vault**：`MEM/vault`，Dashboard 已打开。
-- **Zotero 导入已交接**：BibTeX 已交给 Zotero，等待 Zotero 导入确认；未直接修改 `zotero.sqlite`。
+- **Zotero 导入已完成**：51 篇书目已导入；使用 3 个 collection（主库 + 两个 staging batch）；未直接修改 `zotero.sqlite`。
 - **初始研究案例已完成**：`Agent Memory 2025+`
-- 收录论文：**36 篇**
-- 概念关系：**47 条**
+- 收录论文：**51 篇**
+- 概念关系：**81 条**
 - Obsidian Vault：`vault/`
 - 研究地图：`maps/agent-memory-2025/`
 - 论文元数据：`data/agent-memory-2025/papers.json`
-- Zotero 导入：`data/agent-memory-2025/agent-memory-2025.bib` 和 `.ris`
+- Zotero 导入：`data/agent-memory-2025/agent-memory-2025.bib`、`agent-memory-2025-batch2.bib`、`agent-memory-2025-batch3.bib`
 - 研究综合：`maps/agent-memory-2025/SYNTHESIS.md`
 - 初始研究问题：`vault/30_Ideas/Agent Memory Research Questions.md`
 

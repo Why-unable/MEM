@@ -52,6 +52,7 @@ Recent works have highlighted the significance of memory mechanisms in LLM-based
 - related → [[10_Papers/minerva|Minerva: A Programmable Memory Test Benchmark for Language Models]]：综合评测 vs 可编程测试
 - evaluated-by → [[10_Papers/amem|A-Mem: Agentic Memory for LLM Agents]]：agent memory 综合评测参照
 - related ← [[10_Papers/longmemeval|LongMemEval: Benchmarking Chat Assistants on Long-Term Interactive Memory]]：长期交互 → 综合记忆评测
+- related ← [[10_Papers/memoryagentbench|Evaluating Memory in LLM Agents via Incremental Multi-Turn Interactions]]：综合记忆评测的不同维度
 
 ## 我的阅读问题
 

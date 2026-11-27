@@ -11,11 +11,21 @@
       "color": "1"
     },
     {
+      "id": "hipporag2",
+      "type": "file",
+      "file": "10_Papers/hipporag2.md",
+      "x": 0,
+      "y": 220,
+      "width": 420,
+      "height": 150,
+      "color": "1"
+    },
+    {
       "id": "gmemory",
       "type": "file",
       "file": "10_Papers/gmemory.md",
       "x": 0,
-      "y": 220,
+      "y": 440,
       "width": 420,
       "height": 150,
       "color": "1"
@@ -25,7 +35,7 @@
       "type": "file",
       "file": "10_Papers/magma.md",
       "x": 0,
-      "y": 440,
+      "y": 660,
       "width": 420,
       "height": 150,
       "color": "1"
@@ -35,7 +45,7 @@
       "type": "file",
       "file": "10_Papers/reconstructed.md",
       "x": 0,
-      "y": 660,
+      "y": 880,
       "width": 420,
       "height": 150,
       "color": "1"
@@ -45,7 +55,27 @@
       "type": "file",
       "file": "10_Papers/mplus.md",
       "x": 0,
-      "y": 880,
+      "y": 1100,
+      "width": 420,
+      "height": 150,
+      "color": "1"
+    },
+    {
+      "id": "secom",
+      "type": "file",
+      "file": "10_Papers/secom.md",
+      "x": 0,
+      "y": 1320,
+      "width": 420,
+      "height": 150,
+      "color": "1"
+    },
+    {
+      "id": "emem",
+      "type": "file",
+      "file": "10_Papers/emem.md",
+      "x": 0,
+      "y": 1540,
       "width": 420,
       "height": 150,
       "color": "1"
@@ -55,17 +85,37 @@
       "type": "file",
       "file": "10_Papers/memgas.md",
       "x": 0,
-      "y": 1100,
+      "y": 1760,
       "width": 420,
       "height": 150,
       "color": "1"
+    },
+    {
+      "id": "gam",
+      "type": "file",
+      "file": "10_Papers/gam.md",
+      "x": 0,
+      "y": 1980,
+      "width": 420,
+      "height": 150,
+      "color": "1"
+    },
+    {
+      "id": "agemem",
+      "type": "file",
+      "file": "10_Papers/agemem.md",
+      "x": 520,
+      "y": 0,
+      "width": 420,
+      "height": 150,
+      "color": "2"
     },
     {
       "id": "memagent",
       "type": "file",
       "file": "10_Papers/memagent.md",
       "x": 520,
-      "y": 0,
+      "y": 220,
       "width": 420,
       "height": 150,
       "color": "2"
@@ -75,7 +125,7 @@
       "type": "file",
       "file": "10_Papers/memeolve.md",
       "x": 520,
-      "y": 220,
+      "y": 440,
       "width": 420,
       "height": 150,
       "color": "2"
@@ -85,7 +135,7 @@
       "type": "file",
       "file": "10_Papers/memoryr1.md",
       "x": 520,
-      "y": 440,
+      "y": 660,
       "width": 420,
       "height": 150,
       "color": "2"
@@ -95,17 +145,47 @@
       "type": "file",
       "file": "10_Papers/umem.md",
       "x": 520,
-      "y": 660,
+      "y": 880,
       "width": 420,
       "height": 150,
       "color": "2"
+    },
+    {
+      "id": "lightmem",
+      "type": "file",
+      "file": "10_Papers/lightmem.md",
+      "x": 1040,
+      "y": 0,
+      "width": 420,
+      "height": 150,
+      "color": "3"
     },
     {
       "id": "mem0",
       "type": "file",
       "file": "10_Papers/mem0.md",
       "x": 1040,
-      "y": 0,
+      "y": 220,
+      "width": 420,
+      "height": 150,
+      "color": "3"
+    },
+    {
+      "id": "memoryos",
+      "type": "file",
+      "file": "10_Papers/memoryos.md",
+      "x": 1040,
+      "y": 440,
+      "width": 420,
+      "height": 150,
+      "color": "3"
+    },
+    {
+      "id": "evermemos",
+      "type": "file",
+      "file": "10_Papers/evermemos.md",
+      "x": 1040,
+      "y": 660,
       "width": 420,
       "height": 150,
       "color": "3"
@@ -115,7 +195,7 @@
       "type": "file",
       "file": "10_Papers/hippocampus.md",
       "x": 1040,
-      "y": 220,
+      "y": 880,
       "width": 420,
       "height": 150,
       "color": "3"
@@ -125,7 +205,27 @@
       "type": "file",
       "file": "10_Papers/lightwm.md",
       "x": 1040,
-      "y": 440,
+      "y": 1100,
+      "width": 420,
+      "height": 150,
+      "color": "3"
+    },
+    {
+      "id": "lightmem-slm",
+      "type": "file",
+      "file": "10_Papers/lightmem-slm.md",
+      "x": 1040,
+      "y": 1320,
+      "width": 420,
+      "height": 150,
+      "color": "3"
+    },
+    {
+      "id": "simplemem",
+      "type": "file",
+      "file": "10_Papers/simplemem.md",
+      "x": 1040,
+      "y": 1540,
       "width": 420,
       "height": 150,
       "color": "3"
@@ -201,6 +301,16 @@
       "color": "5"
     },
     {
+      "id": "nemori",
+      "type": "file",
+      "file": "10_Papers/nemori.md",
+      "x": 2080,
+      "y": 660,
+      "width": 420,
+      "height": 150,
+      "color": "5"
+    },
+    {
       "id": "evoking",
       "type": "file",
       "file": "10_Papers/evoking.md",
@@ -231,11 +341,21 @@
       "color": "1"
     },
     {
+      "id": "reasoningbank",
+      "type": "file",
+      "file": "10_Papers/reasoningbank.md",
+      "x": 3640,
+      "y": 0,
+      "width": 420,
+      "height": 150,
+      "color": "2"
+    },
+    {
       "id": "rememberrefine",
       "type": "file",
       "file": "10_Papers/rememberrefine.md",
       "x": 3640,
-      "y": 0,
+      "y": 220,
       "width": 420,
       "height": 150,
       "color": "2"
@@ -311,6 +431,26 @@
       "color": "4"
     },
     {
+      "id": "memoryagentbench",
+      "type": "file",
+      "file": "10_Papers/memoryagentbench.md",
+      "x": 4680,
+      "y": 1320,
+      "width": 420,
+      "height": 150,
+      "color": "4"
+    },
+    {
+      "id": "memorybench",
+      "type": "file",
+      "file": "10_Papers/memorybench.md",
+      "x": 4680,
+      "y": 1540,
+      "width": 420,
+      "height": 150,
+      "color": "4"
+    },
+    {
       "id": "injection",
       "type": "file",
       "file": "10_Papers/injection.md",
@@ -355,6 +495,16 @@
       "type": "file",
       "file": "10_Papers/memrec.md",
       "x": 5720,
+      "y": 0,
+      "width": 420,
+      "height": 150,
+      "color": "5"
+    },
+    {
+      "id": "storagetexperience",
+      "type": "file",
+      "file": "10_Papers/storagetexperience.md",
+      "x": 6240,
       "y": 0,
       "width": 420,
       "height": 150,
@@ -783,6 +933,312 @@
       "toNode": "memagent",
       "toSide": "left",
       "label": "related: 并行记忆共享 vs 长上下文压缩",
+      "color": "4"
+    },
+    {
+      "id": "edge-47",
+      "fromNode": "lightmem",
+      "fromSide": "right",
+      "toNode": "mem0",
+      "toSide": "left",
+      "label": "extends: 生产级记忆流水线 → 轻量级记忆系统",
+      "color": "4"
+    },
+    {
+      "id": "edge-48",
+      "fromNode": "lightmem",
+      "fromSide": "right",
+      "toNode": "hippocampus",
+      "toSide": "left",
+      "label": "related: 高效记忆模块的不同系统路线",
+      "color": "4"
+    },
+    {
+      "id": "edge-49",
+      "fromNode": "lightmem",
+      "fromSide": "right",
+      "toNode": "lightwm",
+      "toSide": "left",
+      "label": "related: 低成本长期记忆 vs 小模型工作记忆",
+      "color": "4"
+    },
+    {
+      "id": "edge-50",
+      "fromNode": "secom",
+      "fromSide": "right",
+      "toNode": "memgas",
+      "toSide": "left",
+      "label": "extends: segment 级记忆 → 多粒度记忆",
+      "color": "4"
+    },
+    {
+      "id": "edge-51",
+      "fromNode": "secom",
+      "fromSide": "right",
+      "toNode": "amem",
+      "toSide": "left",
+      "label": "related: 记忆粒度选择 vs 原子笔记组织",
+      "color": "4"
+    },
+    {
+      "id": "edge-52",
+      "fromNode": "memoryos",
+      "fromSide": "right",
+      "toNode": "magma",
+      "toSide": "left",
+      "label": "related: 三级层次存储 vs 多关系图记忆",
+      "color": "4"
+    },
+    {
+      "id": "edge-53",
+      "fromNode": "memoryos",
+      "fromSide": "right",
+      "toNode": "reconstructed",
+      "toSide": "left",
+      "label": "related: 层次记忆系统作为主动重建的对照",
+      "color": "4"
+    },
+    {
+      "id": "edge-54",
+      "fromNode": "hipporag2",
+      "fromSide": "right",
+      "toNode": "magma",
+      "toSide": "left",
+      "label": "related: 图增强 RAG vs 多关系 agent memory",
+      "color": "4"
+    },
+    {
+      "id": "edge-55",
+      "fromNode": "hipporag2",
+      "fromSide": "right",
+      "toNode": "reconstructed",
+      "toSide": "left",
+      "label": "related: 图检索基线 vs 主动重构",
+      "color": "4"
+    },
+    {
+      "id": "edge-56",
+      "fromNode": "hipporag2",
+      "fromSide": "right",
+      "toNode": "memgas",
+      "toSide": "left",
+      "label": "related: 图检索与多粒度记忆的对照",
+      "color": "4"
+    },
+    {
+      "id": "edge-57",
+      "fromNode": "simplemem",
+      "fromSide": "right",
+      "toNode": "lightmem",
+      "toSide": "left",
+      "label": "related: 高效长期记忆的两条压缩路线",
+      "color": "4"
+    },
+    {
+      "id": "edge-58",
+      "fromNode": "simplemem",
+      "fromSide": "right",
+      "toNode": "mem0",
+      "toSide": "left",
+      "label": "extends: 生产级记忆流水线 → 语义压缩记忆",
+      "color": "4"
+    },
+    {
+      "id": "edge-59",
+      "fromNode": "gam",
+      "fromSide": "right",
+      "toNode": "amem",
+      "toSide": "left",
+      "label": "extends: 原子笔记 → 分层事件/主题图记忆",
+      "color": "4"
+    },
+    {
+      "id": "edge-60",
+      "fromNode": "gam",
+      "fromSide": "right",
+      "toNode": "magma",
+      "toSide": "left",
+      "label": "related: 层次图 vs 多关系图",
+      "color": "4"
+    },
+    {
+      "id": "edge-61",
+      "fromNode": "reasoningbank",
+      "fromSide": "right",
+      "toNode": "rememberrefine",
+      "toSide": "left",
+      "label": "related: 程序性记忆与经验蒸馏",
+      "color": "4"
+    },
+    {
+      "id": "edge-62",
+      "fromNode": "reasoningbank",
+      "fromSide": "right",
+      "toNode": "memeolve",
+      "toSide": "left",
+      "label": "related: 经验驱动的记忆进化",
+      "color": "4"
+    },
+    {
+      "id": "edge-63",
+      "fromNode": "memoryagentbench",
+      "fromSide": "right",
+      "toNode": "longmemeval",
+      "toSide": "left",
+      "label": "extends: 静态长期记忆评测 → 增量多轮能力评测",
+      "color": "4"
+    },
+    {
+      "id": "edge-64",
+      "fromNode": "memoryagentbench",
+      "fromSide": "right",
+      "toNode": "membench",
+      "toSide": "left",
+      "label": "related: 综合记忆评测的不同维度",
+      "color": "4"
+    },
+    {
+      "id": "edge-65",
+      "fromNode": "memoryagentbench",
+      "fromSide": "right",
+      "toNode": "persistbench",
+      "toSide": "left",
+      "label": "related: 选择性遗忘与遗忘边界评测",
+      "color": "4"
+    },
+    {
+      "id": "edge-66",
+      "fromNode": "agemem",
+      "fromSide": "right",
+      "toNode": "memoryr1",
+      "toSide": "left",
+      "label": "extends: 分离的记忆操作 → 统一 LTM/STM 策略",
+      "color": "4"
+    },
+    {
+      "id": "edge-67",
+      "fromNode": "agemem",
+      "fromSide": "right",
+      "toNode": "memagent",
+      "toSide": "left",
+      "label": "related: RL memory agent 的不同统一管理路线",
+      "color": "4"
+    },
+    {
+      "id": "edge-68",
+      "fromNode": "agemem",
+      "fromSide": "right",
+      "toNode": "persistbench",
+      "toSide": "left",
+      "label": "related: 可学习 discard 动作与遗忘边界评测",
+      "color": "4"
+    },
+    {
+      "id": "edge-69",
+      "fromNode": "emem",
+      "fromSide": "right",
+      "toNode": "reconstructed",
+      "toSide": "left",
+      "label": "related: episodic context reconstruction vs active reconstruction",
+      "color": "4"
+    },
+    {
+      "id": "edge-70",
+      "fromNode": "emem",
+      "fromSide": "right",
+      "toNode": "gam",
+      "toSide": "left",
+      "label": "related: E-mem 在 LoCoMo 上以 GAM 为强基线",
+      "color": "4"
+    },
+    {
+      "id": "edge-71",
+      "fromNode": "evermemos",
+      "fromSide": "right",
+      "toNode": "memoryos",
+      "toSide": "left",
+      "label": "extends: 分层 memory OS → 自组织 memory OS",
+      "color": "4"
+    },
+    {
+      "id": "edge-72",
+      "fromNode": "evermemos",
+      "fromSide": "right",
+      "toNode": "memgas",
+      "toSide": "left",
+      "label": "related: 语义整合 + scene-guided retrieval",
+      "color": "4"
+    },
+    {
+      "id": "edge-73",
+      "fromNode": "nemori",
+      "fromSide": "right",
+      "toNode": "memgas",
+      "toSide": "left",
+      "label": "related: 自适应记忆蒸馏 vs 多粒度记忆",
+      "color": "4"
+    },
+    {
+      "id": "edge-74",
+      "fromNode": "nemori",
+      "fromSide": "right",
+      "toNode": "recmem",
+      "toSide": "left",
+      "label": "related: 预测误差驱动整合 vs recurrence-based consolidation",
+      "color": "4"
+    },
+    {
+      "id": "edge-75",
+      "fromNode": "lightmem-slm",
+      "fromSide": "right",
+      "toNode": "lightmem",
+      "toSide": "left",
+      "label": "related: 两个同名 LightMem 系统，机制不同，引用时需区分",
+      "color": "4"
+    },
+    {
+      "id": "edge-76",
+      "fromNode": "lightmem-slm",
+      "fromSide": "right",
+      "toNode": "mem0",
+      "toSide": "left",
+      "label": "related: SLM 驱动记忆 vs 生产级 LLM 记忆",
+      "color": "4"
+    },
+    {
+      "id": "edge-77",
+      "fromNode": "memorybench",
+      "fromSide": "right",
+      "toNode": "longmemeval",
+      "toSide": "left",
+      "label": "extends: 静态记忆 QA → 用户反馈驱动的持续学习评测",
+      "color": "4"
+    },
+    {
+      "id": "edge-78",
+      "fromNode": "memorybench",
+      "fromSide": "right",
+      "toNode": "memoryagentbench",
+      "toSide": "left",
+      "label": "related: 持续学习与增量多轮记忆的不同评测维度",
+      "color": "4"
+    },
+    {
+      "id": "edge-79",
+      "fromNode": "storagetexperience",
+      "fromSide": "right",
+      "toNode": "amem",
+      "toSide": "left",
+      "label": "related: 综述框架：Storage → Reflection → Experience",
+      "color": "4"
+    },
+    {
+      "id": "edge-80",
+      "fromNode": "storagetexperience",
+      "fromSide": "right",
+      "toNode": "reasoningbank",
+      "toSide": "left",
+      "label": "related: Experience 阶段的跨轨迹抽象",
       "color": "4"
     }
   ]

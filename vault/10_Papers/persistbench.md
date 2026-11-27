@@ -52,6 +52,8 @@ Conversational assistants are increasingly integrating long-term memory with lar
 - evaluated-by → [[10_Papers/memoryr1|Memory-R1: Enhancing Large Language Model Agents to Manage and Utilize Memories via Reinforcement Learning]]：记忆管理与遗忘边界
 - evaluates ← [[10_Papers/tiermem|TierMem: Balancing Compressed Memory and Raw Evidence for Long-Horizon Agent Memory]]：压缩记忆的遗忘边界
 - extends ← [[10_Papers/longmemeval|LongMemEval: Benchmarking Chat Assistants on Long-Term Interactive Memory]]：记忆保留 → 何时遗忘
+- related ← [[10_Papers/memoryagentbench|Evaluating Memory in LLM Agents via Incremental Multi-Turn Interactions]]：选择性遗忘与遗忘边界评测
+- related ← [[10_Papers/agemem|Agentic Memory: Learning Unified Long-Term and Short-Term Memory Management for Large Language Model Agents]]：可学习 discard 动作与遗忘边界评测
 
 ## 我的阅读问题
 

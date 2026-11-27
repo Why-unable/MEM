@@ -1,49 +1,488 @@
 [
-  {"from":"amem","to":"gmemory","type":"extends","label":"单 agent 记忆 → 多 agent 层次记忆"},
-  {"from":"amem","to":"magma","type":"extends","label":"动态记忆组织 → 多图结构"},
-  {"from":"amem","to":"memgas","type":"extends","label":"记忆组织 → 多粒度关联"},
-  {"from":"amem","to":"reconstructed","type":"extends","label":"检索 → 重构"},
-  {"from":"amem","to":"memoryr1","type":"extends","label":"记忆结构 → 可学习记忆策略"},
-  {"from":"amem","to":"memagent","type":"extends","label":"记忆结构 → RL memory agent"},
-  {"from":"amem","to":"memeolve","type":"extends","label":"手工设计 → 元进化"},
-  {"from":"amem","to":"umem","type":"extends","label":"动态组织 → 统一抽取与管理"},
-  {"from":"amem","to":"mem0","type":"extends","label":"研究原型 → 生产级记忆流水线"},
-  {"from":"gmemory","to":"learnshare","type":"extends","label":"团队记忆 → 选择性共享记忆"},
-  {"from":"gmemory","to":"memeolve","type":"related","label":"多 agent 记忆 → 记忆系统进化"},
-  {"from":"memagent","to":"memoryr1","type":"related","label":"RL memory agent 的两条实现路线"},
-  {"from":"memoryr1","to":"memeolve","type":"extends","label":"记忆策略学习 → 记忆系统进化"},
-  {"from":"memoryr1","to":"umem","type":"related","label":"记忆管理与统一管理"},
-  {"from":"memeolve","to":"umem","type":"related","label":"自动设计 vs 统一抽取"},
-  {"from":"mem0","to":"hippocampus","type":"extends","label":"长期记忆系统 → 高效记忆模块"},
-  {"from":"mem0","to":"tiermem","type":"extends","label":"记忆压缩与证据保留"},
-  {"from":"mem0","to":"privacy","type":"risk","label":"长期记忆的隐私面"},
-  {"from":"mem0","to":"injection","type":"risk","label":"长期记忆的注入面"},
-  {"from":"humanepisodic","to":"remem","type":"extends","label":"类人 episodic memory → 推理中的事件记忆"},
-  {"from":"humanepisodic","to":"artem","type":"extends","label":"无限上下文 → 时空 episodic memory"},
-  {"from":"remem","to":"ema","type":"extends","label":"事件级记忆 → 选择性 episodic unit"},
-  {"from":"remem","to":"multimodal","type":"extends","label":"文本事件 → 多模态经验"},
-  {"from":"ema","to":"recmem","type":"related","label":"选择性记忆 → 复现式整合"},
-  {"from":"recmem","to":"timem","type":"extends","label":"整合 → 时间层次整合"},
-  {"from":"timem","to":"tiermem","type":"extends","label":"时间层次 → 压缩/证据分层"},
-  {"from":"tiermem","to":"persistbench","type":"evaluates","label":"压缩记忆的遗忘边界"},
-  {"from":"evoking","to":"longmemeval","type":"related","label":"个性化检索 → 长期交互评测"},
-  {"from":"personaagent","to":"evoking","type":"extends","label":"记忆-行动耦合 → 个性化检索"},
-  {"from":"rememberrefine","to":"memeolve","type":"related","label":"程序性记忆 vs 元进化"},
-  {"from":"memrec","to":"mem0","type":"applies","label":"长期记忆用于推荐"},
-  {"from":"longmemeval","to":"membench","type":"related","label":"长期交互 → 综合记忆评测"},
-  {"from":"longmemeval","to":"beyondmillion","type":"extends","label":"长期交互 → 百万 token 压力测试"},
-  {"from":"longmemeval","to":"interdependent","type":"extends","label":"单会话评测 → 多 session 任务"},
-  {"from":"longmemeval","to":"persistbench","type":"extends","label":"记忆保留 → 何时遗忘"},
-  {"from":"membench","to":"minerva","type":"related","label":"综合评测 vs 可编程测试"},
-  {"from":"beyondmillion","to":"interdependent","type":"related","label":"规模压力 vs 任务依赖"},
-  {"from":"privacy","to":"injection","type":"related","label":"隐私抽取与记忆注入的攻击面对照"},
-  {"from":"injection","to":"injecmem","type":"extends","label":"查询注入 → 记忆系统注入"},
-  {"from":"injecmem","to":"poisononce","type":"extends","label":"注入 → 长期记忆 poisoning"},
-  {"from":"longmemeval","to":"amem","type":"evaluated-by","label":"A-Mem 类系统的长期记忆评测参照"},
-  {"from":"membench","to":"amem","type":"evaluated-by","label":"agent memory 综合评测参照"},
-  {"from":"persistbench","to":"memoryr1","type":"evaluated-by","label":"记忆管理与遗忘边界"},
-  {"from":"mplus","to":"reconstructed","type":"related","label":"参数化记忆 vs 图重构记忆"},
-  {"from":"lightwm","to":"ema","type":"related","label":"小模型工作记忆 vs 事件记忆"},
-  {"from":"artem","to":"humanepisodic","type":"related","label":"时空事件记忆与类人机制"},
-  {"from":"learnshare","to":"memagent","type":"related","label":"并行记忆共享 vs 长上下文压缩"}
+  {
+    "from": "amem",
+    "to": "gmemory",
+    "type": "extends",
+    "label": "单 agent 记忆 → 多 agent 层次记忆"
+  },
+  {
+    "from": "amem",
+    "to": "magma",
+    "type": "extends",
+    "label": "动态记忆组织 → 多图结构"
+  },
+  {
+    "from": "amem",
+    "to": "memgas",
+    "type": "extends",
+    "label": "记忆组织 → 多粒度关联"
+  },
+  {
+    "from": "amem",
+    "to": "reconstructed",
+    "type": "extends",
+    "label": "检索 → 重构"
+  },
+  {
+    "from": "amem",
+    "to": "memoryr1",
+    "type": "extends",
+    "label": "记忆结构 → 可学习记忆策略"
+  },
+  {
+    "from": "amem",
+    "to": "memagent",
+    "type": "extends",
+    "label": "记忆结构 → RL memory agent"
+  },
+  {
+    "from": "amem",
+    "to": "memeolve",
+    "type": "extends",
+    "label": "手工设计 → 元进化"
+  },
+  {
+    "from": "amem",
+    "to": "umem",
+    "type": "extends",
+    "label": "动态组织 → 统一抽取与管理"
+  },
+  {
+    "from": "amem",
+    "to": "mem0",
+    "type": "extends",
+    "label": "研究原型 → 生产级记忆流水线"
+  },
+  {
+    "from": "gmemory",
+    "to": "learnshare",
+    "type": "extends",
+    "label": "团队记忆 → 选择性共享记忆"
+  },
+  {
+    "from": "gmemory",
+    "to": "memeolve",
+    "type": "related",
+    "label": "多 agent 记忆 → 记忆系统进化"
+  },
+  {
+    "from": "memagent",
+    "to": "memoryr1",
+    "type": "related",
+    "label": "RL memory agent 的两条实现路线"
+  },
+  {
+    "from": "memoryr1",
+    "to": "memeolve",
+    "type": "extends",
+    "label": "记忆策略学习 → 记忆系统进化"
+  },
+  {
+    "from": "memoryr1",
+    "to": "umem",
+    "type": "related",
+    "label": "记忆管理与统一管理"
+  },
+  {
+    "from": "memeolve",
+    "to": "umem",
+    "type": "related",
+    "label": "自动设计 vs 统一抽取"
+  },
+  {
+    "from": "mem0",
+    "to": "hippocampus",
+    "type": "extends",
+    "label": "长期记忆系统 → 高效记忆模块"
+  },
+  {
+    "from": "mem0",
+    "to": "tiermem",
+    "type": "extends",
+    "label": "记忆压缩与证据保留"
+  },
+  {
+    "from": "mem0",
+    "to": "privacy",
+    "type": "risk",
+    "label": "长期记忆的隐私面"
+  },
+  {
+    "from": "mem0",
+    "to": "injection",
+    "type": "risk",
+    "label": "长期记忆的注入面"
+  },
+  {
+    "from": "humanepisodic",
+    "to": "remem",
+    "type": "extends",
+    "label": "类人 episodic memory → 推理中的事件记忆"
+  },
+  {
+    "from": "humanepisodic",
+    "to": "artem",
+    "type": "extends",
+    "label": "无限上下文 → 时空 episodic memory"
+  },
+  {
+    "from": "remem",
+    "to": "ema",
+    "type": "extends",
+    "label": "事件级记忆 → 选择性 episodic unit"
+  },
+  {
+    "from": "remem",
+    "to": "multimodal",
+    "type": "extends",
+    "label": "文本事件 → 多模态经验"
+  },
+  {
+    "from": "ema",
+    "to": "recmem",
+    "type": "related",
+    "label": "选择性记忆 → 复现式整合"
+  },
+  {
+    "from": "recmem",
+    "to": "timem",
+    "type": "extends",
+    "label": "整合 → 时间层次整合"
+  },
+  {
+    "from": "timem",
+    "to": "tiermem",
+    "type": "extends",
+    "label": "时间层次 → 压缩/证据分层"
+  },
+  {
+    "from": "tiermem",
+    "to": "persistbench",
+    "type": "evaluates",
+    "label": "压缩记忆的遗忘边界"
+  },
+  {
+    "from": "evoking",
+    "to": "longmemeval",
+    "type": "related",
+    "label": "个性化检索 → 长期交互评测"
+  },
+  {
+    "from": "personaagent",
+    "to": "evoking",
+    "type": "extends",
+    "label": "记忆-行动耦合 → 个性化检索"
+  },
+  {
+    "from": "rememberrefine",
+    "to": "memeolve",
+    "type": "related",
+    "label": "程序性记忆 vs 元进化"
+  },
+  {
+    "from": "memrec",
+    "to": "mem0",
+    "type": "applies",
+    "label": "长期记忆用于推荐"
+  },
+  {
+    "from": "longmemeval",
+    "to": "membench",
+    "type": "related",
+    "label": "长期交互 → 综合记忆评测"
+  },
+  {
+    "from": "longmemeval",
+    "to": "beyondmillion",
+    "type": "extends",
+    "label": "长期交互 → 百万 token 压力测试"
+  },
+  {
+    "from": "longmemeval",
+    "to": "interdependent",
+    "type": "extends",
+    "label": "单会话评测 → 多 session 任务"
+  },
+  {
+    "from": "longmemeval",
+    "to": "persistbench",
+    "type": "extends",
+    "label": "记忆保留 → 何时遗忘"
+  },
+  {
+    "from": "membench",
+    "to": "minerva",
+    "type": "related",
+    "label": "综合评测 vs 可编程测试"
+  },
+  {
+    "from": "beyondmillion",
+    "to": "interdependent",
+    "type": "related",
+    "label": "规模压力 vs 任务依赖"
+  },
+  {
+    "from": "privacy",
+    "to": "injection",
+    "type": "related",
+    "label": "隐私抽取与记忆注入的攻击面对照"
+  },
+  {
+    "from": "injection",
+    "to": "injecmem",
+    "type": "extends",
+    "label": "查询注入 → 记忆系统注入"
+  },
+  {
+    "from": "injecmem",
+    "to": "poisononce",
+    "type": "extends",
+    "label": "注入 → 长期记忆 poisoning"
+  },
+  {
+    "from": "longmemeval",
+    "to": "amem",
+    "type": "evaluated-by",
+    "label": "A-Mem 类系统的长期记忆评测参照"
+  },
+  {
+    "from": "membench",
+    "to": "amem",
+    "type": "evaluated-by",
+    "label": "agent memory 综合评测参照"
+  },
+  {
+    "from": "persistbench",
+    "to": "memoryr1",
+    "type": "evaluated-by",
+    "label": "记忆管理与遗忘边界"
+  },
+  {
+    "from": "mplus",
+    "to": "reconstructed",
+    "type": "related",
+    "label": "参数化记忆 vs 图重构记忆"
+  },
+  {
+    "from": "lightwm",
+    "to": "ema",
+    "type": "related",
+    "label": "小模型工作记忆 vs 事件记忆"
+  },
+  {
+    "from": "artem",
+    "to": "humanepisodic",
+    "type": "related",
+    "label": "时空事件记忆与类人机制"
+  },
+  {
+    "from": "learnshare",
+    "to": "memagent",
+    "type": "related",
+    "label": "并行记忆共享 vs 长上下文压缩"
+  },
+  {
+    "from": "lightmem",
+    "to": "mem0",
+    "type": "extends",
+    "label": "生产级记忆流水线 → 轻量级记忆系统"
+  },
+  {
+    "from": "lightmem",
+    "to": "hippocampus",
+    "type": "related",
+    "label": "高效记忆模块的不同系统路线"
+  },
+  {
+    "from": "lightmem",
+    "to": "lightwm",
+    "type": "related",
+    "label": "低成本长期记忆 vs 小模型工作记忆"
+  },
+  {
+    "from": "secom",
+    "to": "memgas",
+    "type": "extends",
+    "label": "segment 级记忆 → 多粒度记忆"
+  },
+  {
+    "from": "secom",
+    "to": "amem",
+    "type": "related",
+    "label": "记忆粒度选择 vs 原子笔记组织"
+  },
+  {
+    "from": "memoryos",
+    "to": "magma",
+    "type": "related",
+    "label": "三级层次存储 vs 多关系图记忆"
+  },
+  {
+    "from": "memoryos",
+    "to": "reconstructed",
+    "type": "related",
+    "label": "层次记忆系统作为主动重建的对照"
+  },
+  {
+    "from": "hipporag2",
+    "to": "magma",
+    "type": "related",
+    "label": "图增强 RAG vs 多关系 agent memory"
+  },
+  {
+    "from": "hipporag2",
+    "to": "reconstructed",
+    "type": "related",
+    "label": "图检索基线 vs 主动重构"
+  },
+  {
+    "from": "hipporag2",
+    "to": "memgas",
+    "type": "related",
+    "label": "图检索与多粒度记忆的对照"
+  },
+  {
+    "from": "simplemem",
+    "to": "lightmem",
+    "type": "related",
+    "label": "高效长期记忆的两条压缩路线"
+  },
+  {
+    "from": "simplemem",
+    "to": "mem0",
+    "type": "extends",
+    "label": "生产级记忆流水线 → 语义压缩记忆"
+  },
+  {
+    "from": "gam",
+    "to": "amem",
+    "type": "extends",
+    "label": "原子笔记 → 分层事件/主题图记忆"
+  },
+  {
+    "from": "gam",
+    "to": "magma",
+    "type": "related",
+    "label": "层次图 vs 多关系图"
+  },
+  {
+    "from": "reasoningbank",
+    "to": "rememberrefine",
+    "type": "related",
+    "label": "程序性记忆与经验蒸馏"
+  },
+  {
+    "from": "reasoningbank",
+    "to": "memeolve",
+    "type": "related",
+    "label": "经验驱动的记忆进化"
+  },
+  {
+    "from": "memoryagentbench",
+    "to": "longmemeval",
+    "type": "extends",
+    "label": "静态长期记忆评测 → 增量多轮能力评测"
+  },
+  {
+    "from": "memoryagentbench",
+    "to": "membench",
+    "type": "related",
+    "label": "综合记忆评测的不同维度"
+  },
+  {
+    "from": "memoryagentbench",
+    "to": "persistbench",
+    "type": "related",
+    "label": "选择性遗忘与遗忘边界评测"
+  },
+  {
+    "from": "agemem",
+    "to": "memoryr1",
+    "type": "extends",
+    "label": "分离的记忆操作 → 统一 LTM/STM 策略"
+  },
+  {
+    "from": "agemem",
+    "to": "memagent",
+    "type": "related",
+    "label": "RL memory agent 的不同统一管理路线"
+  },
+  {
+    "from": "agemem",
+    "to": "persistbench",
+    "type": "related",
+    "label": "可学习 discard 动作与遗忘边界评测"
+  },
+  {
+    "from": "emem",
+    "to": "reconstructed",
+    "type": "related",
+    "label": "episodic context reconstruction vs active reconstruction"
+  },
+  {
+    "from": "emem",
+    "to": "gam",
+    "type": "related",
+    "label": "E-mem 在 LoCoMo 上以 GAM 为强基线"
+  },
+  {
+    "from": "evermemos",
+    "to": "memoryos",
+    "type": "extends",
+    "label": "分层 memory OS → 自组织 memory OS"
+  },
+  {
+    "from": "evermemos",
+    "to": "memgas",
+    "type": "related",
+    "label": "语义整合 + scene-guided retrieval"
+  },
+  {
+    "from": "nemori",
+    "to": "memgas",
+    "type": "related",
+    "label": "自适应记忆蒸馏 vs 多粒度记忆"
+  },
+  {
+    "from": "nemori",
+    "to": "recmem",
+    "type": "related",
+    "label": "预测误差驱动整合 vs recurrence-based consolidation"
+  },
+  {
+    "from": "lightmem-slm",
+    "to": "lightmem",
+    "type": "related",
+    "label": "两个同名 LightMem 系统，机制不同，引用时需区分"
+  },
+  {
+    "from": "lightmem-slm",
+    "to": "mem0",
+    "type": "related",
+    "label": "SLM 驱动记忆 vs 生产级 LLM 记忆"
+  },
+  {
+    "from": "memorybench",
+    "to": "longmemeval",
+    "type": "extends",
+    "label": "静态记忆 QA → 用户反馈驱动的持续学习评测"
+  },
+  {
+    "from": "memorybench",
+    "to": "memoryagentbench",
+    "type": "related",
+    "label": "持续学习与增量多轮记忆的不同评测维度"
+  },
+  {
+    "from": "storagetexperience",
+    "to": "amem",
+    "type": "related",
+    "label": "综述框架：Storage → Reflection → Experience"
+  },
+  {
+    "from": "storagetexperience",
+    "to": "reasoningbank",
+    "type": "related",
+    "label": "Experience 阶段的跨轨迹抽象"
+  }
 ]

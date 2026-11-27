@@ -55,6 +55,8 @@ Recent large language model (LLM)-driven chat assistant systems have integrated 
 - extends → [[10_Papers/persistbench|PersistBench: When Should Long-Term Memories Be Forgotten by LLMs?]]：记忆保留 → 何时遗忘
 - evaluated-by → [[10_Papers/amem|A-Mem: Agentic Memory for LLM Agents]]：A-Mem 类系统的长期记忆评测参照
 - related ← [[10_Papers/evoking|Evoking User Memory: Personalizing LLM via Recollection-Familiarity Adaptive Retrieval]]：个性化检索 → 长期交互评测
+- extends ← [[10_Papers/memoryagentbench|Evaluating Memory in LLM Agents via Incremental Multi-Turn Interactions]]：静态长期记忆评测 → 增量多轮能力评测
+- extends ← [[10_Papers/memorybench|MemoryBench: A Benchmark for Memory and Continual Learning in LLM Systems]]：静态记忆 QA → 用户反馈驱动的持续学习评测
 
 ## 我的阅读问题
 

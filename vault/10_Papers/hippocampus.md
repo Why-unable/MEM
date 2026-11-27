@@ -51,6 +51,7 @@ both streams to support ultra-fast search in the compressed domain, thus avoidin
 ## 关系
 
 - extends ← [[10_Papers/mem0|Mem0: Building Production-Ready AI Agents with Scalable Long-Term Memory]]：长期记忆系统 → 高效记忆模块
+- related ← [[10_Papers/lightmem|LightMem: Lightweight and Efficient Memory-Augmented Generation]]：高效记忆模块的不同系统路线
 
 ## 我的阅读问题
 

@@ -55,6 +55,10 @@ Large Language Models (LLMs) have recently been widely adopted in conversational
 ## 关系
 
 - extends ← [[10_Papers/amem|A-Mem: Agentic Memory for LLM Agents]]：记忆组织 → 多粒度关联
+- extends ← [[10_Papers/secom|On Memory Construction and Retrieval for Personalized Conversational Agents]]：segment 级记忆 → 多粒度记忆
+- related ← [[10_Papers/hipporag2|From RAG to Memory: Non-Parametric Continual Learning for Large Language Models]]：图检索与多粒度记忆的对照
+- related ← [[10_Papers/evermemos|EverMemOS: A Self-Organizing Memory Operating System for Structured Long-Horizon Reasoning]]：语义整合 + scene-guided retrieval
+- related ← [[10_Papers/nemori|What Deserves Memory: Adaptive Memory Distillation for LLM Agents]]：自适应记忆蒸馏 vs 多粒度记忆
 
 ## 我的阅读问题
 

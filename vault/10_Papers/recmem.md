@@ -52,6 +52,7 @@ Memory systems often organize user-agent interactions as retrievable external me
 
 - extends → [[10_Papers/timem|TiMem: Temporal-Hierarchical Memory Consolidation for Long-Horizon Conversational Agents]]：整合 → 时间层次整合
 - related ← [[10_Papers/ema|EMA: An Episodic Memory Agent for Efficient and Selective Memory]]：选择性记忆 → 复现式整合
+- related ← [[10_Papers/nemori|What Deserves Memory: Adaptive Memory Distillation for LLM Agents]]：预测误差驱动整合 vs recurrence-based consolidation
 
 ## 我的阅读问题
 

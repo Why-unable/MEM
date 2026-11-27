@@ -54,6 +54,7 @@ On ALFWorld valid_unseen, Qwen3-4B reaches 0.910 success, whereas representative
 ## 关系
 
 - related → [[10_Papers/ema|EMA: An Episodic Memory Agent for Efficient and Selective Memory]]：小模型工作记忆 vs 事件记忆
+- related ← [[10_Papers/lightmem|LightMem: Lightweight and Efficient Memory-Augmented Generation]]：低成本长期记忆 vs 小模型工作记忆
 
 ## 我的阅读问题
 

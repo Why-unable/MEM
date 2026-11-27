@@ -48,6 +48,9 @@ Despite recent progress, LLM agents still struggle with reasoning over long inte
 
 - extends ← [[10_Papers/amem|A-Mem: Agentic Memory for LLM Agents]]：检索 → 重构
 - related ← [[10_Papers/mplus|M+: Extending MemoryLLM with Scalable Long-Term Memory]]：参数化记忆 vs 图重构记忆
+- related ← [[10_Papers/memoryos|Memory OS of AI Agent]]：层次记忆系统作为主动重建的对照
+- related ← [[10_Papers/hipporag2|From RAG to Memory: Non-Parametric Continual Learning for Large Language Models]]：图检索基线 vs 主动重构
+- related ← [[10_Papers/emem|E-mem: Multi-agent based Episodic Context Reconstruction for LLM Agent Memory]]：episodic context reconstruction vs active reconstruction
 
 ## 我的阅读问题
 

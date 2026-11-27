@@ -48,6 +48,9 @@ Memory-Augmented Generation (MAG) extends large language models with external me
 ## 关系
 
 - extends ← [[10_Papers/amem|A-Mem: Agentic Memory for LLM Agents]]：动态记忆组织 → 多图结构
+- related ← [[10_Papers/memoryos|Memory OS of AI Agent]]：三级层次存储 vs 多关系图记忆
+- related ← [[10_Papers/hipporag2|From RAG to Memory: Non-Parametric Continual Learning for Large Language Models]]：图增强 RAG vs 多关系 agent memory
+- related ← [[10_Papers/gam|GAM: Hierarchical Graph-based Agentic Memory for LLM Agents]]：层次图 vs 多关系图
 
 ## 我的阅读问题
 

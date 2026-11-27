@@ -61,6 +61,7 @@ Large Language Models (LLMs) have demonstrated impressive capabilities across a 
 - extends ← [[10_Papers/amem|A-Mem: Agentic Memory for LLM Agents]]：记忆结构 → 可学习记忆策略
 - related ← [[10_Papers/memagent|MemAgent: Reshaping Long-Context LLM with Multi-Conv RL-based Memory Agent]]：RL memory agent 的两条实现路线
 - evaluated-by ← [[10_Papers/persistbench|PersistBench: When Should Long-Term Memories Be Forgotten by LLMs?]]：记忆管理与遗忘边界
+- extends ← [[10_Papers/agemem|Agentic Memory: Learning Unified Long-Term and Short-Term Memory Management for Large Language Model Agents]]：分离的记忆操作 → 统一 LTM/STM 策略
 
 ## 我的阅读问题
 

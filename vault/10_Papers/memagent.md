@@ -57,6 +57,7 @@ Despite improvements by length extrapolation, efficient attention and memory mod
 - related → [[10_Papers/memoryr1|Memory-R1: Enhancing Large Language Model Agents to Manage and Utilize Memories via Reinforcement Learning]]：RL memory agent 的两条实现路线
 - extends ← [[10_Papers/amem|A-Mem: Agentic Memory for LLM Agents]]：记忆结构 → RL memory agent
 - related ← [[10_Papers/learnshare|Learning to Share: Selective Memory for Efficient Parallel Agentic Systems]]：并行记忆共享 vs 长上下文压缩
+- related ← [[10_Papers/agemem|Agentic Memory: Learning Unified Long-Term and Short-Term Memory Management for Large Language Model Agents]]：RL memory agent 的不同统一管理路线
 
 ## 我的阅读问题
 

@@ -4,8 +4,8 @@
     "from": "2025-01-01",
     "to": "2026-11-19"
   },
-  "paper_count": 36,
-  "edge_count": 47,
+  "paper_count": 51,
+  "edge_count": 81,
   "papers": [
     {
       "id": "amem",
@@ -1064,7 +1064,7 @@
       "ccf": "CCF-A",
       "category": "evaluation",
       "priority": 1,
-      "role_zh": "多 session 相互依赖任务中的 agent memory 基准，贴近真实长期任务。",
+      "role_zh": "MemoryArena：多 session、agent-environment 相互依赖任务中的记忆评测，检验记忆是否真正指导后续行动。",
       "authors": [
         "Zexue He",
         "Yu Wang",
@@ -1091,11 +1091,12 @@
       "openreview_url": "https://openreview.net/forum?id=JHYmxqS9Jv",
       "pdf_url": "https://openreview.net/pdf?id=JHYmxqS9Jv",
       "DOI": null,
-      "arXiv": null,
+      "arXiv": "2602.16313",
       "DBLP": null,
       "S2CorpusId": 288106610,
       "verified_by": [
-        "OpenReview accepted venue"
+        "OpenReview accepted venue",
+        "PMLR proceedings"
       ],
       "status": "published",
       "collected_at": "2026-11-19"
@@ -1367,6 +1368,580 @@
       ],
       "status": "published",
       "collected_at": "2026-11-19"
+    },
+    {
+      "id": "lightmem",
+      "title": "LightMem: Lightweight and Efficient Memory-Augmented Generation",
+      "year": 2026,
+      "venue": "ICLR 2026",
+      "venue_short": "ICLR 2026",
+      "venue_tier": "Top-ICLR",
+      "ccf": "Top-ICLR",
+      "category": "system",
+      "priority": 1,
+      "role_zh": "用 sensory / short-term / long-term 三阶段和 sleep-time update，把记忆压缩与整合移出在线推理，主打低成本长期记忆。",
+      "authors": [
+        "Jizhan Fang",
+        "Xinle Deng",
+        "Haoming Xu",
+        "Ziyan Jiang",
+        "Yuqi Tang",
+        "Ziwen Xu",
+        "Shumin Deng",
+        "Yunzhi Yao",
+        "Mengru Wang",
+        "Shuofei Qiao",
+        "Huajun Chen",
+        "Ningyu Zhang"
+      ],
+      "abstract": "Despite their remarkable capabilities, Large Language Models (LLMs) struggle to effectively leverage historical interaction information in dynamic and complex environments. Memory systems enable LLMs to move beyond stateless interactions by introducing persistent information storage, retrieval, and utilization mechanisms. However, existing memory systems often introduce substantial time and computational overhead. To this end, we introduce a new memory system called LightMem, which strikes a balance between the performance and efficiency of memory systems. Inspired by the Atkinson-Shiffrin model of human memory, LightMem organizes memory into three complementary stages. First, cognition-inspired sensory memory rapidly filters irrelevant information through lightweight compression and groups information according to their topics. Next, topic-aware short-term memory consolidates these topic-based groups, organizing and summarizing content for more structured access. Finally, long-term memory with sleep-time update employs an offline procedure that decouples consolidation from online inference. On LongMemEval and LoCoMo, using GPT and Qwen backbones, LightMem consistently surpasses strong baselines, improving QA accuracy by up to 7.7% / 29.3%, reducing total token usage by up to 38x / 20.9x and API calls by up to 30x / 55.5x, while purely online test-time costs are even lower, achieving up to 106x / 117x token reduction and 159x / 310x fewer API calls. The code is available at https://github.com/zjunlp/LightMem.",
+      "keywords": [
+        "lightweight memory",
+        "memory consolidation",
+        "long-term memory"
+      ],
+      "openreview_url": "https://proceedings.iclr.cc/paper_files/paper/2026/hash/a05b72653ec5b473732129829ae04195-Abstract-Conference.html",
+      "pdf_url": "https://proceedings.iclr.cc/paper_files/paper/2026/file/a05b72653ec5b473732129829ae04195-Paper-Conference.pdf",
+      "DOI": null,
+      "arXiv": "2510.18866",
+      "verified_by": [
+        "ICLR 2026 proceedings"
+      ],
+      "status": "published",
+      "collected_at": "2026-11-27"
+    },
+    {
+      "id": "secom",
+      "title": "On Memory Construction and Retrieval for Personalized Conversational Agents",
+      "year": 2025,
+      "venue": "ICLR 2025",
+      "venue_short": "ICLR 2025",
+      "venue_tier": "Top-ICLR",
+      "ccf": "Top-ICLR",
+      "category": "architecture",
+      "priority": 2,
+      "role_zh": "以主题连贯的 segment 作为记忆单元，并用 prompt compression 去噪，直接研究记忆粒度对检索的影响。",
+      "authors": [
+        "Zhuoshi Pan",
+        "Qianhui Wu",
+        "Huiqiang Jiang",
+        "Xufang Luo",
+        "Hao Cheng",
+        "Dongsheng Li",
+        "Yuqing Yang",
+        "Chin-Yew Lin",
+        "H. Vicky Zhao",
+        "Lili Qiu",
+        "Jianfeng Gao"
+      ],
+      "abstract": "To deliver coherent and personalized experiences in long-term conversations, existing approaches typically perform retrieval augmented response generation by constructing memory banks from conversation history at either the turn-level, session-level, or through summarization techniques.In this paper, we present two key findings: (1) The granularity of memory unit matters: turn-level, session-level, and summarization-based methods each exhibit limitations in both memory retrieval accuracy and the semantic quality of the retrieved content. (2) Prompt compression methods, such as LLMLingua-2, can effectively serve as a denoising mechanism, enhancing memory retrieval accuracy across different granularities. Building on these insights, we propose SeCom, a method that constructs the memory bank at segment level by introducing a conversation segmentation model that partitions long-term conversations into topically coherent segments, while applying compression based denoising on memory units to enhance memory retrieval. Experimental results show that SeCom exhibits a significant performance advantage over baselines on long-term conversation benchmarks LOCOMO and Long-MT-Bench+. Additionally, the proposed conversation segmentation method demonstrates superior performance on dialogue segmentation datasets such as DialSeg711, TIAGE, and SuperDialSeg.",
+      "keywords": [
+        "memory construction",
+        "conversation segmentation",
+        "prompt compression"
+      ],
+      "openreview_url": "https://proceedings.iclr.cc/paper_files/paper/2025/hash/e56f394bbd4f0ec81393d767caa5a31b-Abstract-Conference.html",
+      "pdf_url": "https://proceedings.iclr.cc/paper_files/paper/2025/file/e56f394bbd4f0ec81393d767caa5a31b-Paper-Conference.pdf",
+      "DOI": null,
+      "arXiv": "2502.05589",
+      "verified_by": [
+        "ICLR 2025 proceedings"
+      ],
+      "status": "published",
+      "collected_at": "2026-11-27"
+    },
+    {
+      "id": "memoryos",
+      "title": "Memory OS of AI Agent",
+      "year": 2025,
+      "venue": "EMNLP 2025 Main",
+      "venue_short": "EMNLP 2025",
+      "venue_tier": "CCF-B",
+      "ccf": "CCF-B",
+      "category": "system",
+      "priority": 2,
+      "role_zh": "把操作系统式的分层存储、更新和检索引入 agent memory，建立 short / mid / long-term 三级记忆。",
+      "authors": [
+        "Jiazheng Kang",
+        "Mingming Ji",
+        "Zhe Zhao",
+        "Ting Bai"
+      ],
+      "abstract": "Large Language Models (LLMs) face a crucial challenge from fixed context windows and inadequate memory management, leading to a severe shortage of long-term memory capabilities and limited personalization in the interactive experience with AI agents. To overcome this challenge, we innovatively propose a Memory Operating System, i.e., MemoryOS, to achieve comprehensive and efficient memory management for AI agents. Inspired by the memory management principles in operating systems, MemoryOS designs a hierarchical storage architecture and consists of four key modules: memory Storage, Updating, Retrieval, and Generation. Specifically, the architecture comprises three levels of storage units: short-term memory, mid-term memory, and long-term personal memory. Key operations within MemoryOS include dynamic updates between storage units: short-term to mid-term updates follow a dialogue-chain-based FIFO principle, while mid-term to long-term updates use a segmented page organization strategy. Our pioneering MemoryOS enables hierarchical memory integration and dynamic updating. Extensive experiments on the LoCoMo benchmark show an average improvement of 48.36% on F1 and 46.18% on BLEU-1 over the baselines on GPT-4o-mini, showing contextual coherence and personalized memory retention in long conversations.",
+      "keywords": [
+        "memory operating system",
+        "hierarchical memory",
+        "long-term memory"
+      ],
+      "openreview_url": "https://doi.org/10.18653/v1/2025.emnlp-main.1318",
+      "pdf_url": "https://aclanthology.org/2025.emnlp-main.1318.pdf",
+      "DOI": "10.18653/v1/2025.emnlp-main.1318",
+      "arXiv": null,
+      "verified_by": [
+        "Crossref DOI",
+        "ACL Anthology"
+      ],
+      "status": "published",
+      "collected_at": "2026-11-27"
+    },
+    {
+      "id": "hipporag2",
+      "title": "From RAG to Memory: Non-Parametric Continual Learning for Large Language Models",
+      "year": 2025,
+      "venue": "ICML 2025",
+      "venue_short": "ICML 2025",
+      "venue_tier": "CCF-A",
+      "ccf": "CCF-A",
+      "category": "architecture",
+      "priority": 1,
+      "role_zh": "用 Personalized PageRank + passage integration 统一事实、sense-making 和 associative memory 的图增强 RAG。",
+      "authors": [
+        "Bernal Jiménez Gutiérrez",
+        "Yiheng Shu",
+        "Weijian Qi",
+        "Sizhe Zhou",
+        "Yu Su"
+      ],
+      "abstract": "Our ability to continuously acquire, organize, and leverage knowledge is a key feature of human intelligence that AI systems must approximate to unlock their full potential. Given the challenges in continual learning with large language models (LLMs), retrieval-augmented generation (RAG) has become the dominant way to introduce new information. However, its reliance on vector retrieval hinders its ability to mimic the dynamic and interconnected nature of human long-term memory. Recent RAG approaches augment vector embeddings with various structures like knowledge graphs to address some of these gaps, namely sense-making and associativity. However, their performance on more basic factual memory tasks drops considerably below standard RAG. We address this unintended deterioration and propose HippoRAG 2, a framework that outperforms standard RAG comprehensively on factual, sense-making, and associative memory tasks. HippoRAG 2 builds upon the Personalized PageRank algorithm used in HippoRAG and enhances it with deeper passage integration and more effective online use of an LLM. This combination pushes this RAG system closer to the effectiveness of human long-term memory, achieving a 7% improvement in associative memory tasks over the state-of-the-art embedding model while also exhibiting superior factual knowledge and sense-making memory capabilities. This work paves the way for non-parametric continual learning for LLMs. Code and data are available at https://github.com/OSU-NLP-Group/HippoRAG.",
+      "keywords": [
+        "graph retrieval",
+        "continual learning",
+        "personalized pagerank"
+      ],
+      "openreview_url": "https://proceedings.mlr.press/v267/gutierrez25a.html",
+      "pdf_url": "https://raw.githubusercontent.com/mlresearch/v267/main/assets/gutierrez25a/gutierrez25a.pdf",
+      "DOI": null,
+      "arXiv": "2502.14802",
+      "verified_by": [
+        "PMLR proceedings"
+      ],
+      "status": "published",
+      "collected_at": "2026-11-27"
+    },
+    {
+      "id": "simplemem",
+      "title": "SimpleMem: Efficient Lifelong Memory for LLM Agents",
+      "year": 2026,
+      "venue": "ICML 2026",
+      "venue_short": "ICML 2026",
+      "venue_tier": "CCF-A",
+      "ccf": "CCF-A",
+      "category": "system",
+      "priority": 2,
+      "role_zh": "用语义结构化压缩、在线综合和意图感知检索规划，在长期记忆中同时优化准确率与 token 成本。",
+      "authors": [
+        "Jiaqi Liu",
+        "Yaofeng Su",
+        "Peng Xia",
+        "Siwei Han",
+        "Zeyu Zheng",
+        "Cihang Xie",
+        "Mingyu Ding",
+        "Huaxiu Yao"
+      ],
+      "abstract": "To support long-term interaction in complex environments, LLM agents require memory systems that manage historical experiences. Existing approaches either retain full interaction histories via passive context extension, leading to substantial redundancy, or rely on iterative reasoning to filter noise, incurring high token costs. To address this challenge, we introduce SimpleMem, an efficient memory framework based on semantic lossless compression. We propose a three-stage pipeline designed to maximize information density and token utilization: (1) Semantic Structured Compression, which distills unstructured interactions into compact, multi-view indexed memory units; (2) Online Semantic Synthesis, an intra-session process that instantly integrates related context into unified abstract representations to eliminate redundancy; and (3) Intent-Aware Retrieval Planning, which infers search intent to dynamically determine retrieval scope and construct precise context efficiently. Experiments on benchmark datasets show that our method consistently outperforms baseline approaches in accuracy, retrieval efficiency, and inference cost, achieving an average F1 improvement of 26.4% in LoCoMo while reducing inference-time token consumption by up to 30-fold, demonstrating a superior balance between performance and efficiency. Code is available at https://github.com/aiming-lab/SimpleMem.",
+      "keywords": [
+        "semantic compression",
+        "lifelong memory",
+        "retrieval planning"
+      ],
+      "openreview_url": "https://proceedings.mlr.press/v306/liu26dx.html",
+      "pdf_url": "https://raw.githubusercontent.com/mlresearch/v306/main/assets/liu26dx/liu26dx.pdf",
+      "DOI": null,
+      "arXiv": "2601.02553",
+      "verified_by": [
+        "PMLR proceedings"
+      ],
+      "status": "published",
+      "collected_at": "2026-11-27"
+    },
+    {
+      "id": "gam",
+      "title": "GAM: Hierarchical Graph-based Agentic Memory for LLM Agents",
+      "year": 2026,
+      "venue": "ACL (1) 2026",
+      "venue_short": "ACL 2026",
+      "venue_tier": "CCF-A",
+      "ccf": "CCF-A",
+      "category": "architecture",
+      "priority": 2,
+      "role_zh": "用事件进展图 + 主题关联网络解耦记忆编码与整合，降低瞬态噪声对长期知识结构的干扰。",
+      "authors": [
+        "Zhaofen Wu",
+        "Hanrong Zhang",
+        "Fulin Lin",
+        "Wujiang Xu",
+        "Xinran Xu",
+        "Yankai Chen",
+        "Henry Peng Zou",
+        "Shaowen Chen",
+        "Weizhi Zhang",
+        "Xue Liu",
+        "Philip S. Yu",
+        "Hongwei Wang"
+      ],
+      "abstract": "To sustain coherent long-term interactions, Large Language Model (LLM) agents must navigate the tension between acquiring new information and retaining prior knowledge. Current unified stream-based memory systems facilitate context updates but remain vulnerable to interference from transient noise. Conversely, discrete structured memory architectures provide robust knowledge retention but often struggle to adapt to fluid narrative evolution. To address this, we propose GAM, a hierarchical Graph-based Agentic Memory framework that explicitly decouples memory encoding from consolidation to effectively resolve the conflict between rapid context perception and stable knowledge retention. By isolating ongoing dialogue in a event progression graph and integrating it into a topic associative network only upon semantic shifts, our approach minimizes interference while preserving long-term consistency. Additionally, we introduce a Graph-guided, Multi-factor Retrieval strategy to enhance context precision. Experiments on LoCoMo and LongDialQA benchmarks indicate that our method consistently outperforms state-of-the-art baselines in both reasoning accuracy and computational efficiency.",
+      "keywords": [
+        "graph memory",
+        "hierarchical memory",
+        "memory consolidation"
+      ],
+      "openreview_url": "https://doi.org/10.18653/v1/2026.acl-long.1600",
+      "pdf_url": "https://aclanthology.org/2026.acl-long.1600.pdf",
+      "DOI": "10.18653/v1/2026.acl-long.1600",
+      "arXiv": null,
+      "verified_by": [
+        "Crossref DOI",
+        "ACL Anthology"
+      ],
+      "status": "published",
+      "collected_at": "2026-11-27"
+    },
+    {
+      "id": "reasoningbank",
+      "title": "ReasoningBank: Scaling Agent Self-Evolving with Reasoning Memory",
+      "year": 2026,
+      "venue": "ICLR 2026",
+      "venue_short": "ICLR 2026",
+      "venue_tier": "Top-ICLR",
+      "ccf": "Top-ICLR",
+      "category": "procedural",
+      "priority": 2,
+      "role_zh": "从成功与失败经验中蒸馏可泛化的推理策略，把记忆从“存轨迹”推进到“存可复用推理模式”。",
+      "authors": [
+        "Siru Ouyang",
+        "Jun Yan",
+        "I-Hung Hsu",
+        "Yanfei Chen",
+        "Ke Jiang",
+        "Zifeng Wang",
+        "Rujun Han",
+        "Long T. Le",
+        "Samira Daruki",
+        "Xiangru Tang",
+        "Vishy Tirumalashetty",
+        "George Lee",
+        "Mahsan Rofouei",
+        "Hangfei Lin",
+        "Jiawei Han",
+        "Chen-Yu Lee",
+        "Tomas Pfister"
+      ],
+      "abstract": "With the growing adoption of large language model agents in persistent real-world roles, they naturally encounter continuous streams of tasks. A key limitation, however, is their failure to learn from the accumulated interaction history, forcing them to discard valuable insights and repeat past errors. We propose ReasoningBank, a novel memory framework that distills generalizable reasoning strategies from an agent's self-judged successful and failed experiences. At test time, an agent retrieves relevant memories from ReasoningBank to inform its interaction and then integrates new learnings back, enabling it to become more capable over time. Building on this powerful experience learner, we further introduce memory-aware test-time scaling (MaTTS), which accelerates and diversifies this learning process by scaling up the agent's interaction experience. By allocating more compute to each task, the agent generates abundant, diverse experiences that provide rich contrastive signals for synthesizing higher-quality memory. The better memory in turn guides more effective scaling, establishing a powerful synergy between memory and test-time scaling. Across web browsing and software engineering benchmarks, ReasoningBank consistently outperforms existing memory mechanisms that store raw trajectories or only successful task routines, improving both effectiveness and efficiency; MaTTS further amplifies these gains. These findings establish memory-driven experience scaling as a new scaling dimension, enabling agents to self-evolve with emergent behaviors naturally arise. Our code can be found at https://github.com/google-research/reasoning-bank.",
+      "keywords": [
+        "reasoning memory",
+        "test-time scaling",
+        "self-evolving agents"
+      ],
+      "openreview_url": "https://proceedings.iclr.cc/paper_files/paper/2026/hash/980ea04d23d1f6908964eba2a74afe45-Abstract-Conference.html",
+      "pdf_url": "https://proceedings.iclr.cc/paper_files/paper/2026/file/980ea04d23d1f6908964eba2a74afe45-Paper-Conference.pdf",
+      "DOI": null,
+      "arXiv": "2509.25140",
+      "verified_by": [
+        "ICLR 2026 proceedings"
+      ],
+      "status": "published",
+      "collected_at": "2026-11-27"
+    },
+    {
+      "id": "memoryagentbench",
+      "title": "Evaluating Memory in LLM Agents via Incremental Multi-Turn Interactions",
+      "year": 2026,
+      "venue": "ICLR 2026",
+      "venue_short": "ICLR 2026",
+      "venue_tier": "Top-ICLR",
+      "ccf": "Top-ICLR",
+      "category": "evaluation",
+      "priority": 2,
+      "role_zh": "把长期记忆评测改造成增量多轮交互，覆盖检索、测试时学习、长程理解和选择性遗忘四项能力。",
+      "authors": [
+        "Yuanzhe Hu",
+        "Yu Wang",
+        "Julian McAuley"
+      ],
+      "abstract": "Recent benchmarks for Large Language Model (LLM) agents primarily focus on evaluating reasoning, planning, and execution capabilities, while another critical component-memory, encompassing how agents memorize, update, and retrieve long-term information-is under-evaluated due to the lack of benchmarks. We term agents with memory mechanisms as memory agents. In this paper, based on classic theories from memory science and cognitive science, we identify four core competencies essential for memory agents: accurate retrieval, test-time learning, long-range understanding, and selective forgetting. Existing benchmarks either rely on limited context lengths or are tailored for static, long-context settings like book-based QA, which do not reflect the interactive, multi-turn nature of memory agents that incrementally accumulate information. Moreover, no existing benchmarks cover all four competencies. We introduce MemoryAgentBench, a new benchmark specifically designed for memory agents. Our benchmark transforms existing long-context datasets and incorporates newly constructed datasets into a multi-turn format, effectively simulating the incremental information processing characteristic of memory agents. By carefully selecting and curating datasets, our benchmark provides comprehensive coverage of the four core memory competencies outlined above, thereby offering a systematic and challenging testbed for assessing memory quality. We evaluate a diverse set of memory agents, ranging from simple context-based and retrieval-augmented generation (RAG) systems to advanced agents with external memory modules and tool integration. Empirical results reveal that current methods fall short of mastering all four competencies, underscoring the need for further research into comprehensive memory mechanisms for LLM agents.",
+      "keywords": [
+        "memory benchmark",
+        "multi-turn interaction",
+        "selective forgetting"
+      ],
+      "openreview_url": "https://proceedings.iclr.cc/paper_files/paper/2026/hash/fd1eff9dd295df50a41f2521942fa31d-Abstract-Conference.html",
+      "pdf_url": "https://proceedings.iclr.cc/paper_files/paper/2026/file/fd1eff9dd295df50a41f2521942fa31d-Paper-Conference.pdf",
+      "DOI": null,
+      "arXiv": "2507.05257",
+      "verified_by": [
+        "ICLR 2026 proceedings"
+      ],
+      "status": "published",
+      "collected_at": "2026-11-27"
+    },
+    {
+      "id": "agemem",
+      "title": "Agentic Memory: Learning Unified Long-Term and Short-Term Memory Management for Large Language Model Agents",
+      "year": 2026,
+      "venue": "ACL (1) 2026",
+      "venue_short": "ACL 2026",
+      "venue_tier": "CCF-A",
+      "ccf": "CCF-A",
+      "category": "training",
+      "priority": 1,
+      "role_zh": "把 long-term / short-term memory 操作统一成 agent policy 的 tool actions，并用三阶段 RL + step-wise GRPO 训练。",
+      "authors": [
+        "Yi Yu",
+        "Liuyi Yao",
+        "Yuexiang Xie",
+        "Qingquan Tan",
+        "Jiaqi Feng",
+        "Yaliang Li",
+        "Libing Wu"
+      ],
+      "abstract": "Large language model (LLM) agents face fundamental limitations in long-horizon reasoning due to finite context windows, making effective memory management critical. Existing methods typically handle long-term memory (LTM) and short-term memory (STM) as separate components, relying on heuristics or auxiliary controllers, which limits adaptability and end-to-end optimization. In this paper, we propose Agentic Memory (AgeMem), a unified framework that integrates LTM and STM management directly into the agent’s policy. AgeMem exposes memory operations as tool-based actions, enabling the LLM agent to autonomously decide what and when to store, retrieve, update, summarize, or discard information. To train such unified behaviors, we propose a three-stage progressive reinforcement learning strategy and design a step-wise GRPO to address sparse and discontinuous rewards induced by memory operations. Experiments on five long-horizon benchmarks demonstrate that AgeMem consistently outperforms strong memory-augmented baselines across multiple LLM backbones, achieving improved task performance, higher-quality long-term memory, and more efficient context usage.",
+      "keywords": [
+        "memory management",
+        "reinforcement learning",
+        "long-term memory",
+        "short-term memory"
+      ],
+      "openreview_url": "https://doi.org/10.18653/v1/2026.acl-long.981",
+      "pdf_url": "https://aclanthology.org/2026.acl-long.981.pdf",
+      "DOI": "10.18653/v1/2026.acl-long.981",
+      "arXiv": null,
+      "verified_by": [
+        "Crossref DOI",
+        "ACL Anthology"
+      ],
+      "status": "published",
+      "collected_at": "2026-11-27"
+    },
+    {
+      "id": "emem",
+      "title": "E-mem: Multi-agent based Episodic Context Reconstruction for LLM Agent Memory",
+      "year": 2026,
+      "venue": "ICML 2026",
+      "venue_short": "ICML 2026",
+      "venue_tier": "CCF-A",
+      "ccf": "CCF-A",
+      "category": "architecture",
+      "priority": 2,
+      "role_zh": "用多个 assistant agent 保留未压缩的情境上下文，由 master agent 协调局部推理和证据重构，避免记忆预处理造成去语境化。",
+      "authors": [
+        "Kaixiang Wang",
+        "Yidan Lin",
+        "Zihan Wang",
+        "Bunyod Suvonov",
+        "Zhaojiacheng Zhou",
+        "Yuxiang Zheng",
+        "Jiaxi Cao",
+        "Zhiheng Dong",
+        "Chentao Wu",
+        "Jiong Lou",
+        "Jie Li"
+      ],
+      "abstract": "The evolution of Large Language Model (LLM) agents towards System~2 reasoning, characterized by deliberative, high-precision problem-solving, requires maintaining rigorous logical integrity over extended horizons. However, prevalent memory preprocessing paradigms suffer from destructive de-contextualization. By compressing complex sequential dependencies into pre-defined structures (e.g., embeddings or graphs), these methods sever the contextual integrity essential for deep reasoning. To address this, we propose E-mem, a framework shifting from Memory Preprocessing to Episodic Context Reconstruction. Inspired by biological engrams, E-mem employs a heterogeneous hierarchical architecture where multiple assistant agents maintain uncompressed memory contexts, while a central master agent orchestrates global planning. Unlike passive retrieval, our mechanism empowers assistants to locally reason within activated segments, extracting context-aware evidence before aggregation. Evaluations on the LoCoMo benchmark demonstrate that E-mem achieves over 54\\% F1, surpassing the state-of-the-art GAM by 7.75\\%, while reducing token cost by over 70\\%.",
+      "keywords": [
+        "episodic context",
+        "multi-agent memory",
+        "memory reconstruction"
+      ],
+      "openreview_url": "https://proceedings.mlr.press/v306/wang26ee.html",
+      "pdf_url": "https://raw.githubusercontent.com/mlresearch/v306/main/assets/wang26ee/wang26ee.pdf",
+      "DOI": null,
+      "arXiv": "2601.21714",
+      "verified_by": [
+        "PMLR proceedings"
+      ],
+      "status": "published",
+      "collected_at": "2026-11-27"
+    },
+    {
+      "id": "evermemos",
+      "title": "EverMemOS: A Self-Organizing Memory Operating System for Structured Long-Horizon Reasoning",
+      "year": 2026,
+      "venue": "ACL (1) 2026",
+      "venue_short": "ACL 2026",
+      "venue_tier": "CCF-A",
+      "ccf": "CCF-A",
+      "category": "system",
+      "priority": 2,
+      "role_zh": "用 engram-inspired 生命周期组织记忆：Episodic Trace Formation → Semantic Consolidation → Reconstructive Recollection。",
+      "authors": [
+        "Chuanrui Hu",
+        "Xingze Gao",
+        "Zuyi Zhou",
+        "Dannong Xu",
+        "Yi Bai",
+        "Xintong Li",
+        "Hui Zhang",
+        "Tong Li",
+        "Chong Zhang",
+        "Lidong Bing",
+        "Yafeng Deng"
+      ],
+      "abstract": "Large Language Models (LLMs) are increasingly deployed as long-term interactive agents, yet their limited context windows make it difficult to sustain coherent behavior over extended interactions. Existing memory systems for LLMs often store isolated records and retrieve fragments, limiting their ability to consolidate evolving experience and resolve conflicts. We introduce EverMemOS, a self-organizing memory operating system that implements an engram-inspired lifecycle for computational memory. First, Episodic Trace Formation converts dialogue streams into MemCells that capture episodic traces, atomic facts, and time-bounded foresight. Second, Semantic Consolidation organizes MemCells into thematic MemScenes, distilling stable semantic structures and updating user profiles. Finally, Reconstructive Recollection performs MemScene-guided agentic retrieval to compose the necessary and sufficient context for downstream reasoning. Experiments on LoCoMo, LongMemEval, and PersonaMem-v2 show that EverMemOS significantly outperforms state-of-the-art methods on memory-augmented reasoning tasks.",
+      "keywords": [
+        "memory operating system",
+        "semantic consolidation",
+        "agentic retrieval"
+      ],
+      "openreview_url": "https://doi.org/10.18653/v1/2026.acl-long.2125",
+      "pdf_url": "https://aclanthology.org/2026.acl-long.2125.pdf",
+      "DOI": "10.18653/v1/2026.acl-long.2125",
+      "arXiv": null,
+      "verified_by": [
+        "Crossref DOI",
+        "ACL Anthology"
+      ],
+      "status": "published",
+      "collected_at": "2026-11-27"
+    },
+    {
+      "id": "nemori",
+      "title": "What Deserves Memory: Adaptive Memory Distillation for LLM Agents",
+      "year": 2026,
+      "venue": "ACL (1) 2026",
+      "venue_short": "ACL 2026",
+      "venue_tier": "CCF-A",
+      "ccf": "CCF-A",
+      "category": "consolidation",
+      "priority": 2,
+      "role_zh": "把“什么值得记住”转化为可预测性/预测误差驱动的自适应蒸馏（Nemori），避免重要性分数等启发式规则。",
+      "authors": [
+        "Wenquan Ma",
+        "Jiayan Nan",
+        "Wenlong Wu"
+      ],
+      "abstract": "Memory systems for LLM agents struggle to determine what information deserves retention. Existing approaches rely on predefined heuristics such as importance scores, emotional tags, or factual templates, encoding designer intuition rather than learning from the data itself. Inspired by cognitive ideas, we propose Nemori , an adaptive memory distillation framework that casts the assessment of the experience’s future utility as a matter of predictability. Specifically, Nemori comprises two cascading modules: Episodic Memory Integration transforms raw interactions into coherent narratives, and Semantic Knowledge Distillation extracts insights via prediction error. Centering on distillation, the framework remains agnostic to downstream management. Extensive experiments confirm that Nemori achieves strong performance, efficiency, and storage reduction. Our work suggests that observing the intrinsic properties of interaction sequences offers a viable, data-driven alternative to heuristic-based memory design.",
+      "keywords": [
+        "memory distillation",
+        "predictive coding",
+        "episodic memory"
+      ],
+      "openreview_url": "https://doi.org/10.18653/v1/2026.acl-long.1607",
+      "pdf_url": "https://aclanthology.org/2026.acl-long.1607.pdf",
+      "DOI": "10.18653/v1/2026.acl-long.1607",
+      "arXiv": null,
+      "verified_by": [
+        "Crossref DOI",
+        "ACL Anthology"
+      ],
+      "status": "published",
+      "collected_at": "2026-11-27"
+    },
+    {
+      "id": "lightmem-slm",
+      "title": "Lightweight LLM Agent Memory with Small Language Models",
+      "year": 2026,
+      "venue": "ACL (1) 2026",
+      "venue_short": "ACL 2026",
+      "venue_tier": "CCF-A",
+      "ccf": "CCF-A",
+      "category": "system",
+      "priority": 2,
+      "role_zh": "用 Small Language Models 驱动记忆检索、写入和离线整合，分离 online 与 offline 处理，强调低延迟和固定检索预算。",
+      "authors": [
+        "Jiaquan Zhang",
+        "Chaoning Zhang",
+        "Shuxu Chen",
+        "Zhenzhen Huang",
+        "Pengcheng Zheng",
+        "Zhicheng Wang",
+        "Ping Guo",
+        "Fan Mo",
+        "Sung-Ho Bae",
+        "Jie Zou",
+        "Jiwei Wei",
+        "Yang Yang"
+      ],
+      "abstract": "Although LLM agents can leverage tools for complex tasks, they still need memory to maintain cross-turn consistency and accumulate reusable information in long-horizon interactions. However, retrieval-based external memory systems incur low online overhead but suffer from unstable accuracy due to limited query construction and candidate filtering. In contrast, many systems use repeated large-model calls for online memory operations, improving accuracy but accumulating latency over long interactions. We propose LightMem, a lightweight memory system for better agent memory driven by Small Language Models (SLMs). LightMem modularizes memory retrieval, writing, and long-term consolidation, and separates online processing from offline consolidation to enable efficient memory invocation under bounded compute. We organize memory into short-term memory (STM) for immediate conversational context, mid-term memory (MTM) for reusable interaction summaries, and long-term memory (LTM) for consolidated knowledge, and uses user identifiers to support independent retrieval and incremental maintenance in multi-user settings. Online, LightMem operates under a fixed retrieval budget and selects memories via a two-stage procedure: vector-based coarse retrieval followed by semantic consistency re-ranking. Offline, it abstracts reusable interaction evidence and incrementally integrates it into LTM. Experiments show consistent gains across model scales, with an average F1 improvement of about 2.5 over A-MEM on LoCoMo, while achieving higher efficiency and low median latency (83 ms for retrieval and 581 ms end-to-end).",
+      "keywords": [
+        "small language models",
+        "lightweight memory",
+        "memory consolidation"
+      ],
+      "openreview_url": "https://doi.org/10.18653/v1/2026.acl-long.588",
+      "pdf_url": "https://aclanthology.org/2026.acl-long.588.pdf",
+      "DOI": "10.18653/v1/2026.acl-long.588",
+      "arXiv": null,
+      "verified_by": [
+        "Crossref DOI",
+        "ACL Anthology"
+      ],
+      "status": "published",
+      "collected_at": "2026-11-27"
+    },
+    {
+      "id": "memorybench",
+      "title": "MemoryBench: A Benchmark for Memory and Continual Learning in LLM Systems",
+      "year": 2026,
+      "venue": "ICML 2026",
+      "venue_short": "ICML 2026",
+      "venue_tier": "CCF-A",
+      "ccf": "CCF-A",
+      "category": "evaluation",
+      "priority": 2,
+      "role_zh": "用用户反馈模拟框架评测 LLM 系统的持续学习与记忆能力，覆盖多领域、多语言和多任务类型。",
+      "authors": [
+        "Qingyao Ai",
+        "Yichen Tang",
+        "Changyue Wang",
+        "Jianming Long",
+        "Weihang Su",
+        "Yiqun Liu"
+      ],
+      "abstract": "Scaling up data, parameters, and test-time computation has been the mainstream methods to improve LLM systems (LLMsys), but their upper bounds are almost reached due to the gradual depletion of high-quality data and marginal gains obtained from larger computational resource consumption. Inspired by the abilities of human and traditional AI systems in learning from practice, constructing memory and continual learning frameworks for LLMsys has become an important and popular research direction in recent literature. Yet, existing benchmarks for LLM memory often focus on evaluating the system on homogeneous reading comprehension tasks with long-form inputs rather than testing their abilities to learn from accumulated user feedback in service time. Therefore, we propose a user feedback simulation framework and a comprehensive benchmark covering multiple domains, languages, and types of tasks to evaluate the continual learning abilities of LLMsys. Experiments show that the effectiveness and efficiency of state-of-the-art baselines are far from satisfying, and we hope this benchmark could pave the way for future studies on LLM memory and optimization algorithms. Website: https://memorybench.thuir.cn Code: https://github.com/THUIR/MemoryBench Data: https://huggingface.co/datasets/THUIR/MemoryBench Data-Full: https://huggingface.co/datasets/THUIR/MemoryBench-Full",
+      "keywords": [
+        "continual learning",
+        "memory benchmark",
+        "user feedback"
+      ],
+      "openreview_url": "https://proceedings.mlr.press/v306/ai26e.html",
+      "pdf_url": "https://raw.githubusercontent.com/mlresearch/v306/main/assets/ai26e/ai26e.pdf",
+      "DOI": null,
+      "arXiv": "2510.17281",
+      "verified_by": [
+        "PMLR proceedings"
+      ],
+      "status": "published",
+      "collected_at": "2026-11-27"
+    },
+    {
+      "id": "storagetexperience",
+      "title": "From Storage to Experience: A Survey on the Evolution of LLM Agent Memory Mechanisms",
+      "year": 2026,
+      "venue": "ACL Findings 2026",
+      "venue_short": "ACL Findings 2026",
+      "venue_tier": "ACL-Findings",
+      "ccf": "ACL-Findings",
+      "category": "survey",
+      "priority": 2,
+      "role_zh": "把 LLM agent memory 的演化概括为 Storage → Reflection → Experience 三阶段，并梳理长程一致性、动态环境和持续学习三条驱动线。",
+      "authors": [
+        "Jinghao Luo",
+        "Yuchen Tian",
+        "Chuxue Cao",
+        "Ziyang Luo",
+        "Hongzhan Lin",
+        "Kaixin Li",
+        "Chuyi Kong",
+        "Ruichao Yang",
+        "Jing Ma"
+      ],
+      "abstract": "Large Language Model (LLM)-based agents have fundamentally reshaped artificial intelligence by integrating external tools and planning capabilities. While memory mechanisms have emerged as the architectural cornerstone of these systems, current research remains fragmented, oscillating between operating system engineering and cognitive science. This theoretical divide prevents a unified view of technological synthesis and a coherent evolutionary perspective. To bridge this gap, this survey proposes a novel evolutionary framework for LLM agent memory mechanisms, formalizing the development process into three stages: **Storage** (trajectory preservation), **Reflection** (trajectory refinement), and **Experience** (trajectory abstraction). We first formally define these three stages before analyzing the three core drivers of this evolution: the necessity for long-range consistency, the challenges in dynamic environments, and the ultimate goal of continual learning. Furthermore, we specifically explore two transformative mechanisms in the frontier Experience stage: proactive exploration and cross-trajectory abstraction. By synthesizing these disparate views, this work offers robust design principles and a clear roadmap for the development of next-generation LLM agents.",
+      "keywords": [
+        "survey",
+        "memory evolution",
+        "continual learning"
+      ],
+      "openreview_url": "https://doi.org/10.18653/v1/2026.findings-acl.2069",
+      "pdf_url": "https://aclanthology.org/2026.findings-acl.2069.pdf",
+      "DOI": "10.18653/v1/2026.findings-acl.2069",
+      "arXiv": null,
+      "verified_by": [
+        "Crossref DOI",
+        "ACL Anthology"
+      ],
+      "status": "published",
+      "collected_at": "2026-11-27"
     }
   ],
   "edges": [
@@ -1651,6 +2226,210 @@
       "to": "memagent",
       "type": "related",
       "label": "并行记忆共享 vs 长上下文压缩"
+    },
+    {
+      "from": "lightmem",
+      "to": "mem0",
+      "type": "extends",
+      "label": "生产级记忆流水线 → 轻量级记忆系统"
+    },
+    {
+      "from": "lightmem",
+      "to": "hippocampus",
+      "type": "related",
+      "label": "高效记忆模块的不同系统路线"
+    },
+    {
+      "from": "lightmem",
+      "to": "lightwm",
+      "type": "related",
+      "label": "低成本长期记忆 vs 小模型工作记忆"
+    },
+    {
+      "from": "secom",
+      "to": "memgas",
+      "type": "extends",
+      "label": "segment 级记忆 → 多粒度记忆"
+    },
+    {
+      "from": "secom",
+      "to": "amem",
+      "type": "related",
+      "label": "记忆粒度选择 vs 原子笔记组织"
+    },
+    {
+      "from": "memoryos",
+      "to": "magma",
+      "type": "related",
+      "label": "三级层次存储 vs 多关系图记忆"
+    },
+    {
+      "from": "memoryos",
+      "to": "reconstructed",
+      "type": "related",
+      "label": "层次记忆系统作为主动重建的对照"
+    },
+    {
+      "from": "hipporag2",
+      "to": "magma",
+      "type": "related",
+      "label": "图增强 RAG vs 多关系 agent memory"
+    },
+    {
+      "from": "hipporag2",
+      "to": "reconstructed",
+      "type": "related",
+      "label": "图检索基线 vs 主动重构"
+    },
+    {
+      "from": "hipporag2",
+      "to": "memgas",
+      "type": "related",
+      "label": "图检索与多粒度记忆的对照"
+    },
+    {
+      "from": "simplemem",
+      "to": "lightmem",
+      "type": "related",
+      "label": "高效长期记忆的两条压缩路线"
+    },
+    {
+      "from": "simplemem",
+      "to": "mem0",
+      "type": "extends",
+      "label": "生产级记忆流水线 → 语义压缩记忆"
+    },
+    {
+      "from": "gam",
+      "to": "amem",
+      "type": "extends",
+      "label": "原子笔记 → 分层事件/主题图记忆"
+    },
+    {
+      "from": "gam",
+      "to": "magma",
+      "type": "related",
+      "label": "层次图 vs 多关系图"
+    },
+    {
+      "from": "reasoningbank",
+      "to": "rememberrefine",
+      "type": "related",
+      "label": "程序性记忆与经验蒸馏"
+    },
+    {
+      "from": "reasoningbank",
+      "to": "memeolve",
+      "type": "related",
+      "label": "经验驱动的记忆进化"
+    },
+    {
+      "from": "memoryagentbench",
+      "to": "longmemeval",
+      "type": "extends",
+      "label": "静态长期记忆评测 → 增量多轮能力评测"
+    },
+    {
+      "from": "memoryagentbench",
+      "to": "membench",
+      "type": "related",
+      "label": "综合记忆评测的不同维度"
+    },
+    {
+      "from": "memoryagentbench",
+      "to": "persistbench",
+      "type": "related",
+      "label": "选择性遗忘与遗忘边界评测"
+    },
+    {
+      "from": "agemem",
+      "to": "memoryr1",
+      "type": "extends",
+      "label": "分离的记忆操作 → 统一 LTM/STM 策略"
+    },
+    {
+      "from": "agemem",
+      "to": "memagent",
+      "type": "related",
+      "label": "RL memory agent 的不同统一管理路线"
+    },
+    {
+      "from": "agemem",
+      "to": "persistbench",
+      "type": "related",
+      "label": "可学习 discard 动作与遗忘边界评测"
+    },
+    {
+      "from": "emem",
+      "to": "reconstructed",
+      "type": "related",
+      "label": "episodic context reconstruction vs active reconstruction"
+    },
+    {
+      "from": "emem",
+      "to": "gam",
+      "type": "related",
+      "label": "E-mem 在 LoCoMo 上以 GAM 为强基线"
+    },
+    {
+      "from": "evermemos",
+      "to": "memoryos",
+      "type": "extends",
+      "label": "分层 memory OS → 自组织 memory OS"
+    },
+    {
+      "from": "evermemos",
+      "to": "memgas",
+      "type": "related",
+      "label": "语义整合 + scene-guided retrieval"
+    },
+    {
+      "from": "nemori",
+      "to": "memgas",
+      "type": "related",
+      "label": "自适应记忆蒸馏 vs 多粒度记忆"
+    },
+    {
+      "from": "nemori",
+      "to": "recmem",
+      "type": "related",
+      "label": "预测误差驱动整合 vs recurrence-based consolidation"
+    },
+    {
+      "from": "lightmem-slm",
+      "to": "lightmem",
+      "type": "related",
+      "label": "两个同名 LightMem 系统，机制不同，引用时需区分"
+    },
+    {
+      "from": "lightmem-slm",
+      "to": "mem0",
+      "type": "related",
+      "label": "SLM 驱动记忆 vs 生产级 LLM 记忆"
+    },
+    {
+      "from": "memorybench",
+      "to": "longmemeval",
+      "type": "extends",
+      "label": "静态记忆 QA → 用户反馈驱动的持续学习评测"
+    },
+    {
+      "from": "memorybench",
+      "to": "memoryagentbench",
+      "type": "related",
+      "label": "持续学习与增量多轮记忆的不同评测维度"
+    },
+    {
+      "from": "storagetexperience",
+      "to": "amem",
+      "type": "related",
+      "label": "综述框架：Storage → Reflection → Experience"
+    },
+    {
+      "from": "storagetexperience",
+      "to": "reasoningbank",
+      "type": "related",
+      "label": "Experience 阶段的跨轨迹抽象"
     }
   ]
 }

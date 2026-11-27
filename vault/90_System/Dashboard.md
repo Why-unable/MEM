@@ -10,7 +10,7 @@ tags:
 
 ## 当前研究主题
 
-- [[20_Topics/Agent Memory 2025+]] — 36 篇论文，47 条概念关系
+- [[20_Topics/Agent Memory 2025+]] — 51 篇论文，81 条概念关系
 - [[20_Topics/Mainline A - Memory Architecture]] — 主线 A 全文证据卡与 RQ1 分析（5 篇）
 - [[40_Maps/Agent Memory 2025+.canvas]] — 可视化 Canvas
 - [[40_Maps/Agent Memory 2025+ Synthesis]] — 研究综合与争议
@@ -48,11 +48,11 @@ tags:
 ```text
 主题：Agent Memory 2025+
 范围：2025-01-01 至 2026-11-19
-主库：36 篇
-CCF-A：17 篇
-Top-ICLR：8 篇
-ACL Findings：6 篇
+主库：51 篇
+CCF-A：26 篇
+Top-ICLR：12 篇
+ACL Findings：7 篇
 COLM：3 篇
 MLSys：1 篇
-ECAI：1 篇
+CCF-B：2 篇
 ```

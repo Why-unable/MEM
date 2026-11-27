@@ -55,6 +55,7 @@ Self-evolving memory systems are rapidly reshaping the evolutionary paradigm of 
 - related ← [[10_Papers/gmemory|G-Memory: Tracing Hierarchical Memory for Multi-Agent Systems]]：多 agent 记忆 → 记忆系统进化
 - extends ← [[10_Papers/memoryr1|Memory-R1: Enhancing Large Language Model Agents to Manage and Utilize Memories via Reinforcement Learning]]：记忆策略学习 → 记忆系统进化
 - related ← [[10_Papers/rememberrefine|Remember Me, Refine Me: A Dynamic Procedural Memory Framework for Experience-Driven Agent Evolution]]：程序性记忆 vs 元进化
+- related ← [[10_Papers/reasoningbank|ReasoningBank: Scaling Agent Self-Evolving with Reasoning Memory]]：经验驱动的记忆进化
 
 ## 我的阅读问题
 

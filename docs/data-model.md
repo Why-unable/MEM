@@ -18,7 +18,7 @@ Required fields:
 | `venue` | string | Venue with track |
 | `venue_short` | string | Display venue |
 | `venue_tier` | enum | CCF-A / Top-ICLR / Top-COLM / Top-MLSys / ACL-Findings / CCF-B |
-| `category` | enum | architecture / training / system / episodic / consolidation / personalization / multimodal / procedural / multiagent / evaluation / safety / application |
+| `category` | enum | architecture / training / system / episodic / consolidation / personalization / multimodal / procedural / multiagent / evaluation / safety / application / survey |
 | `priority` | integer | 1 core, 2 supporting |
 | `role_zh` | string | One-sentence role in map |
 | `authors` | string[] | Authors |

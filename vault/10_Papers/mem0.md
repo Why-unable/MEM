@@ -54,6 +54,9 @@ Large Language Models (LLMs) have demonstrated remarkable prowess in generating 
 - risk → [[10_Papers/injection|Memory Injection Attacks on LLM Agents via Query-Only Interaction]]：长期记忆的注入面
 - extends ← [[10_Papers/amem|A-Mem: Agentic Memory for LLM Agents]]：研究原型 → 生产级记忆流水线
 - applies ← [[10_Papers/memrec|MemRec: Collaborative Memory-Augmented Agentic Recommender System]]：长期记忆用于推荐
+- extends ← [[10_Papers/lightmem|LightMem: Lightweight and Efficient Memory-Augmented Generation]]：生产级记忆流水线 → 轻量级记忆系统
+- extends ← [[10_Papers/simplemem|SimpleMem: Efficient Lifelong Memory for LLM Agents]]：生产级记忆流水线 → 语义压缩记忆
+- related ← [[10_Papers/lightmem-slm|Lightweight LLM Agent Memory with Small Language Models]]：SLM 驱动记忆 vs 生产级 LLM 记忆
 
 ## 我的阅读问题
 

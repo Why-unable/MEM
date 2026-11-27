@@ -51,6 +51,7 @@ Procedural memory enables large language model (LLM) agents to internalize ”ho
 ## 关系
 
 - related → [[10_Papers/memeolve|MemEvolve: Meta-Evolution of Agent Memory Systems]]：程序性记忆 vs 元进化
+- related ← [[10_Papers/reasoningbank|ReasoningBank: Scaling Agent Self-Evolving with Reasoning Memory]]：程序性记忆与经验蒸馏
 
 ## 我的阅读问题
 

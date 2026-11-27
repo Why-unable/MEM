@@ -61,6 +61,9 @@ Empirical experiments on six foundation models show superior improvement against
 - extends → [[10_Papers/mem0|Mem0: Building Production-Ready AI Agents with Scalable Long-Term Memory]]：研究原型 → 生产级记忆流水线
 - evaluated-by ← [[10_Papers/longmemeval|LongMemEval: Benchmarking Chat Assistants on Long-Term Interactive Memory]]：A-Mem 类系统的长期记忆评测参照
 - evaluated-by ← [[10_Papers/membench|MemBench: Towards More Comprehensive Evaluation on the Memory of LLM-based Agents]]：agent memory 综合评测参照
+- related ← [[10_Papers/secom|On Memory Construction and Retrieval for Personalized Conversational Agents]]：记忆粒度选择 vs 原子笔记组织
+- extends ← [[10_Papers/gam|GAM: Hierarchical Graph-based Agentic Memory for LLM Agents]]：原子笔记 → 分层事件/主题图记忆
+- related ← [[10_Papers/storagetexperience|From Storage to Experience: A Survey on the Evolution of LLM Agent Memory Mechanisms]]：综述框架：Storage → Reflection → Experience
 
 ## 我的阅读问题
 

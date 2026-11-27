@@ -1,25 +1,25 @@
 # Agent Memory 2025+：实验数据集与对比基线全景
 
-> 更新时间：2026-11-26  
-> 范围：`data/agent-memory-2025/papers.json` 中的 36 篇正式发表论文  
-> 方法：优先读取论文 PDF 的 Experiments / Experimental Setup / Baselines 段落；已完成的 5 张主线 A 证据卡用于交叉核对  
+> 更新时间：2026-11-26
+> 范围：原始 36 篇正式发表论文；2026-11-27 主库已增补至 51 篇，新增 15 篇的实验矩阵尚未回填（见 `data/agent-memory-2025/COVERAGE_AUDIT.md`）
+> 方法：优先读取论文 PDF 的 Experiments / Experimental Setup / Baselines 段落；已完成的 5 张主线 A 证据卡用于交叉核对
 > 说明：本文是“实验设置地图”，不是排行榜。不同论文的 backbone、judge、数据切分、token 预算和 baseline 重实现方式不同，数字不能直接横比。
 
 ## 0. 先给结论
 
-1. **评测高度集中在两个对话记忆基准上。**  
-   在 26 篇方法论文中，至少 12 篇使用 **LoCoMo**，9 篇使用 **LongMemEval**，13 篇至少使用两者之一。它们已经成为 agent memory 的“事实标准”，但两者测的能力并不相同。
+1. **评测高度集中在两个对话记忆基准上。**
+   在原始 36 篇主库的方法论文中，至少 12 篇使用 **LoCoMo**，9 篇使用 **LongMemEval**，13 篇至少使用两者之一。它们已经成为 agent memory 的“事实标准”，但两者测的能力并不相同。
 
-2. **离开对话记忆后，评测迅速碎片化。**  
+2. **离开对话记忆后，评测迅速碎片化。**
    embodied agent 用 ALFWorld / SciWorld / PDDL；deep research 用 GAIA / WebWalkerQA / xBench；工具调用用 BFCL-V3 / AppWorld；Web agent 用 WebArena / WebShop；个性化用 LaMP；推荐用 Amazon / Yelp；多模态用 M3-Bench；安全用 MIMIC-III / eICU / MMLU / WebShop。
 
-3. **基线已经形成几个稳定家族。**  
+3. **基线已经形成几个稳定家族。**
    `no-memory / full-context`、`RAG / BM25 / dense retrieval`、`MemGPT / MemoryBank / A-Mem / Mem0 / MemoryOS / LangMem`、`HippoRAG 2 / GraphRAG / MemoRAG`、`SFT / PPO / GRPO` 学习型策略，以及各类 agent framework。
 
-4. **“结构化记忆优于长上下文”不是普遍结论。**  
+4. **“结构化记忆优于长上下文”不是普遍结论。**
    A-Mem、MAGMA、MRAgent 等在 multi-hop / temporal 上通常更强，但在 single-hop、knowledge-update、adversarial 上，full-context 仍然经常赢。真正稳定的结论更像是：**记忆结构和访问策略要与任务结构匹配**。
 
-5. **当前最缺的不是更多 baseline，而是统一实验协议。**  
+5. **当前最缺的不是更多 baseline，而是统一实验协议。**
    同用 LoCoMo 的论文，可能在 backbone、LLM judge、数据切分、是否排除 adversarial、检索 top-k、构建 token 是否计入成本上完全不同。这使“SOTA”很难被严格比较。
 
 ---
@@ -246,7 +246,7 @@
 
 ---
 
-## 4. 36 篇论文的实验设置对照
+## 4. 原始 36 篇论文的实验设置对照
 
 ### 4.1 方法论文（26 篇）
 
@@ -336,7 +336,7 @@
 
 ### 5.4 访问策略可能比存储结构更关键
 
-MAGMA 的消融显示：去掉 adaptive policy 的下降大于去掉单个关系图；MRAgent 的收益主要来自多轮 active reconstruction，而不只是图结构。  
+MAGMA 的消融显示：去掉 adaptive policy 的下降大于去掉单个关系图；MRAgent 的收益主要来自多轮 active reconstruction，而不只是图结构。
 这直接支持 RQ1 的一个更细的拆法：
 
 ```text
@@ -423,7 +423,7 @@ RQ1：**记忆结构何时优于长上下文？**
 
 ## 7. 证据边界
 
-- 本文覆盖 36 篇主库论文的实验设置，不等于覆盖每篇论文附录中的所有 baseline。
+- 本文覆盖原始 36 篇主库论文的实验设置，不等于覆盖每篇论文附录中的所有 baseline。
 - 论文版本可能不同：例如 MemoryArena 的正式标题与仓库中的早期标题不同；TierMem 的正式版本标题为 “From Lossy to Verified: A Provenance-Aware Tiered Memory for Agents”。
 - 某些论文的表格使用了缩写或重实现名称，本文按论文中的写法记录，不额外推断。
 - 本文不把不同论文的数字放在同一张排行榜上；所有跨论文比较都应回到原 PDF 核对 backbone、judge、split、budget。

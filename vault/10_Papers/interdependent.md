@@ -22,7 +22,7 @@ authors:
   - "Yejin Choi"
   - "Alex Pentland"
 doi: null
-arxiv: null
+arxiv: "2602.16313"
 openreview: "https://openreview.net/forum?id=JHYmxqS9Jv"
 pdf: "https://openreview.net/pdf?id=JHYmxqS9Jv"
 status: "published"
@@ -35,7 +35,7 @@ tags:
 ---
 # Benchmarking Agent Memory in Interdependent Multi-Session Agentic Tasks
 
-> **一句话定位**：多 session 相互依赖任务中的 agent memory 基准，贴近真实长期任务。
+> **一句话定位**：MemoryArena：多 session、agent-environment 相互依赖任务中的记忆评测，检验记忆是否真正指导后续行动。
 
 ## 元数据
 
@@ -52,7 +52,7 @@ Existing evaluations of agents with memory typically assess **memorization** and
 ## 在研究地图中的位置
 
 - **类别**：评测与基准
-- **角色**：多 session 相互依赖任务中的 agent memory 基准，贴近真实长期任务。
+- **角色**：MemoryArena：多 session、agent-environment 相互依赖任务中的记忆评测，检验记忆是否真正指导后续行动。
 - **优先级**：核心
 
 ## 关系

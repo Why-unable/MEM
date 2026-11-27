@@ -10,8 +10,13 @@
 | MIRIX: Multi-Agent Memory System for LLM-Based Agents | arXiv 2025 | 未确认正式 venue |
 | Zep: A Temporal Knowledge Graph Architecture for Agent Memory | arXiv 2025 | 未确认正式 venue |
 | Mem0 | ECAI 2025 | 已进入主地图，但标注为 CCF-B，不冒充 CCF-A |
-| MemoryAgentBench | arXiv / workshop | 主会状态未确认，暂不进入主地图 |
+| O-Mem: Omni Memory System for Personalized, Long Horizon, Self-Evolving Agents | arXiv 2025 | 未确认正式会议/期刊发表 |
+| STALE: Can LLM Agents Know When Their Memories Are No Longer Valid? | arXiv 2026 | 未确认正式 venue |
 | MemGAS 早期 arXiv 版本 | 已被 ICLR 2026 接收 | 主地图使用正式版本 *From Single to Multi-Granularity* |
+
+## 近期迁移
+
+- MemoryAgentBench（*Evaluating Memory in LLM Agents via Incremental Multi-Turn Interactions*）已于 2026-11-27 确认 ICLR 2026，并移入主地图。
 
 ## 处理原则
 

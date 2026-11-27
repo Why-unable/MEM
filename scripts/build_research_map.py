@@ -28,6 +28,7 @@ CATEGORY_LABELS = {
     "evaluation": "评测与基准",
     "safety": "安全与隐私",
     "application": "应用",
+    "survey": "综述与框架",
 }
 CATEGORY_ORDER = list(CATEGORY_LABELS)
 COLORS = {
@@ -43,6 +44,7 @@ COLORS = {
     "evaluation": "4",
     "safety": "6",
     "application": "5",
+    "survey": "5",
 }
 
 

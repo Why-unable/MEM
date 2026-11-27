@@ -1,6 +1,6 @@
 # Agent Memory 2025+ — Research Synthesis
 
-> 基于主库 36 篇正式发表论文的概念地图。这里给出研究脉络、争议和可做的问题；具体实验数字仍需回论文 PDF 复核。
+> 基于主库 51 篇正式发表论文的概念地图；深度综合仍以原始 36 篇全文核对为主，2026-11-27 分两批增补的 15 篇已入图但尚未全部精读。具体实验数字仍需回论文 PDF 复核。
 
 ## 1. 一句话判断
 
@@ -15,7 +15,7 @@
 
 ### 主线 A：记忆架构从“检索”走向“组织 + 重构”
 
-代表：A-Mem、G-Memory、MAGMA、MemGAS、Memory is Reconstructed。
+代表：A-Mem、G-Memory、MAGMA、MemGAS、Memory is Reconstructed；补充：SeCom、HippoRAG 2、GAM。
 
 > 全文证据卡与 RQ1 分析：[[20_Topics/Mainline A - Memory Architecture]]
 
@@ -29,7 +29,7 @@
 
 ### 主线 B：memory policy 变成可学习对象
 
-代表：MemAgent、Memory-R1、MemEvolve、UMEM。
+代表：MemAgent、Memory-R1、MemEvolve、UMEM；补充：AgeMem。
 
 - MemAgent 用 multi-conv RL 训练 memory agent 压缩长上下文。
 - Memory-R1 用 RL 训练记忆管理与使用。
@@ -40,7 +40,7 @@
 
 ### 主线 C：系统效率与生产可用性
 
-代表：Mem0、Hippocampus、LightWM、Learning to Share。
+代表：Mem0、Hippocampus、LightWM、Learning to Share；补充：LightMem、SimpleMem、EverMemOS、LightMem (SLM)。
 
 - Mem0 关注生产级长期记忆的抽取、更新与检索。
 - Hippocampus 关注高效、可扩展的记忆模块。
@@ -51,7 +51,7 @@
 
 ### 主线 D：episodic memory 与记忆整合
 
-代表：Human-inspired Episodic Memory、REMem、ARTEM、EMA、RecMem、TiMem、TierMem。
+代表：Human-inspired Episodic Memory、REMem、ARTEM、EMA、RecMem、TiMem、TierMem；补充：E-mem、Nemori。
 
 - Human-inspired Episodic Memory 用类人机制扩展无限上下文。
 - REMem 把 episodic memory 与推理结合。
@@ -64,7 +64,7 @@
 
 ### 主线 E：个性化、多模态与程序性记忆
 
-代表：Evoking User Memory、PersonaAgent、Seeing/Listening/Remembering、Remember Me Refine Me、MemRec。
+代表：Evoking User Memory、PersonaAgent、Seeing/Listening/Remembering、Remember Me Refine Me、MemRec；补充：ReasoningBank。
 
 - 个性化记忆强调“回忆—熟悉度”式检索和记忆-行动耦合。
 - 多模态记忆把视觉、听觉和文本经验放在同一长期记忆中。
@@ -75,7 +75,7 @@
 
 ### 主线 F：评测从“记住没有”走向“何时该忘”
 
-代表：LongMemEval、Beyond a Million Tokens、Benchmarking Agent Memory in Interdependent Multi-Session Agentic Tasks、PersistBench、MemBench、Minerva。
+代表：LongMemEval、Beyond a Million Tokens、MemoryArena、PersistBench、MemBench、Minerva；补充：MemoryAgentBench、MemoryBench。
 
 - LongMemEval 是长期交互记忆的核心参照。
 - Beyond a Million Tokens 把压力推到百万 token 级。
