@@ -61,3 +61,5 @@
 2026-11-28　按评审行文需求重写研究背景，将拟提出的方法移回综述末段。详见 [研究日志](research-log/2026-11-28-direction-b-evidence-proposal.md)。
 
 2026-11-28　精简开题摘要中的实验描述，将具体基准留在实验设计节。详见 [研究日志](research-log/2026-11-28-direction-b-evidence-proposal.md)。
+
+2026-11-28　细化开题报告的三阶段研究计划，明确工作内容、阶段成果及其与实验设计的对应关系。详见 [研究日志](research-log/2026-11-28-direction-b-evidence-proposal.md)。
