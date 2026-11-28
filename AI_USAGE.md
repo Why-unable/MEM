@@ -51,3 +51,5 @@
 2026-11-28　按学院评审读者需要扩写技术路线，以同一示例说明版本修订与查询，并精简实验对照。详见 [研究日志](research-log/2026-11-28-direction-b-evidence-proposal.md)。
 
 2026-11-28　将技术说明与示例分开，明确历史修订范围和核验时机的拟研究贡献。详见 [研究日志](research-log/2026-11-28-direction-b-evidence-proposal.md)。
+
+2026-11-28　复核关系更新与图检索文献，将实体间关系纳入事实更新，并提炼研究内容小标题。详见 [研究日志](research-log/2026-11-28-direction-b-evidence-proposal.md)。
