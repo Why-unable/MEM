@@ -49,3 +49,5 @@
 2026-11-28　精简开题背景与研究综述，复核更新时机的原始文献，重写技术路线和公开基准评测方案。详见 [研究日志](research-log/2026-11-28-direction-b-evidence-proposal.md)。
 
 2026-11-28　按学院评审读者需要扩写技术路线，以同一示例说明版本修订与查询，并精简实验对照。详见 [研究日志](research-log/2026-11-28-direction-b-evidence-proposal.md)。
+
+2026-11-28　将技术说明与示例分开，明确历史修订范围和核验时机的拟研究贡献。详见 [研究日志](research-log/2026-11-28-direction-b-evidence-proposal.md)。
