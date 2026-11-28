@@ -69,3 +69,5 @@
 2026-11-28　扩充开题报告的文内引文与参考文献，同步更新提交用 Word 版。详见 [研究日志](research-log/2026-11-28-direction-b-evidence-proposal.md)。
 
 2026-11-28　从开题报告的 LoCoMo 条目中移除附加资源链接，保留正式论文引文。详见 [研究日志](research-log/2026-11-28-direction-b-evidence-proposal.md)。
+
+2026-11-28　扩写开题报告的事实修订、更新调度与版本证据检索，调整各项实验对照、预期贡献和研究计划。详见 [研究日志](research-log/2026-11-28-direction-b-evidence-proposal.md)。
