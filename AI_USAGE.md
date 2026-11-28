@@ -59,3 +59,5 @@
 2026-11-28　将拟提出的方法及两项重点前置至研究现状节的首段，调整综述收束。详见 [研究日志](research-log/2026-11-28-direction-b-evidence-proposal.md)。
 
 2026-11-28　按评审行文需求重写研究背景，将拟提出的方法移回综述末段。详见 [研究日志](research-log/2026-11-28-direction-b-evidence-proposal.md)。
+
+2026-11-28　精简开题摘要中的实验描述，将具体基准留在实验设计节。详见 [研究日志](research-log/2026-11-28-direction-b-evidence-proposal.md)。
