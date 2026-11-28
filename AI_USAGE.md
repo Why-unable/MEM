@@ -39,3 +39,7 @@
 ## Future records
 
 每次大规模 AI 辅助研究需要新增一行，并链接研究日志。
+
+2026-11-28　撰写并修订方向 B 开题正文，整理 52 篇更新相关证据与对照边界。详见 [研究日志](research-log/2026-11-28-direction-b-evidence-proposal.md)。
+
+2026-11-28　围绕可追溯事实记忆更新重写开题正文，细化两项研究工作的对照与指标。详见 [研究日志](research-log/2026-11-28-direction-b-evidence-proposal.md)。

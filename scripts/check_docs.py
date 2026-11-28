@@ -145,12 +145,17 @@ def main() -> None:
         "05_VikingMem后续研究与方向B设计.md",
         "06_备选方向A_开题报告模板.md",
         "07_下一步_导师讨论版.md",
+        "08_方向B_硕士论文开题报告.md",
+        "09_记忆更新文献证据矩阵.md",
     ]
     proposal_texts = {name: read(PROPOSAL_DIR / name) for name in proposal_files}
-    primary_title = "面向知识更新的可追溯事件—实体记忆冲突消解与回滚方法研究"
-    require(proposal_texts["README.md"], primary_title, "开题报告/README.md")
-    require(proposal_texts["04_开题报告初稿模板.md"], primary_title, "开题报告/04_开题报告初稿模板.md")
-    require(proposal_texts["05_VikingMem后续研究与方向B设计.md"], primary_title, "开题报告/05_VikingMem后续研究与方向B设计.md")
+    proposal_title = re.match(r"# (.+)", proposal_texts["08_方向B_硕士论文开题报告.md"])
+    if not proposal_title:
+        fail("开题报告/08_方向B_硕士论文开题报告.md is missing a title")
+    require(proposal_texts["README.md"], proposal_title.group(1), "开题报告/README.md")
+    template_title = "面向知识更新的可追溯事件—实体记忆冲突消解与回滚方法研究"
+    require(proposal_texts["04_开题报告初稿模板.md"], template_title, "开题报告/04_开题报告初稿模板.md")
+    require(proposal_texts["05_VikingMem后续研究与方向B设计.md"], template_title, "开题报告/05_VikingMem后续研究与方向B设计.md")
     require(proposal_texts["02_国内开题报告写作规范.md"], "学校/学院模板为准", "开题报告/02_国内开题报告写作规范.md")
     require(proposal_texts["04_开题报告初稿模板.md"], "一页研究设计画布", "开题报告/04_开题报告初稿模板.md")
     require(proposal_texts["07_下一步_导师讨论版.md"], "2 页的“导师讨论版研究方案”", "开题报告/07_下一步_导师讨论版.md")
