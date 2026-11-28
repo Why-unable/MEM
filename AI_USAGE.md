@@ -53,3 +53,5 @@
 2026-11-28　将技术说明与示例分开，明确历史修订范围和核验时机的拟研究贡献。详见 [研究日志](research-log/2026-11-28-direction-b-evidence-proposal.md)。
 
 2026-11-28　复核关系更新与图检索文献，将实体间关系纳入事实更新，并提炼研究内容小标题。详见 [研究日志](research-log/2026-11-28-direction-b-evidence-proposal.md)。
+
+2026-11-28　润色开题报告中重复的自指表述，补写证据事件驱动实体事实版本更新的过程。详见 [研究日志](research-log/2026-11-28-direction-b-evidence-proposal.md)。
