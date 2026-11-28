@@ -45,3 +45,5 @@
 2026-11-28　围绕可追溯事实记忆更新重写开题正文，细化两项研究工作的对照与指标。详见 [研究日志](research-log/2026-11-28-direction-b-evidence-proposal.md)。
 
 2026-11-28　调整开题正文为独立文稿，规范术语、文内引文与参考文献。详见 [研究日志](research-log/2026-11-28-direction-b-evidence-proposal.md)。
+
+2026-11-28　精简开题背景与研究综述，复核更新时机的原始文献，重写技术路线和公开基准评测方案。详见 [研究日志](research-log/2026-11-28-direction-b-evidence-proposal.md)。
