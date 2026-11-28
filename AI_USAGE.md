@@ -43,3 +43,5 @@
 2026-11-28　撰写并修订方向 B 开题正文，整理 52 篇更新相关证据与对照边界。详见 [研究日志](research-log/2026-11-28-direction-b-evidence-proposal.md)。
 
 2026-11-28　围绕可追溯事实记忆更新重写开题正文，细化两项研究工作的对照与指标。详见 [研究日志](research-log/2026-11-28-direction-b-evidence-proposal.md)。
+
+2026-11-28　调整开题正文为独立文稿，规范术语、文内引文与参考文献。详见 [研究日志](research-log/2026-11-28-direction-b-evidence-proposal.md)。
